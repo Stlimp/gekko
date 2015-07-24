@@ -26,19 +26,6 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
     <div class="wrap">
-        <div >
-           <p>
-            <ul >
-                <li><a href="#">Кнопки соц сетей</a></li>
-                 <li><a href="#">Кнопки соц сетей</a></li>
-                 <li><a href="#">Кнопки соц сетей</a></li>
-                 <li><a href="#">Кнопки соц сетей</a></li>                
-                 <li><a href="#">Кнопки соц сетей</a></li>
-                 <li><a href="#">Кнопки соц сетей</a></li>
-                 <li><a href="#">Кнопки соц сетей</a></li>
-            </ul>
-   </p>
-        </div>
         <?php
             NavBar::begin([
                 'brandLabel' => 'Gekkostone',
@@ -103,7 +90,6 @@ AppAsset::register($this);
             NavBar::end();
         ?>
 
-
         <div class="container">
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -130,5 +116,78 @@ AppAsset::register($this);
 
 <?php $this->endBody() ?>
 </body>
+</html>
+<?php $this->endPage() ?>
+
+
+
+<?php $this->endBody() ?>
+</body>
+<img  src="" alt="background" id="bg" style="display:none" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> 
+<script type="text/javascript" class="noprint">
+    var aImages = new Array();
+    var aURL = new Array();
+    var aArtists = new Array();
+    var iPrev = -1;
+    var iRnd = -1;
+    
+    aImages[0] = "images/background/background1.jpg";
+    aImages[1] = "images/background/background2.jpg";
+    aImages[2] = "images/background/background3.jpg";
+    aImages[3] = "images/background/background4.jpg";   
+
+
+    $(document).ready(function() {
+    
+        
+        $("img#bg").load(function()
+            {
+                
+                $("img#bg").fadeTo(500,1);
+                
+                        
+                
+                setTimeout(function() 
+                    {
+                        $("#image_description").animate({right: '-=150'}, 1000);
+                        $("img#bg").fadeOut(500);
+                        
+                        
+                        setTimeout(LoadImages,500);
+                    }
+                    ,5000);
+            }           
+        )
+    
+        
+        setTimeout(LoadImages,500);
+        
+    });
+
+    function LoadImage(iNr)
+    {
+    
+        $("img#bg").attr("src", aImages[iNr]);
+      
+                            
+    };
+    
+    function LoadImages()
+    {
+        
+        /* Select a random image number and make sure this is not equal to the previous image */
+        while(iPrev == iRnd)
+        {
+            iRnd = Math.floor(Math.random()*aImages.length);
+        }
+        
+        /* Show the selected image */
+        LoadImage(iRnd);
+        
+        iPrev = iRnd;
+        
+    };
+</script> 
 </html>
 <?php $this->endPage() ?>
