@@ -180,7 +180,7 @@ AppAsset::register($this);
                 setTimeout(function() 
                     {
                         $("#image_description").animate({right: '-=150'}, 1000);
-                        $("img#bg").fadeOut(500);
+                        $("img#bg").fadeOut(50);
                         
                         
                         setTimeout(LoadImages,500);
@@ -206,9 +206,16 @@ AppAsset::register($this);
     {
         
         /* Select a random image number and make sure this is not equal to the previous image */
-        while(iPrev == iRnd)
+        /*while(iPrev == iRnd)
         {
             iRnd = Math.floor(Math.random()*aImages.length);
+        }*/
+        if(iRnd <3){
+            iRnd=iRnd+1;
+        }
+        else
+        {
+            iRnd=0;
         }
         
         /* Show the selected image */
