@@ -188,6 +188,14 @@ AppAsset::register($this);
         iPrev = iRnd;
         
     };
+
+    /*Menu hover. Replaced css way ov hover*/
+    $('ul.nav li.dropdown').hover(function() {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+     }, function() {
+    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    /*Menu hover. Replaced css way ov hover*/
+});
 </script> 
 </html>
 <?php $this->endPage() ?>

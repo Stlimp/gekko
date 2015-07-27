@@ -142,6 +142,7 @@ ul li  {
   //zoom : 1;
 }
 
+/*Old way of hover. Replaced with JS in main.php
 .dropdown:hover .dropdown-menu {
 display: block;
-}
+}*/
