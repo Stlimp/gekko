@@ -34,10 +34,37 @@ AppAsset::register($this);
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
             ]);
+            /*First menu small*/
+            echo Nav::widget([
+                'options' => ['class' => 'navbar-nav navbar-right '],
+                'items' => [
+                    ['label' => 'Парнерство', 'url' => ['/site/index']],
+                    ['label' => 'Новости', 'url' => ['/site/index']],
+                    ['label' => 'Прайс', 'url' => ['/site/index']],
+                    ['label' => 'Контакты', 'url' => ['/site/index']],
+                    ['label' => 'Поиск', 'url' => ['/site/index']],
+                    ['label' => 'Моя галерея', 'url' => ['/site/index']],
+                    ['label' => 'OK', 'url' => ['/site/index']],
+                    ['label' => 'ВК', 'url' => ['/site/index']],
+                    ['label' => 'f', 'url' => ['/site/index']],
+                    ['label' => 't', 'url' => ['/site/index']],
+                    ['label' => 'Y', 'url' => ['/site/index']],
+                    ['label' => 'V', 'url' => ['/site/index']],
+                    ['label' => 'S', 'url' => ['/site/index']],
+                    ['label' => 'e', 'url' => ['/site/index']],
+                   
+                 /*   Yii::$app->user->isGuest ?
+                        ['label' => 'Login', 'url' => ['/site/login']] :
+                        ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
+                            'url' => ['/site/logout'],
+                            'linkOptions' => ['data-method' => 'post']],*/
+                ],
+            ]);
+            /*Second menu normal*/
             echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
-                    ['label' => 'О компании',
+                    ['label' => 'О КОМПАНИИ',
                         'items' => [
                                      ['label' => 'Gekkostone', 'url' => '#'],
                                      ['label' => 'Преимущества', 'url' => '#'],
@@ -46,8 +73,9 @@ AppAsset::register($this);
                                      ['label' => 'Отзывы и предложения', 'url' => '#'],
                                      ['label' => 'Партнерство', 'url' => '#'],
                                      ['label' => 'Контакты', 'url' => '#'],
-            ],],
-                    ['label' => 'Продукция',
+            ],]
+            ,
+                    ['label' => 'ПРОДУКЦИЯ',
                         'items' => [
                                      ['label' => 'Вся продукция', 'url' => '#'],
                                      ['label' => 'Кирпич тонкий', 'url' => '#'],
@@ -55,13 +83,13 @@ AppAsset::register($this);
                                      ['label' => 'Камень облицовочный', 'url' => '#'],
                                      ['label' => 'Сопутствующие товары', 'url' => '#'],
             ],],
-                    ['label' => 'Фотогалерея',
+                    ['label' => 'ФОТОГАЛЕРЕЯ',
                         'items' => [
                                      ['label' => 'Жилые дома и квартиры', 'url' => '#'],
                                      ['label' => 'Коммерческие объекты', 'url' => '#'],
                                      ['label' => 'До и после', 'url' => '#'],
             ],],
-                    ['label' => 'Информация', 
+                    ['label' => 'ИНФОРМАЦИЯ', 
                         'items' => [
                                      ['label' => 'Укладка камня', 'url' => '#'],
                                      ['label' => 'Вопрос - ответ', 'url' => '#'],
@@ -72,21 +100,22 @@ AppAsset::register($this);
                                      ['label' => 'Каталог и прайс-лист', 'url' => '#'],
                                      ['label' => 'Текстуры камня', 'url' => '#'],
             ],],
-                    ['label' => 'Фотогалерея', 
-                        'items' => [
-                                     ['label' => 'Дизайн проект', 'url' => '#'],
-                                     ['label' => 'Подбор камня', 'url' => '#'],
-                                     ['label' => 'Облицовка', 'url' => '#'],
-             ],],
-                    ['label' => 'Где купить', 'url' => ['/site/index']]
+                    ['label' => 'ГДЕ КУПИТЬ', 'url' => ['/site/index']],
                    
                  /*   Yii::$app->user->isGuest ?
                         ['label' => 'Login', 'url' => ['/site/login']] :
                         ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
                             'url' => ['/site/logout'],
                             'linkOptions' => ['data-method' => 'post']],*/
-                ],
-            ]);
+            
+                    ['label' => 'УСЛУГИ', 
+                        'items' => [
+                                     ['label' => 'Дизайн проект', 'url' => '#'],
+                                     ['label' => 'Подбор камня', 'url' => '#'],
+                                     ['label' => 'Облицовка', 'url' => '#'],
+            ],],
+            ]]);
+
             NavBar::end();
         ?>
 

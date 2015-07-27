@@ -142,7 +142,25 @@ ul li  {
   //zoom : 1;
 }
 
+h1{
+
+   float: left;
+    display: block;
+    width: 60px;
+}
 /*Old way of hover. Replaced with JS in main.php
 .dropdown:hover .dropdown-menu {
 display: block;
 }*/
+.navbar .nav > li > a, .navbar .nav > li > a {
+  font-size: 4,588px;
+  font-family:Corbel;
+
+ }
+.navbar-inverse .navbar-nav > .active > a{
+  background:transparent;
+  color:#9d9d9d;
+}
+.navbar-inverse .navbar-nav > .active > a:hover{
+  background:transparent;
+}
