@@ -11,19 +11,11 @@ img#bg {
     width:100%;
     z-index:-3;
 }
-/* Reset the container */
-.container {
-  width: 970px;
-  max-width: none !important;
-}
-.container-non-responsive {
- margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-
-  /* Set width to your desired site width */
-  width: 1170px;
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
 }
 
 .wrap > .container {
@@ -106,6 +98,9 @@ a.desc:after {
     margin: 0 0 15px 0;
 }
 
+
+
+
 ul {
   text-align: justify;
   line-height: 0;
@@ -142,12 +137,7 @@ ul li  {
   //zoom : 1;
 }
 
-h1{
 
-   float: left;
-    display: block;
-    width: 60px;
-}
 /*Old way of hover. Replaced with JS in main.php
 .dropdown:hover .dropdown-menu {
 display: block;
@@ -155,6 +145,7 @@ display: block;
 .navbar .nav > li > a, .navbar .nav > li > a {
   font-size: 4,588px;
   font-family:Corbel;
+  right:0px;
 
  }
 .navbar-inverse .navbar-nav > .active > a{
@@ -164,3 +155,18 @@ display: block;
 .navbar-inverse .navbar-nav > .active > a:hover{
   background:transparent;
 }
+
+#w1 .active {
+  background-color:#000000;
+}
+
+.wrap{
+  position:relative;
+}
+
+
+.navbar-inverse{
+  background: rgba(0, 0, 0, 0.75);
+}
+
+
