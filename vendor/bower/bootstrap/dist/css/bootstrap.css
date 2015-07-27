@@ -4239,7 +4239,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-collapse.in {
   overflow-y: auto;
 }
-@media (min-width: 1px) {
+@media (min-width: 768px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -6798,8 +6798,3 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
-@media (min-width: 768px) {
-    .dropdown:hover .dropdown-menu {
-        display: block;
-    }
- }
