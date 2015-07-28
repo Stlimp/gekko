@@ -22,7 +22,6 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-
 <?php $this->beginBody() ?>
 
     <div class="wrap">
@@ -117,7 +116,8 @@ AppAsset::register($this);
             ]]);
 
             NavBar::end();
-        ?>
+?>
+
 
         <!--<div class="container"> !-->
             <?= Breadcrumbs::widget([

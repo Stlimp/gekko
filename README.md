@@ -1,3 +1,11 @@
+TODO:
+------
+Carousel Height
+Carousel Fade
+
+
+
+
 DIRECTORY STRUCTURE
 -------------------
 

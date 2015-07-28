@@ -3,45 +3,22 @@
 $this->title = 'Gekkostone';
 ?>
 
- <!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="/assets/example/bg_dogcat.jpg">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Sign up today</a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="http://lorempixel.com/1280/1024/technics" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Learn more</a>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="http://lorempixel.com/1280/1024/abstract" alt="">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>One more for good measure.</h1>
-              <p class="lead">Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-    </div><!-- /.carousel -->
-
+       
+   <?php 
+   use yii\bootstrap\Carousel;   
+echo Carousel::widget([
+    'options' => ['class' => 'carousel slide carousel-fade ','data-ride'=>'carousel','data-interval'=>'5000'],
+    'items' => [
+        // the item contains only the image
+        ['content' => '<img src="images/background/background1.jpg"/>'],
+        // equivalent to the above
+        ['content' => '<img src="images/background/background2.jpg"/>'],
+        // the item contains both the image and the caption
+        ['content' => '<img src="images/background/background3.jpg"/>'],
+        ['content' => '<img src="images/background/background4.jpg"/>'],
+    ]
+]);
+?>
 <div class="site-index">
     <div class="jumbotron">
        <h1>Congratulations!</h1>
@@ -91,6 +68,4 @@ $this->title = 'Gekkostone';
 </div>
 </div>
 
-<script type="text/javascript" class="noprint">
-$('#myCarousel').carousel();
-</script>
+
