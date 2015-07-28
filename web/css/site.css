@@ -190,3 +190,61 @@ padding-left: 5px;
 
   background: rgba(0, 0, 0, 0.5);
 }
+
+
+/* BOOTSTRAP 3.x GLOBAL STYLES
+-------------------------------------------------- */
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+.jumbotron{
+  position:relative;
+}
+/* Carousel base class */
+.carousel {
+  margin-bottom: 0px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 700px;
+
+  background-color:#bbb;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+}
+
+.carousel-buttons {
+  z-index: 1100;
+  position: absolute;
+  width: 100%;
+  color:#fff;
+  bottom:1px;
+}
+.carousel-buttons > div {
+  padding:20px;
+  border:1px solid #fff;
+}
+.carousel-buttons a {
+  color:#fff;
+  display:block;
+  line-height:50px;
+}
+
+.item{
+  min-height: 100% !important;
+}
