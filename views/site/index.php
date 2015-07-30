@@ -2,10 +2,11 @@
 /* @var $this yii\web\View */
 $this->title = 'Gekkostone';
 ?>
-
+<section>
        
    <?php 
-   use yii\bootstrap\Carousel;   
+   use yii\bootstrap\Carousel;  
+
 echo Carousel::widget([
     'options' => ['class' => 'carousel slide carousel-fade ','data-ride'=>'carousel','data-interval'=>'5000'],
     'items' => [
@@ -18,7 +19,14 @@ echo Carousel::widget([
         ['content' => '<img src="images/background/background4.jpg"/>'],
     ]
 ]);
+
+
+
 ?>
+<div class="col-md-12 hover-slide text-center" style="text-align:right;bottom: 100px;right:100px;z-index: 1045";> <a href="#page-intro" class="btn btn-default start-me">Down</a>
+    <div class="col-md-12 hover-slide text-center" style="text-align:right;top: 100px;z-index: 1045";> <a href="#page-intro" class="btn btn-default start-me"> Up </a>
+</div>
+</section>
 <div class="site-index">
     <div class="jumbotron">
        <h1>Congratulations!</h1>
