@@ -2,6 +2,7 @@
 /* @var $this yii\web\View */
 $this->title = 'Gekkostone';
 ?>
+<div id="upper"></div>
 <section>
        
    <?php 
@@ -23,20 +24,44 @@ echo Carousel::widget([
 
 
 ?>
-<div class="col-md-12 hover-slide text-center" style="text-align:right;bottom: 100px;right:100px;z-index: 1045";> <a href="#page-intro" class="btn btn-default start-me">Down</a>
-    <div class="col-md-12 hover-slide text-center" style="text-align:right;top: 100px;z-index: 1045";> <a href="#page-intro" class="btn btn-default start-me"> Up </a>
+<div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 100px;right:100px;z-index: 1015";> <a href="#downer" class="btn btn-default start-me">Down</a>
+<div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;top: 100px";> <a href="#upper" class="btn btn-default start-me"> Up </a>    
 </div>
 </section>
 <div class="site-index">
+    
     <div class="jumbotron">
-       <h1>Congratulations!</h1>
+       
+       <h1 id ="congrats">Congratulations!</h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
 
         <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    */
+    
+    <h1>Congratulations!</h1>
+
+        <p class="lead">You have successfully created your Yii-powered application.</p>
+
+        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+
+        <h1>Congratulations!</h1>
+
+        <p class="lead">You have successfully created your Yii-powered application.</p>
+
+        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+
+
+<!-- PLZ DO NOT REMOOV DIS LINE -->
+
+<DIV STYLE="DISPLAY:NONE;">
+<A HREF="HTTP://SLIPSUM.COM">LOREM IPSUM</A></DIV>
+
+<!-- END SLIPSUM CODE -->
+    
+</div>
 
     <div class="body-content">
+        
 <!--
         <div class="row">
             <div class="col-lg-4">
@@ -71,9 +96,56 @@ echo Carousel::widget([
             </div>
         </div>
 !-->
+<div id="downer">
+    <h1> Service </h1>
+<!-- START SLIPSUM CODE -->
 
+NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
+
+NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
+
+TEH PATH OV TEH RIGHTEOUS MAN IZ BESET ON ALL SIDEZ BY TEH INIQUITIEZ OV TEH S
+<h1> Service </h1>
+<!-- START SLIPSUM CODE -->
+
+NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
+
+NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
+
+TEH PATH OV TEH RIGHTEOUS MAN IZ BESET ON ALL SIDEZ BY TEH INIQUITIEZ OV TEH S
+<h1> Service </h1>
+<!-- START SLIPSUM CODE -->
+
+NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
+
+NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
+
+TEH PATH OV TEH RIGHTEOUS MAN IZ BESET ON ALL SIDEZ BY TEH INIQUITIEZ OV TEH S
     </div>
 </div>
 </div>
 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script> 
+<script type="text/javascript">
+$("#scroll a[href^='#']").on('click', function(e) {
 
+   // prevent default anchor click behavior
+   e.preventDefault();
+
+   // store hash
+   var hash = this.hash;
+
+   // animate
+   $('html, body').animate({
+       scrollTop: $(hash).offset().top
+     }, 1000, function(){
+
+       // when done, add hash to url
+       // (default click behaviour)
+       window.location.hash = hash;
+     });
+
+});
+
+</script>

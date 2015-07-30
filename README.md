@@ -2,7 +2,7 @@ TODO:
 ------
 Carousel Height
 Carousel Fade
-
+Proper DIVS for scrolling. Now its anchored to empty H1 at the top of index.php
 
 
 
