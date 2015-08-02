@@ -66,13 +66,13 @@ AppAsset::register($this);
                 'items' => [
                     ['label' => 'О КОМПАНИИ',
                         'items' => [
-                                     ['label' => 'Gekkostone', 'url' => '#'],
-                                     ['label' => 'Преимущества', 'url' => '#'],
+                                     ['label' => 'Gekkostone', 'url' => 'index.php?r=site%2Fcompany'],
+                                     ['label' => 'Преимущества', 'url' => 'index.php?r=site%2Fadvantages'],
                                      ['label' => 'Новости', 'url' => '#'],
                                      ['label' => 'Вакансии', 'url' => '#'],
-                                     ['label' => 'Отзывы и предложения', 'url' => '#'],
+                                     ['label' => 'Отзывы и предложения', 'url' => 'index.php?r=site%2Ffeedback'],
                                      ['label' => 'Партнерство', 'url' => '#'],
-                                     ['label' => 'Контакты', 'url' => '#'],
+                                     ['label' => 'Контакты', 'url' => 'index.php?r=site%2Fcontact'],
             ],]
             ,
                     ['label' => 'ПРОДУКЦИЯ',
@@ -120,13 +120,10 @@ AppAsset::register($this);
 ?>
 
 
-  <!-- <div class="container">  !-->
-            <?= Breadcrumbs::widget([
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-            <?= $content ?>
-      <!--  </div> !-->
-    </div>
+
+<?= $content ?>
+
+
 
     <footer class="footer">
         <div class="container">

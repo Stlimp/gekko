@@ -2,13 +2,12 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-
 ?>
-<div class="site-contact">
+<div class="site-feedback">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        Страница контакты
+        Страница Отзывы и предложения
     </p>
 
 </div>

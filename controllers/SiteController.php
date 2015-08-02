@@ -93,4 +93,21 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionCompany()
+    {
+        return $this->render('company');
+    }
+
+    public function actionAdvantages()
+    {
+        return $this->render('advantages');
+    }
+
+    public function actionFeedback()
+    {
+        return $this->render('feedback');
+    }
+
+
 }
