@@ -2,12 +2,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
+$this->title = 'О компании';
 ?>
-<div class="site-advantages">
-    <h1><?= Html::encode($this->title) ?></h1>
-
+<div class="site-index">
+   <div class="jumbotron">
+ 
     <p>
-        Страница Наши преимущества
+       Страница Наши преимущества
     </p>
-
+	</div>
 </div>
+
