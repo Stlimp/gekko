@@ -304,3 +304,56 @@ body,
   margin: 0;
   background-color: #ff0000;
   }
+
+
+
+.left-half{
+  width:55%;
+  float:left;
+
+}
+.right-half{
+  width:45%;
+  float:left;
+
+}
+
+  .left-side-half-header {
+     background: #D7D5C1;
+    float:left;
+    font-family:Corbel;
+    font-weight:bolder;
+    font-size:16px;
+    text-align:left;
+ 
+}
+
+.right-side-half-header {
+    background: #D7D5C1;
+    float:left;
+    font-family:Corbel;
+    font-weight:bolder;
+    font-size:16px;
+    text-align:left;
+    
+}
+.left-side-half-text {
+    float:left;
+    font-family:Corbel;
+    font-weight:bolder;
+    text-align:left;
+    /*line-height:120%;межстрочный интервал*/
+}
+
+.right-side-half-text {
+
+    float:left;
+    font-family:Corbel;
+    font-weight:bolder;
+    text-align:left;
+
+    /*line-height:120%;межстрочный интервал*/
+}
+.jumbotron p{
+  font-size:12px;
+}
