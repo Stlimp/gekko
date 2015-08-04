@@ -319,12 +319,27 @@ body,
 
     /*line-height:120%;межстрочный интервал*/
 }
-
-
-.advantage-item:before{
-     content: "• ";
-    color: red; 
+.page-header {
+  width:100%;
+    background: #D7D5C1;
+    float:left;
+    font-family:Corbel;
+    font-weight:bolder;
+    font-size:16px;
+    text-align:left;
 }
+.page-text {
+  width:100%;
+  text-align:left;
+    float:left;
+    font-family:Corbel;
+  
+    text-align:left;
+    padding-right: 30px;
+    /*line-height:120%;межстрочный интервал*/
+}
+
+
 
 .jumbotron p{
   font-size:12px;

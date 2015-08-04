@@ -84,7 +84,7 @@ $this->title = 'Gekkostone';
 					$key = array_rand($input,1); 
 					echo "<h1>$input[$key]</h1>"	; 
 				?>
-</div>
+			</div>
 			</div>
 		</div>
 	</div>

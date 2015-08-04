@@ -108,6 +108,13 @@ class SiteController extends Controller
     {
         return $this->render('feedback');
     }
-
+    public function actionWarranty()
+    {
+        return $this->render('warranty');
+    }
+    public function actionWarning()
+    {
+        return $this->render('warning');
+    }
 
 }
