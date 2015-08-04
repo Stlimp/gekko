@@ -34,7 +34,7 @@ $this->title = 'Gekkostone';
 			</div>
 			<div class="left-side-half-header">ПРИБОРНЫЙ КОНТРОЛЬ ЦВЕТА</div>
 			<div class="left-side-half-text">
-				<p>Для контроля окрасов декоративного камня используется 
+				<p><img src="images/content/colorcontrol.jpg" align="right">Для контроля окрасов декоративного камня используется 
 				прецизионный спектрофотометр X-Rite SP62. Вычи-
 				сление требуемого цвета производится в расчетном 
 				программном комплексе с большой степенью точности. 
@@ -53,7 +53,7 @@ $this->title = 'Gekkostone';
 		</div>
 		<div class="right-half">
 		   	<div class="right-side-half-header">ОСОБАЯ МЕТОДИКА ОКРАШИВАНИЯ В МАССЕ</div>
-		    <div class="right-side-half-text"><p>Нашим предприятием разработана специальная технология окрашивания камня в 
+		    <div class="right-side-half-text"><p><img src="images/content/Lenxess.jpg" align="left">Нашим предприятием разработана специальная технология окрашивания камня в 
 				массе, позволяющая в условиях производ-
 				ства моделировать естественные природ-
 				ные процессы пигментации натуральной 
@@ -69,6 +69,23 @@ $this->title = 'Gekkostone';
 				лютно идентичный химический состав!</p>
 			</div>
 			<div class="right-side-half-header">ПРЕИМУЩЕСТВА КАМНЯ <b>GEKKOSTONE</b></div>
+			<div class="right-side-half-text">
+				<ul style="-webkit-padding-start: 15px;">
+					<li style="color:#D0272E"><span style="color:#666666">фактура натурального камня!</span></li>
+					<li style="color:#D0272E"><span style="color:#666666">натуральные и экологически чистые сырьевые компоненты!</span></li>
+					<li style="color:#D0272E"><span style="color:#666666">уникальная методика окрашивания и приборный контроль цвета!</span></li>
+					<li style="color:#D0272E"><span style="color:#666666">естественность и долговечность окрасов!</span></li>
+					<li style="color:#D0272E"><span style="color:#666666">морозостойкость более 150 циклов!</span></li>
+				</ul>
+			</div>
+			<div class="right-side-half-text" style="text-align:right;font-family:Impact;">
+				<?php 
+					$input = array('ИСКУССТВО ДЕКОРАТИВНОГО <span style="color: #D0272E">К</span>АМНЯ', 'ТВОЕ ПРОСТРАНСТВО, ТВОЙ <span style="color: #D0272E">К</span>АМЕНЬ', 'БУДУЩЕЕ СТРОИТСЯ НА <span style="color: #D0272E">К</span>АМНЕ!', 'СОВЕРШЕННАЯ ФИЛОСОФИЯ <span style="color: #D0272E">К</span>АМНЯ', 'МЫ ДЕЛАЕМ <span style="color: #D0272E">К</span>АМЕНЬ НАТУРАЛЬНЫМ!');
+					$key = array_rand($input,1); 
+					echo "<h1>$input[$key]</h1>"	; 
+				?>
+</div>
+			</div>
 		</div>
 	</div>
 </div>
