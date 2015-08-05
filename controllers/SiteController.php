@@ -116,5 +116,9 @@ class SiteController extends Controller
     {
         return $this->render('warning');
     }
+    public function actionPublicoffer()
+    {
+        return $this->render('publicoffer');
+    }
 
 }

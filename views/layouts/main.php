@@ -28,7 +28,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'Gekkostone',
+                'brandLabel' => Html::img('images/logo.png', ['alt'=>Yii::$app->name]),
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
@@ -96,7 +96,7 @@ AppAsset::register($this);
                                      ['label' => 'Технические данные', 'url' => '#'],
                                      ['label' => 'Цветопередача', 'url' => 'index.php?r=site%2Fwarning'],
                                      ['label' => 'Гарантия качества', 'url' => 'index.php?r=site%2Fwarranty'],
-                                     ['label' => 'Публичная оферта', 'url' => '#'],
+                                     ['label' => 'Публичная оферта', 'url' => 'index.php?r=site%2Fpublicoffer'],
                                      ['label' => 'Каталог и прайс-лист', 'url' => '#'],
                                      ['label' => 'Текстуры камня', 'url' => '#'],
             ],],
@@ -112,6 +112,7 @@ AppAsset::register($this);
                         'items' => [
                                      ['label' => 'Дизайн проект', 'url' => '#'],
                                      ['label' => 'Подбор камня', 'url' => '#'],
+                                     ['label' => 'Доставка камня', 'url' => '#'],
                                      ['label' => 'Облицовка', 'url' => '#'],
             ],],
             ]]);
@@ -127,26 +128,17 @@ AppAsset::register($this);
             ]) ?>!-->
             <?= $content ?>
         </div> 
-   </div>
-
-
-
-    <footer class="footer">
-        <div class="container">
-           <p>
-            <ul class="footer_buttons">
-                <ul><a href="#">Кнопки соц сетей</a></ul>
-                 <li><a href="#">Кнопки соц сетей</a></li>
-                 <li><a href="#">Кнопки соц сетей</a></li>
-                 <li><a href="#">Кнопки соц сетей</a></li>                
-                 <li><a href="#">Кнопки соц сетей</a></li>
-                 <li><a href="#">Кнопки соц сетей</a></li>
-                 <li><a href="#">Кнопки соц сетей</a></li>
-            </ul>
-   </p>
-        </div>
+    </div>
+    <footer class="footer" style="padding:0;height:80px;text-align:justify;padding-left:50px;padding-right:50px;">
+        <img src="images/footer/social.jpg" style="vertical-align:top;height:100%">
+        <div class="footer-image"><img src="images/footer/sitemap.jpg"></div>
+        <div class="footer-image"><img src="images/footer/gallery.jpg"></div>
+        <div class="footer-image"><img src="images/footer/partnership.jpg"></div>
+        <div class="footer-image"><img src="images/footer/contacts.jpg"></div>
+        <div class="footer-image"><img src="images/footer/publicoffer.jpg"></div>
+            <div class="footer-image"><img src="images/footer/copyright.jpg"></div>
     </footer>
-
+<span><p style="text-align:center;vertical-align:middle;font-family:Century Gothic;">©GEKKOSTONE <?php echo date("Y"); ?></p></span>
 <?php $this->endBody() ?>
 </body>
 </html>
