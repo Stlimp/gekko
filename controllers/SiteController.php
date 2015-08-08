@@ -9,6 +9,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\VacancyForm;
+use app\models\PartnershipForm;
 
 class SiteController extends Controller
 {
@@ -130,6 +131,17 @@ class SiteController extends Controller
            Yii::$app->session->setFlash('success',"Ваша заявка успешно отправлена!");
         }
         return $this->render('vacancy',['model' =>$model]);
+    }
+
+    public function actionPartnership()
+    {
+        $model=new PartnershipForm;
+
+        if($model->load(Yii::$app->request->post()) &&$model->validate())
+        {
+           Yii::$app->session->setFlash('success',"Ваша заявка успешно отправлена!");
+        }
+        return $this->render('partnership',['model' =>$model]);
     }
 
 }

@@ -71,7 +71,7 @@ AppAsset::register($this);
                                      ['label' => 'Новости', 'url' => '#'],
                                      ['label' => 'Вакансии', 'url' => 'index.php?r=site%2Fvacancy'],
                                      ['label' => 'Отзывы и предложения', 'url' => 'index.php?r=site%2Ffeedback'],
-                                     ['label' => 'Партнерство', 'url' => '#'],
+                                     ['label' => 'Партнерство', 'url' => 'index.php?r=site%2Fpartnership'],
                                      ['label' => 'Контакты', 'url' => 'index.php?r=site%2Fcontact'],
             ],]
             ,
