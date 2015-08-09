@@ -11,8 +11,8 @@ class m150809_202419_q_and_a extends Migration
         $this->createTable('gkk_q_and_a', array(
             'id' => Schema::TYPE_PK,
             'chapter' => 'string NOT NULL',
-            'question' => 'text DEFAULT NULL',
-            'answer' => 'text DEFAULT NULL',
+            'question' => 'text NOT NULL',
+            'answer' => 'text NOT NULL',
          ), 'ENGINE=InnoDB');
 
     }
