@@ -92,7 +92,7 @@ AppAsset::register($this);
                     ['label' => 'ИНФОРМАЦИЯ', 
                         'items' => [
                                      ['label' => 'Укладка камня', 'url' => '#'],
-                                     ['label' => 'Вопрос - ответ', 'url' => '#'],
+                                     ['label' => 'Вопрос - ответ', 'url' => 'index.php?r=faq%2Findex'],
                                      ['label' => 'Технические данные', 'url' => '#'],
                                      ['label' => 'Цветопередача', 'url' => 'index.php?r=site%2Fwarning'],
                                      ['label' => 'Гарантия качества', 'url' => 'index.php?r=site%2Fwarranty'],
