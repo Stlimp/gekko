@@ -10,6 +10,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\VacancyForm;
 use app\models\PartnershipForm;
+use app\models\FeedbackForm;
 
 class SiteController extends Controller
 {
@@ -108,8 +109,15 @@ class SiteController extends Controller
 
     public function actionFeedback()
     {
-        return $this->render('feedback');
+         $model=new FeedbackForm;
+
+        if($model->load(Yii::$app->request->post()) &&$model->validate())
+        {
+           Yii::$app->session->setFlash('success',"Ваш отзыв успешно отправлен!");
+        }
+        return $this->render('feedback',['model' =>$model]);
     }
+
     public function actionWarranty()
     {
         return $this->render('warranty');
