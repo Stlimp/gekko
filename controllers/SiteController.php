@@ -12,6 +12,7 @@ use app\models\VacancyForm;
 use app\models\PartnershipForm;
 use app\models\FeedbackForm;
 
+
 class SiteController extends Controller
 {
     public function behaviors()

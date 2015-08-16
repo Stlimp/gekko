@@ -9,11 +9,13 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
+
 /**
  * FaqController implements the CRUD actions for Faq model.
  */
 class FaqController extends Controller
 {
+    public $enableCsrfValidation = false;
     public function behaviors()
     {
         return [
@@ -32,12 +34,18 @@ class FaqController extends Controller
      */
     public function actionIndex()
     {
+        $id=Faq::find()->select('id')->distinct()->all();
+        $chapter = Faq::find()->select('chapter')->distinct()->all();
+        $faq = Faq::find()->all();
         $dataProvider = new ActiveDataProvider([
             'query' => Faq::find(),
         ]);
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+            'id' =>$id,
+            'chapter' =>$chapter,
+            'faq' => $faq
         ]);
     }
 
