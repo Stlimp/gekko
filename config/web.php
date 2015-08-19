@@ -39,6 +39,12 @@ $config = [
         ],
         'db' => require(__DIR__ . '/db.php'),
     ],
+    'modules' => [
+          'redactor' => 'yii\redactor\RedactorModule',
+          'uploadDir' => '@webroot/uploa',
+          'uploadUrl' => '@web/images/content/news',
+          'imageAllowExtensions' => ['jpg','png','gif']
+      ],
     'params' => $params,
 ];
 

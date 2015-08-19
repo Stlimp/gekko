@@ -15,6 +15,7 @@ use app\models\FeedbackForm;
 
 class SiteController extends Controller
 {
+    public $enableCsrfValidation = false;
     public function behaviors()
     {
         return [

@@ -3,23 +3,22 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m150809_202419_q_and_a extends Migration
+class m150818_191803_gkk_news extends Migration
 {
     public function up()
     {
-        echo ("Table gkk_q_and_a is created!\n");
-        $this->createTable('gkk_q_and_a', array(
+        echo ("Table gkk_news is created!\n");
+        $this->createTable('gkk_news', array(
             'id' => Schema::TYPE_PK,
-            'chapter' => 'string NOT NULL',
-            'question' => 'text NOT NULL',
-            'answer' => 'text NOT NULL',
+            'post_image' =>'string NOT NULL',
+            'post' => 'text NOT NULL',
+            'date' => 'date NOT NULL',
          ), 'ENGINE=InnoDB');
-
     }
 
     public function down()
     {
-        echo ("Table gkk_q_and_a is dropped!\n");
+        echo ("Table gkk_news is dropped!\n");
         $this->dropTable('gkk_q_and_a');
     }
 

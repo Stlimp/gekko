@@ -68,7 +68,7 @@ AppAsset::register($this);
                         'items' => [
                                      ['label' => 'Gekkostone', 'url' => 'index.php?r=site%2Fcompany'],
                                      ['label' => 'Преимущества', 'url' => 'index.php?r=site%2Fadvantages'],
-                                     ['label' => 'Новости', 'url' => '#'],
+                                     ['label' => 'Новости', 'url' => 'index.php?r=news%2Findex'],
                                      ['label' => 'Вакансии', 'url' => 'index.php?r=site%2Fvacancy'],
                                      ['label' => 'Отзывы и предложения', 'url' => 'index.php?r=site%2Ffeedback'],
                                      ['label' => 'Партнерство', 'url' => 'index.php?r=site%2Fpartnership'],
