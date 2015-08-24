@@ -35,6 +35,7 @@ class NewsController extends Controller
     {
 
         $post=News::find()->all();
+        $years=News::find()->select('date')->distinct()->all();
 
         $dataProvider = new ActiveDataProvider([
             'query' => News::find(),
@@ -43,6 +44,7 @@ class NewsController extends Controller
         return $this->render('index', [
             'dataProvider' => $dataProvider,
             'post'=>$post,
+            'years'=>$years,
         ]);
     }
 

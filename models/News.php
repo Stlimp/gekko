@@ -42,9 +42,9 @@ class News extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'post_image' => 'Post Image',
-            'post' => 'Post',
-            'date' => 'Date',
+            'post_image' => 'Главное изображение',
+            'post' => 'Текст',
+            'date' => 'Дата',
         ];
     }
 }
