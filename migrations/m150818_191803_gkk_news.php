@@ -11,6 +11,7 @@ class m150818_191803_gkk_news extends Migration
         $this->createTable('gkk_news', array(
             'id' => Schema::TYPE_PK,
             'post_image' =>'string NOT NULL',
+            'header' =>'string NOT NULL',
             'post' => 'text NOT NULL',
             'date' => 'date NOT NULL',
          ), 'ENGINE=InnoDB');

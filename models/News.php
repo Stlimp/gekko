@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $id
  * @property string $post_image
+ * @property string $header
  * @property string $post
  * @property string $date
  */
@@ -28,10 +29,10 @@ class News extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['post_image', 'post', 'date'], 'required'],
+            [['post_image', 'header', 'post', 'date'], 'required'],
             [['post'], 'string'],
             [['date'], 'safe'],
-            [['post_image'], 'string', 'max' => 255]
+            [['post_image', 'header'], 'string', 'max' => 255]
         ];
     }
 
@@ -42,7 +43,8 @@ class News extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'post_image' => 'Главное изображение',
+            'post_image' => 'Изображение',
+            'header' => 'Заголовок',
             'post' => 'Текст',
             'date' => 'Дата',
         ];

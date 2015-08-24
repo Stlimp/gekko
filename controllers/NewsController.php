@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\News;
-use yii\data\ActiveDataProvider;
+use app\models\NewsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -14,7 +14,6 @@ use yii\filters\VerbFilter;
  */
 class NewsController extends Controller
 {
-    public $enableCsrfValidation = false;
     public function behaviors()
     {
         return [
@@ -33,18 +32,14 @@ class NewsController extends Controller
      */
     public function actionIndex()
     {
-
-        $post=News::find()->all();
-        $years=News::find()->select('date')->distinct()->all();
-
-        $dataProvider = new ActiveDataProvider([
-            'query' => News::find(),
-        ]);
+        $searchModel = new NewsSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $post = $dataProvider->getModels();
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'post'=>$post,
-            'years'=>$years,
+            'post' =>$post
         ]);
     }
 

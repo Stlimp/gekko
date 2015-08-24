@@ -15,6 +15,7 @@ use yii\jui\DatePicker;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'post_image')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'header')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'post')->widget(\yii\redactor\widgets\Redactor::className(),[
     'clientOptions' => [
