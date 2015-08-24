@@ -149,7 +149,8 @@ AppAsset::register($this);
 <?php $this->endBody() ?>
 </body>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> 
+<!-- script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script !-->
+
 <script type="text/javascript" class="noprint">
     
     /*Menu hover. Replaced css way ov hover*/

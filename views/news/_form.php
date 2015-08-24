@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\jui\DatePicker; 
 
 
 /* @var $this yii\web\View */
@@ -19,8 +20,12 @@ use yii\widgets\ActiveForm;
     'clientOptions' => [
     	'imageUpload' => \yii\helpers\Url::to(['/redactor/upload/image'])]]) ?>
     
-
-    <?= $form->field($model, 'date')->textInput() ?>
+    <?= $form->field($model, 'date')->widget(DatePicker::classname(), [
+        'inline' => false,
+        'language' => 'ru',
+        'dateFormat' => 'yyyy-MM-dd',
+        'value' =>date('Y-m-d'),
+    ]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

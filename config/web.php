@@ -41,7 +41,7 @@ $config = [
     ],
     'modules' => [
           'redactor' => 'yii\redactor\RedactorModule',
-          'uploadDir' => '@webroot/uploa',
+          'uploadDir' => '@webroot/images/content/news',
           'uploadUrl' => '@web/images/content/news',
           'imageAllowExtensions' => ['jpg','png','gif']
       ],
