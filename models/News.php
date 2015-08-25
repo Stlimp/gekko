@@ -18,6 +18,8 @@ class News extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $image;
+
     public static function tableName()
     {
         return 'gkk_news';
@@ -29,8 +31,9 @@ class News extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['post_image', 'header', 'post', 'date'], 'required'],
+            [['header', 'post', 'date'], 'required'],
             [['post'], 'string'],
+            [['image'],'file','extensions'=>'jpg, gif, png, jpeg'],
             [['date'], 'safe'],
             [['post_image', 'header'], 'string', 'max' => 255]
         ];
@@ -43,10 +46,11 @@ class News extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'post_image' => 'Изображение',
+            'image' => 'Изображение',
             'header' => 'Заголовок',
             'post' => 'Текст',
             'date' => 'Дата',
+            'post_image'=> 'Изображение'
         ];
     }
 }

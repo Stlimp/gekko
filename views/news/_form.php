@@ -12,9 +12,10 @@ use yii\jui\DatePicker;
 
 <div class="news-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
 
-    <?= $form->field($model, 'post_image')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'image') -> fileInput(); ?> 
+
     <?= $form->field($model, 'header')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'post')->widget(\yii\redactor\widgets\Redactor::className(),[

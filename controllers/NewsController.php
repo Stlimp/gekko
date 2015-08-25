@@ -8,12 +8,14 @@ use app\models\NewsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * NewsController implements the CRUD actions for News model.
  */
 class NewsController extends Controller
 {
+    public $enableCsrfValidation = false;
     public function behaviors()
     {
         return [
@@ -64,7 +66,15 @@ class NewsController extends Controller
     {
         $model = new News();
 
+        $imageName=$model->id;
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->image = UploadedFile::getInstance($model,'image');
+            $model->post_image = 'images/content/news/thumbnails/news'.$model->image->name;
+            $model->save();
+            $model->image->saveAs(Yii::getAlias('@webroot') .'/images/content/news/thumbnails/news'.$model->image->name);
+            
+           
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('create', [
