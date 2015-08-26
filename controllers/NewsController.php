@@ -10,6 +10,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 
+
 /**
  * NewsController implements the CRUD actions for News model.
  */
@@ -38,10 +39,21 @@ class NewsController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $post = $dataProvider->getModels();
 
+        $tempModel = new News();
+        $years = $tempModel::find()->select('date')->all();
+
+        $yearFilter = array();
+        foreach ($years as $yearItem)
+        {
+            array_push($yearFilter, date('Y', strtotime($yearItem->date)));
+        }
+        $yearFilter=array_reverse(array_unique($yearFilter));
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'post' =>$post
+            'post' =>$post,
+            'yearFilter' =>$yearFilter
         ]);
     }
 
