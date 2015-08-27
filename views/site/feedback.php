@@ -37,7 +37,7 @@ use yii\widgets\ActiveForm;
 				   	}
 				else {
 					$form =ActiveForm::begin();
-					echo $form->field($model,'name')->label('ФИО');
+					echo $form->field($model,'name')->textInput()->label('ФИО');
 					echo $form->field($model,'text')->label('Ваше обращение');
 					echo $form->field($model, 'department')->dropDownList(['a' => 'Отдел 1', 'b' => 'Отдел 2', 'c' => 'Отдел 3'], ['prompt'=>''])->label('Выберите отдел');
 					echo $form->field($model,'email')->label('Контактный e-mail');

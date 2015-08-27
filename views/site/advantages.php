@@ -86,7 +86,6 @@ $this->title = 'Gekkostone';
 				?>
 			</div>
 			</div>
-		</div>
 	</div>
 </div>
 

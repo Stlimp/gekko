@@ -144,7 +144,7 @@ use yii\widgets\ActiveForm;
 			echo $form->field($model,'timeperiod')->label('Период работы');
 			echo $form->field($model,'mainactivity')->label('Основной вид деятельности фирмы или ИП');
 			echo $form->field($model, 'typeofpartnership')->dropDownList(['a' => 'Партнерство с организициями оптово-розничной торговли', 'b' => 'Партнерство с дизайнерами и архитекторами', 'c' => 'Партнерство со строительными организациями', 'd' => 'Рекламное партнерство'], ['prompt'=>''])->label('Желаемый вид сотрудничества');
-			echo $form->field($model,'info')->label('Дополнительная информация и пожелания заявителя');
+			echo $form->field($model,'info')->textarea()->label('Дополнительная информация и пожелания заявителя');
 			echo $form->field($model,'contactperson')->label('Контактное лицо для обратной связи, ФИО');
 			echo $form->field($model,'position')->label('Должность');
 			echo $form->field($model,'email')->label('Контактный e-mail для связи');
