@@ -75,4 +75,13 @@ return array (
       '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
     ),
   ),
+  'newerton/yii2-fancybox' => 
+  array (
+    'name' => 'newerton/yii2-fancybox',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@newerton/fancybox' => $vendorDir . '/newerton/yii2-fancybox',
+    ),
+  ),
 );

@@ -1,5 +1,6 @@
 <?php
 /* @var $this yii\web\View */
+use yii\helpers\Html;
 $this->title = 'Gekkostone';
 ?>
 <div id="upper"></div>
@@ -26,6 +27,38 @@ echo Carousel::widget([
 <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 100px;right:100px;z-index: 1015";> <a href="#downer" class="btn btn-default start-me">Down</a>
     <div class="jumbotron">
       <div id="downer"></div>
+      
+      <?php
+echo newerton\fancybox\FancyBox::widget([
+    'target' => 'a[rel=fancybox]',
+    'helpers' => true,
+    'mouse' => true,
+    'config' => [
+        'maxWidth' => '90%',
+        'maxHeight' => '90%',
+        'playSpeed' => 7000,
+        'padding' => 0,
+        'fitToView' => false,
+        'width' => '100%',
+        'height' => '100%',
+        'autoSize' => false,
+        'closeClick' => false,
+        'openEffect' => 'elastic',
+        'closeEffect' => 'elastic',
+        'prevEffect' => 'elastic',
+        'nextEffect' => 'elastic',
+        'closeBtn' => false,
+        'openOpacity' => true,
+        'arrows' =>true,
+ 
+    ]
+]);
+
+echo Html::a(Html::img('images/content/aboutcompany.jpg'), 'images/content/aboutcompany.jpg', ['rel' => 'fancybox']);
+echo Html::a(Html::img('images/content/colorcontrol.jpg'), 'images/content/colorcontrol.jpg', ['rel' => 'fancybox']);
+?>
+
+
       <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;top: 100px";> <a href="#upper" class="btn btn-default start-me"> Up </a>   </div>
        <h1 id ="congrats">Congratulations!</h1>
 
