@@ -11,47 +11,20 @@ $this->title = 'Products';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="products-index">
+    <div class="page-header">ДЕКОРИТАВНЫЙ КАМЕНЬ <b>GEKKOSTONE</b></div>
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+ <div class="gallery">   
+    <?php foreach ($products as $productItem){ ?>
+        <div class="product">
+        <a target="_blank" href="<?= $productItem->product_name ?>.html"><img src="<?= $productItem->product_image?>" alt="<?= $productItem->product_name?>" width="220" height="150"></a>
+        <h3 style="margin:0"><?= $productItem->product_name?></h3>
+        </div>
+    <?php } ?>
+</div>
 
     <p>
         <?= Html::a('Create Products', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
- <div class="gallery">   
-    <div  class="product" >
-     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
-    </div>
-
-<div  class="product" >
-     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
-    </div>
-    <div  class="product" >
-     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
-    </div>
-    <div  class="product" >
-     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
-    </div>
-    <div  class="product" >
-     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
-    </div>
-    <div  class="product" >
-     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
-    </div>
-    <div  class="product" >
-     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
-    </div>
-    <div  class="product" >
-     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
-    </div>
-    <div  class="product" >
-     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
-    </div>
-
-</div>
-
-
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

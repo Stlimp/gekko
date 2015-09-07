@@ -17,6 +17,8 @@ class Products extends \yii\db\ActiveRecord
     /**
      * @inheritdoc
      */
+    public $image;
+
     public static function tableName()
     {
         return 'gkk_products';
@@ -28,8 +30,9 @@ class Products extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['product_image', 'product_category', 'product_name'], 'required'],
-            [['product_image', 'product_category', 'product_name'], 'string', 'max' => 255]
+            [[ 'product_category', 'product_name'], 'required'],
+            [['product_category', 'product_name'], 'string', 'max' => 255],
+            [['product_image'],'file','extensions'=>'jpg, gif, png, jpeg']
         ];
     }
 
@@ -40,9 +43,9 @@ class Products extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'product_image' => 'Product Image',
-            'product_category' => 'Product Category',
-            'product_name' => 'Product Name',
+            'product_image' => 'Изображение',
+            'product_category' => 'Категория',
+            'product_name' => 'Имя',
         ];
     }
 }
