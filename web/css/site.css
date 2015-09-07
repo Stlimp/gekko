@@ -412,3 +412,26 @@ body,
 .product a:hover img{
     border: 2px solid #a94442;
 }
+
+
+.photogallery-item {  
+
+    display: inline-block;
+    *display:inline; /* ie7 fix */
+    float: none; /* this is the part that makes it work */
+    margin:5px;
+
+} 
+.photogallery-item a{
+  
+}
+.photogallery-item a img {
+
+    border: 2px solid #eed3d7;
+    border-radius: 10px 0  10px;
+}
+
+
+.photogallery-item a:hover img{
+    border: 2px solid #a94442;
+}

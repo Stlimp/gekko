@@ -85,9 +85,9 @@ AppAsset::register($this);
             ],],
                     ['label' => 'ФОТОГАЛЕРЕЯ',
                         'items' => [
-                                     ['label' => 'Жилые дома и квартиры', 'url' => '#'],
-                                     ['label' => 'Коммерческие объекты', 'url' => '#'],
-                                     ['label' => 'До и после', 'url' => '#'],
+                                     ['label' => 'Жилые дома и квартиры', 'url' => 'index.php?r=photogallery%2Findex'],
+                                     ['label' => 'Коммерческие объекты', 'url' => 'index.php?r=photogallery%2Findex'],
+                                     ['label' => 'До и после', 'url' => 'index.php?r=photogallery%2Findex'],
             ],],
                     ['label' => 'ИНФОРМАЦИЯ', 
                         'items' => [
