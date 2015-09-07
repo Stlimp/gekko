@@ -77,7 +77,7 @@ AppAsset::register($this);
             ,
                     ['label' => 'ПРОДУКЦИЯ',
                         'items' => [
-                                     ['label' => 'Вся продукция', 'url' => '#'],
+                                     ['label' => 'Вся продукция', 'url' => 'index.php?r=products%2Findex'],
                                      ['label' => 'Кирпич тонкий', 'url' => '#'],
                                      ['label' => 'Кирпич облицовочный', 'url' => '#'],
                                      ['label' => 'Камень облицовочный', 'url' => '#'],
@@ -136,6 +136,7 @@ AppAsset::register($this);
         <div class="footer-image"><img src="images/footer/partnership.jpg"></div>
         <div class="footer-image"><img src="images/footer/contacts.jpg"></div>
         <div class="footer-image"><img src="images/footer/publicoffer.jpg"></div>
+
             <div class="footer-image"><img src="images/footer/copyright.jpg"></div>
     </footer>
 <span><p style="text-align:center;vertical-align:middle;font-family:Century Gothic;">©GEKKOSTONE <?php echo date("Y"); ?></p></span>

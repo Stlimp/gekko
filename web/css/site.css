@@ -386,3 +386,32 @@ body,
 .navbar-brand img{
   height:80px;
 }
+
+.gallery{
+  text-align:left;
+}
+
+.product {  
+
+        display: inline-block;
+    *display:inline; /* ie7 fix */
+    float: none; /* this is the part that makes it work */
+    margin:10px;
+
+} 
+.product a{
+  
+}
+.product a img {
+
+    border: 2px solid #eed3d7;
+    border-radius: 10px 0  10px;
+
+
+
+}
+}
+
+.product a:hover img{
+    border: 2px solid #a94442;
+}

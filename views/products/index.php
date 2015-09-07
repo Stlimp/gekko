@@ -1,0 +1,71 @@
+<?php
+
+use yii\helpers\Html;
+use yii\grid\GridView;
+
+/* @var $this yii\web\View */
+/* @var $searchModel app\models\ProductsSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
+
+$this->title = 'Products';
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="products-index">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+
+    <p>
+        <?= Html::a('Create Products', ['create'], ['class' => 'btn btn-success']) ?>
+    </p>
+
+ <div class="gallery">   
+    <div  class="product" >
+     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
+    </div>
+
+<div  class="product" >
+     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
+    </div>
+    <div  class="product" >
+     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
+    </div>
+    <div  class="product" >
+     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
+    </div>
+    <div  class="product" >
+     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
+    </div>
+    <div  class="product" >
+     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
+    </div>
+    <div  class="product" >
+     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
+    </div>
+    <div  class="product" >
+     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
+    </div>
+    <div  class="product" >
+     <a target="_blank" href="klematis_big.htm"><img src="http://www.w3schools.com/css/klematis_big.jpg" alt="Klematis" width="220" height="180"></a>
+    </div>
+
+</div>
+
+
+
+    <?= GridView::widget([
+        'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => [
+            ['class' => 'yii\grid\SerialColumn'],
+
+            'id',
+            'product_image',
+            'product_category',
+            'product_name',
+
+            ['class' => 'yii\grid\ActionColumn'],
+        ],
+    ]); ?>
+
+</div>
