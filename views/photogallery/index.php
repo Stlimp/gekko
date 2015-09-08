@@ -11,14 +11,22 @@ $this->title = 'Photogalleries';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="photogallery-index">
-    <div class="page-header">ФОТОГАЛЛЕРЕЯ</div>
-    <div class="photogallery">   
-    <?php foreach ($photogallery as $photoItem){ ?>
-        <div class="photogallery-item">
-            <a target="_blank" href="<?= $photoItem->photo_name ?>.html"><img src="<?= $photoItem->photo_image?>" alt="<?= $photoItem->photo_name?>" width="100" height="75"></a>
-        </div>
-     <?php } ?>
-    </div>
+     
+        
+        <?php foreach ($photo_subcategory as  $subcategory =>$category ){ ?>
+                <div class="page-header"><?= $category?> - <?= $subcategory?></div>
+                <div class="photogallery">  
+                <?php foreach ($photo_image as  $image=> $subcategoryItem ){ ?>
+                    <?php if( $subcategoryItem == $subcategory ){ ?>
+                    <div class="photogallery-item">
+                        <a target="_blank" href="<?= $image ?>.html"><img src="<?= $image?>" alt="<?= $image?>" width="100" height="75"></a>
+                    </div>
+                    <?php }?>
+                <?php }?>
+                </div>
+        <?php }?>
+
+         
 
     <p>
         <?= Html::a('Create Photogallery', ['create'], ['class' => 'btn btn-success']) ?>

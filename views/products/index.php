@@ -13,9 +13,9 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="products-index">
     <div class="page-header">ДЕКОРИТАВНЫЙ КАМЕНЬ <b>GEKKOSTONE</b></div>
 
- <div class="photogallery">   
+ <div class="gallery">   
     <?php foreach ($products as $productItem){ ?>
-        <div class="photogallery-item">
+        <div class="product">
         <a target="_blank" href="<?= $productItem->product_name ?>.html"><img src="<?= $productItem->product_image?>" alt="<?= $productItem->product_name?>" width="220" height="150"></a>
         <h3 style="margin:0"><?= $productItem->product_name?></h3>
         </div>

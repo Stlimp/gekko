@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+use yii\helpers\ArrayHelper;
 
 /**
  * PhotogalleryController implements the CRUD actions for Photogallery model.
@@ -36,11 +37,20 @@ class PhotogalleryController extends Controller
         $searchModel = new PhotogallerySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $photogallery = $dataProvider->getModels();
+        $subcategories =$searchModel::find()->select('photo_subcategory')->distinct()->all();
+         
+        $subcategories = ArrayHelper::map($photogallery,'photo_subcategory','photo_category');
+        $images = ArrayHelper::map($photogallery,'photo_image','photo_subcategory');
+
+        //$searchModel::find()->select('photo_subcategory')->distinct()->all();
+
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
             'photogallery'=>$photogallery,
+            'photo_subcategory'=>$subcategories,
+            'photo_image'=>$images,
         ]);
     }
 
@@ -93,6 +103,11 @@ class PhotogalleryController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->image = UploadedFile::getInstance($model,'image');
+            $model->photo_image = 'images/content/photogallery/'.$model->image->name;
+            $model->save();
+            $model->image->saveAs(Yii::getAlias('@webroot') .'/images/content/photogallery/'.$model->image->name);
+            
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
             return $this->render('update', [
