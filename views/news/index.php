@@ -10,8 +10,6 @@ mb_internal_encoding("UTF-8");
 $this->title = 'gekkostone';
 ?>
 <div class="news-index" >
-
-    <h1><?= Html::encode($this->title) ?></h1>
     <div class="news" style="width:80%;float:left;">
         <div class="post-header left-side-half-header" style="float:left;">НОВОСТИ</div>
         <?php foreach (array_reverse($post) as $postItem){ ?>
