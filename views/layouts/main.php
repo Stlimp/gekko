@@ -5,6 +5,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+$this->title = 'Gekkostone';
 
 /* @var $this \yii\web\View */
 /* @var $content string */
