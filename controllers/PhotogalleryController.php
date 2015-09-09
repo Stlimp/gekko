@@ -41,8 +41,7 @@ class PhotogalleryController extends Controller
          
         $subcategories = ArrayHelper::map($photogallery,'photo_subcategory','photo_category');
         $images = ArrayHelper::map($photogallery,'photo_image','photo_subcategory');
-
-        //$searchModel::find()->select('photo_subcategory')->distinct()->all();
+        
 
 
         return $this->render('index', [

@@ -10,21 +10,7 @@ $this->title = 'Gekkostone';
 <div class="site-index">
   
 
-       <?php 
-   use yii\bootstrap\Carousel;   
-echo Carousel::widget([
-    'options' => ['class' => 'carousel slide carousel-fade ','data-ride'=>'carousel','data-interval'=>'5000'],
-    'items' => [
-        // the item contains only the image
-        ['content' => '<img src="images/background/background1.jpg"/>'],
-        // equivalent to the above
-        ['content' => '<img src="images/background/background2.jpg"/>'],
-        // the item contains both the image and the caption
-        ['content' => '<img src="images/background/background3.jpg"/>'],
-        ['content' => '<img src="images/background/background4.jpg"/>'],
-    ]
-]);
-?>
+       
 <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 100px;right:100px;z-index: 1015";> <a href="#downer" class="btn btn-default start-me">Down</a>
     <div class="jumbotron">
       <div id="downer"></div>
@@ -107,9 +93,6 @@ echo newerton\fancybox\FancyBox::widget([
         'title' => ['type' => 'inside'],
         'title' => 'asd',
         'autoResize'=>true,
-
-
- 
     ]
 ]);
 
