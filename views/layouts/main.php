@@ -86,8 +86,8 @@ AppAsset::register($this);
             ],],
                     ['label' => 'ФОТОГАЛЕРЕЯ',
                         'items' => [
-                                     ['label' => 'Жилые дома и квартиры', 'url' => 'index.php?r=photogallery%2Findex'],
-                                     ['label' => 'Коммерческие объекты', 'url' => 'index.php?r=photogallery%2Findex'],
+                                     ['label' => 'Жилые дома и квартиры', 'url' => 'index.php?PhotogallerySearch%5Bphoto_category%5D=%D0%96%D0%B8%D0%BB%D1%8B%D0%B5+%D0%B4%D0%BE%D0%BC%D0%B0&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex'],
+                                     ['label' => 'Коммерческие объекты', 'url' => 'index.php?PhotogallerySearch%5Bphoto_category%5D=%D0%9A%D0%BE%D0%BC%D0%BC&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex'],
                                      ['label' => 'До и после', 'url' => 'index.php?r=photogallery%2Findex'],
             ],],
                     ['label' => 'ИНФОРМАЦИЯ', 
