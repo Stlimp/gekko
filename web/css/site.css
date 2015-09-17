@@ -186,6 +186,7 @@ body {
     font-weight:bolder;
     font-size:16px;
     text-align:left;
+    width:95%;
  
 }
 
@@ -196,6 +197,7 @@ body {
     font-weight:bolder;
     font-size:16px;
     text-align:left;
+    width:95%
     
 }
 .left-side-half-text {
@@ -204,6 +206,7 @@ body {
     font-weight:bolder;
     text-align:left;
     padding-right: 30px;
+
     /*line-height:120%;межстрочный интервал*/
 }
 
@@ -295,15 +298,18 @@ body {
 
 } 
 .photogallery-item a{
-  
+  display:block;  
 }
 .photogallery-item a img {
 
     border: 2px solid #eed3d7;
     border-radius: 10px 0  10px;
+    
 }
 
 
 .photogallery-item a:hover img{
     border: 2px solid #a94442;
 }
+
+
