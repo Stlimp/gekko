@@ -94,7 +94,7 @@ AppAsset::register($this);
                         'items' => [
                                      ['label' => 'Укладка камня', 'url' => '#'],
                                      ['label' => 'Вопрос - ответ', 'url' => 'index.php?r=faq%2Findex'],
-                                     ['label' => 'Технические данные', 'url' => '#'],
+                                     ['label' => 'Технические данные', 'url' => 'index.php?r=certificates%2Findex'],
                                      ['label' => 'Цветопередача', 'url' => 'index.php?r=site%2Fwarning'],
                                      ['label' => 'Гарантия качества', 'url' => 'index.php?r=site%2Fwarranty'],
                                      ['label' => 'Публичная оферта', 'url' => 'index.php?r=site%2Fpublicoffer'],

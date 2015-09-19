@@ -203,7 +203,7 @@ body {
 .left-side-half-text {
     float:left;
     font-family:Corbel;
-    font-weight:bolder;
+ 
     text-align:left;
     padding-right: 30px;
 
@@ -214,7 +214,7 @@ body {
 
     float:left;
     font-family:Corbel;
-    font-weight:bolder;
+
     text-align:left;
 
     /*line-height:120%;межстрочный интервал*/

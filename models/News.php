@@ -33,7 +33,7 @@ class News extends \yii\db\ActiveRecord
         return [
             [['header', 'post', 'date'], 'required'],
             [['post'], 'string'],
-            [['image'],'file','extensions'=>'jpg, gif, png, jpeg'],
+                
             [['date'], 'safe'],
             [['post_image', 'header'], 'string', 'max' => 255]
         ];
@@ -50,7 +50,7 @@ class News extends \yii\db\ActiveRecord
             'header' => 'Заголовок',
             'post' => 'Текст',
             'date' => 'Дата',
-            'post_image'=> 'Изображение'
+            'post_image'=> 'Изображение новости'
         ];
     }
 }
