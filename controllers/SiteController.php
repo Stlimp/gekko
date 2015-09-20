@@ -155,4 +155,10 @@ class SiteController extends Controller
         return $this->render('partnership',['model' =>$model]);
     }
 
+    public function actionPrice()
+    {
+        return $this->render('price');
+    }
+
+
 }

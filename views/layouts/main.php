@@ -98,7 +98,7 @@ AppAsset::register($this);
                                      ['label' => 'Цветопередача', 'url' => 'index.php?r=site%2Fwarning'],
                                      ['label' => 'Гарантия качества', 'url' => 'index.php?r=site%2Fwarranty'],
                                      ['label' => 'Публичная оферта', 'url' => 'index.php?r=site%2Fpublicoffer'],
-                                     ['label' => 'Каталог и прайс-лист', 'url' => '#'],
+                                     ['label' => 'Каталог и прайс-лист', 'url' => 'index.php?r=site%2Fprice'],
                                      ['label' => 'Текстуры камня', 'url' => '#'],
             ],],
                     ['label' => 'ГДЕ КУПИТЬ', 'url' => ['/site/index']],

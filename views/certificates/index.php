@@ -164,12 +164,13 @@ $this->title = 'Certificates';
         <div class="right-side-half-text">
             
             <div id="document">
+                <a href="http://example.com/files/myfile.pdf" target="_blank">
                 <div id="stbdoc">
                     <img src="images\content\certificates\png\5.png" alt="..." />    
                 </div>
                 <p>ПРОТОКОЛ ИСПЫТАНИЙ</p>
                 <p>№866 от 01.01.2013</p>
-
+                </a>
             </div>
             <div id="document">
                 <div id="tpdoc">
