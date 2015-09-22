@@ -159,6 +159,10 @@ class SiteController extends Controller
     {
         return $this->render('price');
     }
+    public function actionRocklaying()
+    {
+        return $this->render('rocklaying');
+    }
 
 
 }
