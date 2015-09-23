@@ -39,6 +39,8 @@ class NewsController extends Controller
     {
         $searchModel = new NewsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->setSort([
+                    'defaultOrder' => ['date'=>SORT_ASC],]);
         $post = $dataProvider->getModels();
 
         $tempModel = new News();
@@ -53,7 +55,9 @@ class NewsController extends Controller
         {
             array_push($yearFilter, date('Y', strtotime($yearItem->date)));
         }
+
         $yearFilter=array_reverse(array_unique($yearFilter));
+        arsort($yearFilter);
 
         return $this->render('index', [
             'searchModel' => $searchModel,

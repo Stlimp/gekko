@@ -2,7 +2,22 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 ?>
+<style >
+	#vacancyform-employment,#vacancyform-employmenttype,#vacancyform-education,#vacancyform-civilstatus,#vacancyform-personalauto,#vacancyform-smoker{
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+		
 
+	    background:transparent url("http://gekkostone/web/images/content/arrow.png") no-repeat right;
+	}
+	.form-control{
+		height:19px;
+		width:auto;
+		padding:0px;
+		padding-right:15px;
+		border-radius:5px 0px 5px 0px;
+	}
+</style>
 <div class="site-index">
    <div class="jumbotron">
    	<div class="left-half">

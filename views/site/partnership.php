@@ -3,6 +3,26 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 ?>
 
+<style >
+  #partnershipform-typeofpartnership{
+      -webkit-appearance: none;
+      -moz-appearance: none;
+    
+
+      background:transparent url("http://gekkostone/web/images/content/arrow.png") no-repeat right;
+  }
+  #partnershipform-info{
+    height:200px;
+    width:100% !important;
+  }
+  .form-control{
+    height:19px;
+    width:auto;
+    padding:0px;
+    padding-right:15px;
+    border-radius:5px 0px 5px 0px;
+  }
+</style>
 <div class="site-index">
    <div class="jumbotron">
    	<div class="left-half">

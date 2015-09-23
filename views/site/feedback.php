@@ -3,6 +3,23 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 ?>
+<style >
+	#feedbackform-department{
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+		
+
+	    background:transparent url("http://gekkostone/web/images/content/arrow.png") no-repeat right;
+	}
+	.form-control{
+		height:19px;
+		width:auto;
+		padding:0px;
+		padding-right:15px;
+		border-radius:5px 0px 5px 0px;
+	}
+</style>
+
 <div class="site-index">
    <div class="jumbotron">
  
