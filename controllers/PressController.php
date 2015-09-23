@@ -3,22 +3,17 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\News;
-use app\models\NewsSearch;
 use app\models\Press;
+use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
-use yii\imagine\Image;
-use yii\data\ActiveDataProvider;
 
 /**
- * NewsController implements the CRUD actions for News model.
+ * PressController implements the CRUD actions for Press model.
  */
-class NewsController extends Controller
+class PressController extends Controller
 {
-    public $enableCsrfValidation = false;
     public function behaviors()
     {
         return [
@@ -32,88 +27,68 @@ class NewsController extends Controller
     }
 
     /**
-     * Lists all News models.
+     * Lists all Press models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new NewsSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $post = $dataProvider->getModels();
-
-        $tempModel = new News();
-        $years = $tempModel::find()->select('date')->all();
-
-
-        $pressModel = new Press();
-        $pressLinks = $pressModel::find()->all();
-
-        $yearFilter = array();
-        foreach ($years as $yearItem)
-        {
-            array_push($yearFilter, date('Y', strtotime($yearItem->date)));
-        }
-        $yearFilter=array_reverse(array_unique($yearFilter));
+        $dataProvider = new ActiveDataProvider([
+            'query' => Press::find(),
+        ]);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'post' =>$post,
-            'yearFilter' =>$yearFilter,
-            'press' =>$pressLinks,
         ]);
     }
 
     /**
-     * Displays a single News model.
+     * Displays a single Press model.
      * @param integer $id
      * @return mixed
      */
     public function actionView($id)
     {
-        
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
     }
 
     /**
-     * Creates a new News model.
+     * Creates a new Press model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new News();
+        $dataProvider = new ActiveDataProvider([
+            'query' => Press::find(),
+        ]);
 
-        $imageName=$model->id;
+        $model = new Press();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $model->image = UploadedFile::getInstance($model,'image');
-            $model->post_image = 'images/content/news/thumbnails/news'.$model->image->name;
-            $model->save();
-
-            $model->image->saveAs(Yii::getAlias('@webroot') .'/images/content/news/thumbnails/news'.$model->image->name);
-            
-            Image::thumbnail(Yii::getAlias('@webroot') .'/images/content/news/thumbnails/news'.$model->image->name, 100,75)
-    ->save(Yii::getAlias(Yii::getAlias('@webroot') .'/images/content/news/thumbnails/news'.$model->image->name), ['quality' => 100]);
-           
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
+            
             return $this->render('create', [
                 'model' => $model,
+                'dataProvider' => $dataProvider,
             ]);
         }
     }
 
     /**
-     * Updates an existing News model.
+     * Updates an existing Press model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
      */
     public function actionUpdate($id)
     {
+        $dataProvider = new ActiveDataProvider([
+            'query' => Press::find(),
+        ]);
+
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -121,12 +96,13 @@ class NewsController extends Controller
         } else {
             return $this->render('update', [
                 'model' => $model,
+                'dataProvider' => $dataProvider,
             ]);
         }
     }
 
     /**
-     * Deletes an existing News model.
+     * Deletes an existing Press model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -139,24 +115,18 @@ class NewsController extends Controller
     }
 
     /**
-     * Finds the News model based on its primary key value.
+     * Finds the Press model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return News the loaded model
+     * @return Press the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = News::findOne($id)) !== null) {
+        if (($model = Press::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
-    }
-
-     public function actionPress()
-    {
-
-             return $this->redirect(array('press/create')   );
     }
 }

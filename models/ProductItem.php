@@ -45,13 +45,13 @@ class ProductItem extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'product_item_name' => 'Product Item Name',
-            'product_item_price' => 'Product Item Price',
-            'product_item_short_descr' => 'Product Item Short Descr',
-            'product_item_img_char' => 'Product Item Img Char',
-            'product_item_3ds_link' => 'Product Item 3ds Link',
-            'product_item_long_descr_main' => 'Product Item Long Descr Main',
-            'product_item_long_descr_additional' => 'Product Item Long Descr Additional',
+            'product_item_name' => 'Название продукта',
+            'product_item_price' => 'Цена за м2',
+            'product_item_short_descr' => 'Краткое описание',
+            'product_item_img_char' => 'Символические обозначения',
+            'product_item_3ds_link' => 'Ссылка на текстуру 3DS',
+            'product_item_long_descr_main' => 'Характеристики рядовой плитки',
+            'product_item_long_descr_additional' => 'Характеристики угловой плитки',
         ];
     }
 }

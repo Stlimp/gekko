@@ -39,6 +39,12 @@ $this->title = 'gekkostone';
  
         </div>
         <div class="page-header" style="float:left;">ПУБЛИКАЦИИ В СЕТИ</div>
+            <ul style=" list-style-type: none;padding-left:0px;">
+                <?php foreach ($press as $link){ ?>
+                    <li><a href="<?= $link->link?>" ><?= $link->link_name ?></a></li>
+                <?php }?>
+            </ul>
+
     </div>
 
     
@@ -46,6 +52,8 @@ $this->title = 'gekkostone';
 </div>
 <p>
         <?= Html::a('Create News', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Press', ['press',], ['class' => 'btn btn-success']) ?>
+        
         </p>
 
        <?= GridView::widget([

@@ -22,9 +22,9 @@ class m150923_131357_product_item extends Migration
 
     public function down()
     {
-        echo "m150923_131357_product_item cannot be reverted.\n";
-
-        return false;
+        echo ("Table gkk_product_item is dropped!\n");
+        $this->dropTable('gkk_product_item');
+    }
     }
 
     /*

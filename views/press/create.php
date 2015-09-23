@@ -2,25 +2,20 @@
 
 use yii\helpers\Html;
 
-
 /* @var $this yii\web\View */
-/* @var $model app\models\News */
+/* @var $model app\models\Press */
 
-$this->title = 'Create News';
-$this->params['breadcrumbs'][] = ['label' => 'News', 'url' => ['index']];
+$this->title = 'Create Press';
+$this->params['breadcrumbs'][] = ['label' => 'Presses', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<style>
-	.redactor-toolbar {
-	     z-index: 1;
-	}
-</style>
-<div class="news-create">
+<div class="press-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('_form', [
         'model' => $model,
+        'dataProvider' => $dataProvider,
     ]) ?>
 
 </div>
