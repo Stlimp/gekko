@@ -11,7 +11,7 @@ $this->title = 'gekkostone';
 ?>
 <div class="news-index" >
     <div class="news" style="width:80%;float:left;">
-        <div class="post-header left-side-half-header" style="float:left;">НОВОСТИ</div>
+        <div class="page-header" style="float:left;">НОВОСТИ</div>
         <?php foreach (array_reverse($post) as $postItem){ ?>
         <div class="post postid<?= $postItem->id?>" style="float:left;">
              <div class="post-image" style="width:15%;float:left;"> 
@@ -28,7 +28,7 @@ $this->title = 'gekkostone';
     </div>
 
     <div class="news-selector" style="width:20%;float:left;">
-        <div class="archive left-side-half-header" style="float:left;">АРХИВ НОВОСТЕЙ</div>
+        <div class="page-header" style="float:left;">АРХИВ НОВОСТЕЙ</div>
         <div class="year left-side-half-text">
             <ul>
                 <li><a href="/web/index.php?r=news%2Findex">Все записи</a></li>
@@ -38,7 +38,7 @@ $this->title = 'gekkostone';
             </ul>
  
         </div>
-        <div class="press left-side-half-header" style="float:left;">ПУБЛИКАЦИИ В СЕТИ</div>
+        <div class="page-header" style="float:left;">ПУБЛИКАЦИИ В СЕТИ</div>
     </div>
 
     
