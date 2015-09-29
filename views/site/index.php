@@ -16,7 +16,8 @@ $this->title = 'Gekkostone';
       <div id="downer"></div>
       
 
-
+<iframe width="490" height="320" src=http://www.youtube.com/embed/DkaUsBwe0fo
+frameborder="0" allowfullscreen></iframe>
       <?php $items = [
     [
         'url' => 'http://farm8.static.flickr.com/7429/9478294690_51ae7eb6c9_b.jpg',
@@ -97,7 +98,7 @@ echo newerton\fancybox\FancyBox::widget([
 ]);
 
 echo Html::a(Html::img('images/content/aboutcompany.jpg'), 'images/content/aboutcompany.jpg', ['rel' => 'fancybox']);
-echo Html::a(Html::img('images/content/colorcontrol.jpg'), 'images/content/colorcontrol.jpg', ['rel' => 'fancybox']);
+echo Html::a(Html::img('images/content/colorcontrol.jpg'), 'https://www.youtube.com/watch?t=3&v=F_PPd0Ovkw8', ['rel' => 'fancybox','target'=>'_blank']);
 ?>
 
 

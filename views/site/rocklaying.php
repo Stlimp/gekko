@@ -194,6 +194,6 @@ $this->title = 'Rocklaying';
         </div>
 
    </div>
-    
+    <a href="index.php?r=videogallery%2Findex" style="color:#9E8D6B"><u>Видеогаллерея</u></a>.
 </div>
 </div>
