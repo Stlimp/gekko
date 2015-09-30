@@ -168,7 +168,7 @@ echo Carousel::widget([
 <!-- script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script !-->
 
 <script type="text/javascript" class="noprint">
-    
+    $(document).ready(function(){
     /*Menu hover. Replaced css way ov hover*/
     $('ul.nav li.dropdown').hover(function() {
     $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
