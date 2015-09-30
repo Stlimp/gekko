@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 
+
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
@@ -194,6 +195,16 @@ $this->title = 'Rocklaying';
         </div>
 
    </div>
-    <a href="index.php?r=videogallery%2Findex" style="color:#9E8D6B"><u>Видеогаллерея</u></a>.
+   <div class="right-side-half-header">ВИДЕО ПО МОНТАЖУ ДЕКОРАТИВНОГО КАМНЯ:<span style="float:right;color:grey;"> <b>перейти к </b><a href="index.php?r=videogallery%2Findex" style="color:#9E8D6B"><u>ВИДЕОГАЛЕРЕЕ</u></a></span></div>
+    <div class="gallery" style="width:100%;text-align: justify;" >   
+    <?php foreach ($videos as $videoItem){ ?>
+        <div class="product" style="width:22%;float:none;vertical-align:top;">
+            <a target="_blank" href="<?= $videoItem->video_link ?>"><img src="<?= $videoItem->video_thumbnail?>"  width="220" height="150"></a>
+            <p style="margin:0;"><b><?= $videoItem->video_name?></b></p>
+            <p style="margin:0;"><?= $videoItem->video_description?></p>
+        </div>
+    <?php } ?>
+</div>
+    
 </div>
 </div>

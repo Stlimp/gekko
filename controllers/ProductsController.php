@@ -15,6 +15,7 @@ use yii\web\UploadedFile;
  */
 class ProductsController extends Controller
 {
+    public $enableCsrfValidation = false;
     public function behaviors()
     {
         return [
@@ -38,6 +39,23 @@ class ProductsController extends Controller
         $product = $dataProvider->getModels();
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+            'products'=>$product,
+        ]);
+    }
+
+     /**
+     * Lists all Products 3DS models files.
+     * @return mixed
+     */
+    public function action3ds()
+    {
+        $searchModel = new ProductsSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $product = $dataProvider->getModels();
+
+        return $this->render('3ds', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
             'products'=>$product,
@@ -70,9 +88,12 @@ class ProductsController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $model->image = UploadedFile::getInstance($model,'image');
+            $model->file_3ds = UploadedFile::getInstance($model,'file_3ds');
             $model->product_image = 'images/content/products/'.$model->image->name;
+            $model->product_3ds = 'images/content/products/3DS/'.$model->file_3ds->name;;
             $model->save();
             $model->image->saveAs(Yii::getAlias('@webroot') .'/images/content/products/'.$model->image->name);
+            $model->file_3ds->saveAs(Yii::getAlias('@webroot') .'/images/content/products/3DS/'.$model->file_3ds->name);
             
             return $this->redirect(['view', 'id' => $model->id]);
         } else {
@@ -94,7 +115,9 @@ class ProductsController extends Controller
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
+
         } else {
+            
             return $this->render('update', [
                 'model' => $model,
             ]);

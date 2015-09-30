@@ -32,6 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'product_image',
             'product_category',
             'product_name',
+            'product_3ds',
         ],
     ]) ?>
 

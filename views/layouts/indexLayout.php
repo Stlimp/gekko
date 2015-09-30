@@ -99,7 +99,7 @@ IndexAsset::register($this);
                                      ['label' => 'Гарантия качества', 'url' => 'index.php?r=site%2Fwarranty'],
                                      ['label' => 'Публичная оферта', 'url' => 'index.php?r=site%2Fpublicoffer'],
                                      ['label' => 'Каталог и прайс-лист', 'url' => 'index.php?r=site%2Fprice'],
-                                     ['label' => 'Текстуры камня', 'url' => '#'],
+                                     ['label' => 'Текстуры камня', 'url' => 'index.php?r=products%2F3ds'],
             ],],
                     ['label' => 'ГДЕ КУПИТЬ', 'url' => ['/site/index']],
                    

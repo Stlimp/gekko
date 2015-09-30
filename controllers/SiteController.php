@@ -11,6 +11,8 @@ use app\models\ContactsForm;
 use app\models\VacancyForm;
 use app\models\PartnershipForm;
 use app\models\FeedbackForm;
+use app\models\Videogallery;
+use yii\data\ActiveDataProvider;
 
 
 class SiteController extends Controller
@@ -161,7 +163,15 @@ class SiteController extends Controller
     }
     public function actionRocklaying()
     {
-        return $this->render('rocklaying');
+        $dataProvider = new ActiveDataProvider([
+            'query' => Videogallery::find(),
+            'pagination'=>[
+                'pageSize' => 4,
+             ],
+        ]);
+
+        $videos = $dataProvider->getModels();
+        return $this->render('rocklaying',['videos' => $videos]);
     }
 
 

@@ -18,6 +18,7 @@ class Products extends \yii\db\ActiveRecord
      * @inheritdoc
      */
     public $image;
+    public $file_3ds;
 
     public static function tableName()
     {
@@ -32,7 +33,8 @@ class Products extends \yii\db\ActiveRecord
         return [
             [[ 'product_category', 'product_name'], 'required'],
             [['product_category', 'product_name'], 'string', 'max' => 255],
-            [['product_image'],'file','extensions'=>'jpg, gif, png, jpeg']
+            [['product_image'],'file','extensions'=>'jpg, gif, png, jpeg'],
+            [['product_3ds'],'file']
         ];
     }
 
@@ -46,6 +48,7 @@ class Products extends \yii\db\ActiveRecord
             'product_image' => 'Изображение',
             'product_category' => 'Категория',
             'product_name' => 'Имя',
+            'product_3ds' => '3DS файл',
         ];
     }
 }

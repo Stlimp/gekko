@@ -13,6 +13,7 @@ class m150902_194147_products extends Migration
             'product_image' =>'string NOT NULL',
             'product_category' =>'string NOT NULL',
             'product_name' => 'string NOT NULL',
+            'product_3ds' =>'string NOT NULL',
          ), 'ENGINE=InnoDB');
     }
 
