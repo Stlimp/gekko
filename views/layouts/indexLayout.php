@@ -25,7 +25,7 @@ IndexAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
+<div id="upper"></div>
     <div class="wrap">
         <?php
             NavBar::begin([
