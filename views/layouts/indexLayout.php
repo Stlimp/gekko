@@ -122,25 +122,27 @@ IndexAsset::register($this);
 ?>
 
 
-<?php 
+
+    <div class="container">  
+        <?php 
    use yii\bootstrap\Carousel;   
 echo Carousel::widget([
     'options' => ['class' => 'carousel slide carousel-fade ','data-ride'=>'carousel','data-interval'=>'5000'],
     'items' => [
         // the item contains only the image
-        ['content' => '<img src="images/background/background1.jpg"/>'],
+        ['content' => '<img src="images/background/1.png"/>'],
         // equivalent to the above
-        ['content' => '<img src="images/background/background2.jpg"/>'],
+        ['content' => '<img src="images/background/2.png"/>'],
         // the item contains both the image and the caption
         ['content' => '<img src="images/background/background3.jpg"/>'],
         ['content' => '<img src="images/background/background4.jpg"/>'],
     ]
 ]);
 ?>
-    <div class="container">  
              <!-- <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>!-->
+            <br><br><br>
             <?= $content ?>
         </div> 
     </div>

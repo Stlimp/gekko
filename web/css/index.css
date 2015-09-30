@@ -14,11 +14,6 @@
 }
 
 /* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 700px;
-
-  background-color:#bbb;
-}
 .carousel img {
   position: absolute;
   top: 0;
@@ -43,9 +38,7 @@
   line-height:50px;
 }
 
-.item{
-  min-height: 100% !important;
-}
+
 
 /*
   Bootstrap Carousel Fade Transition (for Bootstrap 3.3.x)
@@ -111,6 +104,7 @@ body,
 .carousel-inner,
 .carousel-inner .item {
   height: 100%;
+
 }
 
 .carousel img {
@@ -121,9 +115,18 @@ body,
   min-height:100%;
 }
 .carousel .item {
-  height: 665px;/*TODO implement proper height*/
+  height: 100%;/*TODO implement proper height*/
+}
+.carousel .item {
+  height: 100vh;/*TODO implement proper height*/
 }
 .item{
   min-height: 100% !important;
   
+}
+
+.wrap>.container{
+  padding:0;
+  margin:0;
+    width:100%;
 }
