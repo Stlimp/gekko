@@ -24,6 +24,7 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
+
 <?php $this->beginBody() ?>
 
     <div class="wrap">
@@ -132,13 +133,12 @@ AppAsset::register($this);
     </div>
     <footer class="footer" style="padding:0;height:80px;text-align:justify;padding-left:50px;padding-right:50px;">
         <img src="images/footer/social.jpg" style="vertical-align:top;height:100%">
-        <div class="footer-image"><img src="images/footer/sitemap.jpg"></div>
-        <div class="footer-image"><img src="images/footer/gallery.jpg"></div>
-        <div class="footer-image"><img src="images/footer/partnership.jpg"></div>
-        <div class="footer-image"><img src="images/footer/contacts.jpg"></div>
-        <div class="footer-image"><img src="images/footer/publicoffer.jpg"></div>
-
-            <div class="footer-image"><img src="images/footer/copyright.jpg"></div>
+        <div class="footer-image"><p>КАРТА САЙТА</p><div id="sitemap" ></div></div>
+        <div class="footer-image"><p>МОЯ ГАЛЛЕРЕЯ</p><div id="gallery"></div></div>
+        <div class="footer-image"><p>ПАРТНЕРСТВО</p><div id="partnership"></div></div>
+        <div class="footer-image"><p>КОНТАКТЫ</p><div id="contacts"></div></div>
+        <div class="footer-image"><p>ПУБЛИЧНАЯ ОФЕРТА</p><div id="publicoffer"></div></div>
+        <div class="footer-image"><p>АВТОРСКИЕ ПРАВА</p><div id="copyright"></div></div>
     </footer>
 <span><p style="text-align:center;vertical-align:middle;font-family:Century Gothic;">©GEKKOSTONE <?php echo date("Y"); ?></p></span>
 <?php $this->endBody() ?>

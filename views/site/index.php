@@ -11,10 +11,10 @@ $this->title = 'Gekkostone';
   
 
        
-<div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 100px;right:100px;z-index: 1015";> <a href="#downer" class="btn btn-default start-me">Down</a>
+<div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 150px;right:50px;";> <a href="#downer"><img src="images/down.png" style="width:50px;"></a></div>
     <div class="jumbotron">
       <div id="downer"></div>
-      
+ <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: -100px;z-index: 1015";> <a href="#upper" ><img src="images/up.png" style="width:50px;"> </a>   </div>     
 
 <iframe width="490" height="320" src=http://www.youtube.com/embed/DkaUsBwe0fo
 frameborder="0" allowfullscreen></iframe>
@@ -101,8 +101,7 @@ echo Html::a(Html::img('images/content/aboutcompany.jpg'), 'images/content/about
 echo Html::a(Html::img('images/content/colorcontrol.jpg'), 'https://www.youtube.com/watch?t=3&v=F_PPd0Ovkw8', ['rel' => 'fancybox','target'=>'_blank']);
 ?>
 
-
-      <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;top: 100px";> <a href="#upper" class="btn btn-default start-me"> Up </a>   </div>
+       
        <h1 id ="congrats">Congratulations!</h1>
 
         <p class="lead">You have successfully created your Yii-powered application.</p>
@@ -182,9 +181,9 @@ NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN C
 NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
 
 TEH PATH OV TEH RIGHTEOUS MAN IZ BESET ON ALL SIDEZ BY TEH INIQUITIEZ OV TEH S
+
 </div>
 
-    </div>
   </div>
 </div>
 
