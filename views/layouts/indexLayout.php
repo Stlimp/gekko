@@ -142,7 +142,7 @@ echo Carousel::widget([
              <!-- <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>!-->
-            <br><br><br>
+
             <?= $content ?>
         </div> 
     </div>

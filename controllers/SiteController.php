@@ -12,6 +12,7 @@ use app\models\VacancyForm;
 use app\models\PartnershipForm;
 use app\models\FeedbackForm;
 use app\models\Videogallery;
+use app\models\Products;
 use yii\data\ActiveDataProvider;
 
 
@@ -56,8 +57,18 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+
+        $model = new Products();
+        $products = $model::find()->select('product_name')->all();
+
+
+
+        $product = array_rand($products,1);
+
+
+
         $this->layout='indexLayout';
-        return $this->render('index');
+        return $this->render('index',['product'=>$products[$product]]);
     }
 
     public function actionLogin()

@@ -1,188 +1,171 @@
 <?php
 /* @var $this yii\web\View */
 use yii\helpers\Html;
+mb_internal_encoding("UTF-8");
 $this->title = 'Gekkostone';
 ?>
+
+
+<style>
+    
+    .left_third{
+        background-color:grey;
+        width:25%;
+        height:500px;
+        float:left;
+        vertical-align: middle;
+        display: table;
+        border-radius: 30px 0px ;
+    }
+    .center_third{
+        width:50%;
+        height:500px;
+
+        float:left;
+    }
+    
+    .center_split{
+        width:100%;
+        height:33.3%;
+
+        padding:0px 15px 15px 15px;
+
+    }
+    
+    .center_split_vertically{
+        width:30%;
+        height: 100%;
+        background-color: grey;
+        border-radius: 20px 0px ;
+        display: table;
+        float:left;
+
+    }
+    .center_split_vertically p{
+        width:100%;
+        display: table-cell;
+        vertical-align: middle;
+        font-family:Impact;
+        text-align:center;
+        font-size: 20px;
+        color:white;
+
+    }
+
+    .center_split_text{
+        height: 100%;
+        display: table;
+        text-align:left;
+        font-family:Corbel;
+        padding:5px;
+
+    }
+    .center_split_text p{
+ 
+        display: table-cell;
+        vertical-align: middle;
+         font-size:14px;
+         font-color:#808080;
+
+    }
+    .right_third{
+        width:25%;
+        height:500px;
+
+        float:left;
+
+    }
+
+    .right_split{
+        width:100%;
+        height:47%;
+        background-color:grey;
+        text-align: left;
+        border-radius: 30px 0px ;
+        margin:0px 0px 30px 0px;
+        padding:30px;
+
+    }
+    .left_product_name {
+        font-family:Impact;
+        padding-left: 30px;
+        padding-right: 30px;
+        display: table-cell;
+        vertical-align: middle;
+        text-align:left;
+        color:white;
+         font-size: 42px;
+    }
+
+    .test_text{
+        font-family:Impact;
+
+        vertical-align: middle;
+        text-align:left;
+        font-size: 32px;
+        color:white;
+    }
+</style>
 <div id="upper"></div>
 <!--<section>!-->
        
   
 <div class="site-index">
-  
-
-       
+      
 <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 150px;right:50px;";> <a href="#downer"><img src="images/down.png" style="width:50px;"></a></div>
     <div class="jumbotron">
-      <div id="downer"></div>
- <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: -100px;z-index: 1015";> <a href="#upper" ><img src="images/up.png" style="width:50px;"> </a>   </div>     
-
-<iframe width="490" height="320" src=http://www.youtube.com/embed/DkaUsBwe0fo
-frameborder="0" allowfullscreen></iframe>
-      <?php $items = [
-    [
-        'url' => 'http://farm8.static.flickr.com/7429/9478294690_51ae7eb6c9_b.jpg',
-        'src' => 'http://farm8.static.flickr.com/7429/9478294690_51ae7eb6c9_s.jpg',
-        'options' => array('title' => 'Camposanto monumentale (inside)')
-    ],
-    [
-        'url' => 'http://farm3.static.flickr.com/2863/9479121747_0b37c63fe7_b.jpg',
-        'src' => 'http://farm3.static.flickr.com/2863/9479121747_0b37c63fe7_s.jpg',
-        'options' => array('title' => 'Hafsten - Sunset')
-    ],
-    [
-        'url' => 'http://farm4.static.flickr.com/3712/9478186779_81c2e5f7ef_b.jpg',
-        'src' => 'http://farm4.static.flickr.com/3712/9478186779_81c2e5f7ef_s.jpg',
-        'options' => array('title' => 'Sail us to the Moon')
-    ],
-    [
-        'url' => 'http://farm4.static.flickr.com/3789/9476654149_b4545d2f25_b.jpg',
-        'src' => 'http://farm4.static.flickr.com/3789/9476654149_b4545d2f25_s.jpg',
-        'options' => array('title' => 'Sail us to the Moon')
-    ],
-    [
-        'url' => 'http://farm8.static.flickr.com/7429/9478868728_e9109aff37_b.jpg',
-        'src' => 'http://farm8.static.flickr.com/7429/9478868728_e9109aff37_s.jpg',
-        'options' => array('title' => 'Sail us to the Moon')
-    ],
-    [
-        'url' => 'http://farm4.static.flickr.com/3825/9476606873_42ed88704d_b.jpg',
-        'src' => 'http://farm4.static.flickr.com/3825/9476606873_42ed88704d_s.jpg',
-        'options' => array('title' => 'Sail us to the Moon')
-    ],
-    [
-        'url' => 'http://farm4.static.flickr.com/3749/9480072539_e3a1d70d39_b.jpg',
-        'src' => 'http://farm4.static.flickr.com/3749/9480072539_e3a1d70d39_s.jpg',
-        'options' => array('title' => 'Sail us to the Moon')
-    ],
-    [
-        'url' => 'http://farm8.static.flickr.com/7352/9477439317_901d75114a_b.jpg',
-        'src' => 'http://farm8.static.flickr.com/7352/9477439317_901d75114a_s.jpg',
-        'options' => array('title' => 'Sail us to the Moon')
-    ],
-    [
-        'url' => 'http://farm4.static.flickr.com/3802/9478895708_ccb710cfd1_b.jpg',
-        'src' => 'http://farm4.static.flickr.com/3802/9478895708_ccb710cfd1_s.jpg',
-        'options' => array('title' => 'Sail us to the Moon')
-    ],
-];?>
-<?= dosamigos\gallery\Gallery::widget(['items' => $items,'options' =>[
-    'stretchImages'=>true,
-]]);?>
-      <?php
-echo newerton\fancybox\FancyBox::widget([
-    'target' => 'a[rel=fancybox]',
-    'helpers' => true,
-    'mouse' => true,
-    'config' => [
-
-        'maxWidth' => '100%',
-        'maxHeight' => '100%',
-        'playSpeed' => 7000,
-        'padding' => 0,
-        'fitToView' => false,
-        'width' => '100%',
-        'height' => '100%',
-        'autoSize' => false,
-        'closeClick' => false,
-        'openEffect' => 'elastic',
-        'closeEffect' => 'elastic',
-        'prevEffect' => 'elastic',
-        'nextEffect' => 'elastic',
-        'closeBtn' => false,
-        'openOpacity' => true,
-        'arrows' =>true,
-        'title' => ['type' => 'inside'],
-        'title' => 'asd',
-        'autoResize'=>true,
-    ]
-]);
-
-echo Html::a(Html::img('images/content/aboutcompany.jpg'), 'images/content/aboutcompany.jpg', ['rel' => 'fancybox']);
-echo Html::a(Html::img('images/content/colorcontrol.jpg'), 'https://www.youtube.com/watch?t=3&v=F_PPd0Ovkw8', ['rel' => 'fancybox','target'=>'_blank']);
-?>
-
-       
-       <h1 id ="congrats">Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    
-    <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-
-
-    <div class="body-content">
-        
-<!--
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
+        <div id="downer"></div>
+        <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: -100px;z-index: 1015";> <a href="#upper" ><img src="images/up.png" style="width:50px;"> </a>   </div>     
+        <div class="left_third">
+            <span class="left_product_name">
+                <?= mb_strtoupper($product->product_name) ?>
+            </span>
+        </div>
+        <div class="center_third">
+            <div class="center_split">
+               <div class="center_split_vertically">
+                   <p>ПОДБОР КАМНЯ</p>
+               </div>
+               <div class="center_split_text"><p>При помощи конфигуратора «ПОДБОР КАМНЯ» 
+                    Вы сможете самостоятельно подобрать самую 
+                    оптимальную фактуру и расцветку декоративного
+                    камня для интерьера или экстерьера Вашего дома.</p>
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+            <div class="center_split">
+                <div class="center_split_vertically">
+                   <p>ДО И ПОСЛЕ</p>
+               </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
+               <div class="center_split_text"><p>В фотогалерее представлены фотографии интерьеров
+                    и экстерьеров ДО и ПОСЛЕ проведения облицовочных 
+                    работ по укладке декоративного камня.</p> 
+                </div>
             </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
+            <div class="center_split" style="margin-bottom:0px">
+                <div class="center_split_vertically">
+                   <p>ВИДЕОГАЛЛЕРЕЯ</p>
+               </div>
+               <div class="center_split_text"><p>В видеогалерее представлены демонстрационные,
+                а также обучающие видео по применению в облицовке
+                декоративного облицовочного камня.</p>
+                </div>
+            </div>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+        </div>
+        <div class="right_third">
+            <div class="right_split">
+                <span class="test_text">НАТУРАЛЬНЫЙ ИЛИ ИСКУСТВЕННЫЙ?</span>
+                <p style="font-family:Corbel"><b>ТЕСТ.</b> Попробуй отыскать натуральные камни среди искусственных камней GEKKOSTONE!</p>
+            </div>
+            <div class="right_split">
+                <p style="font-family:Corbel">Собери собственную галерею из наиболее понравившихся фактур 
+и расцветок!</p>
+                <span class="test_text">МОЯ ГАЛЕРЕЯ</span>
+                <p style="font-family:Corbel">Расчет необходимого количества камня, его веса и стоимости!</p>
             </div>
         </div>
-!-->
-    <h1> Service </h1>
-<!-- START SLIPSUM CODE -->
-
-NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
-
-NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
-
-TEH PATH OV TEH RIGHTEOUS MAN IZ BESET ON ALL SIDEZ BY TEH INIQUITIEZ OV TEH S
-<h1> Service </h1>
-<!-- START SLIPSUM CODE -->
-
-NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
-
-NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
-
-TEH PATH OV TEH RIGHTEOUS MAN IZ BESET ON ALL SIDEZ BY TEH INIQUITIEZ OV TEH S
-<h1> Service </h1>
-<!-- START SLIPSUM CODE -->
-
-NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
-
-NAO DAT WE KNOE HOO U R, I KNOE HOO IM. IM NOT MISTAEK! IT ALL MAKEZ SENSE! IN COMIC, U KNOE HOW U CAN TELL HOO TEH ARCH-VILLAINS GOIN 2 BE? HEZ TEH EGSAKT OPPOSIET OV TEH HERO. AN MOST TIEMS THEYRE FRENZ, LIEK U AN ME! I SHUDVE KNOWN WAI BAK WHEN... U KNOE Y, DAVID? CUZ OV TEH KIDZ. THEY CALLD ME MISTAH GLAS.
-
-TEH PATH OV TEH RIGHTEOUS MAN IZ BESET ON ALL SIDEZ BY TEH INIQUITIEZ OV TEH S
-
-</div>
+   
 
   </div>
 </div>
