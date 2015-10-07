@@ -9,7 +9,7 @@ $this->title = 'Gekkostone';
 <style>
     
     .left_third{
-        background-color:grey;
+        background-color:#D8D8CA;
         width:25%;
         height:500px;
         float:left;
@@ -35,7 +35,7 @@ $this->title = 'Gekkostone';
     .center_split_vertically{
         width:30%;
         height: 100%;
-        background-color: grey;
+        background-color: #D8D8CA;
         border-radius: 20px 0px ;
         display: table;
         float:left;
@@ -79,7 +79,7 @@ $this->title = 'Gekkostone';
     .right_split{
         width:100%;
         height:47%;
-        background-color:grey;
+        background-color:#D8D8CA;
         text-align: left;
         border-radius: 30px 0px ;
         margin:0px 0px 30px 0px;
