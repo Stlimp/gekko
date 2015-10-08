@@ -7,6 +7,10 @@ $this->title = 'Gekkostone';
 
 
 <style>
+
+    .site-index{
+        margin-top:60px;
+    }
     
     .left_third{
         background-color:#D8D8CA;
@@ -105,6 +109,21 @@ $this->title = 'Gekkostone';
         font-size: 32px;
         color:white;
     }
+    .button-up{
+        width:50px;
+        height:50px;
+        background-image: url(images/up.png);
+        background-size: contain;
+        display:inline-block;
+    }
+    .button-up:hover{
+        width:50px;
+        height:50px;
+        background-image: url(images/up-hover.png);
+        background-size: contain;
+        display:inline-block;
+    }
+
 </style>
 <div id="upper"></div>
 <!--<section>!-->
@@ -112,10 +131,10 @@ $this->title = 'Gekkostone';
   
 <div class="site-index">
       
-<div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 150px;right:50px;";> <a href="#downer"><img src="images/down.png" style="width:50px;"></a></div>
+
     <div class="jumbotron">
-        <div id="downer"></div>
-        <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: -100px;z-index: 1015";> <a href="#upper" ><img src="images/up.png" style="width:50px;"> </a>   </div>     
+        
+        <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: -100px;z-index: 1015";> <a href="#upper" ><div class="button-up"></div> </a>   </div>     
         <div class="left_third">
             <span class="left_product_name">
                 <?= mb_strtoupper($product->product_name) ?>
