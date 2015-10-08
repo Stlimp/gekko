@@ -102,7 +102,7 @@ AppAsset::register($this);
                                      ['label' => 'Каталог и прайс-лист', 'url' => 'index.php?r=site%2Fprice'],
                                      ['label' => 'Текстуры камня', 'url' => 'index.php?r=products%2F3ds'],
             ],],
-                    ['label' => 'ГДЕ КУПИТЬ', 'url' => ['/site/index']],
+                    ['label' => 'ГДЕ КУПИТЬ', 'url' => ['/stores/index']],
                    
                  /*   Yii::$app->user->isGuest ?
                         ['label' => 'Login', 'url' => ['/site/login']] :
