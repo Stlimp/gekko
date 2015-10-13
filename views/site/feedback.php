@@ -60,7 +60,9 @@ use yii\widgets\ActiveForm;
 					echo $form->field($model,'text')->label('Ваше обращение');
 					echo $form->field($model, 'department')->dropDownList(['Отдел 1' => 'Отдел 1', 'Отдел 2' => 'Отдел 2', 'Отдел 3' => 'Отдел 3'], ['prompt'=>''])->label('Выберите отдел');
 					echo $form->field($model,'email')->label('Контактный e-mail');
-					echo $form->field($model,'phone')->label('Контактный телефон');
+					echo $form->field($model,'phone')->label('Контактный телефон')->widget(\yii\widgets\MaskedInput::className(), [
+    'mask' => '+375(99)999-99-99',
+]);;
 					echo Html::submitButton("Submit",['class'=>'btn btn-success']);
 					}
 				?>

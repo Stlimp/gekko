@@ -73,7 +73,9 @@ use yii\widgets\ActiveForm;
 			echo $form->field($model, 'smoker')->dropDownList(['a' => 'Да', 'b' => 'Нет'], ['prompt'=>''])->label('Вы курите?');
 			echo $form->field($model,'characteristic')->label('Ваши качества');
 			echo $form->field($model,'selfimage')->label('Напишите о себе( свободная форма)');
-			echo $form->field($model,'phonenumber')->label('Контактный телефон( с кодом оператора)');
+			echo $form->field($model,'phonenumber')->label('Контактный телефон( с кодом оператора)')->widget(\yii\widgets\MaskedInput::className(), [
+    'mask' => '+375(99)999-99-99',
+]);;
 
 			echo Html::submitButton("Submit",['class'=>'btn btn-success']);
 		}

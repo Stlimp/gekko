@@ -170,7 +170,9 @@ use yii\widgets\ActiveForm;
 			echo $form->field($model,'contactperson')->label('Контактное лицо для обратной связи, ФИО');
 			echo $form->field($model,'position')->label('Должность');
 			echo $form->field($model,'email')->label('Контактный e-mail для связи');
-			echo $form->field($model,'phone')->label('Контактный телефон для связи');
+			echo $form->field($model,'phone')->label('Контактный телефон для связи')->widget(\yii\widgets\MaskedInput::className(), [
+    'mask' => '+375(99)999-99-99',
+]);;
 
 			echo Html::submitButton("Submit",['class'=>'btn btn-success']);
 		}

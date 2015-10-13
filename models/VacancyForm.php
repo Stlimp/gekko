@@ -25,6 +25,8 @@ class VacancyForm extends Model{
 	{
 		return[
 		[['employment','employmenttype','name','age','education','speciality','civilstatus','personalauto','adress','smoker','phonenumber'],'required','message' => ''],
+		['phonenumber','string']
+
 
 		];
 

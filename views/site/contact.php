@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\widgets\MaskedInput;
 ?>
 <style >
 	#vacancyform-employment,#vacancyform-employmenttype,#vacancyform-education,#vacancyform-civilstatus,#vacancyform-personalauto,#vacancyform-smoker{
@@ -87,9 +88,12 @@ use yii\widgets\ActiveForm;
 		        		echo $form->field($model, 'department')->label('Выберите отдел'); 
 		        		echo $form->field($model, 'name')->label('ФИО контактного лица'); 
 		        		echo $form->field($model, 'position')->label('Должность'); 
-		        		echo $form->field($model, 'email')->label('Контактный e-mail'); 
-		        		echo $form->field($model, 'phone')->label('Контактный телефон');
+		        		echo $form->field($model, 'email')->label('Контактный e-mail');
+		        		echo $form->field($model, 'phone')->label('Контактный телефон')->widget(\yii\widgets\MaskedInput::className(), [
+    'mask' => '+375(99)999-99-99',
+]); 
 			            echo Html::submitButton('Submit', ['class' => 'btn btn-success']);
+			           
 					}        
 		   		 ?>
 			</p>
