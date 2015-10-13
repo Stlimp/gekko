@@ -13,6 +13,7 @@ use app\models\PartnershipForm;
 use app\models\FeedbackForm;
 use app\models\Videogallery;
 use app\models\Products;
+use app\models\Emails;
 use yii\data\ActiveDataProvider;
 
 
@@ -97,15 +98,25 @@ class SiteController extends Controller
     public function actionContact()
     {
         $model = new ContactsForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
+        if ($model->load(Yii::$app->request->post())&&$model->validate() ) {
             Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        } else {
-            return $this->render('contact', [
-                'model' => $model,
-            ]);
-        }
+            Yii::$app->mailer->compose('contact',[
+                    'organization'=>$model->organization,
+                    'city'=>$model->city,
+                    'text'=>$model->text,
+                    'department'=>$model->department,
+                    'name'=>$model->name,
+                    'position'=>$model->position,
+                    'email'=>$model->email,
+                    'phone'=>$model->phone,
+                ])
+            ->setFrom('bot@gekkostone.com')
+            ->setTo('admin@gekkostone.com')
+            ->setSubject('Получен новое обращение  '.$model->text)
+            ->send();
+            Yii::$app->session->setFlash('success',"Ваше обращение успешно отправлено!");                
+            } 
+        return $this->render('contact',['model' =>$model]);
     }
 
     public function actionAbout()
@@ -127,8 +138,21 @@ class SiteController extends Controller
     {
          $model=new FeedbackForm;
 
+
         if($model->load(Yii::$app->request->post()) &&$model->validate())
         {
+          Yii::$app->mailer->compose('feedback',[
+                'name'=>$model->name,
+                'text'=>$model->text,
+                'department'=>$model->department,
+                'email'=>$model->email,
+                'phone'=>$model->phone,
+            ])
+            ->setFrom('bot@gekkostone.com')
+            ->setTo('admin@gekkostone.com')
+            ->setSubject('Получен новый отзыв для '.$model->department)
+            ->send();
+
            Yii::$app->session->setFlash('success',"Ваш отзыв успешно отправлен!");
         }
         return $this->render('feedback',['model' =>$model]);
@@ -152,7 +176,29 @@ class SiteController extends Controller
 
         if($model->load(Yii::$app->request->post()) &&$model->validate())
         {
-           Yii::$app->session->setFlash('success',"Ваша заявка успешно отправлена!");
+            Yii::$app->session->setFlash('contactFormSubmitted');
+            Yii::$app->mailer->compose('vacancy',[
+                            'employment'=>$model->employment,
+                            'employmenttype'=>$model->employmenttype,
+                            'name'=>$model->name,
+                            'age'=> $model->age,
+                            'education'=> $model->education,
+                            'speciality'=> $model->speciality, 
+                            'workhistory'=> $model->workhistory,
+                            'civilstatus'=> $model->civilstatus,
+                            'personalauto'=> $model->personalauto,
+                            'driverlicence'=> $model->driverlicence,
+                            'adress'=> $model->adress,
+                            'salary'=> $model->salary,
+                            'smoker'=> $model->smoker,
+                            'characteristic'=> $model->characteristic,
+                            'selfimage'=> $model->selfimage,
+                            'phonenumber'=> $model->phonenumber,])
+                ->setFrom('bot@gekkostone.com')
+                ->setTo('admin@gekkostone.com')
+                ->setSubject('Получен новое обращение  '.$model->education)
+                ->send();
+            Yii::$app->session->setFlash('success',"Ваша заявка успешно отправлена!");
         }
         return $this->render('vacancy',['model' =>$model]);
     }
@@ -163,7 +209,25 @@ class SiteController extends Controller
 
         if($model->load(Yii::$app->request->post()) &&$model->validate())
         {
-           Yii::$app->session->setFlash('success',"Ваша заявка успешно отправлена!");
+            Yii::$app->session->setFlash('contactFormSubmitted');
+            Yii::$app->mailer->compose('partnership',[
+               'companytype'=>$model->companytype,
+               'location'=>$model->location,
+               'timeperiod'=>$model->timeperiod,
+               'mainactivity'=>$model->mainactivity,
+               'typeofpartnership'=>$model->typeofpartnership,
+               'info'=>$model->info, 
+               'contactperson'=>$model->contactperson,
+               'position'=>$model->position,
+               'email'=>$model->email,
+               'phone'=>$model->phone,
+
+                ])
+                ->setFrom('bot@gekkostone.com')
+                ->setTo('admin@gekkostone.com')
+                ->setSubject('Новая заявка на партнерство')
+                ->send();
+            Yii::$app->session->setFlash('success',"Ваша заявка успешно отправлена!");
         }
         return $this->render('partnership',['model' =>$model]);
     }

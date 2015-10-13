@@ -14,6 +14,7 @@ class FeedbackForm extends Model{
 	{
 		return[
 		[['name','text','department'],'required','message' => ''],
+		['email','email']
 
 		];
 

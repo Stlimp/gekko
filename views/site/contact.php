@@ -2,6 +2,22 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 ?>
+<style >
+	#vacancyform-employment,#vacancyform-employmenttype,#vacancyform-education,#vacancyform-civilstatus,#vacancyform-personalauto,#vacancyform-smoker{
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+		
+
+	    background:transparent url("http://gekkostone/web/images/content/arrow.png") no-repeat right;
+	}
+	.form-control{
+		height:19px;
+		width:auto;
+		padding:0px;
+		padding-right:15px;
+		border-radius:5px 0px 5px 0px;
+	}
+</style>
 <div class="site-index">
    <div class="jumbotron">
 	<div class="left-half">
@@ -55,54 +71,31 @@ use yii\widgets\ActiveForm;
 		</div>
 		<div class="right-side-half-text">
 			<p>
-				<?php $form = ActiveForm::begin(); ?>
-				<?= $form->field($model, 'organization')->label('Наименование фирмы, ИП(для юр.лица) или ФИО для физ.лица'); ?>
-				<?= $form->field($model, 'city')->label('Местонахождение(страна, город'); ?>
 
-		        <?= $form->field($model, 'text')->label('Ваше обращение');?>
-		        <?= $form->field($model, 'department')->label('Выберите отдел'); ?>
-		        <?= $form->field($model, 'name')->label('ФИО контактного лица'); ?>
-		        <?= $form->field($model, 'position')->label('Должность'); ?>
-		        <?= $form->field($model, 'email')->label('Контактный e-mail'); ?>
-		        <?= $form->field($model, 'phone')->label('Контактный телефон');?>
-		    
-		        <div class="form-group">
-		            <?= Html::submitButton('Submit', ['class' => 'btn btn-primary']) ?>
-		        </div>
-		   		 <?php ActiveForm::end(); ?>
+				<?php 
+					if(Yii::$app->session->hasFlash('success')){
+					   	echo "<div style =\"color:#D0272E\"><i>";
+					   	echo Yii::$app->session->getFlash('success');
+					   	echo "</i></div>";
+					}
+					else {
+						$form =ActiveForm::begin(); 
+						echo $form->field($model, 'organization')->label('Наименование фирмы, ИП(для юр.лица) или ФИО для физ.лица'); 
+						echo $form->field($model, 'city')->label('Местонахождение(страна, город)'); 
+
+		        		echo $form->field($model, 'text')->textarea()->label('Ваше обращение');
+		        		echo $form->field($model, 'department')->label('Выберите отдел'); 
+		        		echo $form->field($model, 'name')->label('ФИО контактного лица'); 
+		        		echo $form->field($model, 'position')->label('Должность'); 
+		        		echo $form->field($model, 'email')->label('Контактный e-mail'); 
+		        		echo $form->field($model, 'phone')->label('Контактный телефон');
+			            echo Html::submitButton('Submit', ['class' => 'btn btn-success']);
+					}        
+		   		 ?>
 			</p>
 		</div>
 	</div>
 	</div>
-	<?php
-                echo newerton\fancybox\FancyBox::widget([
-                    'target' => 'a[rel=fancybox]',
-                    'helpers' => true,
-                    'mouse' => false,
-                    'config' => [
-
-                        'maxWidth' => '100%',
-                        'maxHeight' => '100%',
-                        'playSpeed' => 7000,
-                        'padding' => 0,
-                        'fitToView' => false,
-                        'width' => '100%',
-                        'height' => '100%',
-                        'autoSize' => false,
-                        'closeClick' => false,
-                        'openEffect' => 'elastic',
-                        'closeEffect' => 'elastic',
-                        'prevEffect' => 'elastic',
-                        'nextEffect' => 'elastic',
-                        'closeBtn' => true,
-                        'openOpacity' => true,
-                        'arrows' =>true,
-                        'title' => ['type' => 'inside'],
-                        'title' => $subcategory,
-                        'autoResize'=>true,
-                    ]
-                ]);
-                ?>
 </div>
 
 

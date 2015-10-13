@@ -51,7 +51,9 @@ use yii\widgets\ActiveForm;
 	<div class="right-side-half-text">
 	<?php
 		if(Yii::$app->session->hasFlash('success')){
+		   	echo "<div style =\"color:#D0272E\"><i>";
 		   	echo Yii::$app->session->getFlash('success');
+		   	echo "</i></div>";
 		   	}
 		else {
 			$form =ActiveForm::begin();

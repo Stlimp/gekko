@@ -9,7 +9,7 @@ class PartnershipForm extends Model{
 	public $timeperiod;
 	public $mainactivity;
 	public $typeofpartnership;
-	public $info; 
+	public $info;
 	public $contactperson;
 	public $position;
 	public $email;
@@ -19,6 +19,7 @@ class PartnershipForm extends Model{
 	{
 		return[
 		[['companytype','location','timeperiod','mainactivity','typeofpartnership','contactperson','position','email','phone'],'required','message' => ''],
+		['info','string']
 
 		];
 

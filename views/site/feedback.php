@@ -50,13 +50,15 @@ use yii\widgets\ActiveForm;
     		<p>
     			<?php
 				if(Yii::$app->session->hasFlash('success')){
+					echo "<div style =\"color:#D0272E\"><i>";
 				   	echo Yii::$app->session->getFlash('success');
+				   	echo "</i></div>";
 				   	}
 				else {
 					$form =ActiveForm::begin();
 					echo $form->field($model,'name')->textInput()->label('ФИО');
 					echo $form->field($model,'text')->label('Ваше обращение');
-					echo $form->field($model, 'department')->dropDownList(['a' => 'Отдел 1', 'b' => 'Отдел 2', 'c' => 'Отдел 3'], ['prompt'=>''])->label('Выберите отдел');
+					echo $form->field($model, 'department')->dropDownList(['Отдел 1' => 'Отдел 1', 'Отдел 2' => 'Отдел 2', 'Отдел 3' => 'Отдел 3'], ['prompt'=>''])->label('Выберите отдел');
 					echo $form->field($model,'email')->label('Контактный e-mail');
 					echo $form->field($model,'phone')->label('Контактный телефон');
 					echo Html::submitButton("Submit",['class'=>'btn btn-success']);

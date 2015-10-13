@@ -154,17 +154,19 @@ use yii\widgets\ActiveForm;
 	<div class="right-side-half-text">
 	<?php
 		if(Yii::$app->session->hasFlash('success')){
+        echo "<div style =\"color:#D0272E\"><i>";
 		   	echo Yii::$app->session->getFlash('success');
+        echo "</i></div>";
 		   	}
 		else {
 			$form =ActiveForm::begin();
 
 			echo $form->field($model,'companytype')->label('Наименование фирмы или ИП');
-			echo $form->field($model,'location')->label('Местонахождение фирмы или ИП (странаб город)');
+			echo $form->field($model,'location')->label('Местонахождение фирмы или ИП (страна, город)');
 			echo $form->field($model,'timeperiod')->label('Период работы');
 			echo $form->field($model,'mainactivity')->label('Основной вид деятельности фирмы или ИП');
-			echo $form->field($model, 'typeofpartnership')->dropDownList(['a' => 'Партнерство с организициями оптово-розничной торговли', 'b' => 'Партнерство с дизайнерами и архитекторами', 'c' => 'Партнерство со строительными организациями', 'd' => 'Рекламное партнерство'], ['prompt'=>''])->label('Желаемый вид сотрудничества');
-			echo $form->field($model,'info')->textarea()->label('Дополнительная информация и пожелания заявителя');
+			echo $form->field($model,'typeofpartnership')->dropDownList(['a' => 'Партнерство с организициями оптово-розничной торговли', 'b' => 'Партнерство с дизайнерами и архитекторами', 'c' => 'Партнерство со строительными организациями', 'd' => 'Рекламное партнерство'], ['prompt'=>''])->label('Желаемый вид сотрудничества');
+			echo $form->field($model,'info')->textarea(['rows' => 1])->label('Дополнительная информация и пожелания заявителя');
 			echo $form->field($model,'contactperson')->label('Контактное лицо для обратной связи, ФИО');
 			echo $form->field($model,'position')->label('Должность');
 			echo $form->field($model,'email')->label('Контактный e-mail для связи');
