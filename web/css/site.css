@@ -377,3 +377,16 @@ body {
 .wrap{
      margin: 0 auto 0px;
     }
+
+
+
+.social{
+      display: inline-block;
+}
+
+.social p {
+    font-family: Impact;
+    white-space: nowrap;
+    color: #CCCCCC;
+    margin-bottom: 5px;
+}

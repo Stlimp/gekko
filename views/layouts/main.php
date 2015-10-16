@@ -19,6 +19,9 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><!--IE bootstrp fix!-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="декоративный камень, декоративный кирпич, античный кирпич, состаренный кирпич, декоративная плитка, искусственный камень, искусственный декоративный камень">
+    <meta name="Description" content="Компания Gekkostone - производитель декоративного камня высочайшего качества. Оптовые поставки искусственного декоративного камня во все страны мира. Скалистая гора, античный кирпич, состаренный кирпич, дамские пальчики - идеальные фактуры для внутренней и внешней отделки зданий">
+    <link rel="stylesheet" href="css/social-likes_classic.css">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -29,6 +32,7 @@ AppAsset::register($this);
 
     <div class="wrap">
         <?php
+            $this->registerJsFile('@web/js/social-likes.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
             NavBar::begin([
                 'brandLabel' => Html::img('images/logo.png', ['alt'=>Yii::$app->name]),
                 'brandUrl' => Yii::$app->homeUrl,
@@ -132,7 +136,15 @@ AppAsset::register($this);
         </div> 
     </div>
     <footer class="footer" style="padding:0;height:80px;text-align:justify;padding-left:50px;padding-right:50px;">
-        <img src="images/footer/social.jpg" style="vertical-align:top;height:100%">
+        <div class="social"><p>СОЦИАЛЬНЫЕ СЕТИ</p>
+            <div class="social-likes  social-likes_notext">
+                <div class="facebook" title="Поделиться ссылкой на Фейсбуке"></div>
+                <div class="twitter" title="Поделиться ссылкой в Твиттере"></div>
+                <br>
+                <div class="vkontakte" title="Поделиться ссылкой во Вконтакте"></div>
+                <div class="odnoklassniki" title="Поделиться ссылкой в Одноклассниках"></div>
+            </div>
+        </div>
         <div class="footer-image"><p>КАРТА САЙТА</p><div id="sitemap" ></div></div>
         <div class="footer-image"><p>МОЯ ГАЛЛЕРЕЯ</p><div id="gallery"></div></div>
         <div class="footer-image"><p>ПАРТНЕРСТВО</p><div id="partnership"></div></div>
@@ -163,5 +175,16 @@ AppAsset::register($this);
     /*Menu hover. Replaced css way ov hover*/
 });
 </script> 
+<script type="text/javascript">
+
+$('.social-likes').socialLikes({
+    url: 'http://gekkostone.com',
+    title: 'Декоративный камень Gekkostone!',
+    counters: true,
+    zeroes: 'yes'
+
+});
+</script>
+</html>
 </html>
 <?php $this->endPage() ?>
