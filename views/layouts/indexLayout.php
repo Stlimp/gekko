@@ -45,8 +45,237 @@ IndexAsset::register($this);
         display:inline-block;
     }
 
+
+    #w0 > .container{
+        margin:0px 0px 0px;
+        width:100%;
+        
+
+    }
+
 </style>
 
+
+
+<style> 
+/* navigation style */ 
+#nav{ 
+    height: 60px; 
+
+    #background: #3AB3A9; 
+    min-width:500px; 
+    margin-left: 0px; 
+    padding: 25px; 
+    width:80%;
+    float:right;
+    font-family: Corbel;
+    font-size: 16px;
+}     
+ 
+#nav li{ 
+    list-style: none; 
+    display: block; 
+    float: right; 
+    height: 40px; 
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0);/*прозрачная граница, чтобы избежать мерцания*/ 
+    #border-right: 1px solid #FFFFFF;
+    width:150px;
+    z-index : 2;
+ 
+} 
+ 
+#nav li a{ 
+    padding: 0px 10px 0px 10px; 
+    margin: 0px; 
+    line-height: 40px; 
+    text-decoration: none; 
+    height: 40px; 
+    color: #FFFFFF; 
+    text-shadow: 1px 1px 1px #66696B;
+    text-align:center;     
+} 
+ 
+#nav ul{ 
+    background: #4D4D4D;  
+    padding: 0px; 
+    #border-bottom: 1px solid #DDDDDD; 
+   # border-right: 1px solid #DDDDDD; 
+    #border-left:1px solid #DDDDDD; 
+    #border-radius: 0px 0px 3px 3px; 
+    box-shadow: 3px 2px 5px #000000; 
+    -webkit-box-shadow: 3px 2px 5px #000000; 
+        -moz-box-shadow:3px 2px 5px #000000; 
+    width:150px;
+    border-radius: 0px 0px 10px 0px;
+
+     
+}
+
+ 
+#nav li:hover{ 
+    border: 1px solid #FFFFFF;
+    border-radius: 10px 0px 10px 0px;
+    width:150px;
+ 
+}
+#nav li ul li:hover{ 
+    border: 0;
+    width:150px;
+ 
+}
+
+#nav li a:hover{ 
+font-weight:bold;
+}
+#nav li a{ 
+    display: block; 
+} 
+#nav ul li { 
+    border-right:none; 
+    #border-bottom:1px solid #DDDDDD; 
+    width:150px; 
+    height:    39px; 
+} 
+#nav ul li a { 
+    border-right: none; 
+    #color:#6791AD; 
+    #text-shadow: 1px 1px 1px #FFF; 
+    #border-bottom:1px solid #FFFFFF; 
+} 
+/*#nav ul li:hover{background:#000000;border-radius: 0px 0px 0px 0px;}*/
+/*#nav ul li:last-child:hover {border-radius: 0px 0px 10px 0px;}*/
+ 
+#nav ul li:last-child { border-bottom: none;} 
+#nav ul li:last-child a{ border-bottom: none;}
+ 
+/* Sub menus */ 
+#nav ul{ 
+    display: none; 
+    visibility:hidden; 
+    position: absolute; 
+    top: 40px;
+    left: -1px; 
+} 
+
+
+ 
+/* Third-level menus */ 
+#nav ul ul{
+    margin-left:1px; 
+    top: 0px; 
+    left:150px; 
+    display: none; 
+    visibility:hidden; 
+    #border: 1px solid #DDDDDD;
+    border-radius: 10px 0px 10px 0px; 
+}
+#nav ul ul li:first-child:hover {border-radius: 10px 0px 0px 0px;}
+#nav ul ul li:last-child:hover {border-radius: 0px 0px 10px 0px;} 
+/* Fourth-level menus */ 
+#nav ul ul ul{ 
+    top: 0px; 
+    left:150px; 
+    display: none; 
+    visibility:hidden; 
+    border: 1px solid #DDDDDD;
+ 
+} 
+ 
+#nav ul li{ 
+    display: block; 
+    visibility:visible; 
+} 
+#nav li:hover > ul{ 
+    display: block; 
+    visibility:visible; 
+}
+
+#nav ul li a span{
+    color: #FFFFFF;
+    font: 16px Geneva, Arial, Helvetica, sans-serif;
+}
+
+#nav ul ul li a span{
+    color: #FFFFFF;
+    font: 16px Geneva, Arial, Helvetica, sans-serif;
+}
+
+
+#delimiter{
+    width:12px !important;
+    border:0 !important;
+    z-index : 1;
+}
+
+#delimiter :hover{
+
+    border: 0 !important;
+    padding:0px !important;
+    
+
+
+}
+#delimiter a{
+    padding:0px !important;
+}
+
+ 
+</style> 
+<!--[if IE 7]> 
+<style> 
+#nav{ 
+    margin-left:0px 
+} 
+#nav ul{ 
+    left:-40px; 
+} 
+#nav ul ul{ 
+    left:130px; 
+} 
+#nav ul ul ul{ 
+    left:130px; 
+} 
+</style> 
+<![endif]--> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script> 
+$(document).ready(function(){ 
+    $("#nav li").hover( 
+    function(){ 
+        $(this).children('ul').hide();
+        $("#nav li #delimiter").hide(); 
+        $(this).children('ul').fadeIn(800); 
+    }, 
+    function () { 
+        $('ul', this).fadeOut(200); 
+          
+    });
+    $("#nav ul li a").hover(
+    function () {
+        $(this).children('span').css('color', '#D0272E');
+        $(this).children('span').css('font','16px Geneva, Arial, Helvetica, sans-serif' );
+    },
+    function () {
+        $(this).children('span').css('color', '#FFFFFF');
+        $(this).children('span').css('font','16px Geneva, Arial, Helvetica, sans-serif' );
+    });
+    
+    $("#nav ul ul li a").hover(
+    function () {
+        $(this).children('span').css('color', '#D0272E');
+        $(this).children('span').css('font','16px Geneva, Arial, Helvetica, sans-serif' );
+    },
+    function () {
+        $(this).children('span').css('color', '#FFFFFF');
+        $(this).children('span').css('font','16px Geneva, Arial, Helvetica, sans-serif' );
+    });
+
+
+
+     
+}); 
+</script> 
 <body>
 
 <?php $this->beginBody() ?>
@@ -89,7 +318,7 @@ IndexAsset::register($this);
                 ],
             ]);
             /*Second menu normal*/
-            echo Nav::widget([
+            /*echo Nav::widget([
                 'options' => ['class' => 'navbar-nav navbar-right'],
                 'items' => [
                     ['label' => 'О КОМПАНИИ',
@@ -136,15 +365,100 @@ IndexAsset::register($this);
                             'url' => ['/site/logout'],
                             'linkOptions' => ['data-method' => 'post']],*/
             
-                    ['label' => 'УСЛУГИ', 
+                 /*   ['label' => 'УСЛУГИ', 
                         'items' => [
                                      ['label' => 'Дизайн проект', 'url' => '#'],
                                      ['label' => 'Подбор камня', 'url' => '#'],
                                      ['label' => 'Доставка камня', 'url' => '#'],
                                      ['label' => 'Облицовка', 'url' => '#'],
             ],],
-            ]]);
+            ]]);*/
+?>
+<ul id="nav">
 
+         <li class="yahoo"><a href="#">УСЛУГИ</a> 
+        <ul> 
+        <li><a href="#">Yahoo Games <span style="color:#D0272E">&#9658;</span></a>             
+            <ul> 
+                <li><a href="#">&#9679; Board Games</a></li> 
+                <li><a href="#">Card Games</a></li> 
+                <li><a href="#">Puzzle Games</a></li> 
+                <li><a href="#">Skill Games &raquo;</a></li> 
+            </ul> 
+        </li> 
+        <li><a href="#">Yahoo Search</a></li> 
+        <li><a href="#">Yahoo Answsers</a></li> 
+        </ul> 
+        </li>
+    
+    <li id="delimiter"><a>|</a></li> 
+     
+    <li class="yahoo"><a href="#">ГДЕ КУПИТЬ</a> 
+        <ul> 
+        <li><a href="#">Yahoo Games <span style="color:#D0272E">&#9658;</span></a>             
+            <ul> 
+                <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
+                <li><a href="#">Card Games</a></li> 
+                <li><a href="#">Puzzle Games</a></li> 
+                <li><a href="#">Skill Games &raquo;</a></li> 
+            </ul> 
+        </li> 
+        <li><a href="#">Yahoo Search</a></li> 
+        <li><a href="#">Yahoo Answsers</a></li> 
+        </ul> 
+    </li> 
+    <li id="delimiter"><a>|</a></li> 
+ 
+    <li class="yahoo"><a href="#">ИНФОРМАЦИЯ</a> 
+        <ul> 
+        <li><a href="#">Yahoo Games <span style="color:#FFFFFF">&#9658;</span></a>             
+            <ul> 
+                <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
+                <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
+                <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
+               <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
+                <ul> 
+                    <li><a href="#">Yahoo Pool</a></li> 
+                    <li><a href="#">Chess</a></li> 
+                </ul> 
+                </li> 
+            </ul> 
+        </li> 
+        <li><a href="#">Yahoo Search</a></li> 
+        <li><a href="#">Yahoo Answsers</a></li> 
+        </ul> 
+    </li> 
+
+    <li id="delimiter"><a>|</a></li>
+ 
+    <li class="facebook"><a href="#">ФОТОГАЛЛЕРЕЯ</a> 
+        <ul> 
+        <li><a href="#">Facebook Pages</a></li> 
+        <li><a href="#">Facebook Groups</a></li> 
+        </ul> 
+    </li>
+    <li id="delimiter"><a>|</a></li> 
+    <li class="google"><a href="#">ПРОДУКЦИЯ</a> 
+        <ul> 
+        <li><a href="#">Google mail</a></li> 
+        <li><a href="#">Google Plus</a></li> 
+        <li><a href="#">Google Search &raquo;</a> 
+            <ul> 
+                <li><a href="#">Search Images</a></li> 
+                <li><a href="#">Search Web</a></li> 
+            </ul> 
+        </li> 
+        </ul> 
+    </li>
+    <li id="delimiter"><a>|</a></li> 
+    <li class="twitter"><a href="#">О КОМПАНИИ</a> 
+            <ul> 
+                <li><a href="#">New Tweets</a></li> 
+                <li><a href="#">Compose a Tweet</a></li> 
+            </ul> 
+    </li> 
+</ul> 
+<?php
             NavBar::end();
 ?>
 
