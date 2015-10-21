@@ -33,6 +33,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             $this->registerJsFile('@web/js/social-likes.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+            $this->registerJsFile('@web/js/menu.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
             NavBar::begin([
                 'brandLabel' => Html::img('images/logo.png', ['alt'=>Yii::$app->name]),
                 'brandUrl' => Yii::$app->homeUrl,
@@ -40,98 +41,102 @@ AppAsset::register($this);
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
             ]);
-            /*First menu small*/
-            echo Nav::widget([
-                'options' => ['class' => 'navbar-nav navbar-right '],
-                'items' => [
-                    ['label' => 'Парнерство', 'url' => ['/site/partnership']],
-                    ['label' => 'Новости', 'url' => ['/news/index']],
-                    ['label' => 'Прайс', 'url' => ['/site/index']],
-                    ['label' => 'Контакты', 'url' => ['/site/index']],
-                    ['label' => 'Поиск', 'url' => ['/site/index']],
-                    ['label' => 'Моя галерея', 'url' => ['/site/index']],
-                    ['label' => 'OK', 'url' => ['/site/index']],
-                    ['label' => 'ВК', 'url' => ['/site/index']],
-                    ['label' => 'f', 'url' => ['/site/index']],
-                    ['label' => 't', 'url' => ['/site/index']],
-                    ['label' => 'Y', 'url' => ['/site/index']],
-                    ['label' => 'V', 'url' => ['/site/index']],
-                    ['label' => 'S', 'url' => ['/site/index']],
-                    ['label' => 'e', 'url' => ['/site/index']],
-                   
-                 /*   Yii::$app->user->isGuest ?
-                        ['label' => 'Login', 'url' => ['/site/login']] :
-                        ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                            'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],*/
-                ],
-            ]);
-            /*Second menu normal*/
-            echo Nav::widget([
-                'options' => ['class' => 'navbar-nav navbar-right'],
-                'items' => [
-                    ['label' => 'О КОМПАНИИ',
-                        'items' => [
-                                     ['label' => 'Gekkostone', 'url' => 'index.php?r=site%2Fcompany'],
-                                     ['label' => 'Преимущества', 'url' => 'index.php?r=site%2Fadvantages'],
-                                     ['label' => 'Новости', 'url' => 'index.php?r=news%2Findex'],
-                                     ['label' => 'Вакансии', 'url' => 'index.php?r=site%2Fvacancy'],
-                                     ['label' => 'Отзывы и предложения', 'url' => 'index.php?r=site%2Ffeedback'],
-                                     ['label' => 'Партнерство', 'url' => 'index.php?r=site%2Fpartnership'],
-                                     ['label' => 'Контакты', 'url' => 'index.php?r=site%2Fcontact'],
-            ],]
-            ,
-                    ['label' => 'ПРОДУКЦИЯ',
-                        'items' => [
-                                     ['label' => 'Вся продукция', 'url' => 'index.php?r=products%2Findex'],
-                                     ['label' => 'Кирпич тонкий', 'url' => '#'],
-                                     ['label' => 'Кирпич облицовочный', 'url' => '#'],
-                                     ['label' => 'Камень облицовочный', 'url' => '#'],
-                                     ['label' => 'Сопутствующие товары', 'url' => '#'],
-            ],],
-                    ['label' => 'ФОТОГАЛЕРЕЯ',
-                        'items' => [
-                                     ['label' => 'Жилые дома и квартиры', 'url' => 'index.php?PhotogallerySearch%5Bphoto_category%5D=%D0%96%D0%B8%D0%BB%D1%8B%D0%B5+%D0%B4%D0%BE%D0%BC%D0%B0&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex'],
-                                     ['label' => 'Коммерческие объекты', 'url' => 'index.php?PhotogallerySearch%5Bphoto_category%5D=%D0%9A%D0%BE%D0%BC%D0%BC&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex'],
-                                     ['label' => 'До и после', 'url' => 'index.php?r=photogallery%2Findex'],
-            ],],
-                    ['label' => 'ИНФОРМАЦИЯ', 
-                        'items' => [
-                                     ['label' => 'Укладка камня', 'url' => 'index.php?r=site%2Frocklaying'],
-                                     ['label' => 'Вопрос - ответ', 'url' => 'index.php?r=faq%2Findex'],
-                                     ['label' => 'Технические данные', 'url' => 'index.php?r=certificates%2Findex'],
-                                     ['label' => 'Цветопередача', 'url' => 'index.php?r=site%2Fwarning'],
-                                     ['label' => 'Гарантия качества', 'url' => 'index.php?r=site%2Fwarranty'],
-                                     ['label' => 'Публичная оферта', 'url' => 'index.php?r=site%2Fpublicoffer'],
-                                     ['label' => 'Каталог и прайс-лист', 'url' => 'index.php?r=site%2Fprice'],
-                                     ['label' => 'Текстуры камня', 'url' => 'index.php?r=products%2F3ds'],
-            ],],
-                    ['label' => 'ГДЕ КУПИТЬ', 'url' => ['/stores/index']],
-                   
-                 /*   Yii::$app->user->isGuest ?
-                        ['label' => 'Login', 'url' => ['/site/login']] :
-                        ['label' => 'Logout (' . Yii::$app->user->identity->username . ')',
-                            'url' => ['/site/logout'],
-                            'linkOptions' => ['data-method' => 'post']],*/
-            
-                    ['label' => 'УСЛУГИ', 
-                        'items' => [
-                                     ['label' => 'Дизайн проект', 'url' => '#'],
-                                     ['label' => 'Подбор камня', 'url' => '#'],
-                                     ['label' => 'Доставка камня', 'url' => '#'],
-                                     ['label' => 'Облицовка', 'url' => '#'],
-            ],],
-            ]]);
+            ?>
+            <ul id="nav" class="nav1">
+                <a href="index.php?r=site%2Fpartnership">парнерство</a>
+                <a href="index.php?r=news%2Findex">новости</a>
+                <a href="index.php?r=site%2Fprice">прайс</a>
+                <a href="index.php?r=site%2Fcontact">контакты</a>
+                <a href="#">поиск</a>
+                <a href="#">моя галлерея</a>
+                <a href="#">ок</a>
+                <a href="#">в</a>
+                <a href="#">f</a>
+                <a href="#">t</a>
+                <a href="#">youtube</a>
+                <a href="#">tel</a>
+                <a href="#">s</a>
+                <a href="#">@</a>
+            </ul>
+            <ul id="nav" class="nav2">
+                    <li class="menu-item"><a href="#">УСЛУГИ</a> 
+                    <ul> 
+                        <li><a href="#">ДИЗАЙН-ПРОЕКТ</a></li> 
+                        <li><a href="#">ПОДБОР КАМНЯ</a></li>
+                        <li><a href="#">ДОСТАВКА КАМНЯ</a></li> 
+                        <li><a href="#">ОБЛИЦОВКА</a></li> 
+                    </ul> 
+                    </li>    
+                <li id="delimiter"><a>|</a></li>  
+                <li class="menu-item"><a href="index.php?r=stores%2Findex">ГДЕ КУПИТЬ</a></li> 
+                <li id="delimiter"><a>|</a></li> 
+                <li class="menu-item"><a href="#">ИНФОРМАЦИЯ</a> 
+                    <ul> 
+                        <li><a href="index.php?r=site%2Frocklaying">УКЛАДКА КАМНЯ</a></li> 
+                        <li><a href="index.php?r=faq%2Findex">ВОПРОС - ОТВЕТ</a></li> 
+                        <li><a href="index.php?r=certificates%2Findex">ТЕХНИЧЕСКИЕ ДАННЫЕ</a></li> 
+                        <li><a href="index.php?r=site%2Fwarning">ЦВЕТОПЕРЕДАЧА</a></li> 
+                        <li><a href="index.php?r=site%2Fwarranty">ГАРАНТИЯ КАЧЕСТВА</a></li> 
+                        <li><a href="index.php?r=site%2Fpublicoffer">ПУБЛИЧНАЯ ОФЕРТА</a></li> 
+                        <li><a href="index.php?r=site%2Fprice">КАТАЛОГ И ПРАЙС-ЛИСТ</a></li> 
+                        <li><a href="index.php?r=products%2F3ds">ТЕКСТУРЫ КАМНЯ <span style ="color:#4D4D4D;background-color:white;border-radius: 3px 0px 3px 0px; ">3DS</span> </a></li> 
+                    </ul> 
+                </li> 
+                <li id="delimiter"><a>|</a></li>
+                <li class="menu-item"><a href="#">ФОТОГАЛЛЕРЕЯ</a> 
+                    <ul> 
+                        <li><a href="index.php?PhotogallerySearch%5Bphoto_category%5D=%D0%96%D0%B8%D0%BB%D1%8B%D0%B5+%D0%B4%D0%BE%D0%BC%D0%B0&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex">ЖИЛЫЕ ДОМА И КВАРТИРЫ</a></li> 
+                        <li><a href="index.php?PhotogallerySearch%5Bphoto_category%5D=%D0%9A%D0%BE%D0%BC%D0%BC&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex">КОММЕРЧЕСКИЕ ОБЪЕКТЫ</a></li> 
+                        <li><a href="#">ДО И ПОСЛЕ</a></li> 
+                         <li><a href="#">menu-item Games <span style="color:#FFFFFF">&#9658;</span></a>             
+                            <ul> 
+                                <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
+                                <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
+                                <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
+                                <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
+                                <ul> 
+                                    <li><a href="#">menu-item Pool</a></li> 
+                                    <li><a href="#">Chess</a></li> 
+                                </ul> 
+                                </li> 
+                            </ul> 
+                        </li> 
+                    </ul> 
+                </li>
+                <li id="delimiter"><a>|</a></li> 
+                <li class="menu-item"><a href="#">ПРОДУКЦИЯ</a> 
+                    <ul> 
+                        <li><a href="index.php?r=products%2Findex">ВСЯ ПРОДУКЦИЯ</a></li> 
+                        <li><a href="#">КИРПИЧ ТОНКИЙ <span>&#9658;</span></a>             
+                            <ul> 
+                                <li><a href="#"><span>&#9679;</span> АНТИЧНЫЙ</a></li> 
+                                <li><a href="#"><span>&#9679;</span> КЛАССИЧЕСКИЙ</a></li> 
+                                <li><a href="#"><span>&#9679;</span> СОСТАРЕННЫЙ</a></li>  
+                            </ul> 
+                        </li>
+                        <li><a href="#">КИРПИЧ ОБЛИЦОВОЧНЫЙ</a></li>
+                        <li><a href="#">КАМЕНЬ ОБЛИЦОВОЧНЫЙ</a></li>
+                        <li><a href="#">СОПУТСТВУЮЩИЕ ТОВАРЫ</a></li>
+                    </ul> 
+                </li>
+                <li id="delimiter"><a>|</a></li> 
+                <li class="menu-item"><a href="#">О КОМПАНИИ</a> 
+                        <ul> 
+                            <li><a href="index.php?r=site%2Fcompany">GEKKOSTONE</a></li> 
+                            <li><a href="index.php?r=site%2Fadvantages">ПРЕИМУЩЕСТВА</a></li>
+                            <li><a href="index.php?r=news%2Findex">НОВОСТИ</a></li>
+                            <li><a href="index.php?r=site%2Fvacancy">ВАКАНСИИ</a></li>
+                            <li><a href="index.php?r=site%2Ffeedback">ОТЗЫВЫ И ПРЕДЛОЖЕНИЯ</a></li>
+                            <li><a href="index.php?r=site%2Fpartnership">ПАРТНЕРСТВО</a></li> 
+                            <li><a href="index.php?r=site%2Fcontact">КОНТАКТЫ</a></li>    
+                        </ul> 
+                </li> 
+            </ul> 
+        <?php
+                    NavBar::end();
+        ?>
 
-            NavBar::end();
-?>
-
-
-
-  <div class="container">  
-             <!-- <?= Breadcrumbs::widget([
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>!-->
+        <div class="container">  
             <?= $content ?>
         </div> 
     </div>

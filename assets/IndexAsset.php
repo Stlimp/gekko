@@ -20,6 +20,7 @@ class IndexAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/index.css',
+        'css/menu.css',
     ];
     public $js = [
     ];

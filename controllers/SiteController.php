@@ -136,6 +136,7 @@ class SiteController extends Controller
 
     public function actionFeedback()
     {
+        $this->layout='main';
          $model=new FeedbackForm;
 
 
