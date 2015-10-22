@@ -1,6 +1,7 @@
 html,
 body {
     height: 100%;
+    font-family: Corbel;
 }
 
 img#bg {
@@ -19,9 +20,18 @@ img#bg {
 }
 
 .wrap > .container {
-    padding: 70px 15px 20px;
+    padding: 70px 0px 20px;
 }
 
+.container{
+        margin:0;
+        width: 100%;
+}
+
+.container .jumbotron, .container-fluid .jumbotron {
+    padding-right: 0px;
+    padding-left: 0px;
+}
 
 .jumbotron {
     text-align: center;
@@ -187,7 +197,8 @@ body {
     #margin-left: -165px;
     #padding-left: 165px;
     width:100%;
- 
+    padding-left: 50px;
+    padding-right:25px;
 }
 
 .right-side-half-header {
@@ -200,6 +211,8 @@ body {
     #margin-left: -10px;
     #padding-left: 10px;
     width:100%;
+    padding-left: 25px;
+    padding-right:50px;
  
 }
 .left-side-half-text {
@@ -208,6 +221,8 @@ body {
     text-align:left;
     #padding-right: 30px;
     width:100%;
+    padding-left: 50px;
+    padding-right:25px;
 
     /*line-height:120%;межстрочный интервал*/
 }
@@ -217,6 +232,8 @@ body {
     font-family:Corbel;
     text-align:left;
     width:100%;
+    padding-left: 25px;
+    padding-right:50px;
     /*line-height:120%;межстрочный интервал*/
 }
 .page-header {
@@ -227,15 +244,18 @@ body {
     font-weight:bolder;
     font-size:16px;
     text-align:left;
+    padding-left: 50px;
 }
 .page-text {
   width:100%;
   text-align:left;
     float:left;
     font-family:Corbel;
-  
     text-align:left;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-family: Corbel;
+    font-size:12px;
     /*line-height:120%;межстрочный интервал*/
 }
 .footer {

@@ -28,7 +28,12 @@ $this->title = 'Rocklaying';
         font-size:16px;
         color: #CC6633;
         text-align:left;
-        width:95%;
+        #width:95%;
+        padding:0;
+ 
+    }
+    .left-side-half-text {
+        padding:0;
  
     }
 
@@ -40,7 +45,7 @@ $this->title = 'Rocklaying';
         font-size:16px;
         color: #CC6633;
         text-align:left;
-        width:95%
+        #width:95%
     }
 
   #stbdoc {
@@ -105,6 +110,10 @@ $this->title = 'Rocklaying';
 
     a{
         color:#9E8D6B;
+        
+    }
+    a:hover{
+        color:#9E8D6B;
     }
 </style>
 
@@ -159,12 +168,12 @@ $this->title = 'Rocklaying';
                 </table>
                  </p>
         </div>
-        <div class="right-side-half-header">ИНСТРУКЦИИ ПО МОНТАЖУ ДЕКОРАТИВНОГО КАМНЯ И ТИПУ ПРИМЕНЯЕМЫХ МАТЕРИАЛОВ:</div>
+        <div class="left-side-half-header">ИНСТРУКЦИИ ПО МОНТАЖУ ДЕКОРАТИВНОГО КАМНЯ И ТИПУ ПРИМЕНЯЕМЫХ МАТЕРИАЛОВ:</div>
         <div class="right-half">
             <div class="right-side-half-text">
                 <div id="document">
-                    <p><img src="images\content\certificates\transparent.png" alt="..." style="float:left"/>
-                        <a href="">КРАТКАЯ ИНСТРУКЦИЯ.</a><br>
+                    <p><a href=""><img src="images\content\certificates\transparent.png" alt="..." style="float:left"/>
+                        КРАТКАЯ ИНСТРУКЦИЯ.</a><br>
                         Изложены общие рекомендации
                         по монтажу различных фактур и
                         типу применяемых материалов.
@@ -178,8 +187,8 @@ $this->title = 'Rocklaying';
         <div class="left-half">
             <div class="left-side-half-text">
                 <div id="document">
-                    <p><img src="images\content\certificates\transparent.png" alt="..." style="float:left"/>
-                        <a href="">ПОДРОБНАЯ ИНСТРУКЦИЯ.</a><br>
+                    <p><a href=""><img src="images\content\certificates\transparent.png" alt="..." style="float:left"/>
+                        ПОДРОБНАЯ ИНСТРУКЦИЯ.</a><br>
                         Изложены подробные рекомендации
                         по монтажу различных фактур на 
                         различные типы поверхностей и узлы.
@@ -193,9 +202,7 @@ $this->title = 'Rocklaying';
                 </div>
             </div>                    
         </div>
-
-   </div>
-   <div class="right-side-half-header">ВИДЕО ПО МОНТАЖУ ДЕКОРАТИВНОГО КАМНЯ:<span style="float:right;color:grey;"> <b>перейти к </b><a href="index.php?r=videogallery%2Findex" style="color:#9E8D6B"><u>ВИДЕОГАЛЕРЕЕ</u></a></span></div>
+   <div class="left-side-half-header">ВИДЕО ПО МОНТАЖУ ДЕКОРАТИВНОГО КАМНЯ:<span style="float:right;color:grey;"> <b>перейти к </b><a href="index.php?r=videogallery%2Findex" style="color:#9E8D6B"><u>ВИДЕОГАЛЕРЕЕ</u></a></span></div>
     <div class="gallery" style="width:100%;text-align: justify;" >   
     <?php foreach ($videos as $videoItem){ ?>
         <div class="product" style="width:22%;float:none;vertical-align:top;">
@@ -207,4 +214,6 @@ $this->title = 'Rocklaying';
 </div>
     
 </div>
+   </div>
+
 </div>
