@@ -163,14 +163,18 @@ body {
 
 
 .left-half{
-  width:55%;
+  width:50%;
   float:left;
-
+-moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box;
 }
 .right-half{
-  width:45%;
+  width: 50%;
   float:left;
-
+  -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+     box-sizing: border-box;
 }
 
 .left-side-half-header {
@@ -180,9 +184,9 @@ body {
     font-weight:bolder;
     font-size:16px;
     text-align:left;
-    margin-left: -165px;
-    padding-left: 165px;
-    width:150%;
+    #margin-left: -165px;
+    #padding-left: 165px;
+    width:100%;
  
 }
 
@@ -193,30 +197,26 @@ body {
     font-weight:bolder;
     font-size:16px;
     text-align:left;
-    margin-left: -10px;
-    padding-left: 10px;
-    width:150%;
+    #margin-left: -10px;
+    #padding-left: 10px;
+    width:100%;
  
 }
 .left-side-half-text {
     float:left;
-    font-family:Corbel;
- 
+    font-family:Corbel; 
     text-align:left;
-    padding-right: 30px;
+    #padding-right: 30px;
     width:100%;
 
     /*line-height:120%;межстрочный интервал*/
 }
 
 .right-side-half-text {
-
     float:left;
     font-family:Corbel;
-
     text-align:left;
     width:100%;
-
     /*line-height:120%;межстрочный интервал*/
 }
 .page-header {
@@ -375,7 +375,8 @@ body {
 
 /*to make footer work. Remove if needed*/
 .wrap{
-     margin: 0 auto 0px;
+     width: 100%;
+     margin: 0 0px 0px;
     }
 
 

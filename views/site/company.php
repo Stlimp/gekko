@@ -4,6 +4,32 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 $this->title = 'Gekkostone';
 ?>
+<style>
+    .wrap > .container{
+        padding: 70px 0px 20px;
+    }
+    .container{
+        margin:0;
+        width: 100%;
+    }
+    
+    .container .jumbotron, .container-fluid .jumbotron {
+    padding-right: 0px;
+    padding-left: 0px;
+    }
+    .left-side-half-header, .left-side-half-text{
+        padding-left: 50px;
+        padding-right:25px;
+    }
+    .right-side-half-header, .right-side-half-text{
+        padding-left: 25px;
+        padding-right:50px;
+    }
+</style>
+
+
+
+
 <div class="site-index">
    <div class="jumbotron">
     <div class="left-half">
