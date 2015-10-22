@@ -17,8 +17,8 @@ class ContactsForm extends Model{
 	{
 		return[
 		[['text','department','name','email','phone'],'required','message' => ''],
-		['phone','string']
-
+		['phone','string'],
+		[['organization','city','position'],'safe'],
 
 		];
 

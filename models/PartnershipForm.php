@@ -19,10 +19,7 @@ class PartnershipForm extends Model{
 	{
 		return[
 		[['companytype','location','timeperiod','mainactivity','typeofpartnership','contactperson','position','email','phone'],'required','message' => ''],
-		['info','string'],
-		['phone','string']
-
-
+		[['phone','info'],'string'],
 		];
 
 	}
