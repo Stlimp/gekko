@@ -8,9 +8,7 @@ $this->title = 'Gekkostone';
 
 <style>
 
-    .site-index{
-        margin-top:60px;
-    }
+
     
     .left_third{
         background-color:#D8D8CA;
@@ -130,11 +128,10 @@ $this->title = 'Gekkostone';
        
   
 <div class="site-index">
-      
-
     <div class="jumbotron">
-        
+             
         <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: -100px;z-index: 1015";> <a href="#upper" ><div class="button-up"></div> </a>   </div>     
+        <div class="page-text">
         <div class="left_third">
             <span class="left_product_name">
                 <?= mb_strtoupper($product->product_name) ?>
@@ -184,9 +181,8 @@ $this->title = 'Gekkostone';
                 <p style="font-family:Corbel">Расчет необходимого количества камня, его веса и стоимости!</p>
             </div>
         </div>
-   
-
-  </div>
+      </div>
+    </div>
 </div>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
