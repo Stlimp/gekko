@@ -16,6 +16,7 @@ use yii\helpers\ArrayHelper;
  */
 class PhotogalleryController extends Controller
 {
+    public $enableCsrfValidation = false;
     public function behaviors()
     {
         return [

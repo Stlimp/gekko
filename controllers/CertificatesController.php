@@ -15,6 +15,7 @@ use yii\web\UploadedFile;
  */
 class CertificatesController extends Controller
 {
+    public $enableCsrfValidation = false;
     public function behaviors()
     {
         return [
