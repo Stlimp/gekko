@@ -63,7 +63,7 @@ use yii\widgets\ActiveForm;
 					echo $form->field($model,'phone')->label('Контактный телефон')->widget(\yii\widgets\MaskedInput::className(), [
     'mask' => '+375(99)999-99-99',
 ]);;
-					echo Html::submitButton("Submit",['class'=>'btn btn-success']);
+					echo Html::submitButton("ОТПРАВИТЬ",['class'=>'btn btn-success']);
 					}
 				?>
     		</p>

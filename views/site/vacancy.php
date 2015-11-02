@@ -77,7 +77,7 @@ use yii\widgets\ActiveForm;
     'mask' => '+375(99)999-99-99',
 ]);;
 
-			echo Html::submitButton("Submit",['class'=>'btn btn-success']);
+			echo Html::submitButton("ОТПРАВИТЬ",['class'=>'btn btn-success btn-send']);
 		}
 	?>
 </div>

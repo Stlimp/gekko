@@ -411,3 +411,17 @@ body {
     color: #CCCCCC;
     margin-bottom: 5px;
 }
+
+.jumbotron .btn{
+
+  background-color: #979683;
+  border-color: #979683;
+  border-radius: 10px 0px 10px 0px;
+  padding:5px 30px 5px 30px;
+  font-size: 14px;
+}
+
+.btn-success:active:hover{
+  background-color: #3F3F3F;
+  border-color: #3F3F3F;
+}
