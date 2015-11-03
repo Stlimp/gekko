@@ -119,12 +119,12 @@ use yii\widgets\MaskedInput;
     'mask' => '+375(99)999-99-99',
 ]); 
 			            echo Html::submitButton('ОТПРАВИТЬ', ['class' => 'btn btn-success']);
-			           
+			           echo '<p style="color:#D0272E;font-style: italic;">* - поля, обязательные для заполнения;<br> 
+     проверьте указанную информацию перед отправкой!</p>';
 					}        
 		   		 ?>
 			</p>
-			<p style="color:#D0272E;font-style: italic;">* - поля, обязательные для заполнения;<br> 
-     проверьте указанную информацию перед отправкой!</p>
+			
 		</div>
 		<div class="right-side-half-header">
 			КОМПАНИЯ GEKKOSTONE В ИНТЕРНЕТЕ
