@@ -82,6 +82,15 @@ use yii\widgets\ActiveForm;
 	input#vacancyform-phonenumber {
 		width:auto;
 	}
+	.form-group.field-vacancyform-workhistory.required,.form-group.field-vacancyform-workhistory_second,.form-group.field-vacancyform-workhistory_third,.form-group.field-vacancyform-workhistory_fourth{
+		width:70%;
+	}
+	.form-group.field-vacancyform-workhistory_years.required,.form-group.field-vacancyform-workhistory_years_second,.form-group.field-vacancyform-workhistory_years_third,.form-group.field-vacancyform-workhistory_years_fourth {
+		width:30%;
+	}
+	label.control-label {
+		display:initial;
+	}
 	
 
 
@@ -133,6 +142,13 @@ use yii\widgets\ActiveForm;
 			echo $form->field($model, 'education')->dropDownList(['a' => 'Общее', 'b' => 'Среднее', 'c' => 'Средне-специальное', 'в' => 'Высшее'], ['prompt'=>''])->label('Образование');
 			echo $form->field($model,'speciality')->label('Ваша специальность(если несколько - укажите все');
 			echo $form->field($model,'workhistory')->label('Опыт работы(учебы) за последние 10 лет(место работы, город, должность)');
+			echo $form->field($model,'workhistory_years')->label('Период работы');
+			echo $form->field($model,'workhistory_second')->label('');
+			echo $form->field($model,'workhistory_years_second')->label('');
+			echo $form->field($model,'workhistory_third')->label('');
+			echo $form->field($model,'workhistory_years_third')->label('');
+			echo $form->field($model,'workhistory_fourth')->label('');
+			echo $form->field($model,'workhistory_years_fourth')->label('');
 			echo $form->field($model, 'civilstatus')->dropDownList(['a' => 'Женат/замужен', 'b' => 'Не женат/ не замужем', 'c' => 'Разведен/разведена'], ['prompt'=>''])->label('Семейное положение');
 			echo $form->field($model, 'personalauto')->dropDownList(['a' => 'Есть', 'b' => 'Нет'], ['prompt'=>''])->label('Личное авто');
 			echo $form->field($model,'driverlicence')->label('Водительские категории');

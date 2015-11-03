@@ -11,6 +11,13 @@ class VacancyForm extends Model{
 	public $education;
 	public $speciality; 
 	public $workhistory;
+	public $workhistory_years;
+	public $workhistory_second;
+	public $workhistory_years_second;
+	public $workhistory_third;
+	public $workhistory_years_third;
+	public $workhistory_fourth;
+	public $workhistory_years_fourth;
 	public $civilstatus;
 	public $personalauto;
 	public $driverlicence;
@@ -24,9 +31,9 @@ class VacancyForm extends Model{
 	public function rules()
 	{
 		return[
-		[['employment','employmenttype','name','age','education','speciality','civilstatus','personalauto','adress','smoker','phonenumber'],'required','message' => ''],
+		[['employment','employmenttype','name','age','education','speciality','civilstatus','personalauto','adress','smoker','phonenumber','workhistory','workhistory_years'],'required','message' => ''],
 		['phonenumber','string'],
-		[['workhistory','driverlicence','characteristic','selfimage'],'safe']
+		[['workhistory_second','workhistory_third','workhistory_fourth','workhistory_years_second','workhistory_years_third','workhistory_years_fourth','driverlicence','characteristic','selfimage'],'safe']
 
 		];
 

@@ -22,8 +22,10 @@ use yii\helpers\Url;
 <h3>Специальность:</h3>
 		<p><?=$speciality ?></p>
 <h3>Опыт работы:</h3>
-		<p><?=$workhistory ?></p>
-		<p><b>ЗАИМПЕЛЕМЕТИТЬ МАССИВ</b></p>
+		<p><?=$workhistory ?> <?=$workhistory_years ?></p>
+		<p><?=$workhistory_second ?> <?=$workhistory_years_second ?></p>
+		<p><?=$workhistory_third ?> <?=$workhistory_years_third ?></p>
+		<p><?=$workhistory_fourth ?> <?=$workhistory_years_fourth ?></p>
 <h3>Семейное положение:</h3>
 		<p><?=$civilstatus ?></p>
 <h3>Личное авто:</h3>
