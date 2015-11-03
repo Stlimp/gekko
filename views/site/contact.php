@@ -13,11 +13,37 @@ use yii\widgets\MaskedInput;
 	}
 	.form-control{
 		height:19px;
-		width:auto;
+		width:100%;
 		padding:0px;
 		padding-right:15px;
 		border-radius:5px 0px 5px 0px;
 	}
+	.form-group {
+      display: inline-block;
+      margin-bottom: 0px;
+  	}
+  	.required>label::after {
+      content: " *";
+      color:#D0272E;
+  	}
+  	.form-group.field-contactsform-organization,.form-group.field-contactsform-city {
+  		width:100%;
+	}
+
+	.form-group.field-contactsform-department.required,.form-group.field-contactsform-position {
+		width:35%;
+		float:right;
+		padding-left: 30px;
+	}
+	.form-group.field-contactsform-name.required,.form-group.field-contactsform-text.required,.form-group.field-contactsform-email,.form-group.field-contactsform-phone
+	{
+		width:65%;
+	}
+	.btn{
+		float:right;  
+	}
+
+
 </style>
 <div class="site-index">
    <div class="jumbotron">
@@ -84,8 +110,8 @@ use yii\widgets\MaskedInput;
 						echo $form->field($model, 'organization')->label('Наименование фирмы, ИП(для юр.лица) или ФИО для физ.лица'); 
 						echo $form->field($model, 'city')->label('Местонахождение(страна, город)'); 
 
-		        		echo $form->field($model, 'text')->textarea()->label('Ваше обращение');
-		        		echo $form->field($model, 'department')->label('Выберите отдел'); 
+		        		echo $form->field($model, 'text')->textarea(['rows' => 10])->label('Ваше обращение');
+		        		echo $form->field($model, 'department')->dropDownList(['Отдел 1' => 'Отдел 1', 'Отдел 2' => 'Отдел 2', 'Отдел 3' => 'Отдел 3'], ['prompt'=>''])->label('Выберите отдел');
 		        		echo $form->field($model, 'name')->label('ФИО контактного лица'); 
 		        		echo $form->field($model, 'position')->label('Должность'); 
 		        		echo $form->field($model, 'email')->label('Контактный e-mail');
@@ -97,6 +123,11 @@ use yii\widgets\MaskedInput;
 					}        
 		   		 ?>
 			</p>
+			<p style="color:#D0272E;font-style: italic;">* - поля, обязательные для заполнения;<br> 
+     проверьте указанную информацию перед отправкой!</p>
+		</div>
+		<div class="right-side-half-header">
+			КОМПАНИЯ GEKKOSTONE В ИНТЕРНЕТЕ
 		</div>
 	</div>
 	</div>

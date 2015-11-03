@@ -3,7 +3,6 @@
 use yii\helpers\Html;
 use yii\grid\GridView;
 mb_internal_encoding("UTF-8");
-
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
@@ -15,6 +14,10 @@ $this->title = 'gekkostone';
     }
     a:hover{
         color:#000000;
+    }
+    .post{
+        padding-left: 50px;
+
     }
 </style>
 <div class="news-index" >
@@ -45,7 +48,7 @@ $this->title = 'gekkostone';
             <ul>
                 <li><a href="/web/index.php?r=news%2Findex">Все записи</a></li>
                 <?php foreach ($yearFilter as $yearItem){ ?>
-                    <li><a href="/web/index.php?NewsSearch%5Bdate%5D=<?= $yearItem ?>&r=news%2Findex"><?= $yearItem ?></a></li>
+                    <li class="unselected"><a href="/web/index.php?NewsSearch%5Bdate%5D=<?= $yearItem ?>&r=news%2Findex"><?= $yearItem ?></a></li>
                 <?php }?>
             </ul>
  
@@ -53,7 +56,7 @@ $this->title = 'gekkostone';
         <div class="page-header" style="float:left;background: #FFFFFF;">ПУБЛИКАЦИИ В СЕТИ</div>
             <ul style=" list-style-type: none;padding-left:0px;">
                 <?php foreach ($press as $link){ ?>
-                    <li><a href="<?= $link->link?>" ><?= $link->link_name ?></a></li>
+                    <li><a href="<?= $link->link?>" target="_blank"><?= $link->link_name ?></a></li>
                 <?php }?>
             </ul>
 

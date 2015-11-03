@@ -10,13 +10,81 @@ use yii\widgets\ActiveForm;
 
 	    background:transparent url("http://gekkostone/web/images/content/arrow.png") no-repeat right;
 	}
+
+	.required>label::after {
+  		content: " *";
+  		color:#D0272E;
+	}
+	.right-side-half-text {
+		padding-top: 20px;
+	}
+
 	.form-control{
 		height:19px;
-		width:auto;
+		width:100%;
 		padding:0px;
 		padding-right:15px;
 		border-radius:5px 0px 5px 0px;
 	}
+	.form-group {
+    	display: inline-block;
+    	padding-right: 20px;
+    	margin-bottom: 0px;
+	}
+	.form-group.field-vacancyform-employment.required {
+    	width: 60%;
+	}
+	.form-group.field-vacancyform-employmenttype.required {
+		width:30%;
+	}
+	.form-group.field-vacancyform-name.required {
+		width:70%;
+	}
+	.form-group.field-vacancyform-age.required {
+		width:20%;
+	}
+	.form-group.field-vacancyform-education.required {
+		width:30%;
+	}
+	.form-group.field-vacancyform-speciality.required {
+		width:70%;
+	}
+	.form-group.field-vacancyform-civilstatus.required {
+		width:30%;
+	}
+	.form-group.field-vacancyform-personalauto.required {
+		width:30%;
+	}
+	.form-group.field-vacancyform-driverlicence{
+		width:30%;
+	}
+	.form-group.field-vacancyform-adress.required {
+		width:80%;
+	}
+	.form-group.field-vacancyform-salary {
+		width:80%;
+	}
+	.form-group.field-vacancyform-smoker.required {
+		width:20%;
+	}
+	.form-group.field-vacancyform-characteristic {
+		width:100%;
+	}
+	.form-group.field-vacancyform-selfimage {
+		width:100%;
+	}
+	.form-group.field-vacancyform-phonenumber.required {
+		width:50%;
+	}
+	.btn{
+		width:25%;
+	}
+	input#vacancyform-phonenumber {
+		width:auto;
+	}
+	
+
+
 </style>
 <div class="site-index">
    <div class="jumbotron">
@@ -72,7 +140,8 @@ use yii\widgets\ActiveForm;
 			echo $form->field($model,'salary')->label('На какую зарплату вы расчитываете?');
 			echo $form->field($model, 'smoker')->dropDownList(['a' => 'Да', 'b' => 'Нет'], ['prompt'=>''])->label('Вы курите?');
 			echo $form->field($model,'characteristic')->label('Ваши качества');
-			echo $form->field($model,'selfimage')->label('Напишите о себе( свободная форма)');
+			echo $form->field($model,'selfimage')->textarea(['rows' => 5])->label('Напишите о себе( свободная форма)');
+			
 			echo $form->field($model,'phonenumber')->label('Контактный телефон( с кодом оператора)')->widget(\yii\widgets\MaskedInput::className(), [
     'mask' => '+375(99)999-99-99',
 ]);;
@@ -80,6 +149,8 @@ use yii\widgets\ActiveForm;
 			echo Html::submitButton("ОТПРАВИТЬ",['class'=>'btn btn-success btn-send']);
 		}
 	?>
+	<p style="color:#D0272E;font-style: italic;">* - поля, обязательные для заполнения;<br> 
+     проверьте указанную информацию перед отправкой!</p>
 </div>
 </div>
 </div>

@@ -7,21 +7,47 @@ use yii\widgets\ActiveForm;
   #partnershipform-typeofpartnership{
       -webkit-appearance: none;
       -moz-appearance: none;
-    
-
       background:transparent url("http://gekkostone/web/images/content/arrow.png") no-repeat right;
   }
-  #partnershipform-info{
-    height:200px;
-    width:100% !important;
+
+  .form-group {
+      display: inline-block;
+      margin-bottom: 0px;
   }
   .form-control{
     height:19px;
-    width:auto;
+    width:100%;
     padding:0px;
     padding-right:15px;
     border-radius:5px 0px 5px 0px;
   }
+  .required>label::after {
+      content: " *";
+      color:#D0272E;
+  }
+  .form-group.field-partnershipform-companytype.required,.form-group.field-partnershipform-mainactivity.required,.form-group.field-partnershipform-typeofpartnership.required,.form-group.field-partnershipform-info {
+    width:100%;
+  }
+  .form-group.field-partnershipform-location.required {
+    width:70%;
+  }
+  .form-group.field-partnershipform-timeperiod.required {
+    width:25%;
+    float:right;
+  }
+  .form-group.field-partnershipform-contactperson.required, .form-group.field-partnershipform-email.required,.form-group.field-partnershipform-phone.required{
+    width:60%;
+  }
+  .form-group.field-partnershipform-position.required {
+    width:35%;
+    padding-left:30px;
+  }
+  .btn{
+    float:right;  
+
+  }
+
+
 </style>
 <div class="site-index">
    <div class="jumbotron">
@@ -166,7 +192,7 @@ use yii\widgets\ActiveForm;
 			echo $form->field($model,'timeperiod')->label('Период работы');
 			echo $form->field($model,'mainactivity')->label('Основной вид деятельности фирмы или ИП');
 			echo $form->field($model,'typeofpartnership')->dropDownList(['a' => 'Партнерство с организициями оптово-розничной торговли', 'b' => 'Партнерство с дизайнерами и архитекторами', 'c' => 'Партнерство со строительными организациями', 'd' => 'Рекламное партнерство'], ['prompt'=>''])->label('Желаемый вид сотрудничества');
-			echo $form->field($model,'info')->textarea(['rows' => 1])->label('Дополнительная информация и пожелания заявителя');
+			echo $form->field($model,'info')->textarea(['rows' => 10])->label('Дополнительная информация и пожелания заявителя');
 			echo $form->field($model,'contactperson')->label('Контактное лицо для обратной связи, ФИО');
 			echo $form->field($model,'position')->label('Должность');
 			echo $form->field($model,'email')->label('Контактный e-mail для связи');
@@ -177,6 +203,8 @@ use yii\widgets\ActiveForm;
 			echo Html::submitButton("ОТПРАВИТЬ",['class'=>'btn btn-success']);
 		}
 	?>
+  <p style="color:#D0272E;font-style: italic;">* - поля, обязательные для заполнения;<br> 
+     проверьте указанную информацию перед отправкой!</p>
 </div>
 </div>
 </div>

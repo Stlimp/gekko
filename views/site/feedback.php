@@ -7,17 +7,40 @@ use yii\widgets\ActiveForm;
 	#feedbackform-department{
 	    -webkit-appearance: none;
 	    -moz-appearance: none;
-		
-
 	    background:transparent url("http://gekkostone/web/images/content/arrow.png") no-repeat right;
+	}
+	.form-group {
+    	display: inline-block;
+    	margin-bottom: 0px;
+
 	}
 	.form-control{
 		height:19px;
-		width:auto;
+		width:100%;
 		padding:0px;
 		padding-right:15px;
 		border-radius:5px 0px 5px 0px;
 	}
+	.required>label::after {
+  		content: " *";
+  		color:#D0272E;
+	}
+	.form-group.field-feedbackform-name.required,.form-group.field-feedbackform-text.required,.form-group.field-feedbackform-email,.form-group.field-feedbackform-phone
+	{
+		width:65%;
+	}
+	.form-group.field-feedbackform-department.required {
+		width:35%;
+		float:right;
+		padding-left: 30px;
+	}
+	.btn{
+		display: block;
+	}
+
+
+
+
 </style>
 
 <div class="site-index">
@@ -57,16 +80,19 @@ use yii\widgets\ActiveForm;
 				else {
 					$form =ActiveForm::begin();
 					echo $form->field($model,'name')->textInput()->label('ФИО');
-					echo $form->field($model,'text')->label('Ваше обращение');
+					echo $form->field($model,'text')->textarea(['rows' => 20])->label('Ваше обращение');
 					echo $form->field($model, 'department')->dropDownList(['Отдел 1' => 'Отдел 1', 'Отдел 2' => 'Отдел 2', 'Отдел 3' => 'Отдел 3'], ['prompt'=>''])->label('Выберите отдел');
 					echo $form->field($model,'email')->label('Контактный e-mail');
 					echo $form->field($model,'phone')->label('Контактный телефон')->widget(\yii\widgets\MaskedInput::className(), [
     'mask' => '+375(99)999-99-99',
 ]);;
+
 					echo Html::submitButton("ОТПРАВИТЬ",['class'=>'btn btn-success']);
 					}
 				?>
     		</p>
+    		<p style="color:#D0272E;font-style: italic;">* - поля, обязательные для заполнения;<br> 
+     проверьте указанную информацию перед отправкой!</p>
     	</div>
     	
 
