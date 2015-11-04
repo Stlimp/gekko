@@ -34,6 +34,7 @@ class ProductsController extends Controller
      */
     public function actionIndex()
     {
+        $this->layout='twoFootersLayout';
         $searchModel = new ProductsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $product = $dataProvider->getModels();
