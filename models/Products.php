@@ -7,19 +7,22 @@ use Yii;
 /**
  * This is the model class for table "gkk_products".
  *
- * @property integer $id
+ * @property integer $product_id
  * @property string $product_image
- * @property string $product_category
+ * @property string $product_category_id
  * @property string $product_name
+ * @property string $product_3ds
+ *
+ * @property GkkProductCategories $productCategory
  */
 class Products extends \yii\db\ActiveRecord
 {
-    /**
-     * @inheritdoc
-     */
     public $image;
     public $file_3ds;
 
+    /**
+     * @inheritdoc
+     */
     public static function tableName()
     {
         return 'gkk_products';
@@ -31,10 +34,8 @@ class Products extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [[ 'product_category', 'product_name'], 'required'],
-            [['product_category', 'product_name'], 'string', 'max' => 255],
-            [['product_image'],'file','extensions'=>'jpg, gif, png, jpeg'],
-            [['product_3ds'],'file']
+            [['product_category_id', 'product_name'], 'required'],
+            [['product_image', 'product_category_id', 'product_name', 'product_3ds'], 'string', 'max' => 255]
         ];
     }
 
@@ -44,11 +45,19 @@ class Products extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'product_image' => 'Изображение',
-            'product_category' => 'Категория',
-            'product_name' => 'Имя',
-            'product_3ds' => '3DS файл',
+            'product_id' => 'Product ID',
+            'product_image' => 'Product Image',
+            'product_category_id' => 'Product Category ID',
+            'product_name' => 'Product Name',
+            'product_3ds' => 'Product 3ds',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProductCategory()
+    {
+        return $this->hasOne(GkkProductCategories::className(), ['product_category_name' => 'product_category_id']);
     }
 }

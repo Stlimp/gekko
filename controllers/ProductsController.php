@@ -9,7 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
-
+use yii\helpers\ArrayHelper;
 /**
  * ProductsController implements the CRUD actions for Products model.
  */
@@ -85,21 +85,25 @@ class ProductsController extends Controller
 
         $model = new Products();
 
-        $imageName=$model->id;
+        $imageName=$model->product_id;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $model->image = UploadedFile::getInstance($model,'image');
-            $model->file_3ds = UploadedFile::getInstance($model,'file_3ds');
+            $model->image = UploadedFile::getInstance($model,'product_image');
+            $model->file_3ds = UploadedFile::getInstance($model,'product_3ds');
             $model->product_image = 'images/content/products/'.$model->image->name;
-            $model->product_3ds = 'images/content/products/3DS/'.$model->file_3ds->name;;
+            $model->product_3ds = 'images/content/products/3DS/'.$model->file_3ds->name;
             $model->save();
             $model->image->saveAs(Yii::getAlias('@webroot') .'/images/content/products/'.$model->image->name);
             $model->file_3ds->saveAs(Yii::getAlias('@webroot') .'/images/content/products/3DS/'.$model->file_3ds->name);
             
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->product_id]);
         } else {
+
+            
             return $this->render('create', [
                 'model' => $model,
+                
+
             ]);
         }
     }
@@ -115,7 +119,7 @@ class ProductsController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->product_id]);
 
         } else {
             

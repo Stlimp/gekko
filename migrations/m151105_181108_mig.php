@@ -3,9 +3,9 @@
 use yii\db\Schema;
 use yii\db\Migration;
 
-class m150809_202419_q_and_a extends Migration
+class m151105_181108_mig extends Migration
 {
-    public function safeUp()
+   public function safeUp()
     {
 
         $this->createTable('gkk_stores', array(
@@ -60,14 +60,25 @@ class m150809_202419_q_and_a extends Migration
 
 
 
+        $this->createTable('gkk_product_categories', array(
+            'product_category_id' => Schema::TYPE_INTEGER,
+            'product_category_image' =>'string NOT NULL',
+            'product_category_name' =>'string NOT NULL',
+         ), 'ENGINE=InnoDB');
+        echo ("Table gkk_product_categories is created!\n");
+        $this->addPrimaryKey('product_category_pk', 'gkk_product_categories', 'product_category_name');
+
         $this->createTable('gkk_products', array(
-            'id' => Schema::TYPE_PK,
+            'product_id' => Schema::TYPE_PK,
             'product_image' =>'string NOT NULL',
-            'product_category' =>'string NOT NULL',
+            'product_category_id' =>'string NOT NULL',
             'product_name' => 'string NOT NULL',
             'product_3ds' =>'string NOT NULL',
          ), 'ENGINE=InnoDB');
         echo ("Table gkk_products is created!\n");
+        $this->addForeignKey('product_category_123','gkk_products','product_category_id','gkk_product_categories','product_category_name');
+
+
 
 
         $this->createTable('gkk_photogallery', array(
@@ -92,6 +103,8 @@ class m150809_202419_q_and_a extends Migration
             'product_item_long_descr_additional' => 'string DEFAULT NULL',
          ), 'ENGINE=InnoDB');
         echo ("Table gkk_product_item is created!\n");
+
+
 
 
         
@@ -132,7 +145,7 @@ class m150809_202419_q_and_a extends Migration
         $this->dropTable('gkk_videogallery');
         echo ("Table gkk_videogallery is dropped!\n");
     }
-    }
+    
 
     /*
     // Use safeUp/safeDown to run migration code within a transaction

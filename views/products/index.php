@@ -32,9 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            'product_id',
             'product_image',
-            'product_category',
+            'product_category_id',
             'product_name',
             'product_3ds',
 
