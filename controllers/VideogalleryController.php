@@ -33,6 +33,7 @@ class VideogalleryController extends Controller
      */
     public function actionIndex()
     {
+        $this->layout='twoFootersLayout';
         $dataProvider = new ActiveDataProvider([
             'query' => Videogallery::find(),
         ]);
