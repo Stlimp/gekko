@@ -116,9 +116,38 @@ class ProductsController extends Controller
      */
     public function actionUpdate($id)
     {
-        $model = $this->findModel($id);
+            $model = $this->findModel($id);
+            $temp_image=$model->product_image;
+            $temp_3ds=$model->product_3ds;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post()) ) {
+            $model->image = UploadedFile::getInstance($model,'product_image');
+            $model->file_3ds = UploadedFile::getInstance($model,'product_3ds');
+
+        
+            if (!empty($model->image)){ 
+
+                $model->product_image = 'images/content/products/'.$model->image->name;
+                $model->image->saveAs(Yii::getAlias('@webroot') .'/images/content/products/'.$model->image->name);
+            }
+            else
+            {
+                $model->product_image=$temp_image;      
+            }
+            if (!empty($model->file_3ds)){
+                 $model->product_3ds = 'images/content/products/3DS/'.$model->file_3ds->name;
+                 $model->file_3ds->saveAs(Yii::getAlias('@webroot') .'/images/content/products/3DS/'.$model->file_3ds->name);
+            }
+            else
+            {
+                $model->product_3ds = $temp_3ds;
+            }
+
+            $model->save();
+            
+            
+            
+
             return $this->redirect(['view', 'id' => $model->product_id]);
 
         } else {

@@ -66,6 +66,35 @@ use yii\widgets\MaskedInput;
 		СХЕМА ПРОЕЗДА НА СКЛАД-МАГАЗИН ДЕКОРАТИВНОГО КАМНЯ 
 		</div>
 		<div class="left-side-half-text">
+			 <?php
+                        echo newerton\fancybox\FancyBox::widget([
+                            'target' => 'a[rel=fancybox]',
+                            'helpers' => true,
+                            'mouse' => false,
+                            'config' => [
+
+                                'maxWidth' => '100%',
+                                'maxHeight' => '100%',
+                                'playSpeed' => 7000,
+                                'padding' => 0,
+                                'fitToView' => false,
+                                'width' => '100%',
+                                'height' => '100%',
+                                'autoSize' => false,
+                                'closeClick' => false,
+                                'openEffect' => 'elastic',
+                                'closeEffect' => 'elastic',
+                                'prevEffect' => 'elastic',
+                                'nextEffect' => 'elastic',
+                                'closeBtn' => true,
+                                'openOpacity' => true,
+                                'arrows' =>true,
+                                'title' => ['type' => 'inside'],
+                                'title' => $subcategory,
+                                'autoResize'=>true,
+                            ]
+                         ]);
+                    ?>
 			<div class="photogallery-item" style="float:left">
                         <a href="images/content/photogallery/493752772.jpg" rel="fancybox"><img src="images/content/photogallery/493752772.jpg" alt="Схема проезда>" width="200" height="150"></a>
             </div>
