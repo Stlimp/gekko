@@ -81,16 +81,7 @@ class m151105_181108_mig extends Migration
 
 
 
-        $this->createTable('gkk_photogallery', array(
-            'id' => Schema::TYPE_PK,
-            'photo_name' => 'string NOT NULL',
-            'photo_category' =>'string NOT NULL',
-            'photo_subcategory' =>'string NOT NULL',
-            'photo_image' =>'string NOT NULL',
-            'photo_product' =>'string NOT NULL',
-
-         ), 'ENGINE=InnoDB');
-        echo ("Table gkk_photogallery is created!\n");
+        
 
         $this->createTable('gkk_products_item', array(
             'id' => Schema::TYPE_PK,

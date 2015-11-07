@@ -91,11 +91,14 @@ class ProductsController extends Controller
             $model->image = UploadedFile::getInstance($model,'product_image');
             $model->file_3ds = UploadedFile::getInstance($model,'product_3ds');
             $model->product_image = 'images/content/products/'.$model->image->name;
-            $model->product_3ds = 'images/content/products/3DS/'.$model->file_3ds->name;
-            $model->save();
-            $model->image->saveAs(Yii::getAlias('@webroot') .'/images/content/products/'.$model->image->name);
-            $model->file_3ds->saveAs(Yii::getAlias('@webroot') .'/images/content/products/3DS/'.$model->file_3ds->name);
+           
             
+            $model->image->saveAs(Yii::getAlias('@webroot') .'/images/content/products/'.$model->image->name);
+            if (!empty($model->file_3ds)){
+                $model->product_3ds = 'images/content/products/3DS/'.$model->file_3ds->name;
+                $model->file_3ds->saveAs(Yii::getAlias('@webroot') .'/images/content/products/3DS/'.$model->file_3ds->name);
+            }
+            $model->save();
             return $this->redirect(['view', 'id' => $model->product_id]);
         } else {
 

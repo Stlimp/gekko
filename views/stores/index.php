@@ -11,16 +11,7 @@ $this->title = 'Stores';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>
-    .left_third{
-        width:30%;
-        height:500px;
-        float:left;
-        display: inline-block;
-        }
-    .right_two_thirds{
-        width:70%;
-        float:left;
-    }
+
     .cities{
         margin-left: 10px;
         display: block;
@@ -79,9 +70,9 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     <div class="right_two_thirds">
         <div style="color: #CC6633;"><b>Карта</b></div>
-        <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=0a3yPg8cKJ7k8xbDWiqF3iRgaA6pFas2&width=100%&height=420&lang=ru_RU&sourceType=constructor"></script>
-        <!-- GOOGLE MAPS
         <iframe src="https://mapsengine.google.com/map/embed?mid=zpgWQOXI5Eno.kx2t4tkdCL9k" width="100%" height="480"></iframe>
+        <!-- GOOGLE MAPS
+        
         !-->
     </div>
 

@@ -425,3 +425,21 @@ body {
   background-color: #3F3F3F;
   border-color: #3F3F3F;
 }
+
+.photogallery,.gallery{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.left_third{
+  width:30%;
+  height:500px;
+  float:left;
+  display: inline-block;
+  padding-left: 50px;
+}
+.right_two_thirds{
+  width:70%;
+  float:left;
+  padding-right:50px;
+}
