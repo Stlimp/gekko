@@ -3,6 +3,8 @@
 use yii\helpers\Html;
 mb_internal_encoding("UTF-8");
 $this->title = 'Gekkostone';
+$this->registerJsFile('@web/js/lightslider.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 ?>
 
 
@@ -122,6 +124,38 @@ $this->title = 'Gekkostone';
         display:inline-block;
     }
 
+
+    .slider {
+        width:100%;
+        float:left;
+        margin-top: 50px;
+    }
+
+    .lightslider {
+        list-style: none outside none;
+        padding-left: 0;
+        margin-bottom:0;
+    }
+    .sliderLi {
+        display: block;
+        float: left;
+        margin-right: 40px;    
+        margin-left:40px;
+    }
+
+
+    .sliderImg {
+        display: block;
+        border: 3px solid #C7C3AF;
+        border-radius: 10px 0  10px;
+        height: auto;
+        width:100%;
+        max-width: 100%;
+    }
+    .sliderImg:hover{
+        border: 3px solid #999182;
+    }
+
 </style>
 <div id="upper"></div>
 <!--<section>!-->
@@ -179,13 +213,54 @@ $this->title = 'Gekkostone';
 и расцветок!</p>
                 <span class="test_text">МОЯ ГАЛЕРЕЯ</span>
                 <p style="font-family:Corbel">Расчет необходимого количества камня, его веса и стоимости!</p>
+
             </div>
+        </div>
+        <div class="slider">
+            <ul id="lightSlider">
+                <li class="sliderLi">   
+                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-1.jpg" /></a>
+                </li>
+                <li class="sliderLi">
+                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-2.jpg" /></a>
+                </li>
+                <li class="sliderLi">
+                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-3.jpg" /></a>
+                </li>
+                <li class="sliderLi">
+                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-4.jpg" /></a>
+                </li>
+                <li class="sliderLi">
+                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-5.jpg" /></a>
+                </li>
+                <li class="sliderLi">
+                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-6.jpg" /></a>
+                </li>
+                <li class="sliderLi">
+                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-7.jpg" /></a>
+                </li>
+                <li class="sliderLi">
+                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-8.jpg" /></a>
+                </li>
+                <li class="sliderLi">
+                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-9.jpg" /></a>
+                </li>
+                <li class="sliderLi">
+                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-10.jpg" /></a>
+                </li>
+                <li class="sliderLi">
+                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-11.jpg" /></a>
+                </li>
+                <li class="sliderLi">
+                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-13.jpg" /></a>
+                </li>
+            </ul>
         </div>
       </div>
     </div>
 </div>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function() {
 $("#scroll a[href^='#']").on('click', function(e) {
@@ -207,6 +282,7 @@ $("#scroll a[href^='#']").on('click', function(e) {
      });
 
 });
+
 });
 
 </script>

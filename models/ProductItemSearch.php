@@ -55,7 +55,7 @@ class ProductItemSearch extends ProductItem
         }
 
         $query->andFilterWhere([
-            'product_id' => $this->product_id,
+            'product_id' => $this->id,
             'product_item_price' => $this->product_item_price,
         ]);
 

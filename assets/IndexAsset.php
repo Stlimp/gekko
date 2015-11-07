@@ -21,6 +21,8 @@ class IndexAsset extends AssetBundle
         'css/site.css',
         'css/index.css',
         'css/menu.css',
+        'css/lightslider.min.css',
+        'css/second-footer.css'
     ];
     public $js = [
     ];
