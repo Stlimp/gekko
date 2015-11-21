@@ -291,12 +291,16 @@ body {
         height:40px;
         background-size: 100%;
      }
+
+
     #sitemap{
         background-image:url('./../images/footer/sitemap.png');
+        
     }
 
     #sitemap:hover{
         background-image:url('./../images/footer/sitemaphover.png');
+
     }
     #gallery{
         background-image:url('./../images/footer/gallery.png');
@@ -334,7 +338,11 @@ body {
         background-image:url('./../images/footer/copyrighthover.png');
     }
 
-
+     .footer-element{
+      background-size: contain !important;
+        background-repeat: no-repeat;
+        background-position: center; 
+     }
 
 .jumbotron p{
   font-size:12px;

@@ -150,12 +150,12 @@ AppAsset::register($this);
                 <div class="odnoklassniki" title="Поделиться ссылкой в Одноклассниках"></div>
             </div>
         </div>
-        <div class="footer-image"><p>КАРТА САЙТА</p><div id="sitemap" ></div></div>
-        <div class="footer-image"><p>МОЯ ГАЛЛЕРЕЯ</p><div id="gallery"></div></div>
-        <div class="footer-image"><p>ПАРТНЕРСТВО</p><div id="partnership"></div></div>
-        <div class="footer-image"><p>КОНТАКТЫ</p><div id="contacts"></div></div>
-        <div class="footer-image"><p>ПУБЛИЧНАЯ ОФЕРТА</p><div id="publicoffer"></div></div>
-        <div class="footer-image"><p>АВТОРСКИЕ ПРАВА</p><div id="copyright"></div></div>
+        <div class="footer-image"><p>КАРТА САЙТА</p><div class="footer-element" id="sitemap" ></div></div>
+        <div class="footer-image"><p>МОЯ ГАЛЛЕРЕЯ</p><div class="footer-element" id="gallery"></div></div>
+        <div class="footer-image"><p>ПАРТНЕРСТВО</p><div class="footer-element" id="partnership"></div></div>
+        <div class="footer-image"><p>КОНТАКТЫ</p><div class="footer-element" id="contacts"></div></div>
+        <div class="footer-image"><p>ПУБЛИЧНАЯ ОФЕРТА</p><div class="footer-element" id="publicoffer"></div></div>
+        <div class="footer-image"><p>АВТОРСКИЕ ПРАВА</p><div class="footer-element" id="copyright"></div></div>
     </footer>
 <span><p style="text-align:center;vertical-align:middle;font-family:Century Gothic;">©GEKKOSTONE <?php echo date("Y"); ?></p></span>
 <?php $this->endBody() ?>
