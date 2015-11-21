@@ -24,7 +24,7 @@ $this->title = 'gekkostone';
     <div class="news" style="width:80%;float:left;">
         <div class="page-header" style="float:left;">НОВОСТИ</div>
         <?php foreach (array_reverse($post) as $postItem){ ?>
-        <div class="post postid<?= $postItem->id?>" style="float:left;margin-bottom:20px;    ">
+        <div class="post postid<?= $postItem->id?>" style="float:left;margin-bottom:20px;width:100%">
              <div class="post-image" style="width:15%;float:left;"> 
                 <img src="<?= $postItem->post_image?>" style="width:100%;height:100px;border:1px solid #000;border-radius: 10px 0  10px;">
              </div>
@@ -32,7 +32,7 @@ $this->title = 'gekkostone';
                 <div class="post-date" style="width:17%;float:left;">
                     <span style="padding-left:30px;"><b><?=date('d.m.Y', strtotime($postItem->date)); ?>г. </span>
                 </div>
-                <div class="post-content" style="width:83%;float:left;">
+                <div class="post-content" style="width:83%;float:left;display:inline-block;">
                 <a href="/web/index.php?r=news%2Fview&amp;id=<?= $postItem->id?>"><u><?=$postItem->header; ?></u></a></b>
                 <p><?= mb_substr(strip_tags($postItem->post),0,248) ?> ...</p>
                 </div>

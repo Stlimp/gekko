@@ -14,7 +14,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
     
     .left_third{
         background-color:#D8D8CA;
-        width:25%;
+        width:20%;
         height:500px;
         float:left;
         vertical-align: middle;
@@ -92,8 +92,9 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
     }
     .left_product_name {
         font-family:Impact;
-        padding-left: 30px;
-        padding-right: 30px;
+        /*padding-left: 30px;
+        padding-right: 30px;*/
+        width:100%;
         display: table-cell;
         vertical-align: middle;
         text-align:left;

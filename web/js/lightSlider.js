@@ -1,6 +1,6 @@
 $('#lightSlider').lightSlider({
     gallery: false,
-    item: 8,
+    item: 6,
     loop: true,
     slideMargin: 5,
     pager:false,

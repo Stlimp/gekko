@@ -22,7 +22,7 @@ class IndexAsset extends AssetBundle
         'css/index.css',
         'css/menu.css',
         'css/lightslider.min.css',
-        'css/second-footer.css'
+        /*'css/second-footer.css'*/
     ];
     public $js = [
     ];

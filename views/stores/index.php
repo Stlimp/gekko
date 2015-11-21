@@ -70,6 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     <div class="right_two_thirds">
         <div style="color: #CC6633;"><b>Карта</b></div>
+        
         <iframe src="https://mapsengine.google.com/map/embed?mid=zpgWQOXI5Eno.kx2t4tkdCL9k" width="100%" height="480"></iframe>
         <!-- GOOGLE MAPS
         

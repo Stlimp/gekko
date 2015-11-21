@@ -432,11 +432,11 @@ body {
 }
 
 .left_third{
-  width:30%;
+  width:30% ;
   height:500px;
   float:left;
   display: inline-block;
-  padding-left: 50px;
+  padding-left: 10px;
 }
 .right_two_thirds{
   width:70%;
