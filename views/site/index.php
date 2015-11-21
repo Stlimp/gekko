@@ -115,6 +115,8 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
         height:50px;
         background-image: url(images/up.png);
         background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; 
         display:inline-block;
     }
     .button-up:hover{
@@ -122,6 +124,8 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
         height:50px;
         background-image: url(images/up-hover.png);
         background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; 
         display:inline-block;
     }
 

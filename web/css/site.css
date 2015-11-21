@@ -451,3 +451,39 @@ body {
   float:left;
   padding-right:50px;
 }
+.iconblock1,.iconblock2{
+  display: inline-block;  
+  padding-left:20px;
+  padding-right:20px;
+}
+.iconblock1>a,.iconblock2>a{
+  padding-left:5px !important;
+  padding-right:5px !important;
+}
+
+.social-links{
+  width:80%;
+  display:inline-block;
+  vertical-align:top
+
+}
+.social-links>a>img{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.social-links>a{
+  color:#9E8D6B;
+  font-weight:bold;
+
+  display:inline-block;
+}
+
+
+/*Bootstrap buttons fixes*/
+.btn:focus,.btn:active {
+   outline: none !important;
+}
+
+.btn-success:active {
+   background-color:#3F3F3F !important;
+}

@@ -49,14 +49,18 @@ AppAsset::register($this);
                 <a href="index.php?r=site%2Fcontact">контакты</a>
                 <a href="#">поиск</a>
                 <a href="#">моя галлерея</a>
-                <a href="#">ок</a>
-                <a href="#">в</a>
-                <a href="#">f</a>
-                <a href="#">t</a>
-                <a href="#">youtube</a>
-                <a href="#">tel</a>
-                <a href="#">s</a>
-                <a href="#">@</a>
+                <div class="iconblock1">
+                    <a href="#"><img src="images/icons/ok.png" alt="" onmouseover="this.src='images/icons/okhover.png';" onmouseout="this.src='images/icons/ok.png';"></a>
+                <a href="#"><img src="images/icons/vk.png" alt="" onmouseover="this.src='images/icons/vkhover.png';" onmouseout="this.src='images/icons/vk.png';"></a>
+                <a href="#"><img src="images/icons/facebook.png" alt="" onmouseover="this.src='images/icons/facebookhover.png';" onmouseout="this.src='images/icons/facebook.png';"></a>
+                <a href="#"><img src="images/icons/twitter.png" alt="" onmouseover="this.src='images/icons/twitterhover.png';" onmouseout="this.src='images/icons/twitter.png';"></a>
+                <a href="#"><img src="images/icons/youtube.png" alt="" onmouseover="this.src='images/icons/youtubehover.png';" onmouseout="this.src='images/icons/youtube.png';"></a>
+                </div>
+                <div class="iconblock2">
+                   <a href="tel:+123"><img src="images/icons/viber.png" alt="" onmouseover="this.src='images/icons/viberhover.png';" onmouseout="this.src='images/icons/viber.png';"></a>
+                <a href="#"><img src="images/icons/skype.png" alt="" onmouseover="this.src='images/icons/skypehover.png';" onmouseout="this.src='images/icons/skype.png';"></a>
+                <a href="#" target="_top" ><img src="images/icons/email.png" alt="" onmouseover="this.src='images/icons/emailhover.png';" onmouseout="this.src='images/icons/email.png';"></a> 
+                </div>   
             </ul>
             <ul id="nav" class="nav2">
                     <li class="menu-item"><a href="#">УСЛУГИ</a> 

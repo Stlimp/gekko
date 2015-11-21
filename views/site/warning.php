@@ -1,7 +1,7 @@
 
 <div class="site-index">
    	<div class="jumbotron">
-	    <div class="page-header">ПРЕДУПРЕЖДЕНИЕ О ЦВЕТОПЕРЕДАЧЕ<img src="images/content/alarm.jpg" style="padding-left:10px;"></div>
+	    <div class="page-header">ПРЕДУПРЕЖДЕНИЕ О ЦВЕТОПЕРЕДАЧЕ<img src="images/content/alarm.png" style="padding-left:10px;"></div>
 		<div class="page-text">
 			<div style="width:75%;float:left;">
 				<p><b>Знакомясь с образцами продукции GEKKOSTONE, представленными на вебсайте и в печатных материалах 
@@ -23,7 +23,7 @@
 	      В дополнение, технологии цифровой печати также имеют свои ограничения по цветовому охвату. </li>
 				</ol>
 			</div>
-			<div style="width:25%;float:right;padding-left:10px;"><img src="images/content/warning1.jpg" style="width:100%;padding-bottom:15px;"><img src="images/content/warning1.jpg" style="width:100%">фото камня с различным цветовым балансом</div>
+			<div style="width:25%;float:right;padding-left:10px;"><img src="images/content/warning1.png" style="width:100%;padding-bottom:15px;"><img src="images/content/warning2.png" style="width:100%">фото камня с различным цветовым балансом</div>
 			</p>
 			<div style="width:100%;float:left;">
 			<p style="color:#CC6633">Мы рекомендуем Вам делать свой выбор по образцам, представленным на рекламных стендах.  </p>

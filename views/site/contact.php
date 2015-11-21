@@ -158,7 +158,23 @@ use yii\widgets\MaskedInput;
 		<div class="right-side-half-header">
 			КОМПАНИЯ GEKKOSTONE В ИНТЕРНЕТЕ
 		</div>
-	</div>
+		<div class="right-side-half-text" id="social-block-contacts">
+			<p>Социальные сети: 
+				<span class="social-links">
+	                <a href="#"><img src="images/content/icons/ok.png" alt="">ОДНОКЛАССНИКИ</a>
+	                <a href="#"><img src="images/content/icons/vk.png" alt="">ВКОНТАКТЕ</a>
+	                <a href="#"><img src="images/content/icons/facebook.png">FACEBOOK</a>
+	                <a href="#"><img src="images/content/icons/twitter.png" alt="">TWITTER</a>
+                </span>
+            </p>
+            <p>Интернет-адреса:
+            	<span class="social-links">
+	                <a href="#"><img src="images/content/icons/youtube.png" alt="">YouTube</a>
+	                <a href="tel:+123"><img src="images/content/icons/viber.png" alt="">Viber</a>
+	                <a href="#"><img src="images/content/icons/skype.png" alt="">Skype</a>
+	            </span>
+            </p>
+        </div>
 	</div>
 </div>
 
