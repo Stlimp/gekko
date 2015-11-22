@@ -3,18 +3,17 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\ProductItem;
-use app\models\ProductItemSearch;
+use app\models\ProductCategories;
+use app\models\ProductCategoriesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ProductItemController implements the CRUD actions for ProductItem model.
+ * ProductCategoriesController implements the CRUD actions for ProductCategories model.
  */
-class ProductItemController extends Controller
+class ProductCategoriesController extends Controller
 {
-    public $enableCsrfValidation = false;
     public function behaviors()
     {
         return [
@@ -28,12 +27,12 @@ class ProductItemController extends Controller
     }
 
     /**
-     * Lists all ProductItem models.
+     * Lists all ProductCategories models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new ProductItemSearch();
+        $searchModel = new ProductCategoriesSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -43,8 +42,8 @@ class ProductItemController extends Controller
     }
 
     /**
-     * Displays a single ProductItem model.
-     * @param integer $id
+     * Displays a single ProductCategories model.
+     * @param string $id
      * @return mixed
      */
     public function actionView($id)
@@ -55,16 +54,16 @@ class ProductItemController extends Controller
     }
 
     /**
-     * Creates a new ProductItem model.
+     * Creates a new ProductCategories model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new ProductItem();
+        $model = new ProductCategories();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->product_category_name]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -73,9 +72,9 @@ class ProductItemController extends Controller
     }
 
     /**
-     * Updates an existing ProductItem model.
+     * Updates an existing ProductCategories model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
+     * @param string $id
      * @return mixed
      */
     public function actionUpdate($id)
@@ -83,7 +82,7 @@ class ProductItemController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->product_category_name]);
         } else {
             return $this->render('update', [
                 'model' => $model,
@@ -92,9 +91,9 @@ class ProductItemController extends Controller
     }
 
     /**
-     * Deletes an existing ProductItem model.
+     * Deletes an existing ProductCategories model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
+     * @param string $id
      * @return mixed
      */
     public function actionDelete($id)
@@ -105,15 +104,15 @@ class ProductItemController extends Controller
     }
 
     /**
-     * Finds the ProductItem model based on its primary key value.
+     * Finds the ProductCategories model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return ProductItem the loaded model
+     * @param string $id
+     * @return ProductCategories the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = ProductItem::findOne($id)) !== null) {
+        if (($model = ProductCategories::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

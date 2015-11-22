@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Products;
+use app\models\Product;
 
 /**
- * ProductsSearch represents the model behind the search form about `app\models\Products`.
+ * ProductsSearch represents the model behind the search form about `app\models\Product`.
  */
-class ProductsSearch extends Products
+class ProductsSearch extends Product
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class ProductsSearch extends Products
     public function rules()
     {
         return [
-            [['product_id'], 'integer'],
-            [['product_image', 'product_category_id', 'product_name', 'product_3ds'], 'safe'],
+            [['product_product_id'], 'integer'],
+            [['product_product_name', 'product_category_name', 'product_category_short_description', 'product_category_short_characteristics'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class ProductsSearch extends Products
      */
     public function search($params)
     {
-        $query = Products::find();
+        $query = Product::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -56,13 +56,13 @@ class ProductsSearch extends Products
         }
 
         $query->andFilterWhere([
-            'product_id' => $this->product_id,
+            'product_product_id' => $this->product_product_id,
         ]);
 
-        $query->andFilterWhere(['like', 'product_image', $this->product_image])
-            ->andFilterWhere(['like', 'product_category_id', $this->product_category_id])
-            ->andFilterWhere(['like', 'product_name', $this->product_name])
-            ->andFilterWhere(['like', 'product_3ds', $this->product_3ds]);
+        $query->andFilterWhere(['like', 'product_product_name', $this->product_product_name])
+            ->andFilterWhere(['like', 'product_category_name', $this->product_category_name])
+            ->andFilterWhere(['like', 'product_category_short_description', $this->product_category_short_description])
+            ->andFilterWhere(['like', 'product_category_short_characteristics', $this->product_category_short_characteristics]);
 
         return $dataProvider;
     }

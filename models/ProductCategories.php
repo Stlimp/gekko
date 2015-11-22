@@ -8,10 +8,9 @@ use Yii;
  * This is the model class for table "gkk_product_categories".
  *
  * @property integer $product_category_id
- * @property string $product_category_image
  * @property string $product_category_name
  *
- * @property GkkProducts[] $gkkProducts
+ * @property GkkProduct[] $gkkProducts
  */
 class ProductCategories extends \yii\db\ActiveRecord
 {
@@ -30,8 +29,8 @@ class ProductCategories extends \yii\db\ActiveRecord
     {
         return [
             [['product_category_id'], 'integer'],
-            [['product_category_image', 'product_category_name'], 'required'],
-            [['product_category_image', 'product_category_name'], 'string', 'max' => 255]
+            [['product_category_name'], 'required'],
+            [['product_category_name'], 'string', 'max' => 255]
         ];
     }
 
@@ -42,7 +41,6 @@ class ProductCategories extends \yii\db\ActiveRecord
     {
         return [
             'product_category_id' => 'Product Category ID',
-            'product_category_image' => 'Product Category Image',
             'product_category_name' => 'Product Category Name',
         ];
     }
@@ -52,6 +50,6 @@ class ProductCategories extends \yii\db\ActiveRecord
      */
     public function getGkkProducts()
     {
-        return $this->hasMany(GkkProducts::className(), ['product_category_id' => 'product_category_name']);
+        return $this->hasMany(GkkProduct::className(), ['product_category_name' => 'product_category_name']);
     }
 }

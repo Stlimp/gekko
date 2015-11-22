@@ -59,17 +59,17 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-        $model = new Products();
+      /*  $model = new Products();
         $products = $model::find()->select('product_name')->all();
 
 
 
-        $product = array_rand($products,1);
+        $product = array_rand($products,1);*/
 
 
 
         $this->layout='indexLayout';
-        return $this->render('index',['product'=>$products[$product]]);
+        return $this->render('index'/*,['product'=>$products[$product]]*/);
     }
 
     public function actionLogin()

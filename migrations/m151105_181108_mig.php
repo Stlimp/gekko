@@ -57,10 +57,9 @@ class m151105_181108_mig extends Migration
          ), 'ENGINE=InnoDB');
         echo ("Table gkk_videogallery is created!\n");
 
+        
 
-
-
-        $this->createTable('gkk_product_categories', array(
+        /*$this->createTable('gkk_product_categories', array(
             'product_category_id' => Schema::TYPE_INTEGER,
             'product_category_image' =>'string NOT NULL',
             'product_category_name' =>'string NOT NULL',
@@ -78,11 +77,6 @@ class m151105_181108_mig extends Migration
         echo ("Table gkk_products is created!\n");
         $this->addForeignKey('product_category_123','gkk_products','product_category_id','gkk_product_categories','product_category_name');
 
-
-
-
-        
-
         $this->createTable('gkk_products_item', array(
             'id' => Schema::TYPE_PK,
             'product_item_name' =>'string NOT NULL',
@@ -93,12 +87,7 @@ class m151105_181108_mig extends Migration
             'product_item_long_descr_main' => 'string NOT NULL',
             'product_item_long_descr_additional' => 'string DEFAULT NULL',
          ), 'ENGINE=InnoDB');
-        echo ("Table gkk_product_item is created!\n");
-
-
-
-
-        
+        echo ("Table gkk_product_item is created!\n");*/
 
     }
 

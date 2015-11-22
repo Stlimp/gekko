@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\ProductItem;
+use app\models\ProductCategories;
 
 /**
- * ProductItemSearch represents the model behind the search form about `app\models\ProductItem`.
+ * ProductCategoriesSearch represents the model behind the search form about `app\models\ProductCategories`.
  */
-class ProductItemSearch extends ProductItem
+class ProductCategoriesSearch extends ProductCategories
 {
     /**
      * @inheritdoc
@@ -18,7 +18,8 @@ class ProductItemSearch extends ProductItem
     public function rules()
     {
         return [
-            [['product_item_name'], 'safe'],
+            [['product_category_id'], 'integer'],
+            [['product_category_name'], 'safe'],
         ];
     }
 
@@ -40,7 +41,7 @@ class ProductItemSearch extends ProductItem
      */
     public function search($params)
     {
-        $query = ProductItem::find();
+        $query = ProductCategories::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -55,11 +56,10 @@ class ProductItemSearch extends ProductItem
         }
 
         $query->andFilterWhere([
-            'product_id' => $this->id,
-            'product_item_price' => $this->product_item_price,
+            'product_category_id' => $this->product_category_id,
         ]);
 
-        $query->andFilterWhere(['like', 'product_item_name', $this->product_item_name]);
+        $query->andFilterWhere(['like', 'product_category_name', $this->product_category_name]);
 
         return $dataProvider;
     }
