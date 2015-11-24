@@ -4,15 +4,15 @@ namespace app\controllers;
 
 use Yii;
 use app\models\ProductColor;
-use app\models\ProductsColorSearch;
+use app\models\ProductColorSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ProductColorController implements the CRUD actions for ProductColor model.
+ * ProductcolorController implements the CRUD actions for ProductColor model.
  */
-class ProductColorController extends Controller
+class ProductcolorController extends Controller
 {
     public function behaviors()
     {
@@ -32,7 +32,7 @@ class ProductColorController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new ProductsColorSearch();
+        $searchModel = new ProductColorSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [

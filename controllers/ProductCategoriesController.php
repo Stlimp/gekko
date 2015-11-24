@@ -10,9 +10,9 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * ProductCategoriesController implements the CRUD actions for ProductCategories model.
+ * ProductcategoriesController implements the CRUD actions for ProductCategories model.
  */
-class ProductCategoriesController extends Controller
+class ProductcategoriesController extends Controller
 {
     public function behaviors()
     {

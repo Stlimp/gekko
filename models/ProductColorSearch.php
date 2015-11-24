@@ -8,9 +8,9 @@ use yii\data\ActiveDataProvider;
 use app\models\ProductColor;
 
 /**
- * ProductsColorSearch represents the model behind the search form about `app\models\ProductColor`.
+ * ProductColorSearch represents the model behind the search form about `app\models\ProductColor`.
  */
-class ProductsColorSearch extends ProductColor
+class ProductColorSearch extends ProductColor
 {
     /**
      * @inheritdoc

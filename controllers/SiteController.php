@@ -13,7 +13,6 @@ use app\models\PartnershipForm;
 use app\models\FeedbackForm;
 use app\models\Videogallery;
 use app\models\ProductCategories;
-use app\models\ProductSubategories;
 use app\models\Products;
 use app\models\Emails;
 use app\models\Press;
