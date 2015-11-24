@@ -5,8 +5,10 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\models\Product;
+use app\models\ProductCategories;
 $this->title = 'Gekkostone';
-
+mb_internal_encoding("UTF-8");
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -111,17 +113,30 @@ AppAsset::register($this);
                 <li class="menu-item"><a href="#">ПРОДУКЦИЯ</a> 
                     <ul> 
                         <li><a href="index.php?r=products%2Findex">ВСЯ ПРОДУКЦИЯ</a></li> 
-                        <li><a href="#">КИРПИЧ ТОНКИЙ <span>&#9658;</span></a>             
-                            <ul> 
-                                <li><a href="#"><span>&#9679;</span> АНТИЧНЫЙ</a></li> 
-                                <li><a href="#"><span>&#9679;</span> КЛАССИЧЕСКИЙ</a></li> 
-                                <li><a href="#"><span>&#9679;</span> СОСТАРЕННЫЙ</a></li>  
-                            </ul> 
-                        </li>
-                        <li><a href="#">КИРПИЧ ОБЛИЦОВОЧНЫЙ</a></li>
-                        <li><a href="#">КАМЕНЬ ОБЛИЦОВОЧНЫЙ</a></li>
+                         <?php 
+                            $model=new ProductCategories();
+                            $products_categories=$model::find()->select('product_category_name')->orderBy('product_category_id')->all();
+
+                            $model2=new Product();
+                            $products =$model2::find()->orderBy('product_product_id')->all();
+                            ?>
+                            <?php  foreach ($products_categories as $category):?>
+                                <li>
+                                    <a href="#"><?php echo mb_strtoupper($category->product_category_name);?><span>&#9658;</span></a>
+                                    <ul>
+                                        <?php  foreach ($products as $product_item):?>
+                                            <?php if (!strcmp($product_item->product_category_name, $category->product_category_name)):?>
+                                            <li><a href="#"><span>&#9679;</span> <?php echo $product_item->product_product_name ?></a></li>
+                                            <?php endif;?>    
+                                        <?php endforeach;?>
+
+                                    </ul>
+                                </li>
+                            <?php endforeach;?>
+                            
+                         
                         <li><a href="#">СОПУТСТВУЮЩИЕ ТОВАРЫ</a></li>
-                    </ul> 
+                    </ul>  
                 </li>
                 <li id="delimiter"><a>|</a></li> 
                 <li class="menu-item"><a href="#">О КОМПАНИИ</a> 

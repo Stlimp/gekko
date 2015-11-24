@@ -12,8 +12,11 @@ use app\models\VacancyForm;
 use app\models\PartnershipForm;
 use app\models\FeedbackForm;
 use app\models\Videogallery;
+use app\models\ProductCategories;
+use app\models\ProductSubategories;
 use app\models\Products;
 use app\models\Emails;
+use app\models\Press;
 use yii\data\ActiveDataProvider;
 
 
@@ -65,11 +68,16 @@ class SiteController extends Controller
 
 
         $product = array_rand($products,1);*/
+        $model=new ProductCategories();
+        $products_categories=$model::find()->select('product_category_id')->all();
 
-
+        $pressModel = new Press();
+        $pressLinks = $pressModel::find()->all();
 
         $this->layout='indexLayout';
-        return $this->render('index'/*,['product'=>$products[$product]]*/);
+        return $this->render('index',[
+            'press'=>$pressLinks
+            ]);
     }
 
     public function actionLogin()

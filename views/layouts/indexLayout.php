@@ -5,7 +5,11 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\IndexAsset;
+use app\models\Product;
+use app\models\ProductCategories;
 
+
+mb_internal_encoding("UTF-8");
 /* @var $this \yii\web\View */
 /* @var $content string */
 /*LAYOUT USED ONLY FOR INDEX.PHP!!!*/
@@ -119,17 +123,17 @@ IndexAsset::register($this);
                         <li><a href="index.php?PhotogallerySearch%5Bphoto_category%5D=%D0%96%D0%B8%D0%BB%D1%8B%D0%B5+%D0%B4%D0%BE%D0%BC%D0%B0&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex">ЖИЛЫЕ ДОМА И КВАРТИРЫ</a></li> 
                         <li><a href="index.php?PhotogallerySearch%5Bphoto_category%5D=%D0%9A%D0%BE%D0%BC%D0%BC&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex">КОММЕРЧЕСКИЕ ОБЪЕКТЫ</a></li> 
                         <li><a href="#">ДО И ПОСЛЕ</a></li> 
-                         <li><a href="#">menu-item Games <span style="color:#FFFFFF">&#9658;</span></a>             
+                         <li><a href="#1">menu-item Games <span style="color:#FFFFFF">&#9658;</span></a>             
                             <ul> 
-                                <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
-                                <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
-                                <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
-                                <li><a href="#"><span>&#9679;</span> Board Games</a></li> 
+                                <li><a href="#2"><span>&#9679;</span> Board Games</a></li> 
+                                <li><a href="#3"><span>&#9679;</span> Board Games</a></li> 
+                                <li><a href="#4"><span>&#9679;</span> Board Games</a></li> 
+                                <li><a href="#5"><span>&#9679;</span> Board Games</a></li> 
                                 <ul> 
-                                    <li><a href="#">menu-item Pool</a></li> 
-                                    <li><a href="#">Chess</a></li> 
+                                    <li><a href="#6">menu-item Pool</a></li> 
+                                    <li><a href="#7">Chess</a></li> 
                                 </ul> 
-                                </li> 
+                                <!-- </li> --> 
                             </ul> 
                         </li> 
                     </ul> 
@@ -138,15 +142,28 @@ IndexAsset::register($this);
                 <li class="menu-item"><a href="#">ПРОДУКЦИЯ</a> 
                     <ul> 
                         <li><a href="index.php?r=products%2Findex">ВСЯ ПРОДУКЦИЯ</a></li> 
-                        <li><a href="#">КИРПИЧ ТОНКИЙ <span>&#9658;</span></a>             
-                            <ul> 
-                                <li><a href="#"><span>&#9679;</span> АНТИЧНЫЙ</a></li> 
-                                <li><a href="#"><span>&#9679;</span> КЛАССИЧЕСКИЙ</a></li> 
-                                <li><a href="#"><span>&#9679;</span> СОСТАРЕННЫЙ</a></li>  
-                            </ul> 
-                        </li>
-                        <li><a href="#">КИРПИЧ ОБЛИЦОВОЧНЫЙ</a></li>
-                        <li><a href="#">КАМЕНЬ ОБЛИЦОВОЧНЫЙ</a></li>
+                         <?php 
+                            $model=new ProductCategories();
+                            $products_categories=$model::find()->select('product_category_name')->orderBy('product_category_id')->all();
+
+                            $model2=new Product();
+                            $products =$model2::find()->orderBy('product_product_id')->all();
+                            ?>
+                            <?php  foreach ($products_categories as $category):?>
+                                <li>
+                                    <a href="#"><?php echo mb_strtoupper($category->product_category_name);?><span>&#9658;</span></a>
+                                    <ul>
+                                        <?php  foreach ($products as $product_item):?>
+                                            <?php if (!strcmp($product_item->product_category_name, $category->product_category_name)):?>
+                                            <li><a href="#"><span>&#9679;</span> <?php echo $product_item->product_product_name ?></a></li>
+                                            <?php endif;?>    
+                                        <?php endforeach;?>
+
+                                    </ul>
+                                </li>
+                            <?php endforeach;?>
+                            
+                         
                         <li><a href="#">СОПУТСТВУЮЩИЕ ТОВАРЫ</a></li>
                     </ul> 
                 </li>
