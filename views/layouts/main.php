@@ -85,7 +85,7 @@ AppAsset::register($this);
                         <li><a href="index.php?r=site%2Fwarranty">ГАРАНТИЯ КАЧЕСТВА</a></li> 
                         <li><a href="index.php?r=site%2Fpublicoffer">ПУБЛИЧНАЯ ОФЕРТА</a></li> 
                         <li><a href="index.php?r=site%2Fprice">КАТАЛОГ И ПРАЙС-ЛИСТ</a></li> 
-                        <li><a href="index.php?r=products%2F3ds">ТЕКСТУРЫ КАМНЯ <span style ="color:#4D4D4D;background-color:white;border-radius: 3px 0px 3px 0px; ">3DS</span> </a></li> 
+                        <li><a href="index.php?r=product%2F3ds">ТЕКСТУРЫ КАМНЯ <span style ="color:#4D4D4D;background-color:white;border-radius: 3px 0px 3px 0px; ">3DS</span> </a></li> 
                     </ul> 
                 </li> 
                 <li id="delimiter"><a>|</a></li>
@@ -119,7 +119,7 @@ AppAsset::register($this);
 
                             $model2=new Product();
                             $products =$model2::find()->orderBy('product_product_id')->all();
-                            
+
                             ?>
                             <?php  foreach ($products_categories as $category):?>
                                 <li>
