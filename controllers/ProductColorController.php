@@ -34,10 +34,12 @@ class ProductcolorController extends Controller
     {
         $searchModel = new ProductColorSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $colors=$dataProvider->getModels();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'colors'=>$colors,
         ]);
     }
 
