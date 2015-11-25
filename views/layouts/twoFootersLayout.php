@@ -111,7 +111,7 @@ TwoFootersAsset::register($this);
                 <li id="delimiter"><a>|</a></li> 
                 <li class="menu-item"><a href="#">ПРОДУКЦИЯ</a> 
                     <ul> 
-                        <li><a href="index.php?r=products%2Findex">ВСЯ ПРОДУКЦИЯ</a></li> 
+                        <li><a href="index.php?r=product%2Findex">ВСЯ ПРОДУКЦИЯ</a></li> 
                          <?php 
                             $model=new ProductCategories();
                             $products_categories=$model::find()->select('product_category_name')->orderBy('product_category_id')->all();

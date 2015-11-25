@@ -54,15 +54,7 @@ class ProductsSearch extends Product
             // $query->where('0=1');
             return $dataProvider;
         }
-
-        $query->andFilterWhere([
-            'product_product_id' => $this->product_product_id,
-        ]);
-
-        $query->andFilterWhere(['like', 'product_product_name', $this->product_product_name])
-            ->andFilterWhere(['like', 'product_category_name', $this->product_category_name])
-            ->andFilterWhere(['like', 'product_category_short_description', $this->product_category_short_description])
-            ->andFilterWhere(['like', 'product_category_short_characteristics', $this->product_category_short_characteristics]);
+        $query->andFilterWhere(['like', 'product_category_name', $this->product_category_name]);
 
         return $dataProvider;
     }

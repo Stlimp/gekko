@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\Product;
+use app\models\ProductCategories;
 use app\models\ProductsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -35,9 +36,19 @@ class ProductController extends Controller
         $searchModel = new ProductsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
+
+        $products =$searchModel::find()->orderBy('product_product_id')->all();
+
+        $tempmodel=new ProductCategories();
+        $categories=$tempmodel::find()->select('product_category_name')->orderBy('product_category_id')->all();
+        
+        $this->layout='twoFootersLayout';
+        
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'categories'=>$categories,
+            'products'=>$products,
         ]);
     }
 
