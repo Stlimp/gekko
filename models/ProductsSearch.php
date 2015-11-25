@@ -16,10 +16,9 @@ class ProductsSearch extends Product
      * @inheritdoc
      */
     public function rules()
-    {
+    {   
         return [
-            [['product_product_id'], 'integer'],
-            [['product_product_name', 'product_category_name', 'product_category_short_description', 'product_category_short_characteristics'], 'safe'],
+            [['product_product_name', 'product_category_name'], 'safe'],
         ];
     }
 
@@ -54,7 +53,8 @@ class ProductsSearch extends Product
             // $query->where('0=1');
             return $dataProvider;
         }
-        $query->andFilterWhere(['like', 'product_category_name', $this->product_category_name]);
+        $query->andFilterWhere(['like', 'product_product_name', $this->product_product_name])
+              ->andFilterWhere(['like', 'product_category_name', $this->product_category_name]);
 
         return $dataProvider;
     }

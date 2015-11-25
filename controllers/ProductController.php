@@ -34,10 +34,11 @@ class ProductController extends Controller
     public function actionIndex()
     {
         $searchModel = new ProductsSearch();
+        //$dataProvider = $searchModel->search(['ProductsSearch'=>['product_category_name'=>'Кирпич тонкий']]);
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
-
-        $products =$searchModel::find()->orderBy('product_product_id')->all();
+        $products =$dataProvider->getModels();
+        //$products =$searchModel::find()->orderBy('product_product_id')->all();
 
         $tempmodel=new ProductCategories();
         $categories=$tempmodel::find()->select('product_category_name')->orderBy('product_category_id')->all();
@@ -51,6 +52,31 @@ class ProductController extends Controller
             'products'=>$products,
         ]);
     }
+
+     /**
+         * Lists all Product models.
+         * @return mixed
+         */
+        public function action3ds()
+        {
+            $searchModel = new ProductsSearch();
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+
+            $products =$searchModel::find()->orderBy('product_product_id')->all();
+
+            $tempmodel=new ProductCategories();
+            $categories=$tempmodel::find()->select('product_category_name')->orderBy('product_category_id')->all();
+            
+            $this->layout='twoFootersLayout';
+            
+            return $this->render('3ds', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+                'categories'=>$categories,
+                'products'=>$products,
+            ]);
+        }
 
     /**
      * Displays a single Product model.
