@@ -5,7 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\Product;
 use app\models\ProductCategories;
-use app\models\ProductsSearch;
+use app\models\ProductSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -33,7 +33,7 @@ class ProductController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new ProductsSearch();
+        $searchModel = new ProductSearch();
         //$dataProvider = $searchModel->search(['ProductsSearch'=>['product_category_name'=>'Кирпич тонкий']]);
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
