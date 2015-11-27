@@ -7,7 +7,8 @@ use yii\widgets\Breadcrumbs;
 use app\assets\IndexAsset;
 use app\models\Product;
 use app\models\ProductCategories;
-
+use app\models\ImageCategories;
+use app\models\ImageSubcategories;
 
 mb_internal_encoding("UTF-8");
 /* @var $this \yii\web\View */
@@ -120,22 +121,27 @@ IndexAsset::register($this);
                 <li id="delimiter"><a>|</a></li>
                 <li class="menu-item"><a href="#">ФОТОГАЛЛЕРЕЯ</a> 
                     <ul> 
-                        <li><a href="index.php?PhotogallerySearch%5Bphoto_category%5D=%D0%96%D0%B8%D0%BB%D1%8B%D0%B5+%D0%B4%D0%BE%D0%BC%D0%B0&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex">ЖИЛЫЕ ДОМА И КВАРТИРЫ</a></li> 
-                        <li><a href="index.php?PhotogallerySearch%5Bphoto_category%5D=%D0%9A%D0%BE%D0%BC%D0%BC&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex">КОММЕРЧЕСКИЕ ОБЪЕКТЫ</a></li> 
+                        <?php 
+                            $model=new ImageCategories();
+                            $image_categories=$model::find()->select('image_category_name')->orderBy('image_category_id')->all();
+
+                            $model2=new ImageSubcategories();
+                            $imagesubcategories=$model2::find()->orderBy('image_subcategory_id')->all();
+                         ?>
+                         <?php  foreach ($image_categories as $category):?>
+                                <li>
+                                    <a href="index.php?PhotogallerySearch%5Bphoto_category%5D=<?php echo $category->image_category_name ?>&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex"><?php echo mb_strtoupper($category->image_category_name);?><span>&#9658;</span></a>    
+                                    <ul>
+                                        <?php  foreach ($imagesubcategories as $subcategory_item):?>
+                                            <?php if (!strcmp($subcategory_item->image_category_name, $category->image_category_name)):?>
+                                            <li><a href="#"><span>&#9679;</span> <?php echo $subcategory_item->image_subcategory_name ?></a></li>
+                                            <?php endif;?>    
+                                        <?php endforeach;?>
+
+                                    </ul>
+                                </li>
+                            <?php endforeach;?>
                         <li><a href="#">ДО И ПОСЛЕ</a></li> 
-                         <li><a href="#1">menu-item Games <span style="color:#FFFFFF">&#9658;</span></a>             
-                            <ul> 
-                                <li><a href="#2"><span>&#9679;</span> Board Games</a></li> 
-                                <li><a href="#3"><span>&#9679;</span> Board Games</a></li> 
-                                <li><a href="#4"><span>&#9679;</span> Board Games</a></li> 
-                                <li><a href="#5"><span>&#9679;</span> Board Games</a></li> 
-                                <ul> 
-                                    <li><a href="#6">menu-item Pool</a></li> 
-                                    <li><a href="#7">Chess</a></li> 
-                                </ul> 
-                                <!-- </li> --> 
-                            </ul> 
-                        </li> 
                     </ul> 
                 </li>
                 <li id="delimiter"><a>|</a></li> 

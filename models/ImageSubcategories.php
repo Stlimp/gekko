@@ -9,7 +9,9 @@ use Yii;
  *
  * @property integer $image_subcategory_id
  * @property string $image_subcategory_name
+ * @property string $image_category_name
  *
+ * @property GkkImageCategories $imageCategoryName
  * @property GkkPhotogallery[] $gkkPhotogalleries
  */
 class ImageSubcategories extends \yii\db\ActiveRecord
@@ -29,8 +31,8 @@ class ImageSubcategories extends \yii\db\ActiveRecord
     {
         return [
             [['image_subcategory_id'], 'integer'],
-            [['image_subcategory_name'], 'required'],
-            [['image_subcategory_name'], 'string', 'max' => 255]
+            [['image_subcategory_name', 'image_category_name'], 'required'],
+            [['image_subcategory_name', 'image_category_name'], 'string', 'max' => 255]
         ];
     }
 
@@ -42,7 +44,16 @@ class ImageSubcategories extends \yii\db\ActiveRecord
         return [
             'image_subcategory_id' => 'Image Subcategory ID',
             'image_subcategory_name' => 'Image Subcategory Name',
+            'image_category_name' => 'Image Category Name',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getImageCategoryName()
+    {
+        return $this->hasOne(GkkImageCategories::className(), ['image_category_name' => 'image_category_name']);
     }
 
     /**

@@ -21,9 +21,12 @@ class m151107_150158_categories extends Migration
         $this->createTable('gkk_image_subcategories', array(
             'image_subcategory_id' => Schema::TYPE_INTEGER,
             'image_subcategory_name' =>'string NOT NULL',
+            'image_category_name'=>'string NOT NULL',
          ), 'ENGINE=InnoDB');
         echo ("Table gkk_image_subcategories is created!\n");
         $this->addPrimaryKey('image_subcategory_pk', 'gkk_image_subcategories', 'image_subcategory_name');
+        $this->addForeignKey('image_subcategory_category','gkk_image_subcategories','image_category_name','gkk_image_categories','image_category_name');
+
 
         $this->createTable('gkk_photogallery', array(
             'id' => Schema::TYPE_PK,

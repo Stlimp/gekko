@@ -20,13 +20,17 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php if (!strcmp($category->product_category_name,$productItem->product_category_name)): ?>
 
                 <div class="product">
-                    <a href="http://gekkostone/web/index.php"><img src="http://stroykadoma.org/wp-content/uploads/2015/11/m_24.jpg" alt="" width="220" height="150"></a>
+                    <a href="http://gekkostone/web/index.php"><img src="<?= $productItem->product_product_image?>" alt="" width="220" height="150"></a>
                     <h3 style="margin:0"><?= $productItem->product_product_name?></h3>
                 </div>
             <?php endif; ?>
         <?php endforeach; ?>
         <br>
     <?php endforeach; ?>
+    <div class="product">
+        <a href="http://gekkostone/web/index.php"><img src="<?= $productItem->product_product_image?>" alt="" width="220" height="150"></a>
+        <h3 style="margin:0">Сопутствтвующие товары</h3>
+    </div>
 
 </div>
     <h1><?= Html::encode($this->title) ?></h1>
