@@ -9,6 +9,7 @@ use Yii;
  *
  * @property integer $product_product_id
  * @property string $product_product_name
+ * @property string $product_product_image
  * @property string $product_category_name
  * @property string $product_category_short_description
  * @property string $product_category_short_characteristics
@@ -33,8 +34,8 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             [['product_product_id'], 'integer'],
-            [['product_product_name', 'product_category_name', 'product_category_short_description', 'product_category_short_characteristics'], 'required'],
-            [['product_product_name', 'product_category_name', 'product_category_short_description', 'product_category_short_characteristics'], 'string', 'max' => 255]
+            [['product_product_name', 'product_product_image', 'product_category_name', 'product_category_short_description', 'product_category_short_characteristics'], 'required'],
+            [['product_product_name', 'product_product_image', 'product_category_name', 'product_category_short_description', 'product_category_short_characteristics'], 'string', 'max' => 255]
         ];
     }
 
@@ -46,6 +47,7 @@ class Product extends \yii\db\ActiveRecord
         return [
             'product_product_id' => 'Product Product ID',
             'product_product_name' => 'Product Product Name',
+            'product_product_image' => 'Product Product Image',
             'product_category_name' => 'Product Category Name',
             'product_category_short_description' => 'Product Category Short Description',
             'product_category_short_characteristics' => 'Product Category Short Characteristics',

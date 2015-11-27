@@ -36,6 +36,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'product_regular',
             'product_price',
             'product_subcategory_name',
+            'product_color_image',
         ],
     ]) ?>
 

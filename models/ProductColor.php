@@ -15,6 +15,7 @@ use Yii;
  * @property string $product_regular
  * @property string $product_price
  * @property string $product_subcategory_name
+ * @property string $product_color_image
  *
  * @property GkkProduct $productSubcategoryName
  */
@@ -34,8 +35,8 @@ class ProductColor extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['product_color_name', 'product_article', 'product_3ds_link', 'product_angular', 'product_regular', 'product_price', 'product_subcategory_name'], 'required'],
-            [['product_color_name', 'product_article', 'product_3ds_link', 'product_angular', 'product_regular', 'product_price', 'product_subcategory_name'], 'string', 'max' => 255]
+            [['product_color_name', 'product_article', 'product_3ds_link', 'product_angular', 'product_regular', 'product_price', 'product_subcategory_name', 'product_color_image'], 'required'],
+            [['product_color_name', 'product_article', 'product_3ds_link', 'product_angular', 'product_regular', 'product_price', 'product_subcategory_name', 'product_color_image'], 'string', 'max' => 255]
         ];
     }
 
@@ -53,6 +54,7 @@ class ProductColor extends \yii\db\ActiveRecord
             'product_regular' => 'Product Regular',
             'product_price' => 'Product Price',
             'product_subcategory_name' => 'Product Subcategory Name',
+            'product_color_image' => 'Product Color Image',
         ];
     }
 
