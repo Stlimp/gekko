@@ -43,6 +43,20 @@ class ProductcolorController extends Controller
         ]);
     }
 
+
+    public function actionViewProduct()
+    {
+        $searchModel = new ProductColorSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $colors=$dataProvider->getModels();
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+            'colors'=>$colors,
+        ]);
+    }
+
     /**
      * Displays a single ProductColor model.
      * @param integer $id

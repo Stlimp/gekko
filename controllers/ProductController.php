@@ -59,7 +59,7 @@ class ProductController extends Controller
          */
         public function action3ds()
         {
-            $searchModel = new ProductsSearch();
+            $searchModel = new ProductSearch();
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
 
