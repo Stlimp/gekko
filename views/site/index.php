@@ -130,36 +130,6 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
     }
 
 
-    .slider {
-        width:100%;
-        float:left;
-        margin-top: 50px;
-    }
-
-    .lightslider {
-        list-style: none outside none;
-        padding-left: 0;
-        margin-bottom:0;
-    }
-    .sliderLi {
-        display: block;
-        float: left;
-        margin-right: 40px;    
-        margin-left:40px;
-    }
-
-
-    .sliderImg {
-        display: block;
-        border: 3px solid #C7C3AF;
-        border-radius: 10px 0  10px;
-        height: auto;
-        width:100%;
-        max-width: 100%;
-    }
-    .sliderImg:hover{
-        border: 3px solid #999182;
-    }
 
 </style>
 <div id="upper"></div>

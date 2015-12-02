@@ -19,7 +19,8 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
-        'css/menu.css'
+        'css/menu.css',
+        'css/lightslider.min.css',
     ];
     public $js = [
     ];

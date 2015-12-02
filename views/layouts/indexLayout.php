@@ -161,7 +161,7 @@ IndexAsset::register($this);
                                     <ul>
                                         <?php  foreach ($products as $product_item):?>
                                             <?php if (!strcmp($product_item->product_category_name, $category->product_category_name)):?>
-                                            <li><a href="#"><span>&#9679;</span> <?php echo $product_item->product_product_name ?></a></li>
+                                            <li><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?php echo $product_item->product_product_name ?>&r=productcolor%2Findex"><span>&#9679;</span> <?php echo $product_item->product_product_name ?></a></li>
                                             <?php endif;?>    
                                         <?php endforeach;?>
 
