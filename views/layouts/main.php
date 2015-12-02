@@ -127,7 +127,7 @@ AppAsset::register($this);
                             $model2=new Product();
                             $products =$model2::find()->orderBy('product_product_id')->all();
 
-                            ?>
+                            ?> 
                             <?php  foreach ($products_categories as $category):?>
                                 <li>
                                     <a href="?ProductSearch%5Bproduct_category_name%5D=<?php echo str_replace(' ', '+', $category->product_category_name) ?>&r=product%2Findex"><?php echo mb_strtoupper($category->product_category_name);?><span>&#9658;</span></a>
