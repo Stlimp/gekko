@@ -34,12 +34,12 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                 </div>
             
                 <div class="left_halfheader">
-                    <a href="#" ><b><u>СКАЧАТЬ</u></b></a> «ТЕКСТУРУ» для 3DS
+                    <a id="link_to_3ds" href="#" ><b><u>СКАЧАТЬ</u></b></a> «ТЕКСТУРУ» для 3DS
                 </div>
                 <div class="right_halfheader">
                     <a href="#"><b><u>ДОБАВИТЬ</u></b></a> расцветку в <b>«МОЮ ГАЛЕРЕЮ»</b>
                 </div>
-                <div class="selected_product_color"><img src="images\content\products\38.jpg" alt=""></div>
+                <div class="selected_product_color"><img id="selected_product_image" src="images\content\products\38.jpg" alt=""></div>
                 <div class="left_halfheader">
                     <b>расцветка</b> «Венецианский обожженый»
                 </div>
@@ -75,8 +75,8 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
             <hr class="pick_the_color">
             <div class="product_colors">
                 <?php foreach ($colors as $productColor){ ?>
-                    <div class="miniature">
-                        <img src="<?= $productColor->product_color_image ?>" alt=""><?= $productColor->product_color_name ?>
+                    <div class="miniature" id=" miniature<?= $productColor->product_color_id?>">
+                        <span><img src="<?= $productColor->product_color_image ?>" alt=""><?= $productColor->product_color_name ?></span>
                     </div>
                 <?php } ?>
             </div>
@@ -158,3 +158,22 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
 
     </div>
 </div>
+
+<?php 
+$script=<<<JS
+$('.miniature').click(function(){
+
+    var color_id= this.id.replace(/[^\d]+/, '');
+
+    $.get('index.php?r=productcolor/get-product-color',{id:color_id},function(data){;
+        var data = $.parseJSON(data);
+        $("#selected_product_image").attr('src',data.product_color_image);
+         document.getElementById("link_to_3ds").href=data.product_3ds_link;
+        return false;
+
+    });
+})
+
+JS;
+$this->registerJs($script);
+ ?>

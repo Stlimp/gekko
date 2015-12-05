@@ -8,6 +8,7 @@ use app\models\ProductColorSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\Json;
 
 /**
  * ProductcolorController implements the CRUD actions for ProductColor model.
@@ -36,6 +37,7 @@ class ProductcolorController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $colors=$dataProvider->getModels();
 
+        $this->layout='twoFootersLayout';
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -117,6 +119,12 @@ class ProductcolorController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    public function actionGetProductColor($id)
+    {
+        $product_color_image=ProductColor::find()->where(['product_color_id'=>$id])->one();
+        echo Json::encode($product_color_image);
     }
 
     /**

@@ -597,12 +597,19 @@ body {
 .product_colors{
   text-align: left;
 }
-.miniature>img{
+.miniature>span>img{
   height:100%;
   width:100%;
   border-radius: 10px 0px 10px 0px;
 }
+.miniature>span{
+  color: rgb(90, 90, 90);
+  text-decoration: none;
+}
+.miniature>span:hover{
+  font-weight: bold;
 
+}
     .slider {
         width:100%;
         float:left;

@@ -50,9 +50,9 @@ class ProductColor extends \yii\db\ActiveRecord
             'product_color_name' => 'Product Color Name',
             'product_article' => 'Product Article',
             'product_3ds_link' => 'Product 3ds Link',
-            'product_angular' => 'Product Angular',
-            'product_regular' => 'Product Regular',
-            'product_price' => 'Product Price',
+            'product_angular' => 'Product Angular',//move to Product
+            'product_regular' => 'Product Regular',//move to Product
+            'product_price' => 'Product Price',//move to Product
             'product_subcategory_name' => 'Product Subcategory Name',
             'product_color_image' => 'Product Color Image',
         ];
