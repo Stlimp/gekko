@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use yz\shoppingcart\ShoppingCart;
+
 
 /**
  * This is the model class for table "gkk_product_color".
@@ -19,8 +21,9 @@ use Yii;
  *
  * @property GkkProduct $productSubcategoryName
  */
-class ProductColor extends \yii\db\ActiveRecord
+class ProductColor extends \yii\db\ActiveRecord implements \yz\shoppingcart\CartPositionInterface
 {
+    use \yz\shoppingcart\CartPositionTrait;
     /**
      * @inheritdoc
      */
@@ -65,4 +68,45 @@ class ProductColor extends \yii\db\ActiveRecord
     {
         return $this->hasOne(GkkProduct::className(), ['product_product_name' => 'product_subcategory_name']);
     }
+
+    public function getPrice()
+    {
+        return $this->product_price;
+    }
+
+    public function getId()
+    {
+        return $this->product_color_id;
+    }
+
+
+    /**
+     * @param CartPositionInterface $position
+     * @param int $quantity
+     */
+    public function put($position, $quantity = 1)
+    {
+        if (isset($this->_positions[$position->getId()])) {
+            $this->_positions[$position->getId()]->setQuantity(
+                $this->_positions[$position->getId()]->getQuantity() + $quantity);
+
+        } else {
+            $position->setQuantity($quantity);
+            $this->_positions[$position->getId()] = $position;
+        }
+        $this->trigger(self::EVENT_POSITION_PUT, new CartActionEvent([
+            'action' => CartActionEvent::ACTION_POSITION_PUT,
+            'position' => $this->_positions[$position->getId()],
+        ]));
+        $this->trigger(self::EVENT_CART_CHANGE, new CartActionEvent([
+            'action' => CartActionEvent::ACTION_POSITION_PUT,
+            'position' => $this->_positions[$position->getId()],
+        ]));
+        if ($this->storeInSession)
+            $this->saveToSession();
+        die();
+    }
+
+
+  
 }

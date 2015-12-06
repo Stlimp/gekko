@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "33d87e143a69be1123b0a71b43cceec0",
+    "hash": "336f76f5e1de00a6e71cd4f4f9bebdd1",
+    "content-hash": "e054226b92632f24c2bed87afae1c801",
     "packages": [
         {
             "name": "2amigos/yii2-gallery-widget",
@@ -580,7 +581,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/newerton/yii2-fancybox/zipball/55105b97a1b3ab7ee6fa28e50b40cb328b8d31aa",
+                "url": "https://api.github.com/repos/newerton/yii2-fancybox/zipball/d9e61c4e0fab730aa93377d081bbdcb469da13fa",
                 "reference": "55105b97a1b3ab7ee6fa28e50b40cb328b8d31aa",
                 "shasum": ""
             },
@@ -614,6 +615,44 @@
                 "yii2"
             ],
             "time": "2015-05-20 02:05:47"
+        },
+        {
+            "name": "omnilight/yii2-shopping-cart",
+            "version": "1.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/omnilight/yii2-shopping-cart.git",
+                "reference": "76f785e278f403fbac6b1b59d8d15d83345533d5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/omnilight/yii2-shopping-cart/zipball/76f785e278f403fbac6b1b59d8d15d83345533d5",
+                "reference": "76f785e278f403fbac6b1b59d8d15d83345533d5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "yz\\shoppingcart\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Pavel Agalecky",
+                    "email": "pavel.agalecky@gmail.com"
+                }
+            ],
+            "description": "Yii2 extension that adds shopping cart functions",
+            "keywords": [
+                "shopping cart",
+                "yii"
+            ],
+            "time": "2015-09-08 11:18:44"
         },
         {
             "name": "swiftmailer/swiftmailer",

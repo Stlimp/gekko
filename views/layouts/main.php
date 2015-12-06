@@ -52,7 +52,7 @@ AppAsset::register($this);
                 <a href="index.php?r=site%2Fprice">прайс</a>
                 <a href="index.php?r=site%2Fcontact">контакты</a>
                 <a href="#">поиск</a>
-                <a href="#">моя галлерея</a>
+                <a href="index.php?r=site%2Fcart">моя галлерея <span id="<?php echo (Yii::$app->cart->getIsEmpty()?"empty_":"") ?>cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></a>
                 <div class="iconblock1">
                     <a href="#"><img src="images/icons/ok.png" alt="" onmouseover="this.src='images/icons/okhover.png';" onmouseout="this.src='images/icons/ok.png';"></a>
                 <a href="#"><img src="images/icons/vk.png" alt="" onmouseover="this.src='images/icons/vkhover.png';" onmouseout="this.src='images/icons/vk.png';"></a>

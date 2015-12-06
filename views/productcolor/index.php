@@ -16,7 +16,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
 <div class="product-color-index">
     <div class="jumbotron">
         <div class="left-half">
-            <div class="left-side-half-header">АНТИЧНЫЙ КИРПИЧ <div class="price" >ЦЕНА: <span class="price_value">228,000</span> руб/м<span class="warning">*</span> </div></div>    
+            <div class="left-side-half-header">АНТИЧНЫЙ КИРПИЧ <div class="price" >ЦЕНА: <span id="price_value">228,000</span> руб/м<span class="warning">*</span> </div></div>    
             <div class="left-side-half-text">
                 <p>фактура представляет имитацию кладки классического глиняного клинкера</p>
                 <div class="icons">
@@ -37,7 +37,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                     <a id="link_to_3ds" href="#" ><b><u>СКАЧАТЬ</u></b></a> «ТЕКСТУРУ» для 3DS
                 </div>
                 <div class="right_halfheader">
-                    <a href="#"><b><u>ДОБАВИТЬ</u></b></a> расцветку в <b>«МОЮ ГАЛЕРЕЮ»</b>
+                    <a id="add_to_cart" href="index.php?r=productcolor/add-to-cart&id=1"><b><u>ДОБАВИТЬ</u></b></a> расцветку в <b>«МОЮ ГАЛЕРЕЮ»</b>
                 </div>
                 <div class="selected_product_color"><img id="selected_product_image" src="images\content\products\38.jpg" alt=""></div>
                 <div class="left_halfheader">
@@ -71,7 +71,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                 Кол-во в упаковке        -  1,728 усл.м.пог. (24 шт.)<br>
                 Повторяемость            -  10 шт. (0,72 м.пог.)<br>
 
-                            </div>
+            </div>
             <hr class="pick_the_color">
             <div class="product_colors">
                 <?php foreach ($colors as $productColor){ ?>
@@ -159,6 +159,9 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
     </div>
 </div>
 
+
+
+
 <?php 
 $script=<<<JS
 $('.miniature').click(function(){
@@ -169,11 +172,17 @@ $('.miniature').click(function(){
         var data = $.parseJSON(data);
         $("#selected_product_image").attr('src',data.product_color_image);
          document.getElementById("link_to_3ds").href=data.product_3ds_link;
+         document.getElementById("add_to_cart").href="index.php?r=productcolor/add-to-cart&id=".concat(data.product_color_id);
+         document.getElementById("price_value").innerHTML=data.product_price;
         return false;
 
     });
 })
 
+
+    
+
 JS;
 $this->registerJs($script);
  ?>
+

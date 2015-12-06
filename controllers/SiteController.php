@@ -140,6 +140,13 @@ class SiteController extends Controller
     {
         return $this->render('advantages');
     }
+    public function actionCart()
+    {
+
+        $cartItems = \Yii::$app->cart->getPositions();
+        $this->layout='twoFootersLayout';
+        return $this->render('cart',['cartItems'=>$cartItems]);
+    }
 
     public function actionFeedback()
     {

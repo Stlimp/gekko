@@ -492,7 +492,7 @@ body {
 .price{
   float:right;
 }
-.price_value{
+#price_value{
   font-family:"Century Gothic";
   color:#858370;
 }
@@ -640,3 +640,81 @@ body {
     .sliderImg:hover{
         border: 3px solid #999182;
     }
+
+
+     #empty_cart{
+      background-color:#fff;
+      color:#000000;
+      border: 1px solid #C7C3AF;
+      border-radius: 5px 0  5px;
+      font-weight: bold;
+      display:inline-block;
+      min-width: 2ch;
+      height: auto;
+      line-height:15px;
+      text-align: center;
+      font-family:"Century Gothic";
+    } 
+    #cart{
+      background-color:#D0272E;
+      color:#fff;
+      border: 1px solid #FFFFFF;
+      border-radius: 5px 0  5px;
+      font-weight: bold;
+      display:inline-block;
+      min-width: 2ch;
+      height: auto;
+      line-height:15px;
+      text-align: center;
+      padding:2px;
+      font-family:"Century Gothic";
+
+    }
+
+.total_weight{
+  text-align: left;
+  padding-left: 50px;
+}
+.cart-button{
+  color:#787764;
+  font-weight: bold;
+  background-color: #D7D5C1 !important;
+  border: 2px solid #787764;
+}
+
+.submit_form{
+  text-align: left;
+  padding-left: 50px;
+}
+
+#alpha_bank{
+  display: block;
+  text-align: center;
+  width:100%;
+}
+
+#warning{
+    color: #D0272E;
+    font-style: italic; 
+}
+.cart_position{
+  display:inline-block;
+
+  width:100%;
+}
+
+.product_miniature{
+  float:left;
+  width:20%;
+  padding:15px;
+
+}
+.product_miniature>img{
+  width:100%;
+  border-radius: 10px 0px 10px 0px;
+
+}
+
+.calculation{
+  width:80%;
+}

@@ -22,7 +22,8 @@
         "yiisoft/yii2-jui": "^2.0",
         "newerton/yii2-fancybox": "dev-master",
         "2amigos/yii2-gallery-widget": "~1.0",
-        "yiisoft/yii2-imagine": "*"
+        "yiisoft/yii2-imagine": "*",
+        "omnilight/yii2-shopping-cart": "^1.2"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",

@@ -9,6 +9,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\helpers\Json;
+use yz\shoppingcart\ShoppingCart;
 
 /**
  * ProductcolorController implements the CRUD actions for ProductColor model.
@@ -36,12 +37,14 @@ class ProductcolorController extends Controller
         $searchModel = new ProductColorSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $colors=$dataProvider->getModels();
+        $itemsCount = \Yii::$app->cart->getCount();
 
         $this->layout='twoFootersLayout';
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
             'colors'=>$colors,
+            'itemsCount'=>$itemsCount,
         ]);
     }
 
@@ -127,6 +130,39 @@ class ProductcolorController extends Controller
         echo Json::encode($product_color_image);
     }
 
+
+    public function actionAddToCart($id)
+    {
+        $cart = new ShoppingCart();
+        
+        //$model = ProductColor::findOne($id);
+        $model =$this->findModel($id);
+        
+        if ($model) {
+            if (!\Yii::$app->cart->hasPosition($model->product_color_id)) {
+               \Yii::$app->cart->put($model, 1);
+            }
+            
+            //$itemsCount = \Yii::$app->cart->getCount();
+            //\Yii::$app->cart->removeAll();
+            //print_r($itemsCount);die();
+            //$cart->put($model, 1);
+            
+            $searchModel = new ProductColorSearch();
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+            $colors=$dataProvider->getModels();
+            
+
+            $this->layout='twoFootersLayout';
+            return $this->render('index', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+                'colors'=>$colors,
+                'itemsCount'=>$itemsCount,
+            ]);
+        }
+        throw new NotFoundHttpException();
+    }
     /**
      * Finds the ProductColor model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

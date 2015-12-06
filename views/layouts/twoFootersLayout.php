@@ -56,7 +56,7 @@ TwoFootersAsset::register($this);
                 <a href="index.php?r=site%2Fprice">прайс</a>
                 <a href="index.php?r=site%2Fcontact">контакты</a>
                 <a href="#">поиск</a>
-                <a href="#">моя галлерея</a>
+                <a href="index.php?r=site%2Fcart">моя галлерея <span id="<?php echo (Yii::$app->cart->getIsEmpty()?"empty_":"") ?>cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></a>
                 <a href="#">ок</a>
                 <a href="#">в</a>
                 <a href="#">f</a>
