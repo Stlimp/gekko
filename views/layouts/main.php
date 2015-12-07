@@ -43,6 +43,7 @@ AppAsset::register($this);
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
+                    'id'=>'navigation',
                 ],
             ]);
             ?>
@@ -167,7 +168,7 @@ AppAsset::register($this);
             <?= $content ?>
         </div> 
     </div>
-    <footer class="footer" style="padding:0;height:80px;text-align:justify;padding-left:50px;padding-right:50px;">
+    <footer class="footer first-footer">
         <div class="social"><p>СОЦИАЛЬНЫЕ СЕТИ</p>
             <div class="social-likes  social-likes_notext">
                 <div class="facebook" title="Поделиться ссылкой на Фейсбуке"></div>
