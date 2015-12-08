@@ -777,3 +777,16 @@ background-image: url('./../images/menu.jpg');
   text-align: left;
   background-color:red;
 }
+#calc_right_half{
+  width:50%;
+  float:left;
+  text-align: left;
+  background-color:green;
+}
+#calculation_input{
+  height: 19px;
+    width: 50px;
+    padding: 0px;
+    padding-right: 15px;
+    border-radius: 5px 0px 5px 0px;
+}

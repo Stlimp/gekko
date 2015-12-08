@@ -33,11 +33,30 @@ $this->title = 'Gekkostone';
 					<hr id="line" >
 					<div id="calc_left_half">
 						<span id="span_product">АНТИЧНЫЙ КАМЕНЬ - «Венецианский обожженый»</span>
+						<br>
+						<input type="text" id="calculation_input" name="search"> м ,  введите общую площадь облицовки;
+						<br>
+						<input type="text" id="calculation_input" name="search"> м.пог., введите общую высоту углов для облицовки;
+						<br>
+						<input type="checkbox" name="vehicle" value="Bike"> вычесть площадь, занимаемую угловыми элементами;<br>
+						<input type="checkbox" name="vehicle" value="Car" checked> с учетом 5 % отходов камня на подрезку;<br>
+						<input type="checkbox" name="vehicle" value="Car" checked> бесшовный монтаж (расчет без учета швов);<br>
+					</div>
+					<div id="calc_right_half">
+						<?php echo Html::Button("Удалить",['class'=>'btn btn-success btn-send cart-button'],['action'=>'/site/index']); ?> Расцветку из ГАЛЕРЕИ
+						<p>Для облицовки вам необходимо:</p>
+						<p>12,0       усл.м    рядовой плитки (расчет кратно упаковкам);</p>
+						<p>5,256  усл.м.пог. угловой плитки (расчет поштучно).</p>
+						<p>Внимание! Количество камня рассчитано 
+с учетом шва при укладке 12 мм.</p>
+						<p>Стоимость:   4,207,950  беларусских рублей.
+</p>
+						<p>Масса, брутто:   322 кг.</p>
 
 					</div>
 
 
-					<?php echo Html::Button("Удалить",['class'=>'btn btn-success btn-send cart-button'],['action'=>'/site/index']); ?>
+					
 				</div>
 			</div>
 
