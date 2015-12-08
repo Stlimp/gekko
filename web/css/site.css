@@ -600,6 +600,7 @@ body {
   border: 1px solid #666666;
   border-radius: 10px 0px 10px 0px;
   margin:10px;
+  vertical-align: top;
 }
 .product_colors{
   text-align: left;
@@ -612,6 +613,7 @@ body {
 .miniature>span{
   color: rgb(90, 90, 90);
   text-decoration: none;
+
 }
 .miniature>span:hover{
   font-weight: bold;
@@ -706,7 +708,7 @@ body {
 }
 .cart_position{
   display:inline-block;
-
+  position: relative;
   width:100%;
 }
 
@@ -714,16 +716,22 @@ body {
   float:left;
   width:20%;
   padding:15px;
-
+  position: relative;
+  float:left;
 }
 .product_miniature>img{
-  width:100%;
+  width:95%;
   border-radius: 10px 0px 10px 0px;
-
+  position: absolute;
+  left: 15px;
+  top: 15px;
 }
 
 .calculation{
-  width:80%;
+  margin-left: 50px;
+  margin-right: 50px;
+  width:70%;
+  float:left;
 }
 
 #navigation{
@@ -741,4 +749,31 @@ background-image: url('./../images/menu.jpg');
   height:100px;
   width:100%;
   background-color: rgba(0,0,0,0.6); 
+}
+
+#line{
+  margin-top:15px;
+
+}
+
+.overlay{
+ z-index: 100;
+  position: absolute;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  left: 15px;
+  background-color:#787764;
+  opacity:0.8;
+  border-radius: 10px 0px 10px 0px;
+  font-size: 18px;
+  font-family: "Century Gothic";
+  padding: 5px;
+}
+
+#calc_left_half{
+  width:50%;
+  float:left;
+  text-align: left;
+  background-color:red;
 }

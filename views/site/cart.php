@@ -5,6 +5,9 @@ use yii\helpers\Html;
 $this->title = 'Gekkostone';
 ?>
 
+<style>
+
+</style>
 <div class="site-index">
    <div class="jumbotron">
 
@@ -22,9 +25,18 @@ $this->title = 'Gekkostone';
 	 </div>
 	<?php foreach ($cartItems as $cartItem) {?>
 			<div class="cart_position">
-				<div class="product_miniature"><img src="<?= $cartItem->product_color_image?>"></div>
+				<div class="product_miniature">
+					<img src="<?= $cartItem->product_color_image?>">
+					<div class="overlay">226,000 руб/м</div>
+				</div>
 				<div class="calculation">
-					<hr>
+					<hr id="line" >
+					<div id="calc_left_half">
+						<span id="span_product">АНТИЧНЫЙ КАМЕНЬ - «Венецианский обожженый»</span>
+
+					</div>
+
+
 					<?php echo Html::Button("Удалить",['class'=>'btn btn-success btn-send cart-button'],['action'=>'/site/index']); ?>
 				</div>
 			</div>
