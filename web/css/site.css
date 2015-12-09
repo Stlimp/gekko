@@ -272,7 +272,11 @@ body {
 }
 .first-footer{
       background-image: url('./../images/footer.jpg');
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./../images/footer.jpg');
+
+  background-size: cover;
 }
+
 
 
 .footer:after{
