@@ -46,13 +46,17 @@
     font-size: 14px;
 }     
  
+
+
+
+/*main menu*/ 
 #nav li{ 
     list-style: none; 
     display: block; 
     float: right; 
     height: 40px; 
     position: relative;
-    border: 1px solid rgba(0, 0, 0, 0);/*прозрачная граница, чтобы избежать мерцания*/ 
+    /* border: 1px solid rgba(0, 0, 0, 0); *//*прозрачная граница, чтобы избежать мерцания*/ 
     #border-right: 1px solid #FFFFFF;
     width:150px;
     z-index : 2;
@@ -71,17 +75,17 @@
 } 
  
 #nav ul{ 
-    background: #4D4D4D;  
+    /* background: #4D4D4D;   */
     padding: 0px; 
     #border-bottom: 1px solid #DDDDDD; 
    # border-right: 1px solid #DDDDDD; 
     #border-left:1px solid #DDDDDD; 
     #border-radius: 0px 0px 3px 3px; 
-    box-shadow: 3px 2px 5px #000000; 
+    /* box-shadow: 3px 2px 5px #000000; 
     -webkit-box-shadow: 3px 2px 5px #000000; 
         -moz-box-shadow:3px 2px 5px #000000; 
     width:150px;
-    border-radius: 0px 0px 10px 0px;
+    border-radius: 0px 0px 10px 0px;? */
 
      
 }
@@ -89,34 +93,36 @@
  
 #nav li:hover{ 
     border: 1px solid #FFFFFF;
-    border-radius: 10px 0px 10px 0px;
+    border-radius: 10px 0px 0px 0px;
     width:150px;
  
-}
-#nav li ul li:hover{ 
-    border: 0;
-    width:150px;
- 
-}
-
-#nav li a:hover{ 
-text-shadow:0px 0px 1px #FFFFFF;
 }
 #nav li a{ 
     display: block; 
 } 
+
+
 #nav ul li { 
+    background: #4D4D4D;
     border-right:none; 
     #border-bottom:1px solid #DDDDDD; 
     width:150px; 
     min-height:39px; 
     padding:5px;
-} 
+    box-shadow: 2px 2px 3px #000000;
+    -webkit-box-shadow: 2px 2px 3px #000000;
+        -moz-box-shadow:2px 2px 3px #000000;
+    width:150px;
+}
+
+ 
 #nav ul li a { 
     border-right: none;
     text-align:left;
     line-height: 12px;
-
+    color:#FFFFFF;
+    /* text-shadow: 1px 1px 1px #FFF; */
+    #border-bottom:1px solid #FFFFFF;
     #color:#6791AD; 
     #text-shadow: 1px 1px 1px #FFF; 
     #border-bottom:1px solid #FFFFFF; 
@@ -124,6 +130,9 @@ text-shadow:0px 0px 1px #FFFFFF;
 /*#nav ul li:hover{background:#000000;border-radius: 0px 0px 0px 0px;}*/
 /*#nav ul li:last-child:hover {border-radius: 0px 0px 10px 0px;}*/
  
+#nav ul li:hover{border-radius: 0px 0px 0px 0px;}
+#nav ul li:last-child:hover {border-radius: 0px 0px 10px 0px;}
+
 #nav ul li:last-child { border-bottom: none;} 
 #nav ul li:last-child a{ border-bottom: none;}
  
@@ -137,10 +146,28 @@ text-shadow:0px 0px 1px #FFFFFF;
 } 
 
 
+
+#nav li ul li:hover{ 
+    border: 0;
+    width:150px;
+ 
+}
+
+#nav li a:hover{ 
+text-shadow:0px 0px 1px #FFFFFF;
+}
+
+#nav ul ul li a span{
+    color: #4D4D4D;
+    font: 14px Geneva, Arial, Helvetica, sans-serif;
+    text-shadow:none;
+}
+
  
 /* Third-level menus */ 
 #nav ul ul{
-    margin-left:1px; 
+    /* margin-left:1px;  */
+    padding-left:10px;
     top: 0px; 
     left:150px; 
     display: none; 
@@ -148,6 +175,10 @@ text-shadow:0px 0px 1px #FFFFFF;
     #border: 1px solid #DDDDDD;
     border-radius: 10px 0px 10px 0px; 
 }
+
+#nav ul li:last-child{border-radius: 0px 0px 10px 0px;}
+#nav ul ul li:first-child {border-radius: 10px 0px 0px 0px;}
+
 #nav ul ul li:first-child:hover {border-radius: 10px 0px 0px 0px;}
 #nav ul ul li:last-child:hover {border-radius: 0px 0px 10px 0px;} 
 /* Fourth-level menus */ 
@@ -156,13 +187,14 @@ text-shadow:0px 0px 1px #FFFFFF;
     left:150px; 
     display: none; 
     visibility:hidden; 
-    border: 1px solid #DDDDDD;
+    /* border: 1px solid #DDDDDD; */
  
 } 
  
 #nav ul li{ 
     display: block; 
     visibility:visible; 
+    border: 1px solid #4D4D4D;
 } 
 #nav li:hover > ul{ 
     display: block; 
@@ -170,12 +202,6 @@ text-shadow:0px 0px 1px #FFFFFF;
 }
 
 #nav ul li a span{
-    color: #4D4D4D;
-    font: 14px Geneva, Arial, Helvetica, sans-serif;
-    text-shadow:none;
-}
-
-#nav ul ul li a span{
     color: #4D4D4D;
     font: 14px Geneva, Arial, Helvetica, sans-serif;
     text-shadow:none;
