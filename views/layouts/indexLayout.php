@@ -115,7 +115,7 @@ IndexAsset::register($this);
                         <li><a href="index.php?r=site%2Fwarranty">ГАРАНТИЯ КАЧЕСТВА</a></li> 
                         <li><a href="index.php?r=site%2Fpublicoffer">ПУБЛИЧНАЯ ОФЕРТА</a></li> 
                         <li><a href="index.php?r=site%2Fprice">КАТАЛОГ И ПРАЙС-ЛИСТ</a></li> 
-                        <li><a href="index.php?r=product%2F3ds">ТЕКСТУРЫ КАМНЯ <span style ="color:#4D4D4D;background-color:white;border-radius: 3px 0px 3px 0px;">3DS</span> </a></li> 
+                        <li><a href="index.php?r=product%2F3ds">ТЕКСТУРЫ КАМНЯ<span style ="color:#4D4D4D;background-color:white;border-radius: 3px 0px 3px 0px;float:left">3DS</span></a></li> 
                     </ul> 
                 </li> 
                 <li id="delimiter"><a>|</a></li>
@@ -130,11 +130,11 @@ IndexAsset::register($this);
                          ?>
                          <?php  foreach ($image_categories as $category):?>
                                 <li>
-                                    <a href="index.php?PhotogallerySearch%5Bphoto_category%5D=<?php echo $category->image_category_name ?>&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex"><?php echo mb_strtoupper($category->image_category_name);?><span>&#9658;</span></a>    
+                                    <a href="index.php?PhotogallerySearch%5Bphoto_category%5D=<?php echo $category->image_category_name ?>&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex"><?php echo mb_strtoupper($category->image_category_name);?></a><span>&#9658;</span>    
                                     <ul>
                                         <?php  foreach ($imagesubcategories as $subcategory_item):?>
                                             <?php if (!strcmp($subcategory_item->image_category_name, $category->image_category_name)):?>
-                                            <li><a href="#"><span>&#9679;</span> <?php echo $subcategory_item->image_subcategory_name ?></a></li>
+                                            <li><span>&#9679;</span><a href="#"> <?php echo $subcategory_item->image_subcategory_name ?></a></li>
                                             <?php endif;?>    
                                         <?php endforeach;?>
 
@@ -157,11 +157,11 @@ IndexAsset::register($this);
                             ?>
                             <?php  foreach ($products_categories as $category):?>
                                 <li>
-                                    <a href="?ProductSearch%5Bproduct_category_name%5D=<?php echo str_replace(' ', '+', $category->product_category_name) ?>&r=product%2Findex"><?php echo mb_strtoupper($category->product_category_name);?><span>&#9658;</span></a>
+                                    <a href="?ProductSearch%5Bproduct_category_name%5D=<?php echo str_replace(' ', '+', $category->product_category_name) ?>&r=product%2Findex"><?php echo mb_strtoupper($category->product_category_name);?></a><span>&#9658;</span>
                                     <ul>
                                         <?php  foreach ($products as $product_item):?>
                                             <?php if (!strcmp($product_item->product_category_name, $category->product_category_name)):?>
-                                            <li><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?php echo $product_item->product_product_name ?>&r=productcolor%2Findex"><span>&#9679;</span> <?php echo $product_item->product_product_name ?></a></li>
+                                            <li><span>&#9679;</span><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?php echo $product_item->product_product_name ?>&r=productcolor%2Findex"> <?php echo $product_item->product_product_name ?></a></li>
                                             <?php endif;?>    
                                         <?php endforeach;?>
 

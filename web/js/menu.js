@@ -9,10 +9,11 @@ $(document).ready(function(){
         $('ul', this).fadeOut(200); 
           
     });
-    $("#nav ul li a").hover(
+    $("#nav ul li").hover(
     function () {
         $(this).children('span').css('color', '#D0272E');
         $(this).children('span').css('font','14px Geneva, Arial, Helvetica, sans-serif' );
+        $(this).children('span').css('line-height','30px' );
     },
     function () {
         $(this).children('span').css('color', '#4D4D4D');
