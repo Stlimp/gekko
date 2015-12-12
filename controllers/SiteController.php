@@ -13,7 +13,7 @@ use app\models\PartnershipForm;
 use app\models\FeedbackForm;
 use app\models\Videogallery;
 use app\models\ProductCategories;
-use app\models\Products;
+use app\models\Product;
 use app\models\Emails;
 use app\models\Press;
 use yii\data\ActiveDataProvider;
@@ -61,20 +61,19 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-      /*  $model = new Products();
-        $products = $model::find()->select('product_name')->all();
+        $model = new Product();
+        $products = $model::find()->all();
+        $product = array_rand($products,1);
 
-
-
-        $product = array_rand($products,1);*/
         $model=new ProductCategories();
-        $products_categories=$model::find()->select('product_category_id')->all();
+        $products_categories=$model::find()->select('product_category_name')->all();
 
         $pressModel = new Press();
         $pressLinks = $pressModel::find()->all();
 
         $this->layout='indexLayout';
         return $this->render('index',[
+            'product'=>$products[$product],
             'press'=>$pressLinks
             ]);
     }
