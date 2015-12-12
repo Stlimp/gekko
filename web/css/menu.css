@@ -17,6 +17,8 @@
     text-align:justify;
     font-family: Century Gothic;
     margin-bottom: 0;
+    display: inline-block !important;
+    white-space: nowrap;
 } 
 
 .nav1 a{
