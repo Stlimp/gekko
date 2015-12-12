@@ -134,7 +134,7 @@ IndexAsset::register($this);
                                     <ul>
                                         <?php  foreach ($imagesubcategories as $subcategory_item):?>
                                             <?php if (!strcmp($subcategory_item->image_category_name, $category->image_category_name)):?>
-                                            <li><span>&#9679;</span><a href="#"> <?php echo $subcategory_item->image_subcategory_name ?></a></li>
+                                            <li><span>&#9679;</span><a href="index.php?PhotogallerySearch%5Bphoto_category%5D=<?php echo $category->image_category_name ?>&PhotogallerySearch%5Bphoto_subcategory%5D=<?php echo $subcategory_item->image_subcategory_name;?>&r=photogallery%2Findex"> <?php echo $subcategory_item->image_subcategory_name ?></a></li>
                                             <?php endif;?>    
                                         <?php endforeach;?>
 
