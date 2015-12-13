@@ -141,9 +141,9 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
              
         <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: -100px;z-index: 1015";> <a href="#upper" ><div class="button-up"></div> </a>   </div>     
         <div class="page-text">
-        <div class="left_third">
-            <span class="left_product_name">
-                <?= mb_strtoupper($product->product_name) ?>
+        <div class="left_third" style= <?= "background-image:url(&quot;".$product->product_product_image."&quot;);background-size:cover" ?>>
+            <span class="left_product_name" >
+                <?= mb_strtoupper($product->product_product_name) ?>
             </span>
         </div>
         <div class="center_third">
