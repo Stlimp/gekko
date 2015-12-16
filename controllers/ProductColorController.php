@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\ProductColor;
 use app\models\ProductColorSearch;
+use app\models\PhotogallerySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -39,10 +40,17 @@ class ProductcolorController extends Controller
         $colors=$dataProvider->getModels();
         $itemsCount = \Yii::$app->cart->getCount();
 
+
+        /*Product photos*/
+        $searchModelPhotos = new PhotogallerySearch();
+        $paramsPhotos[PhotogallerySearch]['photo_product']=Yii::$app->request->queryParams[ProductColorSearch]['product_subcategory_name'];
+        $dataProviderPhotos = $searchModelPhotos->search($paramsPhotos);
+
         $this->layout='twoFootersLayout';
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'dataProviderPhotos'=>$dataProviderPhotos,
             'colors'=>$colors,
             'itemsCount'=>$itemsCount,
         ]);

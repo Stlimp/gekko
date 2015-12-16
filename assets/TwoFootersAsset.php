@@ -20,7 +20,8 @@ class TwoFootersAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/menu.css',
-        'css/second-footer.css'
+        'css/second-footer.css',
+        'css/lightslider.min.css',
     ];
     public $js = [
     ];

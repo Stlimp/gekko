@@ -97,7 +97,7 @@ ul {
             'photo_category',
             'photo_subcategory',
             'photo_image',
-            // 'photo_product',
+            'photo_product',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

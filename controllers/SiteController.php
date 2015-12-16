@@ -15,7 +15,8 @@ use app\models\Videogallery;
 use app\models\ProductCategories;
 use app\models\Product;
 use app\models\Emails;
-use app\models\Press;
+/*use app\models\Press;*/
+use app\models\Photogallery;
 use yii\data\ActiveDataProvider;
 
 
@@ -68,13 +69,17 @@ class SiteController extends Controller
         $model=new ProductCategories();
         $products_categories=$model::find()->select('product_category_name')->all();
 
-        $pressModel = new Press();
-        $pressLinks = $pressModel::find()->all();
+        $model=new Photogallery();
+        $photos=$model::find()->all();
+
+       /* $pressModel = new Press();
+        $pressLinks = $pressModel::find()->all();*/
 
         $this->layout='indexLayout';
         return $this->render('index',[
             'product'=>$products[$product],
-            'press'=>$pressLinks
+            'photos'=>$photos
+            /*'press'=>$pressLinks*/
             ]);
     }
 

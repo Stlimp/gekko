@@ -18,7 +18,7 @@ class PhotogallerySearch extends Photogallery
     public function rules()
     {
         return [
-            [['photo_category', 'photo_subcategory'], 'safe'],
+            [['photo_category', 'photo_product', 'photo_subcategory'], 'safe'],
         ];
     }
 
@@ -59,6 +59,7 @@ class PhotogallerySearch extends Photogallery
         ]);
 */
         $query->andFilterWhere(['like', 'photo_category', $this->photo_category])
+            ->andFilterWhere(['like', 'photo_product', $this->photo_product])
             ->andFilterWhere(['like', 'photo_subcategory', $this->photo_subcategory]);
 
         return $dataProvider;

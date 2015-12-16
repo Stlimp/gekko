@@ -83,44 +83,20 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
         </div>
         </div>
 
-        <div class="slider">
+        <div class="slider" >
             <ul id="lightSlider">
-                <li class="sliderLi">   
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-1.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-2.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-3.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-4.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-5.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-6.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-7.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-8.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-9.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-10.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-11.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-13.jpg" /></a>
-                </li>
+                <?php foreach ($dataProviderPhotos->getModels() as $productPhoto){ ?>
+
+                    <li class="sliderLi">   
+                        <a href="http://google.com"><img class="sliderImg" src="<?=$productPhoto->photo_image?>" /></a>
+                    </li>
+                    <li class="sliderLi">   
+                        <a href="http://google.com"><img class="sliderImg" src="<?=$productPhoto->photo_image?>" /></a>
+                    </li>                    
+                <?php } ?>
+                
+
+                
             </ul>
         </div>
       </div>

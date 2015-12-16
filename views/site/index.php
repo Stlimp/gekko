@@ -141,7 +141,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
              
         <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: -100px;z-index: 1015";> <a href="#upper" ><div class="button-up"></div> </a>   </div>     
         <div class="page-text">
-        <div class="left_third" style= <?= "background-image:url(&quot;".$product->product_product_image."&quot;);background-size:cover" ?>>
+        <div class="left_third" style= <?= "width:275px;background-image:url(&quot;".$product->product_product_image."&quot;);background-size:cover" ?>>
             <span class="left_product_name" >
                 <?= mb_strtoupper($product->product_product_name) ?>
             </span>
@@ -193,42 +193,11 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
         </div>
         <div class="slider">
             <ul id="lightSlider">
+                <?php foreach ($photos as $image)  { ?>
                 <li class="sliderLi">   
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-1.jpg" /></a>
+                    <a href="#"><img class="sliderImg" src="<?= $image->photo_image ?>" /></a>
                 </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-2.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-3.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-4.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-5.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-6.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-7.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-8.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-9.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-10.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-11.jpg" /></a>
-                </li>
-                <li class="sliderLi">
-                    <a href="http://google.com"><img class="sliderImg" src="http://sachinchoolur.github.io/lightslider/img/cS-13.jpg" /></a>
-                </li>
+                <?php } ?>
             </ul>
         </div>
       </div>
