@@ -800,3 +800,12 @@ background-image: url('./../images/menu.jpg');
 .footer-image>a{
   text-decoration: none;
 }
+
+.right_third>a{
+  color:inherit;
+  text-decoration: none;
+}
+.center_split>a{
+  color:inherit;
+  text-decoration: none;
+}
