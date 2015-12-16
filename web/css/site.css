@@ -796,3 +796,7 @@ background-image: url('./../images/menu.jpg');
     padding-right: 15px;
     border-radius: 5px 0px 5px 0px;
 }
+
+.footer-image>a{
+  text-decoration: none;
+}
