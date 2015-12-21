@@ -16,7 +16,10 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'city')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
+    <!-- <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?> -->
+    <?= $form->field($model, 'description')->widget(\yii\redactor\widgets\Redactor::className(),[
+    'clientOptions' => [
+    	'imageUpload' => \yii\helpers\Url::to(['/redactor/upload/image'])]]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

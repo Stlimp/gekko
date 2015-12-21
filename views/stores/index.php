@@ -19,8 +19,8 @@ $this->params['breadcrumbs'][] = $this->title;
     .store{
         background-color:#D8D8CA;
         border-radius: 10px 0px ;
-        height:100px;
         display: block;
+        padding:10px;
     }
 
     .well{
@@ -28,6 +28,16 @@ $this->params['breadcrumbs'][] = $this->title;
         border:none;
         -webkit-box-shadow:none;
         padding:0px;
+        padding-right:10px;
+    }
+
+    a{
+        text-decoration:none;
+        color:#9E8D6B;
+    }
+    a:hover{
+        text-decoration:underline;
+        color:#9E8D6B;
     }
 
 </style>

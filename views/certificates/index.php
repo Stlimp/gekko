@@ -109,6 +109,7 @@ $this->title = 'Certificates';
     }
      #document>a:hover{
         text-decoration:underline;
+        color:#9E8D6B;
      }
 
 
