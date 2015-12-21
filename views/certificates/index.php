@@ -103,6 +103,14 @@ $this->title = 'Certificates';
             margin:15px;
             text-align: center;
     }
+    #document>a{
+        text-decoration:none;
+        color:#9E8D6B;
+    }
+     #document>a:hover{
+        text-decoration:underline;
+     }
+
 
   
 </style>
@@ -163,23 +171,43 @@ $this->title = 'Certificates';
         <div class="right-side-half-header">СЕРТИФИКАТЫ И ПРОТОКОЛЫ</div>
         <div class="right-side-half-text">
             
+            <!-- <div id="document">
+                          <a href="http://example.com/files/myfile.pdf" target="_blank">
+                          <div id="stbdoc">
+                              <img src="images\content\certificates\png\5.png" alt="..." />    
+                          </div>
+                          <p>ПРОТОКОЛ ИСПЫТАНИЙ</p>
+                          <p>№866 от 01.01.2013</p>
+                          </a>
+                      </div>
+                      <div id="document">
+                          <div id="tpdoc">
+                              <img src="images\content\certificates\transparent.png" alt="..." />
+                          </div>
+                              <p>ПРОТОКОЛ ИСПЫТАНИЙ</p>
+                              <p>№866 от 01.01.2013</p>
+                      </div>   -->          
+           
+            <?php foreach ($dataProvider->getModels() as $certificate){ ?>
             <div id="document">
-                <a href="http://example.com/files/myfile.pdf" target="_blank">
-                <div id="stbdoc">
-                    <img src="images\content\certificates\png\5.png" alt="..." />    
-                </div>
-                <p>ПРОТОКОЛ ИСПЫТАНИЙ</p>
-                <p>№866 от 01.01.2013</p>
+                <a href="<?= $certificate->path?>" target="_blank">
+                    <?php if (!(strcmp($certificate->type,"a"))) :?>
+                    <div id="stbdoc"> 
+                    <?php elseif (!(strcmp($certificate->type,"b"))) : ?>
+                    <div id="tpdoc">
+                    <?php endif ?>
+                        <img src="<?= $certificate->thumbnail ?>" alt="..." /> 
+                    </div>
+                    <?php if (!(strcmp($certificate->type,"a"))) :?>
+                    <p>ПРОТОКОЛ ИСПЫТАНИЙ</p>
+                    <?php elseif (!(strcmp($certificate->type,"b"))) : ?>
+                    <p>ДЕКЛАРАЦИЯ О СООТВЕТСТВИИ</p>
+                    <?php endif ?>
+                    <p><?= $certificate->description ?></p>
                 </a>
             </div>
-            <div id="document">
-                <div id="tpdoc">
-                    <img src="images\content\certificates\transparent.png" alt="..." />
-                </div>
-                    <p>ПРОТОКОЛ ИСПЫТАНИЙ</p>
-                    <p>№866 от 01.01.2013</p>
-            </div>            
-            
+            <?php } ?>
+                
         </div>
     </div>
     
