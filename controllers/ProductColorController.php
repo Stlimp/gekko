@@ -159,12 +159,19 @@ class ProductcolorController extends Controller
             $searchModel = new ProductColorSearch();
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
             $colors=$dataProvider->getModels();
+
+               /*Product photos*/
+            $searchModelPhotos = new PhotogallerySearch();
+            $paramsPhotos[PhotogallerySearch]['photo_product']=Yii::$app->request->queryParams[ProductColorSearch]['product_subcategory_name'];
+            $dataProviderPhotos = $searchModelPhotos->search($paramsPhotos);
+
             
 
             $this->layout='twoFootersLayout';
             return $this->render('index', [
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
+                'dataProviderPhotos'=>$dataProviderPhotos,
                 'colors'=>$colors,
                 'itemsCount'=>$itemsCount,
             ]);
