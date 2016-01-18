@@ -38,8 +38,8 @@ class ProductColor extends \yii\db\ActiveRecord implements \yz\shoppingcart\Cart
     public function rules()
     {
         return [
-            [['product_color_name', 'product_article', 'product_3ds_link', 'product_angular', 'product_regular', 'product_price', 'product_subcategory_name', 'product_color_image'], 'required'],
-            [['product_color_name', 'product_article', 'product_3ds_link', 'product_angular', 'product_regular', 'product_price', 'product_subcategory_name', 'product_color_image'], 'string', 'max' => 255]
+            [['product_color_name', 'product_article', 'product_3ds_link', 'product_subcategory_name', 'product_color_image'], 'required'],
+            [['product_color_name', 'product_article', 'product_3ds_link', 'product_subcategory_name', 'product_color_image'], 'string', 'max' => 255]
         ];
     }
 
@@ -53,9 +53,6 @@ class ProductColor extends \yii\db\ActiveRecord implements \yz\shoppingcart\Cart
             'product_color_name' => 'Product Color Name',
             'product_article' => 'Product Article',
             'product_3ds_link' => 'Product 3ds Link',
-            'product_angular' => 'Product Angular',//move to Product
-            'product_regular' => 'Product Regular',//move to Product
-            'product_price' => 'Product Price',//move to Product
             'product_subcategory_name' => 'Product Subcategory Name',
             'product_color_image' => 'Product Color Image',
         ];

@@ -17,12 +17,9 @@ class ProductColorSearch extends ProductColor
      */
     public function rules()
     {
-        /*return [
+        return [
             [['product_color_id'], 'integer'],
-            [['product_color_name', 'product_article', 'product_3ds_link', 'product_angular', 'product_regular', 'product_price', 'product_subcategory_name', 'product_color_image'], 'safe'],
-        ];*/
-        return[
-            [['product_subcategory_name'],'safe']
+            [['product_color_name', 'product_article', 'product_3ds_link', 'product_subcategory_name', 'product_color_image'], 'safe'],
         ];
     }
 
@@ -62,14 +59,11 @@ class ProductColorSearch extends ProductColor
             'product_color_id' => $this->product_color_id,
         ]);
 
-        $query->andFilterWhere(['like', 'product_subcategory_name', $this->product_subcategory_name])
-            /*->andFilterWhere(['like', 'product_article', $this->product_article])
+        $query->andFilterWhere(['like', 'product_color_name', $this->product_color_name])
+            ->andFilterWhere(['like', 'product_article', $this->product_article])
             ->andFilterWhere(['like', 'product_3ds_link', $this->product_3ds_link])
-            ->andFilterWhere(['like', 'product_angular', $this->product_angular])
-            ->andFilterWhere(['like', 'product_regular', $this->product_regular])
-            ->andFilterWhere(['like', 'product_price', $this->product_price])
             ->andFilterWhere(['like', 'product_subcategory_name', $this->product_subcategory_name])
-            ->andFilterWhere(['like', 'product_color_image', $this->product_color_image])*/;
+            ->andFilterWhere(['like', 'product_color_image', $this->product_color_image]);
 
         return $dataProvider;
     }

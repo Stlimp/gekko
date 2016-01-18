@@ -13,10 +13,21 @@ $this->params['breadcrumbs'][] = $this->title;
 $this->registerJsFile('@web/js/lightslider.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 ?>
+
+<style>
+    
+    .color_element{
+        display: inline-block;
+    height: auto;
+    float:left;
+    width:20%;
+    height:auto;
+    }
+</style>
 <div class="product-color-index">
     <div class="jumbotron">
         <div class="left-half">
-            <div class="left-side-half-header">АНТИЧНЫЙ КИРПИЧ <div class="price" >ЦЕНА: <span id="price_value">228,000</span> руб/м<span class="warning">*</span> </div></div>    
+            <div class="left-side-half-header">АНТИЧНЫЙ КИРПИЧ <div class="price" >ЦЕНА: <span id="price_value"><?= number_format($product_data->product_price) ?></span> руб/м<span class="warning">*</span> </div></div>    
             <div class="left-side-half-text">
                 <p>фактура представляет имитацию кладки классического глиняного клинкера</p>
                 <div class="icons">
@@ -34,17 +45,17 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                 </div>
             
                 <div class="left_halfheader">
-                    <a id="link_to_3ds" href="#" ><b><u>СКАЧАТЬ</u></b></a> «ТЕКСТУРУ» для 3DS
+                    <a id="link_to_3ds" href="<?= reset($colors)->product_3ds_link ?>" target="_blank" ><b><u>СКАЧАТЬ</u></b></a> «ТЕКСТУРУ» для 3DS
                 </div>
                 <div class="right_halfheader">
                     <a id="add_to_cart" href="index.php?r=productcolor/add-to-cart&id=1"><b><u>ДОБАВИТЬ</u></b></a> расцветку в <b>«МОЮ ГАЛЕРЕЮ»</b>
                 </div>
-                <div class="selected_product_color"><img id="selected_product_image" src="images\content\products\38.jpg" alt=""></div>
+                <div class="selected_product_color"><img id="selected_product_image" src="<?= reset($colors)->product_color_image ?>" alt=""></div>
                 <div class="left_halfheader">
-                    <b>расцветка</b> «Венецианский обожженый»
+                    <span id="color_name">расцветка <span>«<?= reset($colors)->product_color_name ?>»</span></span>
                 </div>
                 <div class="right_halfheader">
-                    <span class="article"><b>Арт.01-109</b></span>
+                    <span id="article">Арт.<?= reset($colors)->product_article ?></span>
                 </div>
             </div>
         </div>
@@ -57,19 +68,19 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
             </div>
             <div class="right-side-half-text">
             <div class="regular_product_desription">
-                Размеры камней        -  265 х 60 мм (+/- 4 мм). <br>
-                Толщина камней        -  12 мм (+/- 2 мм).<br>
-                Вес 1 м2                       -  22 кг.<br>
-                Кол-во в упаковке       -  1,2 усл.м2 (61 шт.)<br>
-                Повторяемость           -  42 шт. (0,83 м2)<br>
+                Размеры камней        -  <?= $product_data->product_regular_size ?> <br>
+                Толщина камней        -  <?= $product_data->product_regular_thickness ?><br>
+                Вес 1 м2              -  <?= $product_data->product_regular_weight ?> кг.<br>
+                Кол-во в упаковке     -  <?= $product_data->product_regular_quantity ?><br>
+                Повторяемость         -  <?= $product_data->product_regular_repeatability ?><br>
 
             </div>
             <div class="angular_product_description">
-                Размеры камней        -  120/265 х 60 мм (+/- 4 мм).<br>
-                Толщина камней        -  12 мм (+/- 2 мм).<br>
-                Вес 1 м.пог.                  -  8,5 кг.<br>
-                Кол-во в упаковке        -  1,728 усл.м.пог. (24 шт.)<br>
-                Повторяемость            -  10 шт. (0,72 м.пог.)<br>
+                Размеры камней        -  <?= $product_data->product_angular_size ?> <br>
+                Толщина камней        -  <?= $product_data->product_angular_thickness ?><br>
+                Вес 1 м2              -  <?= $product_data->product_angular_weight ?> кг.<br>
+                Кол-во в упаковке     -  <?= $product_data->product_angular_quantity ?><br>
+                Повторяемость         -  <?= $product_data->product_angular_repeatability ?><br>
 
             </div>
             <hr class="pick_the_color">
@@ -122,9 +133,6 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                 'product_color_name',
                 'product_article',
                 'product_3ds_link',
-                'product_angular',
-                'product_regular',
-                'product_price',
                 'product_subcategory_name',
                 'product_color_image',
 
@@ -148,8 +156,9 @@ $('.miniature').click(function(){
         var data = $.parseJSON(data);
         $("#selected_product_image").attr('src',data.product_color_image);
          document.getElementById("link_to_3ds").href=data.product_3ds_link;
+         document.getElementById("article").innerHTML= "Арт."+data.product_article;
+         document.getElementById("color_name").innerHTML= "расцветка <span>«"+data.product_color_name+"»</span>";
          document.getElementById("add_to_cart").href="index.php?r=productcolor/add-to-cart&id=".concat(data.product_color_id);
-         document.getElementById("price_value").innerHTML=data.product_price;
         return false;
 
     });

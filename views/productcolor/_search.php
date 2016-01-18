@@ -23,13 +23,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'product_3ds_link') ?>
 
-    <?= $form->field($model, 'product_angular') ?>
-
-    <?php // echo $form->field($model, 'product_regular') ?>
-
-    <?php // echo $form->field($model, 'product_price') ?>
-
-    <?php // echo $form->field($model, 'product_subcategory_name') ?>
+    <?= $form->field($model, 'product_subcategory_name') ?>
 
     <?php // echo $form->field($model, 'product_color_image') ?>
 

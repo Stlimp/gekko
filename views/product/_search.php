@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\ProductsSearch */
+/* @var $model app\models\ProductSearch */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -19,11 +19,49 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'product_product_name') ?>
 
+    <?= $form->field($model, 'product_product_image') ?>
+
     <?= $form->field($model, 'product_category_name') ?>
 
-    <?= $form->field($model, 'product_category_short_description') ?>
+    <?= $form->field($model, 'product_regular_size') ?>
 
-    <?= $form->field($model, 'product_category_short_characteristics') ?>
+    <?php // echo $form->field($model, 'product_regular_thickness') ?>
+
+    <?php // echo $form->field($model, 'product_regular_weight') ?>
+
+    <?php // echo $form->field($model, 'product_regular_quantity') ?>
+
+    <?php // echo $form->field($model, 'product_regular_repeatability') ?>
+
+    <?php // echo $form->field($model, 'product_regular_warning') ?>
+
+    <?php // echo $form->field($model, 'product_angular_size') ?>
+
+    <?php // echo $form->field($model, 'product_angular_thickness') ?>
+
+    <?php // echo $form->field($model, 'product_angular_weight') ?>
+
+    <?php // echo $form->field($model, 'product_angular_quantity') ?>
+
+    <?php // echo $form->field($model, 'product_angular_repeatability') ?>
+
+    <?php // echo $form->field($model, 'product_angular_warning') ?>
+
+    <?php // echo $form->field($model, 'product_regular_calculation_size') ?>
+
+    <?php // echo $form->field($model, 'product_angular_calculation_size') ?>
+
+    <?php // echo $form->field($model, 'product_angular_calculation_size_square') ?>
+
+    <?php // echo $form->field($model, 'product_price') ?>
+
+    <?php // echo $form->field($model, 'product_regular_seamless_calculation_size') ?>
+
+    <?php // echo $form->field($model, 'product_angular_seamless_calculation_size') ?>
+
+    <?php // echo $form->field($model, 'product_angular_seamless_calculation_size_square') ?>
+
+    <?php // echo $form->field($model, 'product_price_seamless') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

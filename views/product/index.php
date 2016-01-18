@@ -49,9 +49,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'product_product_id',
             'product_product_name',
             'product_category_name',
-            'product_category_short_description',
-            'product_category_short_characteristics',
-
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>

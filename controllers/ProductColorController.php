@@ -3,6 +3,8 @@
 namespace app\controllers;
 
 use Yii;
+use app\models\Product;
+use app\models\ProductSearch;
 use app\models\ProductColor;
 use app\models\ProductColorSearch;
 use app\models\PhotogallerySearch;
@@ -40,6 +42,12 @@ class ProductcolorController extends Controller
         $colors=$dataProvider->getModels();
         $itemsCount = \Yii::$app->cart->getCount();
 
+        $modelProduct=new ProductSearch();
+        $product_data=$modelProduct::findOne(['product_product_name'=>Yii::$app->request->queryParams[ProductColorSearch]['product_subcategory_name']]);
+
+
+
+
 
         /*Product photos*/
         $searchModelPhotos = new PhotogallerySearch();
@@ -53,6 +61,7 @@ class ProductcolorController extends Controller
             'dataProviderPhotos'=>$dataProviderPhotos,
             'colors'=>$colors,
             'itemsCount'=>$itemsCount,
+            'product_data'=>$product_data,
         ]);
     }
 

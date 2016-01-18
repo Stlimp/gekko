@@ -11,8 +11,26 @@ use Yii;
  * @property string $product_product_name
  * @property string $product_product_image
  * @property string $product_category_name
- * @property string $product_category_short_description
- * @property string $product_category_short_characteristics
+ * @property string $product_regular_size
+ * @property string $product_regular_thickness
+ * @property double $product_regular_weight
+ * @property string $product_regular_quantity
+ * @property string $product_regular_repeatability
+ * @property string $product_regular_warning
+ * @property string $product_angular_size
+ * @property string $product_angular_thickness
+ * @property double $product_angular_weight
+ * @property string $product_angular_quantity
+ * @property string $product_angular_repeatability
+ * @property string $product_angular_warning
+ * @property double $product_regular_calculation_size
+ * @property double $product_angular_calculation_size
+ * @property double $product_angular_calculation_size_square
+ * @property double $product_price
+ * @property double $product_regular_seamless_calculation_size
+ * @property double $product_angular_seamless_calculation_size
+ * @property double $product_angular_seamless_calculation_size_square
+ * @property double $product_price_seamless
  *
  * @property GkkProductCategories $productCategoryName
  * @property GkkProductColor[] $gkkProductColors
@@ -34,8 +52,9 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             [['product_product_id'], 'integer'],
-            [['product_product_name', 'product_product_image', 'product_category_name', 'product_category_short_description', 'product_category_short_characteristics'], 'required'],
-            [['product_product_name', 'product_product_image', 'product_category_name', 'product_category_short_description', 'product_category_short_characteristics'], 'string', 'max' => 255]
+            [['product_product_name', 'product_product_image', 'product_category_name', 'product_regular_size', 'product_regular_thickness', 'product_regular_weight', 'product_regular_quantity', 'product_regular_repeatability', 'product_regular_warning', 'product_angular_warning', 'product_regular_calculation_size', 'product_price', 'product_regular_seamless_calculation_size', 'product_price_seamless'], 'required'],
+            [['product_regular_weight', 'product_angular_weight', 'product_regular_calculation_size', 'product_angular_calculation_size', 'product_angular_calculation_size_square', 'product_price', 'product_regular_seamless_calculation_size', 'product_angular_seamless_calculation_size', 'product_angular_seamless_calculation_size_square', 'product_price_seamless'], 'number'],
+            [['product_product_name', 'product_product_image', 'product_category_name', 'product_regular_size', 'product_regular_thickness', 'product_regular_quantity', 'product_regular_repeatability', 'product_regular_warning', 'product_angular_size', 'product_angular_thickness', 'product_angular_quantity', 'product_angular_repeatability', 'product_angular_warning'], 'string', 'max' => 255]
         ];
     }
 
@@ -49,8 +68,26 @@ class Product extends \yii\db\ActiveRecord
             'product_product_name' => 'Product Product Name',
             'product_product_image' => 'Product Product Image',
             'product_category_name' => 'Product Category Name',
-            'product_category_short_description' => 'Product Category Short Description',
-            'product_category_short_characteristics' => 'Product Category Short Characteristics',
+            'product_regular_size' => 'Product Regular Size',
+            'product_regular_thickness' => 'Product Regular Thickness',
+            'product_regular_weight' => 'Product Regular Weight',
+            'product_regular_quantity' => 'Product Regular Quantity',
+            'product_regular_repeatability' => 'Product Regular Repeatability',
+            'product_regular_warning' => 'Product Regular Warning',
+            'product_angular_size' => 'Product Angular Size',
+            'product_angular_thickness' => 'Product Angular Thickness',
+            'product_angular_weight' => 'Product Angular Weight',
+            'product_angular_quantity' => 'Product Angular Quantity',
+            'product_angular_repeatability' => 'Product Angular Repeatability',
+            'product_angular_warning' => 'Product Angular Warning',
+            'product_regular_calculation_size' => 'Product Regular Calculation Size',
+            'product_angular_calculation_size' => 'Product Angular Calculation Size',
+            'product_angular_calculation_size_square' => 'Product Angular Calculation Size Square',
+            'product_price' => 'Product Price',
+            'product_regular_seamless_calculation_size' => 'Product Regular Seamless Calculation Size',
+            'product_angular_seamless_calculation_size' => 'Product Angular Seamless Calculation Size',
+            'product_angular_seamless_calculation_size_square' => 'Product Angular Seamless Calculation Size Square',
+            'product_price_seamless' => 'Product Price Seamless',
         ];
     }
 

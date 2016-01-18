@@ -18,12 +18,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'product_3ds_link')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'product_angular')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'product_regular')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'product_price')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'product_subcategory_name')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'product_color_image')->textInput(['maxlength' => true]) ?>
