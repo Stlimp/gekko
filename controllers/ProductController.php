@@ -9,7 +9,7 @@ use app\models\ProductSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\helpers\Json;
 /**
  * ProductController implements the CRUD actions for Product model.
  */
@@ -44,7 +44,7 @@ class ProductController extends Controller
         $categories=$tempmodel::find()->select('product_category_name')->orderBy('product_category_id')->all();
         
         $this->layout='twoFootersLayout';
-        
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -138,6 +138,13 @@ class ProductController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+
+    public function actionGetProducts()
+    {
+        $products=Product::find()->all();
+        echo Json::encode($products);
     }
 
     /**
