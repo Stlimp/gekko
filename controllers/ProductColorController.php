@@ -158,7 +158,7 @@ class ProductcolorController extends Controller
         if ($model) {
             if (!\Yii::$app->cart->hasPosition($model->product_color_id)) {
                \Yii::$app->cart->put($model, 1);
-            }
+        }
             
             //$itemsCount = \Yii::$app->cart->getCount();
             //\Yii::$app->cart->removeAll();
@@ -186,6 +186,12 @@ class ProductcolorController extends Controller
             ]);
         }
         throw new NotFoundHttpException();
+    }
+
+   public function actionRemoveFromCart($id)
+    {
+        \Yii::$app->cart->removeById($id);
+         $this->redirect(\Yii::$app->urlManager->createUrl("site/cart"));
     }
     /**
      * Finds the ProductColor model based on its primary key value.

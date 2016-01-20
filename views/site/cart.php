@@ -45,7 +45,7 @@ $this->title = 'Gekkostone';
 								<input type="checkbox" class="calculation_checkbox" id="seamless_<?= $cartItem->product_color_id?>"  onchange="order()"> бесшовный монтаж (расчет без учета швов);<br> 
 							</div>
 							<div id="calc_right_half">
-								<?php echo Html::Button("Удалить",['class'=>'btn btn-success btn-send cart-button'],['action'=>'/site/index']); ?> Расцветку из ГАЛЕРЕИ
+								<a id="remove_from_cart" class="btn btn-success btn-send cart-button" href="index.php?r=productcolor/remove-from-cart&id=<?= $cartItem->product_color_id ?>"><b>Удалить</b></a>  расцветку из <b>ГАЛЕРЕИ</b>
 								<p>Для облицовки вам необходимо:<br>
 								<span class="result" id="regular_result_<?= $cartItem->product_color_id ?>">0</span> усл.м    рядовой плитки (расчет кратно упаковкам);<br>
 								<span class="result" id="angular_result_<?= $cartItem->product_color_id ?>">0</span>  усл.м.пог. угловой плитки (расчет поштучно).<br>
