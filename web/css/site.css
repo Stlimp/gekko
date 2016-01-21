@@ -727,21 +727,29 @@ body {
     color: #D0272E;
     font-style: italic; 
 }
+.cart_index{
+  min-height: 500px;
+}
 .cart_position{
   display:inline-block;
   position: relative;
   width:100%;
+  
 }
 
 .product_miniature{
   float:left;
   width:20%;
+  height: 170px;
   padding:15px;
   position: relative;
   float:left;
+  overflow: hidden;
 }
 .product_miniature>img{
   width:95%;
+  height: auto;
+
   border-radius: 10px 0px 10px 0px;
   position: absolute;
   left: 15px;

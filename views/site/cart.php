@@ -25,6 +25,7 @@ $this->title = 'Gekkostone';
 		</div>
 		
 	 </div>
+	 <div class="cart_index">
 	<?php foreach ($cartItems as $cartItem) {?>
 			<div class="cart_position">
 				<div class="product_miniature">
@@ -64,7 +65,8 @@ $this->title = 'Gekkostone';
 
 
 		<?php } ?>
-	 <br><br><br><br><br><br><br><br><br><br><br><br><br>
+	</div>
+
 	</div>
 </div>
 <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
