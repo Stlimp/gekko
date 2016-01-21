@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+mb_internal_encoding("UTF-8");
 ;
 
 /* @var $this yii\web\View */
@@ -27,7 +28,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
 <div class="product-color-index">
     <div class="jumbotron">
         <div class="left-half">
-            <div class="left-side-half-header">АНТИЧНЫЙ КИРПИЧ <div class="price" >ЦЕНА: <span id="price_value"><?= number_format($product_data->product_price) ?></span> руб/м<span class="warning">*</span> </div></div>    
+            <div class="left-side-half-header"><?=  mb_strtoupper($product_data->product_product_name) ?> <div class="price" >ЦЕНА: <span id="price_value"><?= number_format($product_data->product_price) ?></span> руб/м<span class="warning">*</span> </div></div>    
             <div class="left-side-half-text">
                 <p>фактура представляет имитацию кладки классического глиняного клинкера</p>
                 <div class="icons">

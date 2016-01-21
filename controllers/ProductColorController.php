@@ -174,16 +174,19 @@ class ProductcolorController extends Controller
             $paramsPhotos[PhotogallerySearch]['photo_product']=Yii::$app->request->queryParams[ProductColorSearch]['product_subcategory_name'];
             $dataProviderPhotos = $searchModelPhotos->search($paramsPhotos);
 
-            
 
-            $this->layout='twoFootersLayout';
+            return $this->redirect(Yii::$app->request->referrer);
+
+
+
+           /* $this->layout='twoFootersLayout';
             return $this->render('index', [
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
                 'dataProviderPhotos'=>$dataProviderPhotos,
                 'colors'=>$colors,
                 'itemsCount'=>$itemsCount,
-            ]);
+            ]);*/
         }
         throw new NotFoundHttpException();
     }
