@@ -136,6 +136,13 @@ function order() {
     function calculate(color_data){
     	var regular_value = parseFloat(document.getElementById("regular_input_".concat(color_id)).value);
     	var angular_value = parseFloat(document.getElementById("angular_input_".concat(color_id)).value);
+
+    	if (isNaN(regular_value)){
+    		regular_value=0;
+    	}
+    	if (isNaN(angular_value)){
+    		angular_value=0;
+    	}
     	
     	if (document.getElementById('add_five_percent_'.concat(color_id)).checked) {//. добавить 5%, если выставленна галка
     		regular_value =regular_value*1.05;
@@ -148,6 +155,9 @@ function order() {
 
 	    	if (document.getElementById('reduce_square_'.concat(color_id)).checked) {
 	    		var regular_square=(regular_value-angular_square);// . площадь рядовых при учете угловых
+	    		if (regular_square<0){
+	    			regular_square=0;
+	    		}
 			}
 			else{
 				var regular_square=regular_value;//. площадь рядовых без учета угловых
