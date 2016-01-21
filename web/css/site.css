@@ -209,6 +209,7 @@ body {
     width:100%;
     padding-left: 50px;
     padding-right:25px;
+    line-height: 25px;
 }
 
 .right-side-half-header {
@@ -223,6 +224,7 @@ body {
     width:100%;
     padding-left: 25px;
     padding-right:50px;
+    line-height: 25px;
  
 }
 .left-side-half-text {

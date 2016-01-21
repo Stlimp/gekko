@@ -17,7 +17,7 @@ $this->title = 'Gekkostone';
 	 </div>
 	 <div class="total_price" style="width:80%;float:left;">
 	 	<div class="page-header" style="float:left;">Общая стоимость заказа: <span id="price_value">0</span> беларусских рублей.</div>
-	 	<div class="total_weight">Общий вес, брутто:  1447 кг.  </div>
+	 	<div class="total_weight ">Общий вес, брутто: <span class="result">1447</span> кг.  </div>
 	 	<div class="submit_form">
 			<?php echo Html::submitButton("ОФОРМИТЬ",['class'=>'btn btn-success btn-send cart-button']); ?>
 			<span id="alpha_bank">платежную квитанцию (оплата через любой <a href="https://www.alfabank.by/" target="_blank"><u>филиал «Альфа-Банк»</u></a> или на складе <b>GEKKOSTONE</b>)<br><span id="warning">перед оформлением внимательно проверьте заявку !</span></span>
@@ -50,8 +50,8 @@ $this->title = 'Gekkostone';
 								<span class="result" id="regular_result_<?= $cartItem->product_color_id ?>">0</span> усл.м    рядовой плитки (расчет кратно упаковкам);<br>
 								<span class="result" id="angular_result_<?= $cartItem->product_color_id ?>">0</span>  усл.м.пог. угловой плитки (расчет поштучно).<br>
 								Внимание! Количество камня рассчитано с учетом шва при укладке 12 мм.<br>
-								Стоимость: <span class="color_result" id="result_color_<?= $cartItem->product_color_id ?>">0</span>  беларусских рублей.<br>
-								Масса, брутто: <span id="result_weight_<?= $cartItem->product_color_id ?>">322</span> кг.</p>
+								Стоимость: <span class="color_result result" id="result_color_<?= $cartItem->product_color_id ?>">0</span>  беларусских рублей.<br>
+								Масса, брутто: <span class="result" id="result_weight_<?= $cartItem->product_color_id ?>">322</span> кг.</p>
 
 							</div>
 					</form>
