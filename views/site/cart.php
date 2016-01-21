@@ -8,6 +8,7 @@ $this->title = 'Gekkostone';
 
 <style>
 
+
 </style>
 <div class="site-index">
    <div class="jumbotron">
@@ -41,7 +42,7 @@ $this->title = 'Gekkostone';
 								<input type="text" class="calculation_input" id="angular_input_<?= $cartItem->product_color_id ?>" name="search" value="0" onkeyup="order()"> м.пог., введите общую высоту углов для облицовки;
 								<br>
 								<input type="checkbox" class="calculation_checkbox" id="reduce_square_<?= $cartItem->product_color_id ?>"  onchange="order()"> вычесть площадь, занимаемую угловыми элементами;<br>
-								<input type="checkbox" class="calculation_checkbox" id="add_five_percent_<?= $cartItem->product_color_id?>"  onchange="order()"> с учетом 5 % отходов камня на подрезку;<br>
+								<input type="checkbox" class="calculation_checkbox" id="add_five_percent_<?= $cartItem->product_color_id?>"  onchange="order();showWarning()"> с учетом 5 % отходов камня на подрезку;<br>
 								<input type="checkbox" class="calculation_checkbox" id="seamless_<?= $cartItem->product_color_id?>"  onchange="order()"> бесшовный монтаж (расчет без учета швов);<br> 
 							</div>
 							<div id="calc_right_half">
@@ -49,7 +50,7 @@ $this->title = 'Gekkostone';
 								<p>Для облицовки вам необходимо:<br>
 								<span class="result" id="regular_result_<?= $cartItem->product_color_id ?>">0</span> усл.м    рядовой плитки (расчет кратно упаковкам);<br>
 								<span class="result" id="angular_result_<?= $cartItem->product_color_id ?>">0</span>  усл.м.пог. угловой плитки (расчет поштучно).<br>
-								Внимание! Количество камня рассчитано с учетом шва при укладке 12 мм.<br>
+								<span class="five_percent_warninig" id="five_percent_warning_<?= $cartItem->product_color_id ?>"><br></span>
 								Стоимость: <span class="color_result result" id="result_color_<?= $cartItem->product_color_id ?>">0</span>  беларусских рублей.<br>
 								Масса, брутто: <span class="result" id="result_weight_<?= $cartItem->product_color_id ?>">322</span> кг.</p>
 
@@ -212,8 +213,25 @@ var sum_total=0;
 
 	document.getElementById("price_value").innerHTML=sum_total;//Конечная сумма 
 
-	}	
+	}
+
 	
+}
+
+
+function showWarning (){
+	var color_id=event.target.id.replace(/[^\d]+/, '');;
+var warning="<br>";
+var checkbox=document.getElementById('add_five_percent_'.concat(color_id));
+
+if (checkbox.checked){
+warning="<i><u>Внимание!</u> Количество камня рассчитано с учетом шва при укладке 12 мм.</i><br>";
+}
+//alert(document.getElementById('five_percent_warning_2').innerHTML);
+
+//document.getElementById('five_percent_warning_2').style.display= visibility;
+document.getElementById('five_percent_warning_'.concat(color_id)).innerHTML= warning;
+
 }
 
 </script>
