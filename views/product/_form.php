@@ -20,6 +20,8 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'product_category_name')->textInput(['maxlength' => true]) ?>
 
+    <?= $form->field($model, 'product_characteristics')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'product_regular_size')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'product_regular_thickness')->textInput(['maxlength' => true]) ?>

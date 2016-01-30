@@ -32,16 +32,17 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
             <div class="left-side-half-text">
                 <p>фактура представляет имитацию кладки классического глиняного клинкера</p>
                 <div class="icons">
-                    <img src="images\content\products\icons\cement.png" alt="">
-                    <img src="images\content\products\icons\inout.png" alt="">
-                    <img src="images\content\products\icons\like.png" alt="">
-                    <img src="images\content\products\icons\light.png" alt="">
-                    <img src="images\content\products\icons\angle.png" alt="">
-                    <img src="images\content\products\icons\fireresistance.png" alt="">
-                    <img src="images\content\products\icons\time.png" alt="">
-                    <img src="images\content\products\icons\cold.png" alt="">
-                    <img src="images\content\products\icons\water.png" alt="">
-                    <img src="images\content\products\icons\eco.png" alt="">
+                    <!-- <img src="images/content/products/icons/cement.png" alt="">
+                    <img src="images/content/products/icons/inout.png" alt="">
+                    <img src="images/content/products/icons/like.png" alt="">
+                    <img src="images/content/products/icons/light.png" alt="">
+                    <img src="images/content/products/icons/angle.png" alt="">
+                    <img src="images/content/products/icons/fireresistance.png" alt="">
+                    <img src="images/content/products/icons/time.png" alt="">
+                    <img src="images/content/products/icons/cold.png" alt="">
+                    <img src="images/content/products/icons/water.png" alt="">
+                    <img src="images/content/products/icons/eco.png" alt="">-->
+                    <?= $product_data->product_characteristics?>
                     <img src="images\content\products\icons\TPBY.png" alt="" style="float:right">
                 </div>
             

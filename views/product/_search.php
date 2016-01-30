@@ -23,7 +23,9 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'product_category_name') ?>
 
-    <?= $form->field($model, 'product_regular_size') ?>
+    <?= $form->field($model, 'product_characteristics') ?>
+
+    <?php // echo $form->field($model, 'product_regular_size') ?>
 
     <?php // echo $form->field($model, 'product_regular_thickness') ?>
 
@@ -32,7 +34,6 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'product_regular_quantity') ?>
 
     <?php // echo $form->field($model, 'product_regular_repeatability') ?>
-
 
     <?php // echo $form->field($model, 'product_angular_size') ?>
 
