@@ -18,7 +18,7 @@ $this->title = 'Gekkostone';
 	 </div>
 	 <div class="total_price" style="width:80%;float:left;">
 	 	<div class="page-header" style="float:left;">Общая стоимость заказа: <span id="price_value">0</span> беларусских рублей.</div>
-	 	<div class="total_weight ">Общий вес, брутто: <span class="result">1447</span> кг.  </div>
+	 	<div class="total_weight ">Общий вес, брутто: <span class="result" id="total_weight">0</span> кг.  </div>
 	 	<div class="submit_form">
 			<?php echo Html::submitButton("ОФОРМИТЬ",['class'=>'btn btn-success btn-send cart-button']); ?>
 			<span id="alpha_bank">платежную квитанцию (оплата через любой <a href="https://www.alfabank.by/" target="_blank"><u>филиал «Альфа-Банк»</u></a> или на складе <b>GEKKOSTONE</b>)<br><span id="warning">перед оформлением внимательно проверьте заявку !</span></span>
@@ -38,9 +38,9 @@ $this->title = 'Gekkostone';
 							<div id="calc_left_half">
 								<span id="span_product"><span id="product_subcategory_name_<?= $cartItem->product_color_id ?>"><?=mb_strtoupper($cartItem->product_subcategory_name)?></span> - «<?= $cartItem->product_color_name?>»</span>
 								<br>
-								<input type="number" step="0.01" class="calculation_input" id="regular_input_<?= $cartItem->product_color_id ?>" name="search" value="0" onkeyup="order()" > м² ,  введите общую площадь облицовки;
+								<input type="number" step="0.01" class="calculation_input" id="regular_input_<?= $cartItem->product_color_id ?>" name="search" value="0" onkeyup="order()" onchange="order()"> м² ,  введите общую площадь облицовки;
 								<br>
-								<input type="number" step="0.01" class="calculation_input" id="angular_input_<?= $cartItem->product_color_id ?>" name="search" value="0" onkeyup="order()" > м.пог., введите общую высоту углов для облицовки;
+								<input type="number" step="0.01" class="calculation_input" id="angular_input_<?= $cartItem->product_color_id ?>" name="search" value="0" onkeyup="order()" onchange="order()"> м.пог., введите общую высоту углов для облицовки;
 								<br>
 								<input type="checkbox" class="calculation_checkbox" id="reduce_square_<?= $cartItem->product_color_id ?>"  onchange="order()"> вычесть площадь, занимаемую угловыми элементами;<br>
 								<input type="checkbox" class="calculation_checkbox" id="add_five_percent_<?= $cartItem->product_color_id?>"  onchange="order();showWarning()"> с учетом 5 % отходов камня на подрезку;<br>
@@ -53,7 +53,7 @@ $this->title = 'Gekkostone';
 								<span class="result" id="angular_result_<?= $cartItem->product_color_id ?>">0</span>  усл.м.пог. угловой плитки (расчет поштучно).<br>
 								<span class="five_percent_warninig" id="five_percent_warning_<?= $cartItem->product_color_id ?>"><br></span>
 								Стоимость: <span class="color_result result" id="result_color_<?= $cartItem->product_color_id ?>">0</span>  беларусских рублей.<br>
-								Масса, брутто: <span class="result" id="result_weight_<?= $cartItem->product_color_id ?>">322</span> кг.</p>
+								Масса, брутто: <span class="weight_result result" id="result_weight_<?= $cartItem->product_color_id ?>">0</span> кг.</p>
 
 							</div>
 					</form>
@@ -175,6 +175,9 @@ function order() {
 
 	    	var price=Math.ceil((angular_result+regular_result)*color_data.product_price/100)*100;//6. общая цена до деноминации
 	    	//var price=Math.ceil((angular_result+regular_result)*color_data.product_price_seamless*100)/100;//6. общая цена после деноминации
+
+	    	price
+
 	    }
 	    else{
 	    	/*Бесшовный монтаж*/
@@ -216,15 +219,33 @@ function order() {
     	//console.log(color_data.product_angular_calculation_size);
 		//console.log(color_data);
 
-var sum_total=0;
-		
-		$('.color_result').each(function(){
+	var weight_regular=regular_packages*color_data.product_regular_weight;
+	var weight_angular=angular_packages*color_data.product_angular_weight;
+	var weight=weight_regular+weight_angular;
+	document.getElementById('result_weight_'.concat(color_id)).innerHTML=weight;//. вес
+
+
+	var sum_total=0;
+	
+	$('.color_result').each(function(){
 			//alert(parseFloat(this.innerHTML));
 			if (parseFloat(this.innerHTML)!="") {
 				var temp_price=parseFloat(this.innerHTML.replace(/,/g,''));
 				sum_total+=temp_price;
 			}
 	});
+
+	var weight_total=0;
+
+	$('.weight_result').each(function(){
+			//alert(parseFloat(this.innerHTML));
+			if (parseFloat(this.innerHTML)!="") {
+				var temp_weight=parseFloat(this.innerHTML.replace(/,/g,''));
+				weight_total+=temp_weight;
+			}
+	});
+	
+	document.getElementById("total_weight").innerHTML=weight_total;//Конечный вес
 
 	document.getElementById("price_value").innerHTML=addCommas(sum_total);//Конечная сумма 
 
@@ -236,16 +257,16 @@ var sum_total=0;
 
 function showWarning (){
 	var color_id=event.target.id.replace(/[^\d]+/, '');;
-var warning="<br>";
-var checkbox=document.getElementById('add_five_percent_'.concat(color_id));
+	var warning="<br>";
+	var checkbox=document.getElementById('add_five_percent_'.concat(color_id));
 
-if (checkbox.checked){
-warning="<i><u>Внимание!</u> Количество камня рассчитано с учетом шва при укладке 12 мм.</i><br>";
-}
-//alert(document.getElementById('five_percent_warning_2').innerHTML);
+	if (checkbox.checked){
+	warning="<i><u>Внимание!</u> Количество камня рассчитано с учетом шва при укладке 12 мм.</i><br>";
+	}
+	//alert(document.getElementById('five_percent_warning_2').innerHTML);
 
-//document.getElementById('five_percent_warning_2').style.display= visibility;
-document.getElementById('five_percent_warning_'.concat(color_id)).innerHTML= warning;
+	//document.getElementById('five_percent_warning_2').style.display= visibility;
+	document.getElementById('five_percent_warning_'.concat(color_id)).innerHTML= warning;
 
 }
 
