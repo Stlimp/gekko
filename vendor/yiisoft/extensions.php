@@ -66,24 +66,6 @@ return array (
       '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
     ),
   ),
-  'newerton/yii2-fancybox' => 
-  array (
-    'name' => 'newerton/yii2-fancybox',
-    'version' => '9999999-dev',
-    'alias' => 
-    array (
-      '@newerton/fancybox' => $vendorDir . '/newerton/yii2-fancybox',
-    ),
-  ),
-  '2amigos/yii2-gallery-widget' => 
-  array (
-    'name' => '2amigos/yii2-gallery-widget',
-    'version' => '1.0.1.0',
-    'alias' => 
-    array (
-      '@dosamigos/gallery' => $vendorDir . '/2amigos/yii2-gallery-widget/src',
-    ),
-  ),
   'yiisoft/yii2-imagine' => 
   array (
     'name' => 'yiisoft/yii2-imagine',
@@ -109,6 +91,24 @@ return array (
     'alias' => 
     array (
       '@yz/shoppingcart' => $vendorDir . '/omnilight/yii2-shopping-cart',
+    ),
+  ),
+  '2amigos/yii2-gallery-widget' => 
+  array (
+    'name' => '2amigos/yii2-gallery-widget',
+    'version' => '1.0.2.0',
+    'alias' => 
+    array (
+      '@dosamigos/gallery' => $vendorDir . '/2amigos/yii2-gallery-widget/src',
+    ),
+  ),
+  'newerton/yii2-fancybox' => 
+  array (
+    'name' => 'newerton/yii2-fancybox',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@newerton/fancybox' => $vendorDir . '/newerton/yii2-fancybox',
     ),
   ),
 );

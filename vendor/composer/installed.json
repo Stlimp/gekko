@@ -742,120 +742,6 @@
         ]
     },
     {
-        "name": "newerton/yii2-fancybox",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/newerton/yii2-fancybox.git",
-            "reference": "55105b97a1b3ab7ee6fa28e50b40cb328b8d31aa"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/newerton/yii2-fancybox/zipball/d9e61c4e0fab730aa93377d081bbdcb469da13fa",
-            "reference": "55105b97a1b3ab7ee6fa28e50b40cb328b8d31aa",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/fancybox": "@stable",
-            "bower-asset/jquery-mousewheel": "~3.1.3",
-            "php": ">=5.4.0",
-            "yiisoft/yii2": "*"
-        },
-        "time": "2015-05-20 02:05:47",
-        "type": "yii2-extension",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "newerton\\fancybox\\": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "Newerton Vargas de Araujo",
-                "email": "newerton.araujo@gmail.com"
-            }
-        ],
-        "description": "fancyBox is a tool that offers a nice and elegant way to add zooming functionality for images, html content and multi-media on your webpages.",
-        "keywords": [
-            "extension",
-            "fancyapps",
-            "fancybox",
-            "yii2"
-        ]
-    },
-    {
-        "name": "2amigos/yii2-gallery-widget",
-        "version": "1.0.1",
-        "version_normalized": "1.0.1.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/2amigos/yii2-gallery-widget.git",
-            "reference": "77b82b4a4d33a5cb9013220ff843de75984e7e82"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/2amigos/yii2-gallery-widget/zipball/77b82b4a4d33a5cb9013220ff843de75984e7e82",
-            "reference": "77b82b4a4d33a5cb9013220ff843de75984e7e82",
-            "shasum": ""
-        },
-        "require": {
-            "bower-asset/blueimp-gallery": "~2.15.0",
-            "yiisoft/yii2": "~2.0.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.0"
-        },
-        "time": "2015-04-12 22:21:58",
-        "type": "yii2-extension",
-        "extra": {
-            "asset-installer-paths": {
-                "npm-asset-library": "vendor/npm",
-                "bower-asset-library": "vendor/bower"
-            },
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "dosamigos\\gallery\\": "src"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "BSD-3-Clause"
-        ],
-        "authors": [
-            {
-                "name": "2amigOS! Consulting Group",
-                "email": "hola@2amigos.us",
-                "homepage": "http://2amigos.us",
-                "role": "Developer"
-            },
-            {
-                "name": "Alexander Kochetov",
-                "email": "creocoder@gmail.com",
-                "role": "Developer"
-            }
-        ],
-        "description": "Blueimp gallery widget for the Yii framework",
-        "homepage": "https://github.com/2amigos/yii2-gallery-widget",
-        "keywords": [
-            "2amigos",
-            "gallery",
-            "widget",
-            "yii",
-            "yii 2",
-            "yii2"
-        ]
-    },
-    {
         "name": "imagine/imagine",
         "version": "v0.5.0",
         "version_normalized": "0.5.0.0",
@@ -1440,5 +1326,160 @@
             "bower-asset-main": "dist/typeahead.bundle.js"
         },
         "installation-source": "dist"
+    },
+    {
+        "name": "2amigos/yii2-gallery-widget",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/2amigos/yii2-gallery-widget.git",
+            "reference": "77ae3c5e19b027f5c2f2147ce8c14a7a916ad6fc"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/2amigos/yii2-gallery-widget/zipball/77ae3c5e19b027f5c2f2147ce8c14a7a916ad6fc",
+            "reference": "77ae3c5e19b027f5c2f2147ce8c14a7a916ad6fc",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/blueimp-gallery": "~2.15.0",
+            "yiisoft/yii2": "~2.0.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0",
+            "scrutinizer/ocular": "~1.1"
+        },
+        "time": "2016-01-04 06:27:31",
+        "type": "yii2-extension",
+        "extra": {
+            "asset-installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            },
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "dosamigos\\gallery\\": "src"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "2amigOS! Consulting Group",
+                "email": "hola@2amigos.us",
+                "homepage": "http://2amigos.us",
+                "role": "Developer"
+            }
+        ],
+        "description": "Blueimp gallery widget for the Yii framework",
+        "homepage": "https://github.com/2amigos/yii2-gallery-widget",
+        "keywords": [
+            "2amigos",
+            "gallery",
+            "widget",
+            "yii",
+            "yii 2",
+            "yii2"
+        ]
+    },
+    {
+        "name": "kartik-v/mpdf",
+        "version": "v1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kartik-v/mpdf.git",
+            "reference": "6ab0ae3a82673e514f168c8e6da02289e6d95f2c"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kartik-v/mpdf/zipball/6ab0ae3a82673e514f168c8e6da02289e6d95f2c",
+            "reference": "6ab0ae3a82673e514f168c8e6da02289e6d95f2c",
+            "shasum": ""
+        },
+        "require": {
+            "ext-mbstring": "*",
+            "php": ">=4.3.10"
+        },
+        "time": "2015-05-05 07:34:49",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "mpdf.php",
+                "classes"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-1.0+"
+        ],
+        "authors": [
+            {
+                "name": "Ian N Back"
+            }
+        ],
+        "description": "A PHP class to generate PDF files from HTML with Unicode/UTF-8 and CJK support. This is a fork of the official mPDF library.",
+        "homepage": "http://www.mpdf1.com/mpdf/index.php",
+        "keywords": [
+            "pdf",
+            "php",
+            "utf-8"
+        ]
+    },
+    {
+        "name": "newerton/yii2-fancybox",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/newerton/yii2-fancybox.git",
+            "reference": "9059b2b3198a152b40d1c18ba76c0e5b1e48c7df"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/newerton/yii2-fancybox/zipball/9059b2b3198a152b40d1c18ba76c0e5b1e48c7df",
+            "reference": "9059b2b3198a152b40d1c18ba76c0e5b1e48c7df",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/fancybox": ">=2.1.5",
+            "bower-asset/jquery-mousewheel": ">=3.1.13",
+            "php": ">=5.4.0",
+            "yiisoft/yii2": "*"
+        },
+        "time": "2015-12-30 06:44:39",
+        "type": "yii2-extension",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "newerton\\fancybox\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Newerton Vargas de Araujo",
+                "email": "newerton.araujo@gmail.com"
+            }
+        ],
+        "description": "fancyBox is a tool that offers a nice and elegant way to add zooming functionality for images, html content and multi-media on your webpages.",
+        "keywords": [
+            "extension",
+            "fancyapps",
+            "fancybox",
+            "yii2"
+        ]
     }
 ]

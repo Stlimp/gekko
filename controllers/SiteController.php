@@ -18,7 +18,9 @@ use app\models\Emails;
 /*use app\models\Press;*/
 use app\models\Photogallery;
 use yii\data\ActiveDataProvider;
+use mPDF;
 
+mb_internal_encoding("UTF-8");
 
 class SiteController extends Controller
 {
@@ -274,6 +276,32 @@ class SiteController extends Controller
         $videos = $dataProvider->getModels();
         return $this->render('rocklaying',['videos' => $videos]);
     }
+
+
+
+
+
+    public function actionSamplepdf() {
+        $mpdf = new mPDF;
+
+        $mpdf->allow_charset_conversion=true;  // Set by default to TRUE
+        $mpdf->charset_in='windows-1251';
+        $mpdf->SetTitle("Счет Gekkostone");
+        $mpdf->SetHeader('|GEKKOSTONE|');
+        $mpdf->setFooter('{PAGENO}');
+        $content=file_get_contents('http://gekkostone/web/shit.txt');
+        $html = utf8_encode($content);
+
+        $stylesheet = file_get_contents('http://gekkostone/web/css/site.css'); // external css
+        $mpdf->WriteHTML($stylesheet,1);
+        $mpdf->WriteHTML($content,2);
+
+        $mpdf->WriteHTML('Sample Text', 'D');
+        $mpdf->Output();
+        exit;
+    }
+
+
 
 
 }

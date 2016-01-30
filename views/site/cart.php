@@ -20,6 +20,7 @@ $this->title = 'Gekkostone';
 	 	<div class="page-header" style="float:left;">Общая стоимость заказа: <span id="price_value">0</span> беларусских рублей.</div>
 	 	<div class="total_weight ">Общий вес, брутто: <span class="result" id="total_weight">0</span> кг.  </div>
 	 	<div class="submit_form">
+	 		<a id="remove_from_cart" class="btn btn-success btn-send cart-button" href="index.php?r=site%2Fsamplepdf" target="_blank"><b>ОФОРМИТЬ</b></a>  расцветку из <b>ГАЛЕРЕИ</b>
 			<?php echo Html::submitButton("ОФОРМИТЬ",['class'=>'btn btn-success btn-send cart-button']); ?>
 			<span id="alpha_bank">платежную квитанцию (оплата через любой <a href="https://www.alfabank.by/" target="_blank"><u>филиал «Альфа-Банк»</u></a> или на складе <b>GEKKOSTONE</b>)<br><span id="warning">перед оформлением внимательно проверьте заявку !</span></span>
 		</div>
@@ -38,9 +39,9 @@ $this->title = 'Gekkostone';
 							<div id="calc_left_half">
 								<span id="span_product"><span id="product_subcategory_name_<?= $cartItem->product_color_id ?>"><?=mb_strtoupper($cartItem->product_subcategory_name)?></span> - «<?= $cartItem->product_color_name?>»</span>
 								<br>
-								<input type="number" step="0.01" class="calculation_input" id="regular_input_<?= $cartItem->product_color_id ?>" name="search" value="0" onkeyup="order()" onchange="order()"> м² ,  введите общую площадь облицовки;
+								<input type="number" step="0.01" class="calculation_input" id="regular_input_<?= $cartItem->product_color_id ?>" name="regular_input" value="0" onkeyup="order()" onchange="order()"> м² ,  введите общую площадь облицовки;
 								<br>
-								<input type="number" step="0.01" class="calculation_input" id="angular_input_<?= $cartItem->product_color_id ?>" name="search" value="0" onkeyup="order()" onchange="order()"> м.пог., введите общую высоту углов для облицовки;
+								<input type="number" step="0.01" class="calculation_input" id="angular_input_<?= $cartItem->product_color_id ?>" name="angular_input" value="0" onkeyup="order()" onchange="order()"> м.пог., введите общую высоту углов для облицовки;
 								<br>
 								<input type="checkbox" class="calculation_checkbox" id="reduce_square_<?= $cartItem->product_color_id ?>"  onchange="order()"> вычесть площадь, занимаемую угловыми элементами;<br>
 								<input type="checkbox" class="calculation_checkbox" id="add_five_percent_<?= $cartItem->product_color_id?>"  onchange="order();showWarning()"> с учетом 5 % отходов камня на подрезку;<br>
