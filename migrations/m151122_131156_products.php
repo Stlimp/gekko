@@ -26,13 +26,11 @@ class m151122_131156_products extends Migration
             'product_regular_weight' =>'float NOT NULL',
             'product_regular_quantity' =>'string NOT NULL',
             'product_regular_repeatability' =>'string NOT NULL',
-            'product_regular_warning' =>'string NOT NULL',
             'product_angular_size' =>'string DEFAULT NULL',
             'product_angular_thickness' =>'string DEFAULT NULL',
             'product_angular_weight' =>'float DEFAULT NULL',
             'product_angular_quantity' =>'string DEFAULT NULL',
             'product_angular_repeatability' =>'string DEFAULT NULL',
-            'product_angular_warning' =>'string NOT NULL',
 
             'product_regular_calculation_size' =>'FLOAT NOT NULL',
             'product_angular_calculation_size' =>'FLOAT DEFAULT 0',

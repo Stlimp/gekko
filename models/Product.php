@@ -16,13 +16,11 @@ use Yii;
  * @property double $product_regular_weight
  * @property string $product_regular_quantity
  * @property string $product_regular_repeatability
- * @property string $product_regular_warning
  * @property string $product_angular_size
  * @property string $product_angular_thickness
  * @property double $product_angular_weight
  * @property string $product_angular_quantity
  * @property string $product_angular_repeatability
- * @property string $product_angular_warning
  * @property double $product_regular_calculation_size
  * @property double $product_angular_calculation_size
  * @property double $product_angular_calculation_size_square
@@ -52,9 +50,9 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             [['product_product_id'], 'integer'],
-            [['product_product_name', 'product_product_image', 'product_category_name', 'product_regular_size', 'product_regular_thickness', 'product_regular_weight', 'product_regular_quantity', 'product_regular_repeatability', 'product_regular_warning', 'product_angular_warning', 'product_regular_calculation_size', 'product_price', 'product_regular_seamless_calculation_size', 'product_price_seamless'], 'required'],
+            [['product_product_name', 'product_product_image', 'product_category_name', 'product_regular_size', 'product_regular_thickness', 'product_regular_weight', 'product_regular_quantity', 'product_regular_repeatability', 'product_regular_calculation_size', 'product_price', 'product_regular_seamless_calculation_size', 'product_price_seamless'], 'required'],
             [['product_regular_weight', 'product_angular_weight', 'product_regular_calculation_size', 'product_angular_calculation_size', 'product_angular_calculation_size_square', 'product_price', 'product_regular_seamless_calculation_size', 'product_angular_seamless_calculation_size', 'product_angular_seamless_calculation_size_square', 'product_price_seamless'], 'number'],
-            [['product_product_name', 'product_product_image', 'product_category_name', 'product_regular_size', 'product_regular_thickness', 'product_regular_quantity', 'product_regular_repeatability', 'product_regular_warning', 'product_angular_size', 'product_angular_thickness', 'product_angular_quantity', 'product_angular_repeatability', 'product_angular_warning'], 'string', 'max' => 255]
+            [['product_product_name', 'product_product_image', 'product_category_name', 'product_regular_size', 'product_regular_thickness', 'product_regular_quantity', 'product_regular_repeatability', 'product_angular_size', 'product_angular_thickness', 'product_angular_quantity', 'product_angular_repeatability'], 'string', 'max' => 255]
         ];
     }
 
@@ -73,13 +71,11 @@ class Product extends \yii\db\ActiveRecord
             'product_regular_weight' => 'Product Regular Weight',
             'product_regular_quantity' => 'Product Regular Quantity',
             'product_regular_repeatability' => 'Product Regular Repeatability',
-            'product_regular_warning' => 'Product Regular Warning',
             'product_angular_size' => 'Product Angular Size',
             'product_angular_thickness' => 'Product Angular Thickness',
             'product_angular_weight' => 'Product Angular Weight',
             'product_angular_quantity' => 'Product Angular Quantity',
             'product_angular_repeatability' => 'Product Angular Repeatability',
-            'product_angular_warning' => 'Product Angular Warning',
             'product_regular_calculation_size' => 'Product Regular Calculation Size',
             'product_angular_calculation_size' => 'Product Angular Calculation Size',
             'product_angular_calculation_size_square' => 'Product Angular Calculation Size Square',

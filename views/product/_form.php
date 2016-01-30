@@ -30,8 +30,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'product_regular_repeatability')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'product_regular_warning')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'product_angular_size')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'product_angular_thickness')->textInput(['maxlength' => true]) ?>
@@ -41,8 +39,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'product_angular_quantity')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'product_angular_repeatability')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'product_angular_warning')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'product_regular_calculation_size')->textInput() ?>
 

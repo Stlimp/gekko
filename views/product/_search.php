@@ -33,7 +33,6 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'product_regular_repeatability') ?>
 
-    <?php // echo $form->field($model, 'product_regular_warning') ?>
 
     <?php // echo $form->field($model, 'product_angular_size') ?>
 
@@ -44,8 +43,6 @@ use yii\widgets\ActiveForm;
     <?php // echo $form->field($model, 'product_angular_quantity') ?>
 
     <?php // echo $form->field($model, 'product_angular_repeatability') ?>
-
-    <?php // echo $form->field($model, 'product_angular_warning') ?>
 
     <?php // echo $form->field($model, 'product_regular_calculation_size') ?>
 

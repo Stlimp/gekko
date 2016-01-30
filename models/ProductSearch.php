@@ -19,7 +19,7 @@ class ProductSearch extends Product
     {
         return [
             [['product_product_id'], 'integer'],
-            [['product_product_name', 'product_product_image', 'product_category_name', 'product_regular_size', 'product_regular_thickness', 'product_regular_quantity', 'product_regular_repeatability', 'product_regular_warning', 'product_angular_size', 'product_angular_thickness', 'product_angular_quantity', 'product_angular_repeatability', 'product_angular_warning'], 'safe'],
+            [['product_product_name', 'product_product_image', 'product_category_name', 'product_regular_size', 'product_regular_thickness', 'product_regular_quantity', 'product_regular_repeatability', 'product_angular_size', 'product_angular_thickness', 'product_angular_quantity', 'product_angular_repeatability'], 'safe'],
             [['product_regular_weight', 'product_angular_weight', 'product_regular_calculation_size', 'product_angular_calculation_size', 'product_angular_calculation_size_square', 'product_price', 'product_regular_seamless_calculation_size', 'product_angular_seamless_calculation_size', 'product_angular_seamless_calculation_size_square', 'product_price_seamless'], 'number'],
         ];
     }
@@ -77,12 +77,10 @@ class ProductSearch extends Product
             ->andFilterWhere(['like', 'product_regular_thickness', $this->product_regular_thickness])
             ->andFilterWhere(['like', 'product_regular_quantity', $this->product_regular_quantity])
             ->andFilterWhere(['like', 'product_regular_repeatability', $this->product_regular_repeatability])
-            ->andFilterWhere(['like', 'product_regular_warning', $this->product_regular_warning])
             ->andFilterWhere(['like', 'product_angular_size', $this->product_angular_size])
             ->andFilterWhere(['like', 'product_angular_thickness', $this->product_angular_thickness])
             ->andFilterWhere(['like', 'product_angular_quantity', $this->product_angular_quantity])
-            ->andFilterWhere(['like', 'product_angular_repeatability', $this->product_angular_repeatability])
-            ->andFilterWhere(['like', 'product_angular_warning', $this->product_angular_warning]);
+            ->andFilterWhere(['like', 'product_angular_repeatability', $this->product_angular_repeatability]);
 
         return $dataProvider;
     }
