@@ -118,7 +118,7 @@ TwoFootersAsset::register($this);
                                     </ul>
                                 </li>
                             <?php endforeach;?>
-                        <li><a href="#">ДО И ПОСЛЕ</a></li> 
+                        <li><a href="index.php?r=beforeandafteralbum%2Findex">ДО И ПОСЛЕ</a></li> 
                     </ul> 
                 </li>
                 <li id="delimiter"><a>|</a></li> 

@@ -282,7 +282,7 @@ class SiteController extends Controller
 
 
     public function actionSamplepdf() {
-        $mpdf = new mPDF;
+        $mpdf = new mPDF(BLANK,'A4-L');
 
         $mpdf->allow_charset_conversion=true;  // Set by default to TRUE
         $mpdf->charset_in='windows-1251';

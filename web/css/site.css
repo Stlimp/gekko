@@ -852,3 +852,30 @@ background-image: url('./../images/menu.jpg');
 #color_name>span{
   color: #979683;
 }
+
+
+
+.beforeandafter-album-index{
+        min-height:600px;
+    }
+
+    .beforeandafter_album{
+      display:block;
+        min-height:200px;
+        width:100%;
+        text-align:left;
+    }
+    .album{
+        /* margin-top:30px; */
+        padding-left: 50px;
+        width:75%;
+        float:left;
+        padding-top:10px;
+    }
+
+    .product_before_and_after{
+        float:left;
+        height:210px;
+        width:25%;
+
+    }
