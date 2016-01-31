@@ -856,26 +856,26 @@ background-image: url('./../images/menu.jpg');
 
 
 .beforeandafter-album-index{
-        min-height:600px;
-    }
+  min-height:600px;
+  height:auto;
+}
 
-    .beforeandafter_album{
-      display:block;
-        min-height:200px;
-        width:100%;
-        text-align:left;
-    }
-    .album{
-        /* margin-top:30px; */
-        padding-left: 50px;
-        width:75%;
-        float:left;
-        padding-top:10px;
-    }
+.beforeandafter_album{
+  display:inline-block;
+    min-height:200px;
+    width:100%;
+    text-align:left;
+}
+.album{
+  /* margin-top:30px; */
+  padding-left: 50px;
+  width:75%;
+  float:left;
+  padding-top:10px;
+}
 
-    .product_before_and_after{
-        float:left;
-        height:210px;
-        width:25%;
-
-    }
+.product_before_and_after{
+    float:left;
+    height:210px;
+    width:25%:;
+}

@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="product_before_and_after">
             <div class="product">
                 <h5 style="text-align:center;"><b><?= mb_strtoupper(ProductColor::findOne($album->product_color_id)->product_subcategory_name)?></b></h5>
-                <a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=Античный&amp;r=productcolor%2Findex"><img src="<?= ProductColor::findOne($album->product_color_id)->product_color_image?>" alt="" width="220" height="150"></a>
+                <a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?=ProductColor::findOne($album->product_color_id)->product_subcategory_name?>&amp;r=productcolor%2Findex"><img src="<?= ProductColor::findOne($album->product_color_id)->product_color_image?>" alt="" width="220" height="150"></a>
                 <h5 style="margin:0;text-align:center;"><b><?= ProductColor::findOne($album->product_color_id)->product_color_name?></b></h5>
             </div>
         </div>
