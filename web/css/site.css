@@ -879,3 +879,7 @@ background-image: url('./../images/menu.jpg');
     height:210px;
     width:25%:;
 }
+.gallery{
+  min-height:600px;
+  height:auto;
+}

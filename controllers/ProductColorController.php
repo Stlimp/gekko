@@ -31,6 +31,27 @@ class ProductcolorController extends Controller
         ];
     }
 
+    public function action3ds()
+        {
+            $searchModel = new ProductColorSearch();
+            $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+
+            //$products =$searchModel::find()->orderBy('product_product_id')->all();
+
+            //$tempmodel=new ProductCategories();
+           // $categories=$tempmodel::find()->select('product_category_name')->orderBy('product_category_id')->all();
+            
+            $this->layout='twoFootersLayout';
+            
+            return $this->render('3ds', [
+                'searchModel' => $searchModel,
+                'dataProvider' => $dataProvider,
+               // 'categories'=>$categories,
+               // 'products'=>$products,
+            ]);
+        }
+
     /**
      * Lists all ProductColor models.
      * @return mixed
