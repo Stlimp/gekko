@@ -3,48 +3,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\widgets\MaskedInput;
 ?>
-<style >
-	#vacancyform-employment,#vacancyform-employmenttype,#vacancyform-education,#vacancyform-civilstatus,#vacancyform-personalauto,#vacancyform-smoker{
-	    -webkit-appearance: none;
-	    -moz-appearance: none;
-		
 
-	    background:transparent url("http://gekkostone/web/images/content/arrow.png") no-repeat right;
-	}
-	.form-control{
-		height:19px;
-		width:100%;
-		padding:0px;
-		padding-right:15px;
-		border-radius:5px 0px 5px 0px;
-	}
-	.form-group {
-      display: inline-block;
-      margin-bottom: 0px;
-  	}
-  	.required>label::after {
-      content: " *";
-      color:#D0272E;
-  	}
-  	.form-group.field-contactsform-organization,.form-group.field-contactsform-city {
-  		width:100%;
-	}
-
-	.form-group.field-contactsform-department.required,.form-group.field-contactsform-position {
-		width:35%;
-		float:right;
-		padding-left: 30px;
-	}
-	.form-group.field-contactsform-name.required,.form-group.field-contactsform-text.required,.form-group.field-contactsform-email,.form-group.field-contactsform-phone
-	{
-		width:65%;
-	}
-	.btn{
-		float:right;  
-	}
-
-
-</style>
 <div class="site-index">
    <div class="jumbotron">
 	<div class="left-half">
@@ -110,14 +69,14 @@ use yii\widgets\MaskedInput;
 		</div>
 		<div class="left-side-half-text">
 			<p>Для оформления заявки на декоративный камень воспользуйтесь формой по ссылке 
-			в меню «УСЛУГИ» или в дополнительном меню страницы, <a href="index.php?r=site%2Fgallery" style="color:#9E8D6B"><u>Моя галерея</u></a>.</p>
+			в меню «УСЛУГИ» или в дополнительном меню страницы, <a class="link_brown_color" href="index.php?r=site%2Fgallery"><u>Моя галерея</u></a>.</p>
 			<p>Для оформления заявки на сотрудничество с компанией воспользуйтесь соответ-
-			ствующей формой по ссылке в меню «О КОМПАНИИ», <a href="index.php?r=site%2Fpartnership" style="color:#9E8D6B"><u>Партнерство</u></a>.</p>
+			ствующей формой по ссылке в меню «О КОМПАНИИ», <a class="link_brown_color" href="index.php?r=site%2Fpartnership"><u>Партнерство</u></a>.</p>
 			<p>Для заполнения заявки на вакансии по трудоустройству воспользуйтесь формой
-			по ссылке в меню «О КОМПАНИИ»,<a href="index.php?r=site%2Fvacancy" style="color:#9E8D6B"><u>Вакансии</u></a>.</p>
+			по ссылке в меню «О КОМПАНИИ»,<a class="link_brown_color" href="index.php?r=site%2Fvacancy"><u>Вакансии</u></a>.</p>
 			<p>Если Вы желаете оставить отзыв или внести предложение по качеству продукции и
 			предоставляемых услуг компании, - воспользуйтесь специальной формой по ссылке 
-			в меню «О КОМПАНИИ», <a href="index.php?r=site%2Ffeedback" style="color:#9E8D6B"><u>Отзывы и предложения</u></a>.</p>
+			в меню «О КОМПАНИИ», <a class="link_brown_color" href="index.php?r=site%2Ffeedback"><u>Отзывы и предложения</u></a>.</p>
 			<p>По иным вопросам Вы можете воспользоваться формой для связи на текущей странице.</p>
 		</div>
 	</div>

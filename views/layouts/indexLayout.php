@@ -33,28 +33,6 @@ IndexAsset::register($this);
     <?php $this->head() ?>
 </head>
 
-<style>
-    
-    .button-down{
-        width:50px;
-        height:50px;
-        background-image: url(images/down.png);
-        background-size: contain;
-        display:inline-block;
-        background-repeat: no-repeat;
-        background-position: center; 
-    }
-    .button-down:hover{
-        width:50px;
-        height:50px;
-        background-image: url(images/down-hover.png);
-        background-size: contain;
-        display:inline-block;
-    }
-</style>
-
-
-
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
 
 <body>

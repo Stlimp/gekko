@@ -11,25 +11,6 @@ $this->title = 'Photogalleries';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<style>
-ul {
-   list-style: none;
-   text-align: right;
-   display:inline;
-}
-
-.dots li:before {
-   content: "•";
-   font-size: 150%; /* or whatever */
-   padding-right: 5px;
-   
-}
-.dots li {
-    width: auto;
-    float: right;
-    height: 25px;
-}
-</style>
 
 <div class="photogallery-index">
      <div class="jumbotron">

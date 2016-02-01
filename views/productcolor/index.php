@@ -15,16 +15,6 @@ $this->registerJsFile('@web/js/lightslider.min.js', ['depends' => [\yii\web\Jque
 $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 ?>
 
-<style>
-    
-    .color_element{
-        display: inline-block;
-    height: auto;
-    float:left;
-    width:20%;
-    height:auto;
-    }
-</style>
 <div class="product-color-index">
     <div class="jumbotron">
         <div class="left-half">

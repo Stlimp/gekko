@@ -8,18 +8,7 @@ mb_internal_encoding("UTF-8");
 
 $this->title = 'gekkostone';
 ?>
-<style>
-    a{
-        color:#666666;
-    }
-    a:hover{
-        color:#000000;
-    }
-    .post{
-        padding-left: 50px;
 
-    }
-</style>
 <div class="news-index" >
     <div class="jumbotron">
         <div class="news" style="width:80%;float:left;">
@@ -34,7 +23,7 @@ $this->title = 'gekkostone';
                         <span style="padding-left:30px;"><b><?=date('d.m.Y', strtotime($postItem->date)); ?>г. </span>
                     </div>
                     <div class="post-content" style="width:83%;float:left;display:inline-block;">
-                    <a href="/web/index.php?r=news%2Fview&amp;id=<?= $postItem->id?>"><u><?=$postItem->header; ?></u></a></b>
+                    <a class="link_grey_color" href="/web/index.php?r=news%2Fview&amp;id=<?= $postItem->id?>"><u><?=$postItem->header; ?></u></a></b>
                     <p><?= mb_substr(strip_tags($postItem->post),0,248) ?> ...</p>
                     </div>
                  </div>
@@ -47,9 +36,9 @@ $this->title = 'gekkostone';
             <div class="page-header" style="float:left;">АРХИВ НОВОСТЕЙ</div>
             <div class="year left-side-half-text" style="height:250px;">
                 <ul>
-                    <li><a href="/web/index.php?r=news%2Findex">Все записи</a></li>
+                    <li><a class="link_grey_color" href="/web/index.php?r=news%2Findex">Все записи</a></li>
                     <?php foreach ($yearFilter as $yearItem){ ?>
-                        <li class="unselected"><a href="/web/index.php?NewsSearch%5Bdate%5D=<?= $yearItem ?>&r=news%2Findex"><?= $yearItem ?></a></li>
+                        <li class="unselected"><a class="link_grey_color" href="/web/index.php?NewsSearch%5Bdate%5D=<?= $yearItem ?>&r=news%2Findex"><?= $yearItem ?></a></li>
                     <?php }?>
                 </ul>
      
@@ -57,7 +46,7 @@ $this->title = 'gekkostone';
             <div class="page-header" style="float:left;background: #FFFFFF;">ПУБЛИКАЦИИ В СЕТИ</div>
                 <ul style=" list-style-type: none;padding-left:0px;">
                     <?php foreach ($press as $link){ ?>
-                        <li><a href="<?= $link->link?>" target="_blank"><?= $link->link_name ?></a></li>
+                        <li><a class="link_grey_color" href="<?= $link->link?>" target="_blank"><?= $link->link_name ?></a></li>
                     <?php }?>
                 </ul>
 

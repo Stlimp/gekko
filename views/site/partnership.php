@@ -3,59 +3,6 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 ?>
 
-<style >
-  #partnershipform-typeofpartnership{
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      background:transparent url("http://gekkostone/web/images/content/arrow.png") no-repeat right;
-  }
-
-  .form-group {
-      display: inline-block;
-      margin-bottom: 0px;
-  }
-  .form-control{
-    height:19px;
-    width:100%;
-    padding:0px;
-    padding-right:15px;
-    border-radius:5px 0px 5px 0px;
-  }
-  .required>label::after {
-      content: " *";
-      color:#D0272E;
-  }
-  .form-group.field-partnershipform-companytype.required,.form-group.field-partnershipform-mainactivity.required,.form-group.field-partnershipform-typeofpartnership.required,.form-group.field-partnershipform-info {
-    width:100%;
-  }
-  .form-group.field-partnershipform-location.required {
-    width:70%;
-  }
-  .form-group.field-partnershipform-timeperiod.required {
-    width:25%;
-    float:right;
-  }
-  .form-group.field-partnershipform-contactperson.required, .form-group.field-partnershipform-email.required,.form-group.field-partnershipform-phone.required{
-    width:60%;
-  }
-  .form-group.field-partnershipform-position.required {
-    width:35%;
-    padding-left:30px;
-  }
-  .btn{
-    float:right;  
-
-  }
-  a{
-        text-decoration:none;
-        color:#9E8D6B;
-  }
-  a:hover{
-        color:#9E8D6B;
-  }
-
-
-</style>
 <div class="site-index">
    <div class="jumbotron">
    	<div class="left-half">
@@ -82,12 +29,12 @@ use yii\widgets\ActiveForm;
 занимаетесь оптово-розничной торговлей строительной продукцией, то Вы 
 можете претендовать на получение статуса «Дилер». </p>
 			<p>Для наглядного представление нашей продукции после подписания дилерского 
-соглашения Дилер получает базовый <a href="">комплект демонстрационных стендов</a>. 
+соглашения Дилер получает базовый <a class="link_brown_color" href="">комплект демонстрационных стендов</a>. 
 Согласно договора Дилер имеет право  на бесплатное использование демонстрационных стендов GEKKOSTONE в течение 3-х месяцев. После окончания срока, 
 требуемого для изучения спроса, Дилер принимает решение о приобретении 
 или возврате рекламных стендов.</p>
 			<p>По желанию Дилера информация о нем может быть размещена на настоящем 
-сайте и будет доступна в разделе ,<a href="index.php?r=stores%2Findex">«ГДЕ КУПИТЬ»</a> в главном меню сайта. </p>
+сайте и будет доступна в разделе ,<a class="link_brown_color" href="index.php?r=stores%2Findex">«ГДЕ КУПИТЬ»</a> в главном меню сайта. </p>
 			<p>По результатам анализа деятельности Дилера возможно принятие решения о 
 присвоении Дилеру статуса «Региональный Дистрибьютор».</p>
 			<p>Для рассмотрения условий сотрудничества предлагаем заполнить Заявку на 
@@ -106,11 +53,11 @@ use yii\widgets\ActiveForm;
     <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
       <div class="panel-body">
       	<p> Широкий спектр фактур и многообразие цветовых решений продукции 
-<b>GEKKOSTONE</b> помогут реализовать самые оригинальные дизайнерские и архитектурные решения. Предлагаем взаимовыгодные условия партнерства по программе «Агент». Для рассмотрения условий сотрудничества предлагаем заполнить Заявку на партнерство по форме, прилагаемой справа.  </p>
+<b>GEKKOSTONE</b> помогут реализовать самые оригинальные дизайнерские и архитектурные решения. Предлагаем взаимовыгодные условия партнерства по программе <b>«Агент»</b>. Для рассмотрения условий сотрудничества предлагаем заполнить Заявку на партнерство по форме, прилагаемой справа.  </p>
 		<p>Обращаем Ваше внимание, что на вебсайте в разделе «ИНФОРМАЦИЯ», 
-<a href="index.php?r=product%2F3ds">Текстуры камня</a>  Вы можете скачать интересующие Вас текстуры декоративно-
-го камня GEKKOSTONE, специально подготовленные для работы в дизайнер-
-ских  программах для 3D визуализации Ваших проектов.</p>
+<a class="link_brown_color" href="index.php?r=product%2F3ds">Текстуры камня</a>  Вы можете скачать интересующие Вас текстуры декоративно-
+го камня <b>GEKKOSTONE</b>, специально подготовленные для работы в дизайнер-
+ских  программах для <b>3D</b> визуализации Ваших проектов.</p>
       </div>
     </div>
   </div>
@@ -129,9 +76,9 @@ use yii\widgets\ActiveForm;
 идеально подходит для реконструкции исторических зданий и сооружений. 
 Технологии <b>GEKKOSTONE</b> позволяют со 100%-ной точностью передавать цвет и 
 фактуру природного камня и облицовочного кирпича. Подробную информацию 
-смотрите: «О КОМПАНИИ», <a href="index.php?r=site%2Fadvantages">Преимущества</a>. </p>
+смотрите: «О КОМПАНИИ», <a class="link_brown_color" href="index.php?r=site%2Fadvantages">Преимущества</a>. </p>
 		<p>Декоративный камень <b>GEKKOSTONE</b> изготавливается с применением только натуральных и экологически чистых сырьевых компонентов согласно СТБ 1374-2003. На 
-всю продукцию <b>GEKKOSTONE</b> дается <a href="index.php?r=site%2Fwarranty">производственная гарантия</a>. </p>
+всю продукцию <b>GEKKOSTONE</b> дается <a class="link_brown_color" href="index.php?r=site%2Fwarranty">производственная гарантия</a>. </p>
 		<p>Крупным потребителям облицовочных материалов и строительным организациям 
 предлагаются специальные цены, сроки и условия поставки продукции 
 <b>GEKKOSTONE</b>.</p>
@@ -158,7 +105,7 @@ use yii\widgets\ActiveForm;
 <b>GEKKOSTONE</b>, мы всегда готовы рассмотреть вариант аренды рекламного места. 
 Рекламные стенды <b>GEKKOSTONE</b> выглядят очень презентабельно и вполне могут 
 являться визитной карточкой Вашего объекта.</p>
-		<p>Образцы рекламных стендов <b>GEKKOSTONE</b> Вы можете посмотреть <a href="">здесь</a>.</p>
+		<p>Образцы рекламных стендов <b>GEKKOSTONE</b> Вы можете посмотреть <a class="link_brown_color" href="">здесь</a>.</p>
 		<p>Для рассмотрения условий сотрудничества предлагаем заполнить Заявку на партнерство по форме, прилагаемой справа.</p>
       </div>
     </div>

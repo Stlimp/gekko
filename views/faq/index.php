@@ -7,30 +7,7 @@ $this->registerJsFile('@web/js/faq-select.js', ['depends' => [\yii\web\JqueryAss
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 ?>
-<style>
-     .collapsed{
-        color:#000000;   
-    }
-    .collapsed:hover{
-        text-decoration: none;    
-    }
-    .question:active{
-        font-weight: bold;
-    }
-    .well{
-        padding:5px 10px 5px 10px;
-        min-height:0px;
-        text-align:left;
-        border:0px;
-        border-radius:10px 0 10px;
-        font-size:14px;
-        ox-shadow:none;-webkit-box-shadow:none;
-    }
-    .well p{
-        margin:0px 1px 2px 3px;
-    }
 
-</style>
 <div class="site-index">
 <div class="jumbotron">
     <div class="page-header" style="float:left;">ВОПРОС - ОТВЕТ</div>

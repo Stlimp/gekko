@@ -9,9 +9,6 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
 
 
 <style>
-
-
-    
     .left_third{
         background-color:#D8D8CA;
         width:20%;
@@ -35,7 +32,6 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
         padding:0px 15px 15px 15px;
 
     }
-    
     .center_split_vertically{
         width:30%;
         height: 100%;
@@ -55,7 +51,6 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
         color:white;
 
     }
-
     .center_split_text{
         height: 100%;
         display: table;
@@ -77,9 +72,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
         height:500px;
 
         float:left;
-
     }
-
     .right_split{
         width:100%;
         height:47%;
@@ -88,7 +81,6 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
         border-radius: 30px 0px ;
         margin:0px 0px 30px 0px;
         padding:30px;
-
     }
     .left_product_name {
         font-family:Impact;
@@ -101,7 +93,6 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
         color:white;
          font-size: 42px;
     }
-
     .test_text{
         font-family:Impact;
 
@@ -128,8 +119,6 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
         background-position: center; 
         display:inline-block;
     }
-
-
 
 </style>
 <div id="upper"></div>

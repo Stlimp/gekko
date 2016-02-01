@@ -2,7 +2,8 @@
    .page-text OL { counter-reset: item; padding-left: 0px; }
    .page-text LI { display: block }
    .page-text LI:before { content: counters(item, ".") " "; counter-increment: item }
-  </style>
+  /* should be left */
+</style>
 <div class="site-index">
    	<div class="jumbotron">
 	    <div class="page-header">ДОГОВОР ПУБЛИЧНОЙ ОФЕРТЫ</div>

@@ -11,26 +11,6 @@ $this->title = 'Stores';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <style>
-
-    .cities{
-        margin-left: 10px;
-        display: block;
-    }
-    .store{
-        background-color:#D8D8CA;
-        border-radius: 10px 0px ;
-        display: block;
-        padding:10px;
-    }
-
-    .well{
-        background-color: white;
-        border:none;
-        -webkit-box-shadow:none;
-        padding:0px;
-        padding-right:10px;
-    }
-
     a{
         text-decoration:none;
         color:#9E8D6B;
@@ -39,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         text-decoration:underline;
         color:#9E8D6B;
     }
-
+/* should be left */
 </style>
 <div class="stores-index">
     <div class="jumbotron">
@@ -52,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h1 style="font-size:14px;"><b><u><?= mb_strtoupper($countryItem) ?></u></b>    </h1>
             </a>
                 <div class="collapse" id="collapse<?= $countryItem ?>">
-                    <div class="well">
+                    <div class="well-stores">
                     <?php foreach($stores as $arr) { 
                         if ($arr->country == $countryItem) {?>
                         <div class="cities">
@@ -60,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <h2 style="font-size:12px;"><u><?= mb_strtoupper($arr->city) ?></u></h1>
                             </a>
                             <div class="collapse" id="collapse<?= $arr->city ?>">
-                                <div class="well">       
+                                <div class="well-stores">       
                                     <div class="store">
                                         <?= $arr->description ?>
                                     </div>

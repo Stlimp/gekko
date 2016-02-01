@@ -32,9 +32,6 @@ TwoFootersAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
-    <style>
-       
-    </style>
 
 <?php $this->beginBody() ?>
 

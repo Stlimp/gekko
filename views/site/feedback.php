@@ -3,45 +3,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 /* @var $this yii\web\View */
 ?>
-<style >
-	#feedbackform-department{
-	    -webkit-appearance: none;
-	    -moz-appearance: none;
-	    background:transparent url("http://gekkostone/web/images/content/arrow.png") no-repeat right;
-	}
-	.form-group {
-    	display: inline-block;
-    	margin-bottom: 0px;
 
-	}
-	.form-control{
-		height:19px;
-		width:100%;
-		padding:0px;
-		padding-right:15px;
-		border-radius:5px 0px 5px 0px;
-	}
-	.required>label::after {
-  		content: " *";
-  		color:#D0272E;
-	}
-	.form-group.field-feedbackform-name.required,.form-group.field-feedbackform-text.required,.form-group.field-feedbackform-email,.form-group.field-feedbackform-phone
-	{
-		width:65%;
-	}
-	.form-group.field-feedbackform-department.required {
-		width:35%;
-		float:right;
-		padding-left: 30px;
-	}
-	.btn{
-		display: block;
-	}
-
-
-
-
-</style>
 
 <div class="site-index">
    <div class="jumbotron">

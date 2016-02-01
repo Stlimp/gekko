@@ -9,112 +9,12 @@ use yii\grid\GridView;
 
 $this->title = 'Rocklaying';
 ?>
-<style>
-    .subheader{
-       background: none ;
-        float:left;
-        font-family:Corbel;
-        font-weight:bolder;
-        font-size:16px;
-        color: #CC6633;
-        text-align:left;
-        width:95% 
-    }
-    .left-side-half-header {
-        background: none ;
-        float:left;
-        font-family:Corbel;
-        font-weight:bolder;
-        font-size:16px;
-        color: #CC6633;
-        text-align:left;
-        #width:95%;
-        padding:0;
- 
-    }
-    .left-side-half-text {
-        padding:0;
- 
-    }
-
-    .right-side-half-header {
-        background: none ;
-        float:left;
-        font-family:Corbel;
-        font-weight:bolder;
-        font-size:16px;
-        color: #CC6633;
-        text-align:left;
-        #width:95%
-    }
-
-  #stbdoc {
-    /* the image you want to 'watermark' */
-    height: 162px; /* or whatever, equal to the image you want 'watermarked' */
-    width: 115px; /* as above */
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: relative;
-    display:inline-block;
-
-    }
-
-    #tpdoc {
-    /* the image you want to 'watermark' */
-    height: 162px; /* or whatever, equal to the image you want 'watermarked' */
-    width: 115px; /* as above */
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: relative;
-    display:inline-block;
-
-    }
-
-
-    #stbdoc img {
-    /* the actual 'watermark' */
-    position: absolute;
-    top: 0; /* or whatever */
-    left: 0; /* or whatever, position according to taste */
-    opacity: 0.5;/* Firefox, Chrome, Safari, Opera, IE >= 9 (preview) */
-    filter:alpha(opacity=50); /* for <= IE 8 */
-    float:top;
-    }
-
-    #tpdoc img {
-    /* the actual 'watermark' */
-    position: absolute;
-    top: 0; /* or whatever */
-    left: 0; /* or whatever, position according to taste */
-    opacity: 0.5;*/ /* Firefox, Chrome, Safari, Opera, IE >= 9 (preview) */
-    filter:alpha(opacity=50); /* for <= IE 8 */
-    float:top;
-    }
-    #document{
-        display:inline-block;
-        margin:15px;
-        text-align: left;
-
-    }
-    #document img{
-        border: 2px solid #eed3d7;
-        border-radius: 10px 0  10px;
-        margin:0px 10px 10px 10px;
-    }
-
-  
+<style>  
     tr > td
     {
         padding-bottom: 1em;
     }
-
-    a{
-        color:#9E8D6B;
-        
-    }
-    a:hover{
-        color:#9E8D6B;
-    }
+/* should be left */
 </style>
 
    
@@ -130,8 +30,8 @@ $this->title = 'Rocklaying';
         </p>
     
     
-         <div class="left-side-half-header">ДО НАЧАЛА РАБОТ</div>
-        <div class="left-side-half-text">
+         <div class="left-side-half-header-orange" style="padding-left: 0px;">ДО НАЧАЛА РАБОТ</div>
+        <div class="left-side-half-text" style="padding:0;">
             
             <p>
                 <table style="width:100%;border:20px">
@@ -168,27 +68,27 @@ $this->title = 'Rocklaying';
                 </table>
                  </p>
         </div>
-        <div class="left-side-half-header">ИНСТРУКЦИИ ПО МОНТАЖУ ДЕКОРАТИВНОГО КАМНЯ И ТИПУ ПРИМЕНЯЕМЫХ МАТЕРИАЛОВ:</div>
+        <div class="left-side-half-header-orange" style="padding-left: 0px;">ИНСТРУКЦИИ ПО МОНТАЖУ ДЕКОРАТИВНОГО КАМНЯ И ТИПУ ПРИМЕНЯЕМЫХ МАТЕРИАЛОВ:</div>
         <div class="right-half">
             <div class="right-side-half-text">
-                <div id="document">
-                    <p><a href=""><img src="images\content\certificates\transparent.png" alt="..." style="float:left"/>
-                        КРАТКАЯ ИНСТРУКЦИЯ.</a><br>
+                <div id="document" style="text-align: left;">
+                    <p><a class="link_grey_color" href=""><img class="doc-miniature" src="images\content\certificates\transparent.png" alt="..." style="float:left"/>
+                        <u><b>КРАТКАЯ ИНСТРУКЦИЯ.</b></u></a><br>
                         Изложены общие рекомендации
                         по монтажу различных фактур и
                         типу применяемых материалов.
                     </p>
                     <p>(файл в формате <b>pdf</b>, для просмотра
-                        необходим <a href="https://get.adobe.com/reader/" target="_blank">Adobe Reader</a>).
+                        необходим <a class="link_grey_color" href="https://get.adobe.com/reader/" target="_blank"><b>Adobe Reader</b></a>).
                     </p>
                 </div>
             </div>
         </div>
         <div class="left-half">
             <div class="left-side-half-text">
-                <div id="document">
-                    <p><a href=""><img src="images\content\certificates\transparent.png" alt="..." style="float:left"/>
-                        ПОДРОБНАЯ ИНСТРУКЦИЯ.</a><br>
+                <div id="document" style="text-align: left;">
+                    <p><a class="link_grey_color" href=""><img class="doc-miniature" src="images\content\certificates\transparent.png" alt="..." style="float:left"/>
+                        <u><b>ПОДРОБНАЯ ИНСТРУКЦИЯ.</b></u></a><br>
                         Изложены подробные рекомендации
                         по монтажу различных фактур на 
                         различные типы поверхностей и узлы.
@@ -197,12 +97,12 @@ $this->title = 'Rocklaying';
                         рекомендации по их применению.
                     </p>
                     <p>(файл в формате <b>pdf</b>, для просмотра
-                        необходим <a href="https://get.adobe.com/reader/" target="_blank">Adobe Reader</a>).
+                        необходим <a class="link_grey_color" href="https://get.adobe.com/reader/" target="_blank"><b>Adobe Reader</b></a>).
                     </p>
                 </div>
             </div>                    
         </div>
-   <div class="left-side-half-header">ВИДЕО ПО МОНТАЖУ ДЕКОРАТИВНОГО КАМНЯ:<span style="float:right;color:grey;"> <b>перейти к </b><a href="index.php?r=videogallery%2Findex" style="color:#9E8D6B"><u>ВИДЕОГАЛЕРЕЕ</u></a></span></div>
+    <div class="left-side-half-header-orange" style="padding-left: 0px;">ВИДЕО ПО МОНТАЖУ ДЕКОРАТИВНОГО КАМНЯ:<span style="float:right;color:grey;"> <b>перейти к </b><a class="link_brown_color" href="index.php?r=videogallery%2Findex" style="color:#9E8D6B"><u>ВИДЕОГАЛЕРЕЕ</u></a></span></div>
     <div class="gallery" style="width:100%;text-align: justify;" >   
     <?php foreach ($videos as $videoItem){ ?>
         <div class="product" style="width:22%;float:none;vertical-align:top;">

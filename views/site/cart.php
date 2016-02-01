@@ -6,10 +6,6 @@ mb_internal_encoding("UTF-8");
 $this->title = 'Gekkostone';
 ?>
 
-<style>
-
-
-</style>
 <div class="site-index">
    <div class="jumbotron">
 

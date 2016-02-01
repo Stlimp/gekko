@@ -14,6 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 	.redactor-toolbar {
 	     z-index: 1;
 	}
+/* should be left */
 </style>
 <div class="news-create">
 

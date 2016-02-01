@@ -8,113 +8,7 @@ use yii\grid\GridView;
 
 $this->title = 'Certificates';
 ?>
-<style>
-    .left-side-half-header {
-        background: none ;
-        float:left;
-        font-family:Corbel;
-        font-weight:bolder;
-        font-size:16px;
-        color: #CC6633;
-        text-align:left;
-        width:95%;
- 
-    }
 
-    .right-side-half-header {
-        background: none ;
-        float:left;
-        font-family:Corbel;
-        font-weight:bolder;
-        font-size:16px;
-        color: #CC6633;
-        text-align:left;
-        width:95%
-    }
-
-    .right-side-half-text img{
-        border: 2px solid #eed3d7;
-        border-radius: 10px 0  10px;
-        height:162px;
-        width:115px;
-
-    }
-
-   /* #watermark{
-   background:url(http://gekkostone/web/images/content/certificates/STB.png) no-repeat; 
-   width: 50px;
-   height: 50px;
-   position: relative;
-   top: 0;
-   left: 0;
-    }
-    #image{
-       width: 115px;
-       height: 162px;
-       position: relative;
-       top: 0;
-       left: 0;
-    }*/
-    #stbdoc {
-    /* the image you want to 'watermark' */
-    height: 162px; /* or whatever, equal to the image you want 'watermarked' */
-    width: 115px; /* as above */
-    background-image: url(images/content/certificates/STB.png);
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: relative;
-    display:inline-block;
-
-    }
-
-    #tpdoc {
-    /* the image you want to 'watermark' */
-    height: 162px; /* or whatever, equal to the image you want 'watermarked' */
-    width: 115px; /* as above */
-    background-image: url(images/content/certificates/TP.png);
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    position: relative;
-    display:inline-block;
-
-    }
-
-    #stbdoc img {
-    /* the actual 'watermark' */
-    position: absolute;
-    top: 0; /* or whatever */
-    left: 0; /* or whatever, position according to taste */
-    opacity: 0.5;/* Firefox, Chrome, Safari, Opera, IE >= 9 (preview) */
-    filter:alpha(opacity=50); /* for <= IE 8 */
-    float:top;
-    }
-
-    #tpdoc img {
-    /* the actual 'watermark' */
-    position: absolute;
-    top: 0; /* or whatever */
-    left: 0; /* or whatever, position according to taste */
-    opacity: 0.5;*/ /* Firefox, Chrome, Safari, Opera, IE >= 9 (preview) */
-    filter:alpha(opacity=50); /* for <= IE 8 */
-    float:top;
-    }
-    #document{
-        display:inline-block;
-            margin:15px;
-            text-align: center;
-    }
-    #document>a{
-        text-decoration:none;
-        color:#9E8D6B;
-    }
-     #document>a:hover{
-        text-decoration:underline;
-        color:#9E8D6B;
-     }
-
-
-  
-</style>
 <div class="certificates-index">
     <div class="jumbotron">
         <div class="page-header">ТЕХНИЧЕСКИЕ ДАННЫЕ И СЕРТИФИКАТЫ</div>
@@ -129,12 +23,12 @@ $this->title = 'Certificates';
 
         </div>
         <div class="left-half">
-            <div class="left-side-half-header">ТЕХНИЧЕСКИЕ ДАННЫЕ</div>
+            <div class="left-side-half-header-orange">ТЕХНИЧЕСКИЕ ДАННЫЕ</div>
             <div class="left-side-half-text">
                 <p>
                     <table style="width:100%">
                         <tr>
-                            <td><img src="images\content\certificates\png\1.png" align="left"></img></td>
+                            <td><img class=""src="images\content\certificates\png\1.png" align="left"></img></td>
                             <td>Изготовлен на основе марочного цемента <br>(преимущественно CIMSA White и CEMEX).</td> 
                         </tr>
                         <tr>
@@ -170,7 +64,7 @@ $this->title = 'Certificates';
             </div>
         </div>
         <div class="right-half">
-            <div class="right-side-half-header">СЕРТИФИКАТЫ И ПРОТОКОЛЫ</div>
+            <div class="right-side-half-header-orange">СЕРТИФИКАТЫ И ПРОТОКОЛЫ</div>
             <div class="right-side-half-text">
                 
                 <!-- <div id="document">
@@ -192,16 +86,16 @@ $this->title = 'Certificates';
                
                 <?php foreach ($dataProvider->getModels() as $certificate){ ?>
                 <div id="document">
-                    <a href="<?= $certificate->path?>" target="_blank">
+                    <a class="link_grey_color" href="<?= $certificate->path?>" target="_blank">
                         <?php if (!(strcmp($certificate->type,"a"))) :?>
                         <div id="stbdoc"> 
                         <?php elseif (!(strcmp($certificate->type,"b"))) : ?>
                         <div id="tpdoc">
                         <?php endif ?>
-                            <img src="<?= $certificate->thumbnail ?>" alt="..." /> 
+                            <img class="doc-miniature" src="<?= $certificate->thumbnail ?>" alt="..." /> 
                         </div>
                         <?php if (!(strcmp($certificate->type,"a"))) :?>
-                        <p>ПРОТОКОЛ ИСПЫТАНИЙ</p>
+                        <p >ПРОТОКОЛ ИСПЫТАНИЙ</p>
                         <?php elseif (!(strcmp($certificate->type,"b"))) : ?>
                         <p>ДЕКЛАРАЦИЯ О СООТВЕТСТВИИ</p>
                         <?php endif ?>
