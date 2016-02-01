@@ -42,6 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 </style>
 <div class="stores-index">
+    <div class="jumbotron">
     <div class="page-header">ГДЕ КУПИТЬ</div>
     <div class="left_third">
         <div style="color: #CC6633;"><b>Выберите Ваш регион и город:</b></div>
@@ -105,5 +106,5 @@ $this->params['breadcrumbs'][] = $this->title;
 <p>
         <?= Html::a('Create Stores', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
-
+    </div>
 </div>

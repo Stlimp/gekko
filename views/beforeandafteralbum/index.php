@@ -13,65 +13,65 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="beforeandafter-album-index">
+    <div class="jumbotron">
+        <div class="page-header">ФОТОГАЛЛЕРЕЯ - <b>До и после</b></div>
 
-    <div class="page-header">ФОТОГАЛЛЕРЕЯ - <b>До и после</b></div>
+        <?php foreach ($dataProvider->getModels() as $album){?>
+        <div class="beforeandafter_album"> 
+             <div class="album">
+                 <p><?= mb_strtoupper($album->description)." - г.". $album->city?></p>
+                
+                <?php foreach ($dataProviderPhotos->getModels() as $photo){
+                    if ($album->album_name==$photo->album_name) {
+                ?>
 
-    <?php foreach ($dataProvider->getModels() as $album){?>
-    <div class="beforeandafter_album"> 
-         <div class="album">
-             <p><?= mb_strtoupper($album->description)." - г.". $album->city?></p>
-            
-            <?php foreach ($dataProviderPhotos->getModels() as $photo){
-                if ($album->album_name==$photo->album_name) {
-            ?>
+                <div class="photogallery-item">
+                    <a href="<?= $photo->photo_image?>" rel="fancybox"><img src="<?= $photo->photo_image?>" alt="<?= $image?>" width="100" height="75"></a>
+                </div>
+                <?php }} ?>
 
-            <div class="photogallery-item">
-                <a href="<?= $photo->photo_image?>" rel="fancybox"><img src="<?= $photo->photo_image?>" alt="<?= $image?>" width="100" height="75"></a>
             </div>
-            <?php }} ?>
-
-        </div>
-        <div class="product_before_and_after">
-            <div class="product">
-                <h5 style="text-align:center;"><b><?= mb_strtoupper(ProductColor::findOne($album->product_color_id)->product_subcategory_name)?></b></h5>
-                <a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?=ProductColor::findOne($album->product_color_id)->product_subcategory_name?>&amp;r=productcolor%2Findex"><img src="<?= ProductColor::findOne($album->product_color_id)->product_color_image?>" alt="" width="220" height="150"></a>
-                <h5 style="margin:0;text-align:center;"><b><?= ProductColor::findOne($album->product_color_id)->product_color_name?></b></h5>
+            <div class="product_before_and_after">
+                <div class="product">
+                    <h5 style="text-align:center;"><b><?= mb_strtoupper(ProductColor::findOne($album->product_color_id)->product_subcategory_name)?></b></h5>
+                    <a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?=ProductColor::findOne($album->product_color_id)->product_subcategory_name?>&amp;r=productcolor%2Findex"><img src="<?= ProductColor::findOne($album->product_color_id)->product_color_image?>" alt="" width="220" height="150"></a>
+                    <h5 style="margin:0;text-align:center;"><b><?= ProductColor::findOne($album->product_color_id)->product_color_name?></b></h5>
+                </div>
             </div>
         </div>
+
+    <?php } ?>
+
+    <?php
+                            echo newerton\fancybox\FancyBox::widget([
+                                'target' => 'a[rel=fancybox]',
+                                'helpers' => true,
+                                'mouse' => false,
+                                'config' => [
+
+                                    'maxWidth' => '100%',
+                                    'maxHeight' => '100%',
+                                    'playSpeed' => 7000,
+                                    'padding' => 0,
+                                    'fitToView' => false,
+                                    'width' => '100%',
+                                    'height' => '100%',
+                                    'autoSize' => false,
+                                    'closeClick' => false,
+                                    'openEffect' => 'elastic',
+                                    'closeEffect' => 'elastic',
+                                    'prevEffect' => 'elastic',
+                                    'nextEffect' => 'elastic',
+                                    'closeBtn' => true,
+                                    'openOpacity' => true,
+                                    'arrows' =>true,
+                                    'title' => ['type' => 'inside'],
+                                    'title' => $album_name,
+                                    'autoResize'=>true,
+                                ]
+                             ]);
+                        ?>
     </div>
-
-<?php } ?>
-
-<?php
-                        echo newerton\fancybox\FancyBox::widget([
-                            'target' => 'a[rel=fancybox]',
-                            'helpers' => true,
-                            'mouse' => false,
-                            'config' => [
-
-                                'maxWidth' => '100%',
-                                'maxHeight' => '100%',
-                                'playSpeed' => 7000,
-                                'padding' => 0,
-                                'fitToView' => false,
-                                'width' => '100%',
-                                'height' => '100%',
-                                'autoSize' => false,
-                                'closeClick' => false,
-                                'openEffect' => 'elastic',
-                                'closeEffect' => 'elastic',
-                                'prevEffect' => 'elastic',
-                                'nextEffect' => 'elastic',
-                                'closeBtn' => true,
-                                'openOpacity' => true,
-                                'arrows' =>true,
-                                'title' => ['type' => 'inside'],
-                                'title' => $album_name,
-                                'autoResize'=>true,
-                            ]
-                         ]);
-                    ?>
-
 </div>
 <!-- 
     <p>

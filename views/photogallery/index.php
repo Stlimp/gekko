@@ -25,14 +25,14 @@ ul {
    
 }
 .dots li {
- width: auto;
-  float: right;
-
+    width: auto;
+    float: right;
+    height: 25px;
 }
 </style>
 
 <div class="photogallery-index">
-     
+     <div class="jumbotron">
        
         <?php $redDot =1; foreach ($photo_subcategory as  $subcategory =>$category ){  ?>
                 <div class="page-header"><?= mb_strtoupper($category)?> - <b><?= $subcategory?></b> <ul class="dots">
@@ -102,5 +102,5 @@ ul {
             ['class' => 'yii\grid\ActionColumn'],
         ],
     ]); ?>
-
+    </div>
 </div>

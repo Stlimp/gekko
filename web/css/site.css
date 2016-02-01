@@ -43,7 +43,8 @@ img#bg {
 }
 
 .jumbotron {
-    text-align: center;
+    /* text-align: center; */
+    text-align: left;
     background-color: transparent;
 }
 
@@ -201,7 +202,7 @@ body {
      background: #D7D5C1;
     float:left;
     font-family:Corbel;
-    font-weight:bolder;
+    font-weight:bold;
     font-size:16px;
     text-align:left;
     #margin-left: -165px;
@@ -216,7 +217,7 @@ body {
     background: #D7D5C1;
     float:left;
     font-family:Corbel;
-    font-weight:bolder;
+    font-weight:bold;
     font-size:16px;
     text-align:left;
     #margin-left: -10px;
@@ -260,7 +261,8 @@ body {
     text-align:left;
     padding-left: 50px;
     padding-bottom: 0;
-    line-height: 25px
+    line-height: 25px;
+    margin-top:0px; 
 }
 .page-text {
   width:100%;
@@ -883,3 +885,4 @@ background-image: url('./../images/menu.jpg');
   min-height:600px;
   height:auto;
 }
+
