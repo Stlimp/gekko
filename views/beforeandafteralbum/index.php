@@ -38,7 +38,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     <h5 style="margin:0;text-align:center;"><b><?= ProductColor::findOne($album->product_color_id)->product_color_name?></b></h5>
                 </div>
             </div>
+
         </div>
+        <hr>
 
     <?php } ?>
 
