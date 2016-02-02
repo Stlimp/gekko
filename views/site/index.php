@@ -5,6 +5,7 @@ mb_internal_encoding("UTF-8");
 $this->title = 'Gekkostone';
 $this->registerJsFile('@web/js/lightslider.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerJsFile('@web/js/slide-up-down.js');
 ?>
 
 <div id="upper"></div>
@@ -87,29 +88,3 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
     </div>
 </div>
 
-
-<script type="text/javascript">
-$(document).ready(function() {
-$("#scroll a[href^='#']").on('click', function(e) {
-
-   // prevent default anchor click behavior
-   e.preventDefault();
-
-   // store hash
-   var hash = this.hash;
-
-   // animate
-   $('html, body').animate({
-       scrollTop: $(hash).offset().top
-     }, 1000, function(){
-
-       // when done, add hash to url
-       // (default click behaviour)
-       window.location.hash = hash;
-     });
-
-});
-
-});
-
-</script>

@@ -14,7 +14,9 @@ $this->title = 'Gekkostone';
 mb_internal_encoding("UTF-8");
 /* @var $this \yii\web\View */
 /* @var $content string */
-
+$this->registerJsFile('@web/js/social-likes.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerJsFile('@web/js/menu.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerJsFile('@web/js/likes.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 TwoFootersAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -37,8 +39,7 @@ TwoFootersAsset::register($this);
 
     <div class="wrap">
         <?php
-            $this->registerJsFile('@web/js/social-likes.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
-            $this->registerJsFile('@web/js/menu.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+            
             NavBar::begin([
                 'brandLabel' => Html::img('images/logo.png', ['alt'=>Yii::$app->name]),
                 'brandUrl' => Yii::$app->homeUrl,
@@ -221,29 +222,6 @@ TwoFootersAsset::register($this);
 
 <?php $this->endBody() ?>
 </body>
-
-<!-- script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script !-->
-
-<script type="text/javascript" class="noprint">
-    
-    /*Menu hover. Replaced css way ov hover*/
-    $('ul.nav li.dropdown').hover(function() {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-     }, function() {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
-    /*Menu hover. Replaced css way ov hover*/
-});
-</script> 
-<script type="text/javascript">
-
-$('.social-likes').socialLikes({
-    url: 'http://gekkostone.com',
-    title: 'Декоративный камень Gekkostone!',
-    counters: true,
-    zeroes: 'yes'
-
-});
-</script>
 </html>
 </html>
 <?php $this->endPage() ?>
