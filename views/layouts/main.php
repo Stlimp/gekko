@@ -71,10 +71,10 @@ AppAsset::register($this);
             <ul id="nav" class="nav2">
                     <li class="menu-item"><a href="#">УСЛУГИ</a> 
                     <ul> 
-                        <li><a href="#">ДИЗАЙН-ПРОЕКТ</a></li> 
-                        <li><a href="#">ПОДБОР КАМНЯ</a></li>
-                        <li><a href="#">ДОСТАВКА КАМНЯ</a></li> 
-                        <li><a href="#">ОБЛИЦОВКА</a></li> 
+                        <li><a href="index.php?r=site%2Fdesign">ДИЗАЙН-ПРОЕКТ</a></li> 
+                        <li><a href="index.php?r=site%2Fselection">ПОДБОР КАМНЯ</a></li>
+                        <li><a href="index.php?r=site%2Fdelivery">ДОСТАВКА КАМНЯ</a></li> 
+                        <li><a href="index.php?r=site%2Ffacing">ОБЛИЦОВКА</a></li> 
                     </ul> 
                     </li>    
                 <li id="delimiter"><a>|</a></li>  

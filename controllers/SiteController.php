@@ -277,7 +277,22 @@ class SiteController extends Controller
         return $this->render('rocklaying',['videos' => $videos]);
     }
 
-
+    public function actionDesign()
+    {
+        return $this->render('design');
+    }
+    public function actionSelection()
+    {
+        return $this->render('selection');
+    }
+    public function actionDelivery()
+    {
+        return $this->render('delivery');
+    }
+    public function actionFacing()
+    {
+        return $this->render('facing');
+    }
 
 
 
