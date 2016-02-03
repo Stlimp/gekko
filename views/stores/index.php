@@ -10,17 +10,6 @@ mb_internal_encoding("UTF-8");
 $this->title = 'Stores';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<style>
-    a{
-        text-decoration:none;
-        color:#9E8D6B;
-    }
-    a:hover{
-        text-decoration:underline;
-        color:#9E8D6B;
-    }
-/* should be left */
-</style>
 <div class="stores-index">
     <div class="jumbotron">
     <div class="page-header">ГДЕ КУПИТЬ</div>
