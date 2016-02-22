@@ -63,7 +63,7 @@ class ProductColor extends \yii\db\ActiveRecord implements \yz\shoppingcart\Cart
      */
     public function getProductSubcategoryName()
     {
-        return $this->hasOne(GkkProduct::className(), ['product_product_name' => 'product_subcategory_name']);
+        return $this->hasOne(Product::className(), ['product_product_name' => 'product_subcategory_name']);
     }
 
     public function getPrice()
@@ -76,6 +76,22 @@ class ProductColor extends \yii\db\ActiveRecord implements \yz\shoppingcart\Cart
         return $this->product_color_id;
     }
 
+    public function hasSeamless(){
+        $product=$this->hasOne(Product::className(), ['product_product_name' => 'product_subcategory_name'])->one();     
+        return $product->product_price_seamless>0?"true":"false";
+    } 
+
+    public function hasAngular(){
+        $product=$this->hasOne(Product::className(), ['product_product_name' => 'product_subcategory_name'])->one();     
+        return $product->product_angular_calculation_size>0?"true":"false";
+    } 
+
+
+    public function getProductPrice()
+    {
+        $product=$this->hasOne(Product::className(), ['product_product_name' => 'product_subcategory_name'])->one();
+        return $product->product_price;
+    }
 
     /**
      * @param CartPositionInterface $position

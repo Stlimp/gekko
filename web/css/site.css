@@ -736,14 +736,16 @@ body {
 }
 
 #alpha_bank{
-  display: block;
-  text-align: center;
-  width:100%;
+  display: inline;
+  text-align: left;
+  
+  padding-left:10px;
 }
 
 #warning{
     color: #D0272E;
     font-style: italic; 
+    padding-left: 10px;
 }
 .cart_index{
   min-height: 500px;
@@ -1142,7 +1144,7 @@ left: 0;
   }
   .btn{
     float:right;  
-    width:25%;
+  //width:25%;
     display: block;
   }
     .required>label::after {
@@ -1275,4 +1277,9 @@ left: 0;
    .store a:hover{
        text-decoration:underline;
        color:#9E8D6B;
+   }
+
+
+   #cart_checkbox_disabled{
+    color:#B3B3B3;
    }

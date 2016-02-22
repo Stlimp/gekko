@@ -104,4 +104,9 @@ class Product extends \yii\db\ActiveRecord
     {
         return $this->hasMany(GkkProductColor::className(), ['product_subcategory_name' => 'product_product_name']);
     }
+    public function hasAngular(){
+        
+        return $this->product_angular_calculation_size>0?"true":"false";
+    } 
+
 }

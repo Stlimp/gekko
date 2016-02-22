@@ -16,6 +16,12 @@
 $('#calc1').change(function(){alert(111);
 });
 */
+
+function myFunction(){
+	document.getElementById('calculation_form').submit();  		
+};
+
+
 function order() {
 	
 	var color_id=event.target.id.replace(/[^\d]+/, '');;

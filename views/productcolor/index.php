@@ -55,8 +55,9 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
             
             <div class="right-side-half-header">
                 <div class="regular_product">Рядовая плитка <img src="images\content\products\icons\regular.png" alt=""></div> 
-                
+            <?php if ($product_data->hasAngular()=="true") { ?>
                 <div class="angular_product">Угловая плитка <img src="images\content\products\icons\angular.png" alt=""> </div>
+            <?php } ?> 
             </div>
             <div class="right-side-half-text">
             <div class="regular_product_desription">
@@ -67,14 +68,15 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                 Повторяемость         -  <?= $product_data->product_regular_repeatability ?><br>
 
             </div>
+            <?php if ($product_data->hasAngular()=="true") { ?>
             <div class="angular_product_description">
                 Размеры камней        -  <?= $product_data->product_angular_size ?> <br>
                 Толщина камней        -  <?= $product_data->product_angular_thickness ?><br>
                 Вес 1 м2              -  <?= $product_data->product_angular_weight ?> кг.<br>
                 Кол-во в упаковке     -  <?= $product_data->product_angular_quantity ?><br>
                 Повторяемость         -  <?= $product_data->product_angular_repeatability ?><br>
-
             </div>
+            <?php } ?>
             <hr class="pick_the_color">
             <div class="product_colors">
                 <?php foreach ($colors as $productColor){ ?>

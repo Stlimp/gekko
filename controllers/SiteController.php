@@ -297,6 +297,25 @@ class SiteController extends Controller
 
 
     public function actionSamplepdf() {
+
+if (Yii::$app->request->isPost) {
+    $data = Yii::$app->request->post();
+    //$price_value= explode(":", $data['price_value']);
+    //$total_weight= explode(":", $data['total_weight']);
+
+
+    //$bar = $_POST['bar'];
+   /*  
+    $postKeys = array_keys($_POST['product']);
+
+   foreach ($_POST['product'] as $key=>$value){
+    print_r($value);
+   };
+     die();*/
+    
+
+
+
         $mpdf = new mPDF(BLANK,'A4-L');
 
         $mpdf->allow_charset_conversion=true;  // Set by default to TRUE
@@ -305,11 +324,27 @@ class SiteController extends Controller
         $mpdf->SetHeader('|GEKKOSTONE|');
         $mpdf->setFooter('{PAGENO}');
         $content=file_get_contents('http://gekkostone/web/shit.txt');
-        $html = utf8_encode($content);
+        //
 
-        $stylesheet = file_get_contents('http://gekkostone/web/css/site.css'); // external css
+
+     /*   $content='<div class="site-index">
+                   <div class="jumbotron">
+                    <div class="my_gallery" style="width:20%;float:left;">
+                     <div class="page-header" style="float:left;">МОЯ ГАЛЛЕРЕЯ <span id="<?php echo (Yii::$app->cart->getIsEmpty()?"empty_":"") ?>cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></div>
+                  </div></div></div>';
+
+*/
+        ob_start();
+        $cartItems = \Yii::$app->cart->getPositions();
+        include(\Yii::$app->basePath.'/web/shit.txt');
+        $output = ob_get_contents();
+        ob_end_clean();
+
+        $html = utf8_encode($content);
+        $stylesheet = file_get_contents(\Yii::$app->basePath.'/web/css/mPdf.css'); // external css
+        
         $mpdf->WriteHTML($stylesheet,1);
-        $mpdf->WriteHTML($content,2);
+        $mpdf->WriteHTML($output,2);
 
         $mpdf->WriteHTML('Sample Text', 'D');
         $mpdf->Output();
@@ -317,6 +352,6 @@ class SiteController extends Controller
     }
 
 
-
+}
 
 }

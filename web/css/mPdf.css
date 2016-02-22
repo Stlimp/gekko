@@ -1,0 +1,2 @@
+.product_miniature { width: 20%; padding: 15px; position: relative; float: left; overflow: hidden; }
+.product_miniature > img { width: 95%; height: 20px; border-radius: 10px 0px; position: absolute; left: 15px; top: 15px; }

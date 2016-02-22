@@ -1,56 +1,57 @@
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" lang="ru">
+<div class="wrap"> 
+<div class="container">  
 <div class="site-index">
    <div class="jumbotron">
-    <div class="left-half">
-    	<div class="left-side-half-header">О КОМПАНИИ</div>
-    	<div class="left-side-half-text">
-    		<p><img src="images/content/aboutcompany.jpg" style="float:top;width:100%;">ООО «ГЕККОСТОУН» производит декоративный облицовочный камень с 2009 года. На 
-протяжении 6 лет нами накоплен огромный опыт в производстве качественных и долговеч-
-ных облицовочных материалов. Особое внимание уделяется декоративным свойствам обли-
-цовочного камня. Самую большую гордость нашего предприятия составляют матрицы-моде-
-ли, которые являются прототипами для будущего камня GEKKOSTONE. Все без исключения 
-прототипы изготовлены на основе натурального природного камня самых различных пород 
-и фактур. Уникальность и неповторимость каждому штучному элементу камня придает 
-особая технология окрашивания в массе. Декоративный камень изготавливается с примене-
-нием только натуральных сырьевых компонентов и красителей, что позволяет заявить о его 
-100% натуральности и экологичности.</p>
-    	</div>
-    </div>
-    <div class="right-half">
-    	<div class="right-side-half-header">GEKKOSTONE</div>
-    	<div class="right-side-half-text">
-    		<p>
-    			Компания <b>GEKKOSTONE</b> является производителем декоративного облицовочного 
-камня премиум качества по доступным ценам. 
-				<ul style="-webkit-padding-start: 15px;">
-					<li style="color:#D0272E"><span style="color:#666666">многообразие натуральных окрасов и фактур!</span></li>
-					<li style="color:#D0272E"><span style="color:#666666">прочность и долговечность</span></li>
-					<li style="color:#D0272E"><span style="color:#666666">великолепный декоративный эффект снаружи и внутри!</span></li>
-				</ul>
-    		</p>
-    	</div>
-    	<div class="right-side-half-header">ПОЧЕМУ GEKKO</div>
-    	<div class="right-side-half-text">
-    		<p><img src="images/content/gekko.jpg" style="float:right;width:45%;">
-				Гекконы - очень красивые ящерецы, имеющие выразительно яркий и весьма 
-разнообразный окрас. Обитают гекконы 
-в теплом климате и обычно прячутся от 
-дневной жары среди камней. Удивительной особенностью гекконов является их 
-необыкновенная способность карабкаться по крутым склонам, взбираться по 
-гладкой стене с огромной скоростью и 
-даже бегать вниз головой по поверхности из полированного стекла. Невероятно, но каждая лапка геккона может прикаса-
-ться к поверхности двумя миллиардами окончаний! Благодаря близкому контакту щетинок на лапках с поверхностью гекконы используют силы ближнего вза-
-имодействия между молекулами. В результате 1 см2  поверхности лапки геккона 
-способен удержать груз весом почти 100 кг! Теоретически один геккон способен 
-удерживать двух взрослых человек. Вот такие природные нанотехнологии! 
-Еще одной замечательной особенностью геккона является необычайное строение глаз, позволяющее одинаково четко видеть как на свету, так и в абсолютной 
-темноте. 
-    		</p>
-    	</div>
-    	<div class="right-side-half-text" style="text-align:right;font-family:Impact;">
-			<h1>МЫ ДЕЛАЕМ <span style="color: #D0272E">К</span>АМЕНЬ НАТУРАЛЬНЫМ!</h1>		</div>
-    </div>
+	<form id="calculation_form" method="POST" action="index.php?r=site%2Fsamplepdf" target="_blank">	
+		 <div class="total_price" style="width:100%;float:left;">
+		 	<div class="page-header" style="float:left;">РћР±С‰Р°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ Р·Р°РєР°Р·Р°: <span id="price_value">0</span> Р±РµР»Р°СЂСѓСЃСЃРєРёС… СЂСѓР±Р»РµР№.</div>
+		 	<div class="total_weight ">РћР±С‰РёР№ РІРµСЃ, Р±СЂСѓС‚С‚Рѕ: <span class="result" id="total_weight">0</span> РєРі.  </div>
+		 	
+		 		<div class="submit_form">
+			 	    
+		 		РћРїР»Р°С‚Р° С‡РµСЂРµР· Р»СЋР±РѕР№ <a href="https://www.alfabank.by/" target="_blank"><u>С„РёР»РёР°Р» В«РђР»СЊС„Р°-Р‘Р°РЅРєВ»</u></a> РёР»Рё РЅР° СЃРєР»Р°РґРµ <b>GEKKOSTONE</b>)<br></span>
+				</div>
+		 </div>
+		<div class="cart_index">
+		<?php foreach ($cartItems as $cartItem) {?>
+				<div class="cart_position">
+					<div class="product_miniature">
+						<img src="<?= $cartItem->product_color_image?>">
+						<div class="overlay">226,000 СЂСѓР±/Рј</div>
+					</div>
+					<div class="calculation">
+						<hr id="line" >
+						<!-- <form class="calculator" id="calc<?= $cartItem->product_color_id ?>"> -->
+						<div id="calc_left_half">
+										<span id="span_product"><b><span id="product_subcategory_name_<?= $cartItem->product_color_id ?>"><?=mb_strtoupper($cartItem->product_subcategory_name)?></span> - В«<?= $cartItem->product_color_name?>В»</b></span>
+										<input type="hidden" disabled="disabled" name="product[<?= $cartItem->product_color_id ?>]" value="<?=$cartItem->product_color_name?>" />
+										<br>
+										<input type="number" name="regular_input[<?= $cartItem->product_color_id ?>]" step="0.01" class="calculation_input" id="regular_input_<?= $cartItem->product_color_id ?>"  value="0" onkeyup="order()" onchange="order()"> РјВІ, РѕР±С‰Р°СЏ РїР»РѕС‰Р°РґСЊ РѕР±Р»РёС†РѕРІРєРё;
+										<br>
+										<input type="number" name="angular_input[<?= $cartItem->product_color_id ?>]" step="0.01" class="calculation_input" id="angular_input_<?= $cartItem->product_color_id ?>"  value="0" onkeyup="order()" onchange="order()"> Рј.РїРѕРі., РѕР±С‰Р°СЏ РІС‹СЃРѕС‚Р° СѓРіР»РѕРІ РґР»СЏ РѕР±Р»РёС†РѕРІРєРё;
+										<br>
+										<input type="checkbox" name="reduce_squere[<?= $cartItem->product_color_id ?>]" class="calculation_checkbox" id="reduce_square_<?= $cartItem->product_color_id ?>"  onchange="order()"> РІС‹С‡РµСЃС‚СЊ РїР»РѕС‰Р°РґСЊ, Р·Р°РЅРёРјР°РµРјСѓСЋ СѓРіР»РѕРІС‹РјРё СЌР»РµРјРµРЅС‚Р°РјРё;<br>
+										<input type="checkbox" name="add_five_percent[<?= $cartItem->product_color_id ?>]"class="calculation_checkbox" id="add_five_percent_<?= $cartItem->product_color_id?>"  onchange="order();showWarning()"> СЃ СѓС‡РµС‚РѕРј 5 % РѕС‚С…РѕРґРѕРІ РєР°РјРЅСЏ РЅР° РїРѕРґСЂРµР·РєСѓ;<br>
+										<input type="checkbox" disabled ="disabled" checked="checked" name="seamless[<?= $cartItem->product_color_id ?>]" class="calculation_checkbox" id="seamless_<?= $cartItem->product_color_id?>"  onchange="order()" > Р±РµСЃС€РѕРІРЅС‹Р№ РјРѕРЅС‚Р°Р¶ (СЂР°СЃС‡РµС‚ Р±РµР· СѓС‡РµС‚Р° С€РІРѕРІ);<br> 
+						</div>
+						<div id="calc_right_half">
+										<p>Р”Р»СЏ РѕР±Р»РёС†РѕРІРєРё РІР°Рј РЅРµРѕР±С…РѕРґРёРјРѕ:<br>
+										<span class="result" id="regular_result_<?= $cartItem->product_color_id ?>">0</span> СѓСЃР».Рј    СЂСЏРґРѕРІРѕР№ РїР»РёС‚РєРё (СЂР°СЃС‡РµС‚ РєСЂР°С‚РЅРѕ СѓРїР°РєРѕРІРєР°Рј);<br>
+										<span class="result" id="angular_result_<?= $cartItem->product_color_id ?>">0</span>  СѓСЃР».Рј.РїРѕРі. СѓРіР»РѕРІРѕР№ РїР»РёС‚РєРё (СЂР°СЃС‡РµС‚ РїРѕС€С‚СѓС‡РЅРѕ).<br>
+										<span class="five_percent_warninig" id="five_percent_warning_<?= $cartItem->product_color_id ?>"><br></span>
+										РЎС‚РѕРёРјРѕСЃС‚СЊ: <span class="color_result result" id="result_color_<?= $cartItem->product_color_id ?>">0</span>  Р±РµР»Р°СЂСѓСЃСЃРєРёС… СЂСѓР±Р»РµР№.<br>
+										РњР°СЃСЃР°, Р±СЂСѓС‚С‚Рѕ: <span class="weight_result result" id="result_weight_<?= $cartItem->product_color_id ?>">0</span> РєРі.</p>
+
+						</div>	
+
+					</div>
+				</div>
+
+			<?php } ?>
+		</div>
+	</form>
 	</div>
 </div>
-
+</div>
+</div>
