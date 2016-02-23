@@ -296,26 +296,27 @@ class SiteController extends Controller
 
 
 
-    public function actionSamplepdf() {
+    public function actionOrder() {
+       // $start = microtime(true);
 
-if (Yii::$app->request->isPost) {
-    $data = Yii::$app->request->post();
+
+
+    if (Yii::$app->request->isPost) {
+        $data = Yii::$app->request->post();
     //$price_value= explode(":", $data['price_value']);
     //$total_weight= explode(":", $data['total_weight']);
 
 
     //$bar = $_POST['bar'];
-   /*  
-    $postKeys = array_keys($_POST['product']);
+     
+    //$postKeys = array_keys($_POST['product']);
 
-   foreach ($_POST['product'] as $key=>$value){
-    print_r($value);
-   };
+
+/*print_r($_POST["regular_input"][7]);
      die();*/
-    
-
-
-
+   /* if(isset($_POST['reduce_squere'][1])){
+     print_r($_POST['reduce_squere']);die();
+    }*/
         $mpdf = new mPDF(BLANK,'A4-L');
 
         $mpdf->allow_charset_conversion=true;  // Set by default to TRUE
@@ -323,7 +324,7 @@ if (Yii::$app->request->isPost) {
         $mpdf->SetTitle("Счет Gekkostone");
         $mpdf->SetHeader('|GEKKOSTONE|');
         $mpdf->setFooter('{PAGENO}');
-        $content=file_get_contents('http://gekkostone/web/shit.txt');
+        //$content=file_get_contents('http://gekkostone/web/orderPdf.php');
         //
 
 
@@ -336,18 +337,27 @@ if (Yii::$app->request->isPost) {
 */
         ob_start();
         $cartItems = \Yii::$app->cart->getPositions();
-        include(\Yii::$app->basePath.'/web/shit.txt');
+        include(\Yii::$app->basePath.'/web/orderPdf.php');
         $output = ob_get_contents();
         ob_end_clean();
-
+        
         $html = utf8_encode($content);
         $stylesheet = file_get_contents(\Yii::$app->basePath.'/web/css/mPdf.css'); // external css
-        
-        $mpdf->WriteHTML($stylesheet,1);
-        $mpdf->WriteHTML($output,2);
+        $bill_stylesheet=  file_get_contents(\Yii::$app->basePath.'/web/css/bill.css');
+        $bill=file_get_contents('http://gekkostone/web/bill.php');
 
-        $mpdf->WriteHTML('Sample Text', 'D');
-        $mpdf->Output();
+        $mpdf->WriteHTML($stylesheet,1);
+        $mpdf->WriteHTML($bill_stylesheet,1);
+
+        $mpdf->WriteHTML($bill,2);
+        $mpdf->WriteHTML($output,2);
+        
+        //$time_elapsed_secs = microtime(true) - $start;
+        //print_r($time_elapsed_secs);die();
+        //$mpdf->WriteHTML('Sample Text', 'D');
+        $mpdf->Output('Gekkostone-'.date('Y-m-d-His').'.pdf','D');
+
+
         exit;
     }
 

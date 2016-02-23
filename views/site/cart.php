@@ -18,18 +18,22 @@ $this->registerJsFile('@web/js/ajax.js');
 	 <!--   <?php $form = ActiveForm::begin([
 	  	//'action' => './index.php?r=site%2Fsamplepdf'
 	 			]); ?> -->
-	<form id="calculation_form" method="POST" action="index.php?r=site%2Fsamplepdf" target="_blank">	
+	<form id="calculation_form" method="POST" action="index.php?r=site%2Forder" target="_blank">	
 		 <div class="total_price" style="width:80%;float:left;">
+										
 		 	<div class="page-header" style="float:left;">Общая стоимость заказа: <span id="price_value">0</span> беларусских рублей.</div>
+		 	<input type="hidden" id="price_input" name="price_input" value="0">
+		 	<input type="hidden" id="weight_input" name="weight_input" value="0">
+
 		 	<div class="total_weight ">Общий вес, брутто: <span class="result" id="total_weight">0</span> кг.  </div>
 		 	<?php if($cartItems==NULL) {?>
 		 	<div class="submit_form">
-		 		<p style="padding:50px;">Ни одна ТОВАРНАЯ продукция не выбрана. Для выбора продукции перейдите в раздел <a href="index.php?r=product%2Findex">ПРОДУКЦИЯ</a></p>
+		 		<p style="padding:50px;">Ни одна ТОВАРНАЯ продукция не выбрана. Для выбора продукции перейдите в раздел <a class="link_brown_color" href="index.php?r=product%2Findex">ПРОДУКЦИЯ</a></p>
 		 	</div>
 		 	<?php }else{ ?>
 
 		 		<div class="submit_form">
-		 			<a id="totaltotal" style="float:left" class="btn btn-success btn-send cart-button" onclick="myFunction()" target="_blank" ><b>ОФОРМИТЬ</b></a> 
+		 			<a id="totaltotal" style="float:left" class="btn btn-success btn-send cart-button" onclick="myFunction()"><b>ОФОРМИТЬ</b></a> 
 					<span style="display: inline-block;padding-left: 10px;margin-top: 7px;"id="alpha_bank">платежную квитанцию (оплата через любой <a href="https://www.alfabank.by/" target="_blank"><u>филиал «Альфа-Банк»</u></a> или на складе <b>GEKKOSTONE</b>)</span>
 					<br>
 					<p style="text-align:center;margin-top:10px;"id="warning">перед оформлением внимательно проверьте заявку !</p>
@@ -52,7 +56,7 @@ $this->registerJsFile('@web/js/ajax.js');
 						<!-- <form class="calculator" id="calc<?= $cartItem->product_color_id ?>"> -->
 						<div id="calc_left_half">
 										<span id="span_product"><b><span id="product_subcategory_name_<?= $cartItem->product_color_id ?>"><?=mb_strtoupper($cartItem->product_subcategory_name)?></span> - «<?= $cartItem->product_color_name?>»</b></span>
-										<input type="hidden" name="product[<?= $cartItem->product_color_id ?>]" value="<?=$cartItem->product_color_name?>" />
+										<!-- <input type="hidden" name="product[<?= $cartItem->product_color_id ?>]" value="<?=$cartItem->product_color_name?>" /> -->
 										<br>
 										<input type="number" name="regular_input[<?= $cartItem->product_color_id ?>]" step="0.01" class="calculation_input" id="regular_input_<?= $cartItem->product_color_id ?>"  value="0" onkeyup="order()" onchange="order()"> м² ,  введите общую площадь облицовки;
 										<br>
@@ -66,6 +70,8 @@ $this->registerJsFile('@web/js/ajax.js');
 										<a style="float:left" id="remove_from_cart" class="btn btn-success btn-send cart-button" href="index.php?r=productcolor/remove-from-cart&id=<?= $cartItem->product_color_id ?>"><b>Удалить</b></a>  <span style="display: inline-block;padding-left: 10px;margin-top: 7px;">расцветку из</span> <b>ГАЛЕРЕИ</b>
 										
 										<p><br><span style="color: #D0272E">Для облицовки вам необходимо:</span><br>
+										<input type="hidden" id="price_color_<?= $cartItem->product_color_id ?>" name="price_color[<?= $cartItem->product_color_id ?>]" value="0">
+										<input type="hidden" id="weight_color_<?= $cartItem->product_color_id ?>" name="weight_color[<?= $cartItem->product_color_id ?>]" value="0">
 										<span class="result" id="regular_result_<?= $cartItem->product_color_id ?>">0</span> усл.м    рядовой плитки (расчет кратно упаковкам);<br>
 										<span class="result" id="angular_result_<?= $cartItem->product_color_id ?>">0</span>  усл.м.пог. угловой плитки (расчет поштучно).<br>
 										<span class="five_percent_warninig" id="five_percent_warning_<?= $cartItem->product_color_id ?>"><br></span>

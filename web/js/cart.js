@@ -66,6 +66,7 @@ function order() {
 		   	//находим данные камня
 		    color_data=data[i];
 		    calculate(color_data);
+		    
 		   }
 		 }
     });
@@ -99,6 +100,7 @@ function order() {
 				var regular_square=regular_value;//. площадь рядовых без учета угловых
 			}
 			
+			
 	    	var regular_packages=Math.ceil(regular_square/color_data.product_regular_calculation_size);//3. количество упаково рядовой
 
 	    	var angular_result=Math.ceil(angular_packages*color_data.product_angular_calculation_size*1000)/1000;//4. подсчет погонных метров угловой
@@ -109,8 +111,6 @@ function order() {
 
 	    	var price=Math.ceil((angular_result+regular_result)*color_data.product_price/100)*100;//6. общая цена до деноминации
 	    	//var price=Math.ceil((angular_result+regular_result)*color_data.product_price_seamless*100)/100;//6. общая цена после деноминации
-
-	    	price
 
 	    }
 	    else{
@@ -142,6 +142,7 @@ function order() {
 	
     	
     	document.getElementById('result_color_'.concat(color_id)).innerHTML=addCommas(price);
+    	document.getElementById('price_color_'.concat(color_id)).value=price;
 
 
     	/*console.log(Math.ceil(angular_value/color_data.product_angular_calculation_size));
@@ -153,10 +154,11 @@ function order() {
     	//console.log(color_data.product_angular_calculation_size);
 		//console.log(color_data);
 
-	var weight_regular=regular_packages*color_data.product_regular_weight;
-	var weight_angular=angular_packages*color_data.product_angular_weight;
-	var weight=weight_regular+weight_angular;
-	document.getElementById('result_weight_'.concat(color_id)).innerHTML=weight;//. вес
+		var weight_regular=regular_packages*color_data.product_regular_weight;
+		var weight_angular=angular_packages*color_data.product_angular_weight;
+		var weight=weight_regular+weight_angular;
+		document.getElementById('result_weight_'.concat(color_id)).innerHTML=weight;//. вес
+		document.getElementById('weight_color_'.concat(color_id)).value=weight;//. вес
 
 
 	var sum_total=0;
@@ -182,6 +184,9 @@ function order() {
 	document.getElementById("total_weight").innerHTML=weight_total;//Конечный вес
 
 	document.getElementById("price_value").innerHTML=addCommas(sum_total);//Конечная сумма 
+
+	document.getElementById('price_input').value=addCommas(sum_total); 
+	document.getElementById('weight_input').value=weight_total; 
 
 	}
 
