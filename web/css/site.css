@@ -1283,3 +1283,8 @@ left: 0;
    #cart_checkbox_disabled{
     color:#B3B3B3;
    }
+
+.contacts_table td { 
+  padding-left: 10px;
+  font-size: 12px;
+}   

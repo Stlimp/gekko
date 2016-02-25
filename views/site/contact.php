@@ -3,7 +3,6 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\widgets\MaskedInput;
 ?>
-
 <div class="site-index">
    <div class="jumbotron">
 	<div class="left-half">
@@ -11,15 +10,48 @@ use yii\widgets\MaskedInput;
 		КОНТАКТЫ 
 		</div>
 		<div class="left-side-half-text">
-			<p><img src="images/content/logomonochrome.jpg" align="left">ООО «ГЕККОСТОУН», УНП 290489059
-				<br>
-	юридический адрес: д. Черни, ул. Брестская 56/6;  Брестская область.</p>
-			<p><b><u>Отдел сбыта</u></b><br>
-				тел. +375 29 7208060(МТС)<br>
-				тел. +375 29 9324060(Velcom)<br>
-				факс. +375 16 2490075<br>
-				gekkostone@gmail.com<br>
-			</p>
+			<table class="contacts_table">
+				<tr>
+					<td rowspan="2">
+						<img src="images/content/logomonochrome.jpg" align="left">
+					</td>
+					<td>ООО <b>«ГЕККОСТОУН»</b>, УНП 290489059
+					</td>
+				</tr>
+				<tr>
+					<td><b>юридический адрес:</b> д. Черни, ул. Брестская 56/6;  Брестская область.
+					</td>
+				</tr>
+			</table>
+			<br>
+			<table class="contacts_table">
+				<tr>
+					<td>
+						<b><u>Отдел сбыта</u></b>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						тел. +375 29 7208060(МТС)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						тел. +375 29 9324060(Velcom)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						факс. +375 16 2490075
+					</td>
+				</tr>
+				<tr>
+					<td>
+						gekkostone@gmail.com
+					</td>
+				</tr>
+			</table>
+			<br>
 		</div>
 		<div class="left-side-half-header">
 		СХЕМА ПРОЕЗДА НА СКЛАД-МАГАЗИН ДЕКОРАТИВНОГО КАМНЯ 
@@ -55,13 +87,45 @@ use yii\widgets\MaskedInput;
                          ]);
                     ?>
 			<div class="photogallery-item" style="float:left">
-                        <a href="images/content/photogallery/493752772.jpg" rel="fancybox"><img src="images/content/photogallery/493752772.jpg" alt="Схема проезда>" width="200" height="150"></a>
+                <a href="images/content/map.png" rel="fancybox"><img src="images/content/map_thumb.jpg" alt="Схема проезда>" width="200" height="150"></a>
             </div>
             <div class="store-item" float="left" >
-                       <p> <u><b>Время работы склада:</b></u>	
-							Понедельник - Четверг: <b>8:00 - 17:00</b>
-						  <br>Пятница: <b>8:00 - 12:00</b>
-						  <br>Суббота, воскресенье: <b>выходные</b></p>
+				<table class="contacts_table">
+					<tr>
+						<td><u><b>Время работы склада:</b></u>(без перерывов)</td>
+					</tr>
+					<tr>
+						<td>Понедельник - Четверг: <b>8:00 - 17:00</b></td>
+					</tr>
+					<tr>
+						<td>Пятница: <b>8:00 - 12:00</b></td>
+					</tr>
+					<tr>
+						<td>Суббота, воскресенье: <b>выходные</b></td></td>
+					</tr>
+				</table>
+				<table class="contacts_table">
+					<tr>
+						<td><u><b>Адрес склада:</b></u></th>
+						<td> г. Брест, Красный Двор-108,</th>
+					</tr>
+					<tr>
+						<td></td>
+						<td>р-н Картингового стадиона.</td>
+					</tr>
+				</table>
+     			<table class="contacts_table">
+					<tr>
+						<td><u><b>GPS склада:</b></u></th>
+						<td> N52° 04.896´</th>
+						<td rowspan="2"><img src="images/content/icons/gps.png" alt=""></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td> E23° 48.810´</td>
+						<td></td>
+					</tr>
+				</table>
             </div>
 		</div>
 		<div class="left-side-half-header">
