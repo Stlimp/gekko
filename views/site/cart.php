@@ -71,7 +71,11 @@ $this->registerJsFile('@web/js/ajax.js');
 										
 										<p><br><span style="color: #D0272E">Для облицовки вам необходимо:</span><br>
 										<input type="hidden" id="price_color_<?= $cartItem->product_color_id ?>" name="price_color[<?= $cartItem->product_color_id ?>]" value="0">
+
 										<input type="hidden" id="weight_color_<?= $cartItem->product_color_id ?>" name="weight_color[<?= $cartItem->product_color_id ?>]" value="0">
+										<input type="hidden" id="regular_packages_input_<?= $cartItem->product_color_id ?>" name="regular_packages_input[<?= $cartItem->product_color_id ?>]" value="0">
+										<input type="hidden" id="angular_packages_input_<?= $cartItem->product_color_id ?>" name="angular_packages_input[<?= $cartItem->product_color_id ?>]" value="0">										
+
 										<span class="result" id="regular_result_<?= $cartItem->product_color_id ?>">0</span> усл.м    рядовой плитки (расчет кратно упаковкам);<br>
 										<span class="result" id="angular_result_<?= $cartItem->product_color_id ?>">0</span>  усл.м.пог. угловой плитки (расчет поштучно).<br>
 										<span class="five_percent_warninig" id="five_percent_warning_<?= $cartItem->product_color_id ?>"><br></span>

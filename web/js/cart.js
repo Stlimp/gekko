@@ -144,7 +144,8 @@ function order() {
     	document.getElementById('result_color_'.concat(color_id)).innerHTML=addCommas(price);
     	document.getElementById('price_color_'.concat(color_id)).value=price;
 
-
+    	document.getElementById('regular_packages_input_'.concat(color_id)).value=regular_result;
+    	document.getElementById('angular_packages_input_'.concat(color_id)).value=angular_result;
     	/*console.log(Math.ceil(angular_value/color_data.product_angular_calculation_size));
     	console.log(angular_value*color_data.product_angular_calculation_size_square);
 		console.log(regular_square);
@@ -159,6 +160,7 @@ function order() {
 		var weight=weight_regular+weight_angular;
 		document.getElementById('result_weight_'.concat(color_id)).innerHTML=weight;//. вес
 		document.getElementById('weight_color_'.concat(color_id)).value=weight;//. вес
+		document.getElementById('angular_result_'.concat(color_id)).value=weight;//. вес
 
 
 	var sum_total=0;
