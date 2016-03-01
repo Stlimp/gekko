@@ -58,9 +58,9 @@ $this->registerJsFile('@web/js/ajax.js');
 										<span id="span_product"><b><span id="product_subcategory_name_<?= $cartItem->product_color_id ?>"><?=mb_strtoupper($cartItem->product_subcategory_name)?></span> - «<?= $cartItem->product_color_name?>»</b></span>
 										<!-- <input type="hidden" name="product[<?= $cartItem->product_color_id ?>]" value="<?=$cartItem->product_color_name?>" /> -->
 										<br>
-										<input type="number" name="regular_input[<?= $cartItem->product_color_id ?>]" step="0.01" class="calculation_input" id="regular_input_<?= $cartItem->product_color_id ?>"  value="0" onkeyup="order()" onchange="order()"> м² ,  введите общую площадь облицовки;
+										<input type="number" name="regular_input[<?= $cartItem->product_color_id ?>]" min="0" step="0.01" class="calculation_input" id="regular_input_<?= $cartItem->product_color_id ?>"  value="0" onkeyup="order()" onchange="order()"> м² ,  введите общую площадь облицовки;
 										<br>
-										<input type="number" name="angular_input[<?= $cartItem->product_color_id ?>]" step="0.01" class="calculation_input" id="angular_input_<?= $cartItem->product_color_id ?>"  value="0" onkeyup="order()" onchange="order()"> м.пог., введите общую высоту углов для облицовки;
+										<input type="number" name="angular_input[<?= $cartItem->product_color_id ?>]" min="0" step="0.01" class="calculation_input" id="angular_input_<?= $cartItem->product_color_id ?>"  value="0" onkeyup="order()" onchange="order()"> м.пог., введите общую высоту углов для облицовки;
 										<br>
 										<input type="checkbox" <?= $cartItem->hasAngular()=="false"?disabled:"" ?> name="reduce_squere[<?= $cartItem->product_color_id ?>]" class="calculation_checkbox" id="reduce_square_<?= $cartItem->product_color_id ?>"  onchange="order()"><span <?= $cartItem->hasAngular()=="false"?"id=\"cart_checkbox_disabled\"":"" ?> > вычесть площадь, занимаемую угловыми элементами;</span><br>
 										<input type="checkbox" name="add_five_percent[<?= $cartItem->product_color_id ?>]"class="calculation_checkbox" id="add_five_percent_<?= $cartItem->product_color_id?>"  onchange="order();showWarning()"><span > с учетом 5 % отходов камня на подрезку;</span><br>

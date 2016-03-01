@@ -16,7 +16,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
     <div class="jumbotron">
         <div class="col-md-12 hover-slide text-center" id="scroll" style="height:0px;text-align:right;bottom: -100px;";> <a href="#upper" ><div class="button-up"></div> </a>   </div>     
         <div class="page-text">
-        <div class="left_third" style= <?= "width:275px;background-image:url(&quot;".$product->product_product_image."&quot;);background-size:cover" ?>>
+        <div class="left_third" style= <?= "background-image:url(&quot;".$product->product_product_image."&quot;);background-size:cover" ?>>
             <span class="left_product_name" >
                 <?= mb_strtoupper($product->product_product_name) ?>
             </span>
@@ -46,8 +46,6 @@ $this->registerJsFile('@web/js/slide-up-down.js');
                         работ по укладке декоративного камня.</p> 
                 </div>
             </div>
-            
-            <a href="">
                 <div class="center_split" style="margin-bottom:0px">
                     <a href="index.php?r=videogallery%2Findex"><div class="center_split_vertically" style="background-image:url(images/content/videogallery.jpg);background-size:cover;">
                        <p>ВИДЕОГАЛЛЕРЕЯ</p>

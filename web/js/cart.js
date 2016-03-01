@@ -23,7 +23,7 @@ function myFunction(){
 
 
 function order() {
-	
+
 	var color_id=event.target.id.replace(/[^\d]+/, '');;
 
 	var color_data=0;

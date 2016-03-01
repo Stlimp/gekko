@@ -297,71 +297,76 @@ class SiteController extends Controller
 
 
     public function actionOrder() {
-       // $start = microtime(true);
+           // $start = microtime(true);
+        if (Yii::$app->request->isPost) {
+            $data = Yii::$app->request->post();
+        //$price_value= explode(":", $data['price_value']);
+        //$total_weight= explode(":", $data['total_weight']);
+           
 
 
+            if(Yii::$app->user->isGuest) {
+                $user='GUEST';
+            } else {
+                $user=Yii::app()->user->name;
+            }
+            $date=date('Y-m-d');
+            $time=date('His');
 
-    if (Yii::$app->request->isPost) {
-        $data = Yii::$app->request->post();
-    //$price_value= explode(":", $data['price_value']);
-    //$total_weight= explode(":", $data['total_weight']);
-
-
-    //$bar = $_POST['bar'];
-     
-    //$postKeys = array_keys($_POST['product']);
-
-
-/*print_r($_POST["regular_input"][7]);
-     die();*/
-   /* if(isset($_POST['reduce_squere'][1])){
-     print_r($_POST['reduce_squere']);die();
-    }*/
-        $mpdf = new mPDF(BLANK,'A4-L');
-
-        $mpdf->allow_charset_conversion=true;  // Set by default to TRUE
-        $mpdf->charset_in='windows-1251';
-        $mpdf->SetTitle("Счет Gekkostone");
-        $mpdf->SetHeader('|GEKKOSTONE|');
-        $mpdf->setFooter('{PAGENO}');
-        //$content=file_get_contents('http://gekkostone/web/orderPdf.php');
-        //
+            $ip=Yii::$app->request->getUserIP();
 
 
-     /*   $content='<div class="site-index">
-                   <div class="jumbotron">
-                    <div class="my_gallery" style="width:20%;float:left;">
-                     <div class="page-header" style="float:left;">МОЯ ГАЛЛЕРЕЯ <span id="<?php echo (Yii::$app->cart->getIsEmpty()?"empty_":"") ?>cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></div>
-                  </div></div></div>';
-
-*/
-        ob_start();
-        $cartItems = \Yii::$app->cart->getPositions();
-        include(\Yii::$app->basePath.'/web/orderPdf.php');
-        $output = ob_get_contents();
-        ob_end_clean();
-        
-        $html = utf8_encode($content);
-        $stylesheet = file_get_contents(\Yii::$app->basePath.'/web/css/mPdf.css'); // external css
-        $bill_stylesheet=  file_get_contents(\Yii::$app->basePath.'/web/css/bill.css');
-        $bill=file_get_contents('http://gekkostone/web/bill.php');
-
-        $mpdf->WriteHTML($stylesheet,1);
-        $mpdf->WriteHTML($bill_stylesheet,1);
-
-        $mpdf->WriteHTML($bill,2);
-        $mpdf->WriteHTML($output,2);
-        
-        //$time_elapsed_secs = microtime(true) - $start;
-        //print_r($time_elapsed_secs);die();
-        //$mpdf->WriteHTML('Sample Text', 'D');
-        $mpdf->Output('Gekkostone-'.date('Y-m-d-His').'.pdf','D');
+        //$bar = $_POST['bar'];
+         
+        //$postKeys = array_keys($_POST['product']);
 
 
-        exit;
+    /*print_r($_POST["regular_input"][7]);
+         die();*/
+       /* if(isset($_POST['reduce_squere'][1])){
+         print_r($_POST['reduce_squere']);die();
+        }*/
+            $mpdf = new mPDF(BLANK,'A4-L');
+
+            $mpdf->allow_charset_conversion=true;  // Set by default to TRUE
+            $mpdf->charset_in='windows-1251';
+            $mpdf->SetTitle("Счет Gekkostone");
+            $mpdf->SetHeader('|GEKKOSTONE|');
+            $mpdf->setFooter('{PAGENO}');
+            //$content=file_get_contents('http://gekkostone/web/orderPdf.php');
+            //
+
+
+         /*   $content='<div class="site-index">
+                       <div class="jumbotron">
+                        <div class="my_gallery" style="width:20%;float:left;">
+                         <div class="page-header" style="float:left;">МОЯ ГАЛЛЕРЕЯ <span id="<?php echo (Yii::$app->cart->getIsEmpty()?"empty_":"") ?>cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></div>
+                      </div></div></div>';
+
+    */
+            ob_start();
+            $cartItems = \Yii::$app->cart->getPositions();
+            include(\Yii::$app->basePath.'/web/orderPdf.php');
+            $output = ob_get_contents();
+            ob_end_clean();
+            
+            $html = utf8_encode($content);
+            $stylesheet = file_get_contents(\Yii::$app->basePath.'/web/css/mPdf.css'); // external css
+            $bill_stylesheet=  file_get_contents(\Yii::$app->basePath.'/web/css/bill.css');
+            $bill=file_get_contents('http://gekkostone/web/bill.php');
+
+            $mpdf->WriteHTML($stylesheet,1);
+            $mpdf->WriteHTML($bill_stylesheet,1);
+
+            $mpdf->WriteHTML($bill,2);
+            $mpdf->WriteHTML($output,2);
+            
+            //$time_elapsed_secs = microtime(true) - $start;
+            //print_r($time_elapsed_secs);die();
+            //$mpdf->WriteHTML('Sample Text', 'D');
+            $mpdf->Output('Gekkostone-'.$date.'-'.$time.'.pdf','D');
+            exit;
+        }
     }
-
-
-}
 
 }
