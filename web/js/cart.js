@@ -187,7 +187,7 @@ function order() {
 
 	document.getElementById("price_value").innerHTML=addCommas(sum_total);//Конечная сумма 
 
-	document.getElementById('price_input').value=addCommas(sum_total); 
+	document.getElementById('price_input').value=sum_total; 
 	document.getElementById('weight_input').value=weight_total; 
 
 	}

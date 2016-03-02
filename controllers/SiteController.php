@@ -15,6 +15,8 @@ use app\models\Videogallery;
 use app\models\ProductCategories;
 use app\models\Product;
 use app\models\Emails;
+use app\models\Orders;
+use app\models\OrderItems;
 /*use app\models\Press;*/
 use app\models\Photogallery;
 use yii\data\ActiveDataProvider;
@@ -316,6 +318,39 @@ class SiteController extends Controller
             $ip=Yii::$app->request->getUserIP();
 
 
+            //SAVE ORDER DETAILS
+            $order = new Orders();
+            $order->user=$user;
+            $order->ip=$ip;
+            $order->date=$date;
+            $order->time= $time;
+            $order->new="1";
+            $order->status="pending";
+            $order->price_input=$_POST["price_input"];
+            $order->weight_input=$_POST["weight_input"];
+            $order->save();
+            //SAVE ORDER ITEMS
+
+            $cartItems = \Yii::$app->cart->getPositions();
+            foreach ($cartItems as $cartItem) {
+                $orderItem = new OrderItems();
+                $orderItem->order_id=$order->id;
+                $orderItem->product_name=$cartItem->product_subcategory_name;
+                $orderItem->product_color_name=$cartItem->product_color_name;
+                $orderItem->regular_input=$_POST["regular_input"][$cartItem->product_color_id];
+                $orderItem->angular_input=$_POST["angular_input"][$cartItem->product_color_id];
+                $orderItem->reduce_squere=isset($_POST['reduce_squere'][$cartItem->product_color_id])?"checked":"unchecked";
+                $orderItem->add_five_percent=isset($_POST['add_five_percent'][$cartItem->product_color_id])?"checked":"unchecked";
+                $orderItem->seamless=isset($_POST['seamless'][$cartItem->product_color_id])?"checked":"unchecked";
+                $orderItem->price_color=$_POST['price_color'][$cartItem->product_color_id];
+                $orderItem->weight_color=$_POST['weight_color'][$cartItem->product_color_id];
+                $orderItem->save();
+            }
+
+
+
+
+
         //$bar = $_POST['bar'];
          
         //$postKeys = array_keys($_POST['product']);
@@ -345,7 +380,6 @@ class SiteController extends Controller
 
     */
             ob_start();
-            $cartItems = \Yii::$app->cart->getPositions();
             include(\Yii::$app->basePath.'/web/orderPdf.php');
             $output = ob_get_contents();
             ob_end_clean();

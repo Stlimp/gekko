@@ -48,7 +48,7 @@ class m151122_131156_products extends Migration
         $this->addForeignKey('product_category','gkk_product','product_category_name','gkk_product_categories','product_category_name');
 
         $this->createTable('gkk_product_color', array(
-            'product_color_id' => Schema::TYPE_PK,
+            'product_color_id' => Schema::TYPE_INTEGER,
             'product_color_name' =>'string NOT NULL',
             'product_article' =>'string NOT NULL',
             'product_3ds_link' =>'string NOT NULL',
@@ -58,8 +58,9 @@ class m151122_131156_products extends Migration
             
            
         ), 'ENGINE=InnoDB');
+        $this->addPrimaryKey('product_color_id', 'gkk_product_color', 'product_color_id');
         $this->addForeignKey('product_subcategory','gkk_product_color','product_subcategory_name','gkk_product','product_product_name');
-
+        $this->createIndex('product_color_name','gkk_product_color','product_color_name');
 
     }
 
