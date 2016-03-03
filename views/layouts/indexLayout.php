@@ -191,7 +191,7 @@ echo Carousel::widget([
              <!-- <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>!-->
-            <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 150px;";> <a href="#downer"><div class="button-down"></div></a></div>
+            <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 100px;";> <a href="#downer"><div class="button-down"></div></a></div>
             <div id="downer"></div>
             <?= $content ?>
         </div> 

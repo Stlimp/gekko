@@ -38,11 +38,23 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+        'urlManager' => [
+            'class' => 'yii\web\UrlManager',
+            // Disable r= routes
+            'enablePrettyUrl' => false,
+            // Disable index.php
+            'showScriptName' => false,
+
+            ],
         'cart' => [
             'class' => 'yz\shoppingcart\ShoppingCart',
             'cartId' => 'my_application_cart',
-    ]
+
     ],
+    
+    ],
+
+   
     'modules' => [
           'redactor' => 'yii\redactor\RedactorModule',
           'uploadDir' => '@webroot/images/content/news',
