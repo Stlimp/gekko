@@ -19,7 +19,7 @@ class m151122_131156_products extends Migration
             'product_product_name' =>'string NOT NULL',
             'product_product_image'=>'string NOT NULL',
             'product_category_name' =>'string NOT NULL',
-            'product_characteristics'=>'varchar(500) NOT NULL',
+            'product_characteristics'=>'varchar(1000) NOT NULL',
 
 
             'product_regular_size' =>'string NOT NULL',

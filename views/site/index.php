@@ -16,11 +16,13 @@ $this->registerJsFile('@web/js/slide-up-down.js');
     <div class="jumbotron">
         <div class="col-md-12 hover-slide text-center" id="scroll" style="height:0px;text-align:right;bottom: -100px;";> <a href="#upper" ><div class="button-up"></div> </a>   </div>     
         <div class="page-text">
-        <div class="left_third" style= <?= "background-image:url(&quot;".$product->product_product_image."&quot;);background-size:cover" ?>>
-            <span class="left_product_name" >
-                <?= mb_strtoupper($product->product_product_name) ?>
-            </span>
-        </div>
+        <a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?= $product->product_product_name?>&r=productcolor%2Findex">
+            <div class="left_third" style= <?= "background-image:url(&quot;".$product->product_product_image."&quot;);background-size:cover" ?>>
+                <span class="left_product_name" >
+                    <?= mb_strtoupper($product->product_product_name) ?>
+                </span>
+            </div>
+        </a>
         <div class="center_third">
             <div class="center_split">
                <a href="#">
