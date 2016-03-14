@@ -221,7 +221,7 @@ class SiteController extends Controller
                             'phonenumber'=> $model->phonenumber,])
                 ->setFrom('bot@gekkostone.com')
                 ->setTo('admin@gekkostone.com')
-                ->setSubject('Получен новое обращение  '.$model->education)
+                ->setSubject('Получен отзыв на вакансию')
                 ->send();
             Yii::$app->session->setFlash('success',"Ваша заявка успешно отправлена!");
         }
