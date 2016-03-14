@@ -18,7 +18,18 @@ $this->registerJsFile('@web/js/slide-up-down.js');
         <div class="page-text">
         <a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?= $product->product_product_name?>&r=productcolor%2Findex">
             <div class="left_third" style= <?= "background-image:url(&quot;".$product->product_product_image."&quot;);background-size:cover" ?>>
-                <span class="left_product_name" >
+                <?php
+                    $words = explode(" ", $product->product_product_name);
+                    $font_class = 'left_product_name';
+                    foreach ($words as $word) {
+                        if(mb_strlen($word)>9){
+                            $font_class = 'left_product_name_small';
+                        }
+                    }
+
+                   
+                ?>
+                <span class="<?= $font_class?>" >
                     <?= mb_strtoupper($product->product_product_name) ?>
                 </span>
             </div>
