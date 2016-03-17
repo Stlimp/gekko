@@ -1,3 +1,8 @@
+#w0-nav{
+background-image: none ;
+min-width: 1000px;  
+}
+
 .navbar > .container{
         margin:0px 0px 0px;
         width:100%;
@@ -6,6 +11,7 @@
     }
 /* navigation style */ 
 .nav1{ 
+    min-width: 800px;
     height: 30px; 
     background-color: #000000;
     line-height: 30px;
@@ -13,12 +19,12 @@
     padding: 0px 0px 0px 10px; 
 
     float:right;
-    font-size: 14px;
-    text-align:justify;
+    font-size: 1em;
+  /*   text-align:justify; */
     font-family: Century Gothic;
     margin-bottom: 0;
-    display: inline-block !important;
-    white-space: nowrap;
+   /*  display: inline-block !important; */
+     white-space: nowrap; 
 } 
 
 .nav1 a{
