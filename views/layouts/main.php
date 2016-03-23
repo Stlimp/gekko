@@ -16,6 +16,7 @@ mb_internal_encoding("UTF-8");
 $this->registerJsFile('@web/js/social-likes.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJsFile('@web/js/menu.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJsFile('@web/js/likes.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerJsFile('@web/../vendor/bower/bootstrap/dist/js/bootstrap.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 AppAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
