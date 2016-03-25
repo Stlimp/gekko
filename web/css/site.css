@@ -1150,7 +1150,7 @@ left: 0;
 
 
 
-.form-group {
+#inline-form>.form-group {
       display: inline-block;
       padding-right: 20px;
       margin-bottom: 0px;

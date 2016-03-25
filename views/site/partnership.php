@@ -139,7 +139,7 @@ use yii\widgets\ActiveForm;
         echo "</i></div>";
 		   	}
 		else {
-			$form =ActiveForm::begin();
+			$form =ActiveForm::begin(['id'=>'inline-form']);
 
 			echo $form->field($model,'companytype')->label('Наименование фирмы или ИП');
 			echo $form->field($model,'location')->label('Местонахождение фирмы или ИП (страна, город)');

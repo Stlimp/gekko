@@ -2,7 +2,11 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 ?>
+<style>
+	.wrap{
 
+	}
+</style>
 <div class="site-index">
    <div class="jumbotron">
    	<div class="left-half">
@@ -41,13 +45,13 @@ use yii\widgets\ActiveForm;
 		   	echo "</i></div>";
 		   	}
 		else {
-			$form =ActiveForm::begin();
+			$form =ActiveForm::begin(['id'=>'inline-form']);
 
 			echo $form->field($model, 'employment')->dropDownList(['a' => 'Род занятости 1', 'b' => 'Род занятости 2', 'c' => 'Род занятости 3'], ['prompt'=>''])->label('Род занятости в GEKKOSTONE');
 			echo $form->field($model, 'employmenttype')->dropDownList(['a' => 'Полная занятость', 'b' => 'Частичная занятость'], ['prompt'=>''])->label('Занятость');
 			echo $form->field($model,'name')->label('ФИО');
 			echo $form->field($model,'age')->label('Возраст');
-			echo $form->field($model, 'education')->dropDownList(['a' => 'Общее', 'b' => 'Среднее', 'c' => 'Средне-специальное', 'в' => 'Высшее'], ['prompt'=>''])->label('Образование');
+			echo $form->field($model,'education')->dropDownList(['a' => 'Общее', 'b' => 'Среднее', 'c' => 'Средне-специальное', 'в' => 'Высшее'], ['prompt'=>''])->label('Образование');
 			echo $form->field($model,'speciality')->label('Ваша специальность(если несколько - укажите все');
 			echo $form->field($model,'workhistory')->label('Опыт работы(учебы) за последние 10 лет(место работы, город, должность)');
 			echo $form->field($model,'workhistory_years')->label('Период работы');

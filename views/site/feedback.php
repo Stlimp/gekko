@@ -40,7 +40,7 @@ use yii\widgets\ActiveForm;
 				   	echo "</i></div>";
 				   	}
 				else {
-					$form =ActiveForm::begin();
+					$form =ActiveForm::begin(['id'=>'inline-form']);
 					echo $form->field($model,'name')->textInput()->label('ФИО');
 					echo $form->field($model,'text')->textarea(['rows' => 20])->label('Ваше обращение');
 					echo $form->field($model, 'department')->dropDownList(['Отдел 1' => 'Отдел 1', 'Отдел 2' => 'Отдел 2', 'Отдел 3' => 'Отдел 3'], ['prompt'=>''])->label('Выберите отдел');

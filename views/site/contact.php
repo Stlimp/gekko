@@ -158,7 +158,7 @@ use yii\widgets\MaskedInput;
 					   	echo "</i></div>";
 					}
 					else {
-						$form =ActiveForm::begin(); 
+						$form =ActiveForm::begin(['id'=>'inline-form']); 
 						echo $form->field($model, 'organization')->label('Наименование фирмы, ИП(для юр.лица) или ФИО для физ.лица'); 
 						echo $form->field($model, 'city')->label('Местонахождение(страна, город)'); 
 
