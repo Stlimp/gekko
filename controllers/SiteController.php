@@ -295,6 +295,7 @@ class SiteController extends Controller
 
     public function actionOrder() {
            // $start = microtime(true);
+
         if (Yii::$app->request->isPost) {
             $data = Yii::$app->request->post();
         //$price_value= explode(":", $data['price_value']);
@@ -389,12 +390,13 @@ class SiteController extends Controller
 
             $mpdf->WriteHTML($bill,2);
             $mpdf->WriteHTML($output,2);
-            
             //$time_elapsed_secs = microtime(true) - $start;
             //print_r($time_elapsed_secs);die();
             //$mpdf->WriteHTML('Sample Text', 'D');
             $mpdf->Output('Gekkostone-'.$date.'-'.$time.'.pdf','D');
+            \Yii::$app->cart->removeAll();
             exit;
+
         }
     }
 
