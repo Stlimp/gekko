@@ -32,6 +32,9 @@ img#bg {
     padding: 70px 0px 20px;
 }
 
+a{
+  outline:0;
+}
 .container{
         margin:0;
         width: 100%;
@@ -504,6 +507,11 @@ body {
    float:left;
    width:60%;
 }
+.ablock>span{
+  display: inline-block; 
+   width:16.6%;
+   text-align: center;
+}
 .iconblock1{
   width:20%;
 }
@@ -517,6 +525,7 @@ body {
   padding-right:10px; */
   float:right;
   text-align: right;
+  padding-right: 5px;
 }
 .iconblock1>span{
   width: 10%;
@@ -528,9 +537,10 @@ body {
   display: inline-block;
   margin-right: 10px;
 }
-.iconblock1>a,.iconblock2>a{
+.iconblock1 a,.iconblock2 a{
   padding-left:5px !important;
   padding-right:5px !important;
+  outline:0;
 }
 .iconblock1 img,.iconblock2 img{
   height:100%;

@@ -29,9 +29,9 @@ min-width: 1000px;
 
 .nav1 .ablock a{
     color: #FFFFFF;
-    padding: 0px 20px 0px 10px;
+    /* padding: 0px 20px 0px 10px; */
     text-decoration: none;
-
+    outline: 0;
 }
 
 .nav1 a:hover{
@@ -81,6 +81,7 @@ min-width: 1000px;
     text-align:center;   
     display: table-cell;
   vertical-align: middle;  
+  outline: 0;
 } 
  
 #nav ul{ 
@@ -108,6 +109,7 @@ min-width: 1000px;
 #nav>li>a{ 
     display: block; 
     font-size: 1em;
+    outline: 0;
 } 
 
 
@@ -138,6 +140,7 @@ min-width: 1000px;
     #border-bottom:1px solid #FFFFFF;
     width: 100%; 
     font-size: 1em;
+    outline: 0;
 } 
 /*#nav ul li:hover{background:#000000;border-radius: 0px 0px 0px 0px;}*/
 /*#nav ul li:last-child:hover {border-radius: 0px 0px 10px 0px;}*/
@@ -182,6 +185,7 @@ padding-left: 8px;
     vertical-align: middle;
     padding-left:0px;
     float: left;
+    outline: 0;
 }
 
 #nav ul ul li span{

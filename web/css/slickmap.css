@@ -122,7 +122,8 @@ a {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -webkit-box-shadow: rgba(0,0,0,0.5) 2px 2px 2px; 
-  -moz-box-shadow: rgba(0,0,0,0.5) 2px 2px 2px; /* FF 3.5+ */ 
+  -moz-box-shadow: rgba(0,0,0,0.5) 2px 2px 2px; /* FF 3.5+ */
+  text-decoration: none;
 }
 #primaryNav li a:hover {
   background-color: #e2f4fd;
@@ -238,7 +239,8 @@ a:visited:before {
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   -webkit-box-shadow: rgba(0,0,0,0.5) 2px 2px 2px; 
-  -moz-box-shadow: rgba(0,0,0,0.5) 2px 2px 2px; /* FF 3.5+ */ 
+  -moz-box-shadow: rgba(0,0,0,0.5) 2px 2px 2px; /* FF 3.5+ */
+  text-decoration: none;
 }
 #utilityNav li a:hover {
   background-color: #fffce5;
