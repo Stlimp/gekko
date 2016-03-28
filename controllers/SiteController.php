@@ -291,7 +291,10 @@ class SiteController extends Controller
         return $this->render('facing');
     }
 
-
+    public function actionSitemap()
+    {
+        return $this->render('sitemap');
+    }
 
     public function actionOrder() {
            // $start = microtime(true);

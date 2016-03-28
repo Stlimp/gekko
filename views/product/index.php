@@ -11,7 +11,7 @@ $this->title = 'Products';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="product-index">
-  <div class="jumpotron">
+  <div class="jumbotron">
     <div class="page-header">ДЕКОРИТАВНЫЙ КАМЕНЬ <b>GEKKOSTONE</b></div>
 
    <div class="gallery">   
