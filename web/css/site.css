@@ -288,6 +288,7 @@ body {
     padding-left:50px;
     padding-right:50px;
     background-size: cover;
+    min-width:1000px;
 }
 .first-footer{
       background-image: url('./../images/footer.jpg');
@@ -507,19 +508,36 @@ body {
   width:20%;
 }
 .iconblock2{
-  width:10%;
+  width:15%;
 }
 
 .iconblock1,.iconblock2{
   display: inline-block;  
-  padding-left:10px;
-  padding-right:10px;
+  /* padding-left:10px;
+  padding-right:10px; */
   float:right;
+  text-align: right;
+}
+.iconblock1>span{
+  width: 10%;
+  display: inline-block;
+  /* margin-right: 10px; */
+}
+.iconblock2>span{
+  width: 10%;
+  display: inline-block;
+  margin-right: 10px;
 }
 .iconblock1>a,.iconblock2>a{
   padding-left:5px !important;
   padding-right:5px !important;
 }
+.iconblock1 img,.iconblock2 img{
+  height:100%;
+}
+
+
+
 
 .social-links{
   width:80%;

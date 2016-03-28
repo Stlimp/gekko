@@ -27,7 +27,7 @@ min-width: 1000px;
      white-space: nowrap; 
 } 
 
-.nav1 a{
+.nav1 .ablock a{
     color: #FFFFFF;
     padding: 0px 20px 0px 10px;
     text-decoration: none;

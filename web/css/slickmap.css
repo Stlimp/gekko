@@ -51,14 +51,14 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   General Styles
 ------------------------------------------------------------ */
 
-/* body {
-  background: white;
-  color: black;
-  padding: 40px;
-  font-family: Gotham, Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  line-height: 1;
-} */
+  body {
+ /* background: white;
+ color: black; */
+ padding: 0px;
+ font-family: Gotham, Helvetica, Arial, sans-serif;
+ font-size: 12px;
+ line-height: 1;
+}  
 .sitemap {
   margin: 0 0 40px 0;
   float: left;
