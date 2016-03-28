@@ -126,7 +126,7 @@ body{
                     </ul> 
                 </li> 
                 <li id="delimiter"><a>|</a></li>
-                <li class="menu-item"><a href="#">ФОТОГАЛЛЕРЕЯ</a> 
+                <li class="menu-item"><a href="#">ФОТОГАЛЕРЕЯ</a> 
                      
                 </li>
                 <li id="delimiter"><a>|</a></li> 

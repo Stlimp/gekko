@@ -61,7 +61,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
             </div>
                 <div class="center_split" style="margin-bottom:0px">
                     <a href="index.php?r=videogallery%2Findex"><div class="center_split_vertically" style="background-image:url(images/content/videogallery.jpg);background-size:cover;">
-                       <p>ВИДЕОГАЛЛЕРЕЯ</p>
+                       <p>ВИДЕОГАЛЕРЕЯ</p>
                    </div></a>
                    <div class="center_split_text"><p>В видеогалерее представлены демонстрационные,
                     а также обучающие видео по применению в облицовке

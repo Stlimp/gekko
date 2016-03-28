@@ -50,7 +50,7 @@ TwoFootersAsset::register($this);
                     $input = array(
                         '<span class="footer-widget_text">НАТУРАЛЬНЫЙ ИЛИ ИСКУСТВЕННЫЙ?</span><span class="footer-widget_text-small" style="font-family:Corbel"><b>ТЕСТ.</b> Попробуй отыскать натуральные камни среди искусственных камней GEKKOSTONE!</span>',
                         '<span class="footer-widget_text-small" style="font-family:Corbel">Собери собственную галерею из наиболее понравившихся фактур и расцветок!</span>
-                         <span class="footer-widget_text">МОЯ ГАЛЛЕРЕЯ</span>
+                         <span class="footer-widget_text">МОЯ ГАЛЕРЕЯ</span>
                          <span class="footer-widget_text-small" style="font-family:Corbel">Расчет необходимого количества камня, его веса и стоимости!</span>'
                         );
                     $key = array_rand($input,1);
@@ -81,7 +81,7 @@ TwoFootersAsset::register($this);
             </div>
         </div>
         <div class="footer-image"><a href="index.php?r=site%2Fsitemap"><p>КАРТА САЙТА</p><div class="footer-element" id="sitemap" ></div></a></div>
-        <div class="footer-image"><a href="index.php?r=site%2Fcart"><p>МОЯ ГАЛЛЕРЕЯ</p><div class="footer-element" id="gallery"></div></a></div>
+        <div class="footer-image"><a href="index.php?r=site%2Fcart"><p>МОЯ ГАЛЕРЕЯ</p><div class="footer-element" id="gallery"></div></a></div>
         <div class="footer-image"><a href="index.php?r=site%2Fpartnership"><p>ПАРТНЕРСТВО</p><div class="footer-element" id="partnership"></div></a></div>
         <div class="footer-image"><a href="index.php?r=site%2Fcontact"><p>КОНТАКТЫ</p><div class="footer-element" id="contacts"></div></a></div>
         <div class="footer-image"><a href="index.php?r=site%2Fpublicoffer"><p>ПУБЛИЧНАЯ ОФЕРТА</p><div class="footer-element" id="publicoffer"></div></a></div>

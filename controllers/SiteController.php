@@ -374,7 +374,7 @@ class SiteController extends Controller
          /*   $content='<div class="site-index">
                        <div class="jumbotron">
                         <div class="my_gallery" style="width:20%;float:left;">
-                         <div class="page-header" style="float:left;">МОЯ ГАЛЛЕРЕЯ <span id="<?php echo (Yii::$app->cart->getIsEmpty()?"empty_":"") ?>cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></div>
+                         <div class="page-header" style="float:left;">МОЯ ГАЛЕРЕЯ <span id="<?php echo (Yii::$app->cart->getIsEmpty()?"empty_":"") ?>cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></div>
                       </div></div></div>';
 
     */

@@ -18,7 +18,7 @@
                     <a href="index.php?r=site%2Fprice">прайс</a>
                     <a href="index.php?r=site%2Fcontact">контакты</a>
                     <a href="#">поиск</a>
-                    <a href="index.php?r=site%2Fcart">моя галлерея <span id="<?php echo (Yii::$app->cart->getIsEmpty()?"empty_":"") ?>cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></a>
+                    <a href="index.php?r=site%2Fcart">моя галерея <span id="<?php echo (Yii::$app->cart->getIsEmpty()?"empty_":"") ?>cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></a>
                 </div>
                 <div class="iconblock1">
                     <a href="#"><img src="images/icons/ok.png" alt="" onmouseover="this.src='images/icons/okhover.png';" onmouseout="this.src='images/icons/ok.png';"></a>
@@ -79,7 +79,7 @@
                     </ul> 
                 </li>
                 <li id="delimiter"><a>|</a></li>
-                <li class="menu-item"><a href="#">ФОТОГАЛЛЕРЕЯ</a> 
+                <li class="menu-item"><a href="#">ФОТОГАЛЕРЕЯ</a> 
                     <ul> 
                         <?php 
                             $model=new ImageCategories();

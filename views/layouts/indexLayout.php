@@ -75,7 +75,7 @@ IndexAsset::register($this);
             </div>
         </div>
         <div class="footer-image"><a href="index.php?r=site%2Fsitemap"><p>КАРТА САЙТА</p><div class="footer-element" id="sitemap" ></div></a></div>
-        <div class="footer-image"><a href="index.php?r=site%2Fcart"><p>МОЯ ГАЛЛЕРЕЯ</p><div class="footer-element" id="gallery"></div></a></div>
+        <div class="footer-image"><a href="index.php?r=site%2Fcart"><p>МОЯ ГАЛЕРЕЯ</p><div class="footer-element" id="gallery"></div></a></div>
         <div class="footer-image"><a href="index.php?r=site%2Fpartnership"><p>ПАРТНЕРСТВО</p><div class="footer-element" id="partnership"></div></a></div>
         <div class="footer-image"><a href="index.php?r=site%2Fcontact"><p>КОНТАКТЫ</p><div class="footer-element" id="contacts"></div></a></div>
         <div class="footer-image"><a href="index.php?r=site%2Fpublicoffer"><p>ПУБЛИЧНАЯ ОФЕРТА</p><div class="footer-element" id="publicoffer"></div></a></div>

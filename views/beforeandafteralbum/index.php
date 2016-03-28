@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="beforeandafter-album-index">
     <div class="jumbotron">
-        <div class="page-header">ФОТОГАЛЛЕРЕЯ - <b>До и после</b></div>
+        <div class="page-header">ФОТОГАЛЕРЕЯ - <b>До и после</b></div>
 
         <?php foreach ($dataProvider->getModels() as $album){?>
         <div class="beforeandafter_album"> 

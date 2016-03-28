@@ -13,7 +13,7 @@
 
 		<ul id="utilityNav">
 			<li><a href="index.php?r=site%2Fsitemap">Карта сайта</a></li>
-			<li><a href="index.php?r=site%2Fcart">Моя Галлерея</a></li>
+			<li><a href="index.php?r=site%2Fcart">Моя Галерея</a></li>
 			<li><a href="index.php?r=site%2Fpartnership">Партнерство</a></li>
 			<li><a href="index.php?r=site%2Fcontact">Контакты</a></li>
 			<li><a href="index.php?r=site%2Fpublicoffer">Публичная оферта</a></li>
@@ -55,7 +55,7 @@
 					<li><a href="#">Сопутствующие товары</a>
 				</ul>
 			</li>
-			<li><a href="#">Фотогаллерея</a>
+			<li><a href="#">Фотогалерея</a>
 				<ul>
 					<li><a href="index.php?PhotogallerySearch%5Bphoto_category%5D=Жилые дома и квартиры&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex">Жилые дома и квартиры</a></li>
 					<li><a href="index.php?PhotogallerySearch%5Bphoto_category%5D=Коммерческие объекты&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex">Коммерческие объекты</a></li>
@@ -66,7 +66,7 @@
 				<ul>
 					<li><a href="index.php?r=site%2Frocklaying">Укладка камня</a>
 						<ul>
-							<li><a href="index.php?r=videogallery%2Findex">Видеогаллерея</a>
+							<li><a href="index.php?r=videogallery%2Findex">Видеогалерея</a>
 						</ul>
 					</li> 
                     <li><a href="index.php?r=faq%2Findex">Вопрос - ответ</a></li> 

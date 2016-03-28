@@ -13,7 +13,7 @@ $this->registerJsFile('@web/js/ajax.js');
 <div class="site-index">
    <div class="jumbotron">
 	 <div class="my_gallery" style="width:20%;float:left;">
-	 	<div class="page-header" style="float:left;">МОЯ ГАЛЛЕРЕЯ <span id="cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></div>
+	 	<div class="page-header" style="float:left;">МОЯ ГАЛЕРЕЯ <span id="cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></div>
 	 </div>
 	 <!--   <?php $form = ActiveForm::begin([
 	  	//'action' => './index.php?r=site%2Fsamplepdf'
