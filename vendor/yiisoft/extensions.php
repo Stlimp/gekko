@@ -3,33 +3,6 @@
 $vendorDir = dirname(__DIR__);
 
 return array (
-  'yiisoft/yii2-swiftmailer' => 
-  array (
-    'name' => 'yiisoft/yii2-swiftmailer',
-    'version' => '2.0.4.0',
-    'alias' => 
-    array (
-      '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer',
-    ),
-  ),
-  'yiisoft/yii2-codeception' => 
-  array (
-    'name' => 'yiisoft/yii2-codeception',
-    'version' => '2.0.4.0',
-    'alias' => 
-    array (
-      '@yii/codeception' => $vendorDir . '/yiisoft/yii2-codeception',
-    ),
-  ),
-  'yiisoft/yii2-gii' => 
-  array (
-    'name' => 'yiisoft/yii2-gii',
-    'version' => '2.0.4.0',
-    'alias' => 
-    array (
-      '@yii/gii' => $vendorDir . '/yiisoft/yii2-gii',
-    ),
-  ),
   'yiisoft/yii2-faker' => 
   array (
     'name' => 'yiisoft/yii2-faker',
@@ -37,15 +10,6 @@ return array (
     'alias' => 
     array (
       '@yii/faker' => $vendorDir . '/yiisoft/yii2-faker',
-    ),
-  ),
-  'yiisoft/yii2-debug' => 
-  array (
-    'name' => 'yiisoft/yii2-debug',
-    'version' => '2.0.5.0',
-    'alias' => 
-    array (
-      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
     ),
   ),
   'yiidoc/yii2-redactor' => 
@@ -57,15 +21,6 @@ return array (
       '@yii/redactor' => '/',
     ),
   ),
-  'yiisoft/yii2-jui' => 
-  array (
-    'name' => 'yiisoft/yii2-jui',
-    'version' => '2.0.4.0',
-    'alias' => 
-    array (
-      '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
-    ),
-  ),
   'yiisoft/yii2-imagine' => 
   array (
     'name' => 'yiisoft/yii2-imagine',
@@ -73,15 +28,6 @@ return array (
     'alias' => 
     array (
       '@yii/imagine' => $vendorDir . '/yiisoft/yii2-imagine',
-    ),
-  ),
-  'yiisoft/yii2-bootstrap' => 
-  array (
-    'name' => 'yiisoft/yii2-bootstrap',
-    'version' => '2.0.5.0',
-    'alias' => 
-    array (
-      '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap',
     ),
   ),
   'omnilight/yii2-shopping-cart' => 
@@ -109,6 +55,60 @@ return array (
     'alias' => 
     array (
       '@newerton/fancybox' => $vendorDir . '/newerton/yii2-fancybox',
+    ),
+  ),
+  'yiisoft/yii2-swiftmailer' => 
+  array (
+    'name' => 'yiisoft/yii2-swiftmailer',
+    'version' => '2.0.5.0',
+    'alias' => 
+    array (
+      '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer',
+    ),
+  ),
+  'yiisoft/yii2-jui' => 
+  array (
+    'name' => 'yiisoft/yii2-jui',
+    'version' => '2.0.5.0',
+    'alias' => 
+    array (
+      '@yii/jui' => $vendorDir . '/yiisoft/yii2-jui',
+    ),
+  ),
+  'yiisoft/yii2-codeception' => 
+  array (
+    'name' => 'yiisoft/yii2-codeception',
+    'version' => '2.0.5.0',
+    'alias' => 
+    array (
+      '@yii/codeception' => $vendorDir . '/yiisoft/yii2-codeception',
+    ),
+  ),
+  'yiisoft/yii2-bootstrap' => 
+  array (
+    'name' => 'yiisoft/yii2-bootstrap',
+    'version' => '2.0.6.0',
+    'alias' => 
+    array (
+      '@yii/bootstrap' => $vendorDir . '/yiisoft/yii2-bootstrap',
+    ),
+  ),
+  'yiisoft/yii2-debug' => 
+  array (
+    'name' => 'yiisoft/yii2-debug',
+    'version' => '2.0.6.0',
+    'alias' => 
+    array (
+      '@yii/debug' => $vendorDir . '/yiisoft/yii2-debug',
+    ),
+  ),
+  'yiisoft/yii2-gii' => 
+  array (
+    'name' => 'yiisoft/yii2-gii',
+    'version' => '2.0.5.0',
+    'alias' => 
+    array (
+      '@yii/gii' => $vendorDir . '/yiisoft/yii2-gii',
     ),
   ),
 );
