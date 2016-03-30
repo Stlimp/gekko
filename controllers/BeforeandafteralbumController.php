@@ -9,12 +9,13 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use yii\web\ForbiddenHttpException;
 /**
  * BeforeandafteralbumController implements the CRUD actions for BeforeandafterAlbum model.
  */
 class BeforeandafteralbumController extends Controller
 {
+    public $enableCsrfValidation = false;
     public function behaviors()
     {
         return [
@@ -55,6 +56,9 @@ class BeforeandafteralbumController extends Controller
      */
     public function actionView($id)
     {
+        if (!\Yii::$app->user->can('view')) {
+            throw new ForbiddenHttpException('Access denied');
+        }
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -67,6 +71,9 @@ class BeforeandafteralbumController extends Controller
      */
     public function actionCreate()
     {
+        if (!\Yii::$app->user->can('create')) {
+            throw new ForbiddenHttpException('Access denied');
+        }
         $model = new BeforeandafterAlbum();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -86,6 +93,9 @@ class BeforeandafteralbumController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (!\Yii::$app->user->can('update')) {
+            throw new ForbiddenHttpException('Access denied');
+        }
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -105,6 +115,9 @@ class BeforeandafteralbumController extends Controller
      */
     public function actionDelete($id)
     {
+        if (!\Yii::$app->user->can('delete')) {
+            throw new ForbiddenHttpException('Access denied');
+        }
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);

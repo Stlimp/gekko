@@ -1473,3 +1473,10 @@ max-height:100%;
   width:80%;
 /*   white-space: nowrap; */
 }
+
+
+
+
+.field-loginform-username,.field-loginform-password{
+  width:75%;
+}

@@ -90,7 +90,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
             <ul id="lightSlider">
                 <?php foreach ($photos as $image)  { ?>
                 <li class="sliderLi">   
-                    <a href="#"><img class="sliderImg" src="<?= $image->photo_image ?>" /></a>
+                    <a href="http://gekkostone/web/?ProductColorSearch%5Bproduct_subcategory_name%5D=<?=$image->photo_product?>&r=productcolor%2Findex"><img class="sliderImg" src="<?= $image->photo_image ?>" /></a>
                 </li>
                 <?php } ?>
             </ul>
