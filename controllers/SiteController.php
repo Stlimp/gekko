@@ -20,6 +20,7 @@ use app\models\OrderItems;
 /*use app\models\Press;*/
 use app\models\Photogallery;
 use yii\data\ActiveDataProvider;
+use yii\web\ForbiddenHttpException;
 use mPDF;
 
 mb_internal_encoding("UTF-8");
@@ -30,7 +31,7 @@ class SiteController extends Controller
     public function behaviors()
     {
         return [
-            'access' => [
+            /*'access' => [
                 'class' => AccessControl::className(),
                 'only' => ['logout'],
                 'rules' => [
@@ -40,16 +41,27 @@ class SiteController extends Controller
                         'roles' => ['@'],
                     ],
                 ],
-            ],
-            'verbs' => [
+            ],*/
+            /*'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'logout' => ['post'],
                 ],
-            ],
+            ],*/
         ];
     }
+    /*public function beforeAction($action)
+    {
+        if (parent::beforeAction($action)) {
+            if (!\Yii::$app->user->can($action->id)) {
+                throw new ForbiddenHttpException('Access denied');
+            }
+            return true;
+        } else {
+            return false;
+        }
 
+    }*/
     public function actions()
     {
         return [

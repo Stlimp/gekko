@@ -12,6 +12,7 @@ use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
 use yii\imagine\Image;
 use yii\data\ActiveDataProvider;
+use yii\web\ForbiddenHttpException;
 
 /**
  * NewsController implements the CRUD actions for News model.
@@ -22,15 +23,26 @@ class NewsController extends Controller
     public function behaviors()
     {
         return [
-            'verbs' => [
+           /* 'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
                     'delete' => ['post'],
                 ],
-            ],
+            ],*/
         ];
     }
-
+/*    public function beforeAction($action)
+    {
+        if (parent::beforeAction($action)) {
+            if (!\Yii::$app->user->can($action->id)) {
+                throw new ForbiddenHttpException('Access denied');
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+*/
     /**
      * Lists all News models.
      * @return mixed
@@ -74,8 +86,7 @@ class NewsController extends Controller
      * @return mixed
      */
     public function actionView($id)
-    {
-        
+    {        
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);
@@ -87,27 +98,31 @@ class NewsController extends Controller
      * @return mixed
      */
     public function actionCreate()
-    {
+    {   
+
+        if (!\Yii::$app->user->can('create')) {
+            throw new ForbiddenHttpException('Access denied');
+        }
         $model = new News();
 
-        $imageName=$model->id;
+            $imageName=$model->id;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            $model->image = UploadedFile::getInstance($model,'image');
-            $model->post_image = 'images/content/news/thumbnails/news'.$model->image->name;
-            $model->save();
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                $model->image = UploadedFile::getInstance($model,'image');
+                $model->post_image = 'images/content/news/thumbnails/news'.$model->image->name;
+                $model->save();
 
-            $model->image->saveAs(Yii::getAlias('@webroot') .'/images/content/news/thumbnails/news'.$model->image->name);
-            
-            Image::thumbnail(Yii::getAlias('@webroot') .'/images/content/news/thumbnails/news'.$model->image->name, 100,75)
-    ->save(Yii::getAlias(Yii::getAlias('@webroot') .'/images/content/news/thumbnails/news'.$model->image->name), ['quality' => 100]);
-           
-            return $this->redirect(['view', 'id' => $model->id]);
-        } else {
-            return $this->render('create', [
-                'model' => $model,
-            ]);
-        }
+                $model->image->saveAs(Yii::getAlias('@webroot') .'/images/content/news/thumbnails/news'.$model->image->name);
+                
+                Image::thumbnail(Yii::getAlias('@webroot') .'/images/content/news/thumbnails/news'.$model->image->name, 100,75)
+        ->save(Yii::getAlias(Yii::getAlias('@webroot') .'/images/content/news/thumbnails/news'.$model->image->name), ['quality' => 100]);
+               
+                return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                return $this->render('create', [
+                    'model' => $model,
+                ]);
+            }
     }
 
     /**
@@ -118,6 +133,9 @@ class NewsController extends Controller
      */
     public function actionUpdate($id)
     {
+        if (!\Yii::$app->user->can('update')) {
+            throw new ForbiddenHttpException('Access denied');
+        }
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -137,6 +155,9 @@ class NewsController extends Controller
      */
     public function actionDelete($id)
     {
+        if (!\Yii::$app->user->can('delete')) {
+            throw new ForbiddenHttpException('Access denied');
+        }
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
@@ -151,6 +172,7 @@ class NewsController extends Controller
      */
     protected function findModel($id)
     {
+
         if (($model = News::findOne($id)) !== null) {
             return $model;
         } else {
@@ -160,7 +182,6 @@ class NewsController extends Controller
 
      public function actionPress()
     {
-
              return $this->redirect(array('press/create')   );
     }
 }

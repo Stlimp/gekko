@@ -7,6 +7,9 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'components' => [
+        'authManager' => [
+            'class' => 'yii\rbac\PhpManager',
+        ],
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '19_07_Gekko',
@@ -16,7 +19,7 @@ $config = [
         ],
         'user' => [
             'identityClass' => 'app\models\User',
-            'enableAutoLogin' => false,
+            'enableAutoLogin' => true,
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -58,18 +61,7 @@ $config = [
             'class' => 'yz\shoppingcart\ShoppingCart',
             'cartId' => 'my_application_cart',
 
-        ],
-        'authManager' => [
-            'class' => 'yii\rbac\PhpManager', // or use 'yii\rbac\DbManager'
-        ]
-    
-    ],
-    'as access' => [
-        'class' => 'mdm\admin\components\AccessControl',
-        'allowActions' => [
-        '*',
-            'admin/*', // add or remove allowed actions to this list
-        ],
+        ],    
     ],
     'modules' => [
           'redactor' => 'yii\redactor\RedactorModule',
@@ -77,7 +69,7 @@ $config = [
           'uploadUrl' => '@web/images/content/news',
           'imageAllowExtensions' => ['jpg','png','gif'],
           'admin' => [
-            'class' => 'mdm\admin\Module',
+            'class' => 'app\modules\admin\Module',
           ],
       ],
     'params' => $params,
