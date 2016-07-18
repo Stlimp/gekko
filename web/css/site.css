@@ -420,13 +420,15 @@ body {
 }
 .product a img {
 
-    border: 2px solid #eed3d7;
+    #border: 2px solid #eed3d7;
     border-radius: 10px 0  10px;
+    transition: all .1s ease-in-out;
 }
 
 
 .product a:hover img{
-    border: 2px solid #a94442;
+    #border: 2px solid #a94442;
+    transform: scale(1.02);
 }
 
 
@@ -443,14 +445,17 @@ body {
 }
 .photogallery-item a img {
 
-    border: 2px solid #eed3d7;
+    #border: 2px solid #eed3d7;
     border-radius: 10px 0  10px;
+    transition: all .1s ease-in-out;
     
 }
 
 
 .photogallery-item a:hover img{
-    border: 2px solid #a94442;
+    #border: 2px solid #a94442;
+    transform: scale(1.02);
+}
 }
 
 /*to make footer work. Remove if needed*/
@@ -684,6 +689,7 @@ body {
   //border-radius: 10px 0px 10px 0px;
   margin:10px;
   vertical-align: top;
+  cursor: pointer;
 }
 .product_colors{
   text-align: left;
@@ -693,6 +699,11 @@ body {
   width:100%;
   //border: 1px solid #666666;
   border-radius: 10px 0px 10px 0px;
+  transition: all .1s ease-in-out;
+}
+.miniature>span>img:hover{
+
+transform: scale(1.02);
 }
 .miniature>span{
 
