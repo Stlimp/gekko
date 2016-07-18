@@ -151,7 +151,7 @@ margin:10px;}
 .left_third{
     background-color:#D8D8CA;
     width:22%;
-    height:500px;
+    height:450px;
     float:left;
     vertical-align: middle;
     display: table;
@@ -160,7 +160,7 @@ margin:10px;}
 }
 .center_third{
     width:50%;
-    height:500px;
+    height:450px;
 
     float:left;
 }
@@ -216,7 +216,7 @@ margin:10px;}
 }
 .right_third{
     width:25%;
-    height:500px;
+    height:450px;
 
     float:left;
 }
