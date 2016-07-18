@@ -16,7 +16,7 @@ $this->title = 'gekkostone';
             <?php foreach (array_reverse($post) as $postItem){ ?>
             <div class="post postid<?= $postItem->id?>" style="float:left;margin-bottom:20px;width:100%">
                  <div class="post-image" style="width:15%;float:left;"> 
-                    <img src="<?= $postItem->post_image?>" style="width:100%;height:100px;border:1px solid #000;border-radius: 10px 0  10px;">
+                    <a href="/web/index.php?r=news%2Fview&amp;id=<?= $postItem->id?>"><img src="<?= $postItem->post_image?>" style="width:100%;height:100px;border-radius: 10px 0  10px;"></a>
                  </div>
                  <div class="post-text" style="width:85%;float:left;">
                     <div class="post-date" style="width:17%;float:left;">
@@ -36,7 +36,7 @@ $this->title = 'gekkostone';
             <div class="page-header" style="float:left;">АРХИВ НОВОСТЕЙ</div>
             <div class="year left-side-half-text" style="height:250px;">
                 <ul>
-                    <li><a class="link_grey_color" href="/web/index.php?r=news%2Findex">Все записи</a></li>
+                    <li><a class="link_grey_color" href="/web/index.php?r=news%2Findex">ВСЕ ГОДА</a></li>
                     <?php foreach ($yearFilter as $yearItem){ ?>
                         <li class="unselected"><a class="link_grey_color" href="/web/index.php?NewsSearch%5Bdate%5D=<?= $yearItem ?>&r=news%2Findex"><?= $yearItem ?></a></li>
                     <?php }?>

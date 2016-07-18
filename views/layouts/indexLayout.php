@@ -56,6 +56,7 @@ IndexAsset::register($this);
                 // the item contains both the image and the caption
                 ['content' => '<img src="images/background/background3.jpg"/>'],
                 ['content' => '<img src="images/background/background4.jpg"/>'],
+                ['content' => '<img src="images/background/1.png"/>'],
             ]
         ]);
         ?>

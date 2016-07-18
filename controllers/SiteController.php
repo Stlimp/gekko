@@ -318,11 +318,11 @@ class SiteController extends Controller
            
 
 
-            if(Yii::$app->user->isGuest) {
+           /* if(Yii::$app->user->isGuest) {
                 $user='GUEST';
             } else {
                 $user=Yii::app()->user->name;
-            }
+            }*/
             $date=date('Y-m-d');
             $time=date('His');
 

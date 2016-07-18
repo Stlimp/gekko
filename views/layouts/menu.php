@@ -13,7 +13,7 @@
 
             <ul id="nav" class="nav1">
                 <div class="ablock">
-                    <span><a href="<?=Yii::$app->user->isGuest?"index.php?r=site%2Flogin":"index.php?r=site%2Flogout"?>"><?=Yii::$app->user->isGuest?"guest":Yii::$app->user->identity->username?></a></span>
+                    
                     <span><a href="index.php?r=site%2Fpartnership">парнерство</a></span>
                     <span><a href="index.php?r=news%2Findex">новости</a></span>
                     <span><a href="index.php?r=site%2Fprice">прайс</a></span>
