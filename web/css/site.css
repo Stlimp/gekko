@@ -456,7 +456,7 @@ body {
     #border: 2px solid #a94442;
     transform: scale(1.02);
 }
-}
+
 
 /*to make footer work. Remove if needed*/
 .wrap{
@@ -1501,3 +1501,17 @@ max-height:100%;
         top: 40% !important;
         height: 65px !important;
   }
+
+.news-selector .year ul{
+  padding-left: 15px;
+}
+.news-selector> ul{
+  padding-left: 50px;
+}
+.selected{
+  font-weight: bold;
+  color:#D0272E;
+}
+.unselected{
+  color:transparent;
+}

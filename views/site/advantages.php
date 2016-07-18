@@ -75,6 +75,7 @@ $this->title = 'Gekkostone';
 					<li style="color:#D0272E"><span style="color:#666666">уникальная методика окрашивания и приборный контроль цвета!</span></li>
 					<li style="color:#D0272E"><span style="color:#666666">естественность и долговечность окрасов!</span></li>
 					<li style="color:#D0272E"><span style="color:#666666">морозостойкость более <span class="numbers">150</span> циклов!</span></li>
+					<li style="color:#D0272E"><span style="color:#666666">производственная гарантия на камень!</span></li>
 				</ul>
 			</div>
 			<div class="right-side-half-text" style="text-align:right;font-family:Impact;">
