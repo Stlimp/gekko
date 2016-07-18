@@ -61,20 +61,95 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
             </div>
             <div class="right-side-half-text">
             <div class="regular_product_desription">
-                Размеры камней        -  <?= $product_data->product_regular_size ?> <br>
-                Толщина камней        -  <?= $product_data->product_regular_thickness ?><br>
-                Вес 1 м2              -  <?= $product_data->product_regular_weight ?> кг.<br>
-                Кол-во в упаковке     -  <?= $product_data->product_regular_quantity ?><br>
-                Повторяемость         -  <?= $product_data->product_regular_repeatability ?><br>
+                <table>
+                    <tr>
+                        <td>
+                        Размеры камней 
+                        </td>
+                        <td style="padding-left:10px;">
+                        -  <?= $product_data->product_regular_size ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Толщина камней   
+                        </td>
+                        <td style="padding-left:10px;">
+                        -  <?= $product_data->product_regular_thickness ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Вес 1 м2 
+                        </td>
+                        <td style="padding-left:10px;">
+                        -  <?= $product_data->product_regular_weight ?> кг.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Кол-во в упаковке 
+                        </td>
+                        <td style="padding-left:10px;">
+                        -  <?= $product_data->product_regular_quantity ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Повторяемость
+                        </td>
+                        <td style="padding-left:10px;">
+                        -  <?= $product_data->product_regular_repeatability ?>
+                        </td>
+                    </tr>
+
+                </table>
 
             </div>
             <?php if ($product_data->hasAngular()=="true") { ?>
             <div class="angular_product_description">
-                Размеры камней        -  <?= $product_data->product_angular_size ?> <br>
-                Толщина камней        -  <?= $product_data->product_angular_thickness ?><br>
-                Вес 1 м2              -  <?= $product_data->product_angular_weight ?> кг.<br>
-                Кол-во в упаковке     -  <?= $product_data->product_angular_quantity ?><br>
-                Повторяемость         -  <?= $product_data->product_angular_repeatability ?><br>
+                <table>
+                    <tr>
+                        <td>
+                        Размеры камней 
+                        </td>
+                        <td style="padding-left:10px;">
+                        -  <?= $product_data->product_angular_size ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Толщина камней
+                        </td>
+                        <td style="padding-left:10px;">
+                        -  <?= $product_data->product_angular_thickness ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Вес 1 м2 
+                        </td>
+                        <td style="padding-left:10px;">
+                        -  <?= $product_data->product_angular_weight ?> кг.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Кол-во в упаковке 
+                        </td>
+                        <td style="padding-left:10px;">
+                        -  <?= $product_data->product_angular_quantity ?>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Повторяемость 
+                        </td>
+                        <td style="padding-left:10px;">
+                        -  <?= $product_data->product_angular_repeatability ?>
+                        </td>
+                    </tr>
+                </table>
             </div>
             <?php } ?>
             <hr class="pick_the_color">
