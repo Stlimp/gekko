@@ -36,15 +36,15 @@ $this->title = 'gekkostone';
             <div class="page-header" style="float:left;">АРХИВ НОВОСТЕЙ</div>
             <div class="year left-side-half-text" style="height:250px;">
                 <ul>
-                    <li><a class="link_grey_color" href="/web/index.php?r=news%2Findex">ВСЕ ГОДА</a></li>
+                    <li <?php if (!isset($_GET["NewsSearch"]["date"])){ echo "class=\"selected\"";} else { echo "class=\"unselected\"";} ?>><a class="link_grey_color" href="/web/index.php?r=news%2Findex">ВСЕ ГОДА</a></li>
                     <?php foreach ($yearFilter as $yearItem){ ?>
-                        <li class="unselected"><a class="link_grey_color" href="/web/index.php?NewsSearch%5Bdate%5D=<?= $yearItem ?>&r=news%2Findex"><?= $yearItem ?></a></li>
+                        <li <?php if (isset($_GET["NewsSearch"]["date"])&&($_GET["NewsSearch"]["date"]==$yearItem)){ echo "class=\"selected\"";} else { echo "class=\"unselected\"";} ?>><a class="link_grey_color" href="/web/index.php?NewsSearch%5Bdate%5D=<?= $yearItem ?>&r=news%2Findex"><span class="numbers"><?= $yearItem ?></span></a></li>
                     <?php }?>
                 </ul>
      
             </div>
-            <div class="page-header" style="float:left;background: #FFFFFF;">ПУБЛИКАЦИИ В СЕТИ</div>
-                <ul style=" list-style-type: none;padding-left:0px;">
+            <div class="page-header" style="float:left;background: #FFFFFF;border:0;">ПУБЛИКАЦИИ В СЕТИ</div>
+                <ul style=" list-style-type: none;">
                     <?php foreach ($press as $link){ ?>
                         <li><a class="link_grey_color" href="<?= $link->link?>" target="_blank"><?= $link->link_name ?></a></li>
                     <?php }?>
