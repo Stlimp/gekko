@@ -717,8 +717,9 @@ body {
     .sliderLi {
         display: block;
         float: left;
-        margin-right: 20px;    
-        margin-left:10px;
+        margin-right: 5px !important;    
+        margin-left:5px;
+        width:160px !important;
     }
 
 
