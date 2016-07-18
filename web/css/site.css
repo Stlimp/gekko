@@ -1512,3 +1512,6 @@ max-height:100%;
   font-weight: bold;
   color:#D0272E;
 }
+.unselected{
+  color:transparent;
+}
