@@ -15,24 +15,29 @@
                 <div class="ablock">
                     
                     <span><a href="index.php?r=site%2Fpartnership">парнерство</a></span>
+                    <span class="bullet">&#8226;</span>
                     <span><a href="index.php?r=news%2Findex">новости</a></span>
+                    <span class="bullet">&#8226;</span>
                     <span><a href="index.php?r=site%2Fprice">прайс</a></span>
+                    <span class="bullet">&#8226;</span>
                     <span><a href="index.php?r=site%2Fcontact">контакты</a></span>
+                    <span class="bullet">&#8226;</span>
                     <span><a href="#">поиск</a></span>
+                    <span class="bullet">&#8226;</span>
                     <span><a href="index.php?r=site%2Fcart">моя галерея <span id="<?php echo (Yii::$app->cart->getIsEmpty()?"empty_":"") ?>cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></a></span>
                 </div>
-                <div class="iconblock2">
+                <!-- <div class="iconblock2">
                     <span><a href="tel:+123"><img src="images/icons/viber.png" alt="" onmouseover="this.src='images/icons/viberhover.png';" onmouseout="this.src='images/icons/viber.png';"></a></span>
                     <span><a href="#"><img src="images/icons/skype.png" alt="" onmouseover="this.src='images/icons/skypehover.png';" onmouseout="this.src='images/icons/skype.png';"></a></span>
                     <span><a href="#" target="_top" ><img src="images/icons/email.png" alt="" onmouseover="this.src='images/icons/emailhover.png';" onmouseout="this.src='images/icons/email.png';"></a> </span>
-                </div>
-                <div class="iconblock1">
+                </div>-->
+                <div class="iconblock2">
                     <span><a href="#"><img src="images/icons/ok.png" alt="" onmouseover="this.src='images/icons/okhover.png';" onmouseout="this.src='images/icons/ok.png';"></a></span>
                     <span><a href="#"><img src="images/icons/vk.png" alt="" onmouseover="this.src='images/icons/vkhover.png';" onmouseout="this.src='images/icons/vk.png';"></a></span>
                     <span><a href="#"><img src="images/icons/facebook.png" alt="" onmouseover="this.src='images/icons/facebookhover.png';" onmouseout="this.src='images/icons/facebook.png';"></a></span>
                     <span><a href="#"><img src="images/icons/twitter.png" alt="" onmouseover="this.src='images/icons/twitterhover.png';" onmouseout="this.src='images/icons/twitter.png';"></a></span>
                     <span><a href="#"><img src="images/icons/youtube.png" alt="" onmouseover="this.src='images/icons/youtubehover.png';" onmouseout="this.src='images/icons/youtube.png';"></a></span>
-                </div>
+                </div> 
             </ul>
 
 
@@ -50,7 +55,6 @@
                             <li><a href="index.php?r=site%2Fcontact">КОНТАКТЫ</a></li>    
                         </ul> 
                 </li>
-                <li id="delimiter"><a>|</a></li>
                 <li class="menu-item"><a href="#">ПРОДУКЦИЯ</a> 
                     <ul> 
                         <li><a href="index.php?r=product%2Findex">ВСЯ ПРОДУКЦИЯ</a></li> 
@@ -79,7 +83,6 @@
                         <li><a href="#">СОПУТСТВУЮЩИЕ ТОВАРЫ</a></li>
                     </ul> 
                 </li>
-                <li id="delimiter"><a>|</a></li>
                 <li class="menu-item"><a href="#">ФОТОГАЛЕРЕЯ</a> 
                     <ul> 
                         <?php 
@@ -105,7 +108,6 @@
                         <li><a href="index.php?r=beforeandafteralbum%2Findex">ДО И ПОСЛЕ</a></li> 
                     </ul> 
                 </li>
-                <li id="delimiter"><a>|</a></li> 
                 <li class="menu-item"><a href="#">ИНФОРМАЦИЯ</a> 
                     <ul> 
                         <li><a href="index.php?r=site%2Frocklaying">УКЛАДКА КАМНЯ</a></li> 
@@ -118,9 +120,7 @@
                         <li><a href="index.php?r=product%2F3ds">ТЕКСТУРЫ КАМНЯ<span style ="color:#4D4D4D;background-color:white;border-radius: 3px 0px 3px 0px;float:left">3DS</span></a></li> 
                     </ul> 
                 </li> 
-                <li id="delimiter"><a>|</a></li>  
                 <li class="menu-item"><a href="index.php?r=stores%2Findex">ГДЕ КУПИТЬ</a></li> 
-                <li id="delimiter"><a>|</a></li> 
                 <li class="menu-item"><a href="#">УСЛУГИ</a> 
                     <ul> 
                             <li><a href="index.php?r=site%2Fdesign">ДИЗАЙН-ПРОЕКТ</a></li> 

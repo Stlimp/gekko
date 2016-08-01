@@ -54,9 +54,9 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
         <div class="right-half">
             
             <div class="right-side-half-header">
-                <div class="regular_product">Рядовая плитка <img src="images\content\products\icons\regular.png" alt=""></div> 
+                <div class="regular_product">РЯДОВАЯ ПЛИТКА <img src="images\content\products\icons\regular.png" alt=""></div> 
             <?php if ($product_data->hasAngular()=="true") { ?>
-                <div class="angular_product">Угловая плитка <img src="images\content\products\icons\angular.png" alt=""> </div>
+                <div class="angular_product">УГЛОВАЯ ПЛИТКА <img src="images\content\products\icons\angular.png" alt=""> </div>
             <?php } ?> 
             </div>
             <div class="right-side-half-text">

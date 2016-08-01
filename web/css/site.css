@@ -148,7 +148,7 @@ display: block;
 
 /*Menu opacity*/
 .navbar{
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(255, 255, 255, 0.87);
   height:101px;
 
 }
@@ -512,7 +512,7 @@ body {
 .ablock{
    display: inline-block; 
    float:left;
-   width:60%;
+   width:75%;
 }
 .ablock>span{
   display: inline-block; 
