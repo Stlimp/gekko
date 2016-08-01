@@ -46,24 +46,15 @@ AppAsset::register($this);
             <?= $content ?>
         </div> 
     </div>
-    <footer class="footer first-footer">
-        <div class="social"><p>СОЦИАЛЬНЫЕ СЕТИ</p>
-            <div class="social-likes  social-likes_notext">
-                <div class="facebook" title="Поделиться ссылкой на Фейсбуке"></div>
-                <div class="twitter" title="Поделиться ссылкой в Твиттере"></div>
-                <br>
-                <div class="vkontakte" title="Поделиться ссылкой во Вконтакте"></div>
-                <div class="odnoklassniki" title="Поделиться ссылкой в Одноклассниках"></div>
-            </div>
-        </div>
-        <div class="footer-image"><a href="index.php?r=site%2Fsitemap"><p>КАРТА САЙТА</p><div class="footer-element" id="sitemap" ></div></a></div>
-        <div class="footer-image"><a href="index.php?r=site%2Fcart"><p>МОЯ ГАЛЕРЕЯ</p><div class="footer-element" id="gallery"></div></a></div>
-        <div class="footer-image"><a href="index.php?r=site%2Fpartnership"><p>ПАРТНЕРСТВО</p><div class="footer-element" id="partnership"></div></a></div>
-        <div class="footer-image"><a href="index.php?r=site%2Fcontact"><p>КОНТАКТЫ</p><div class="footer-element" id="contacts"></div></a></div>
-        <div class="footer-image"><a href="index.php?r=site%2Fpublicoffer"><p>ПУБЛИЧНАЯ ОФЕРТА</p><div class="footer-element" id="publicoffer"></div></a></div>
-        <div class="footer-image"><p>АВТОРСКИЕ ПРАВА</p><div class="footer-element" id="copyright"></div></div>
+         <footer class="footer first-footer">
+        <div class="footer-image"><a href="index.php?r=site%2Fsitemap"><p>КАРТА САЙТА</p></a></div>
+        <div class="footer-image"><a href="index.php?r=site%2Fcart"><p id="mygallery">МОЯ ГАЛЕРЕЯ</p></a></div>
+        <div class="footer-image"><a href="index.php?r=site%2Fpartnership"><p>ПАРТНЕРСТВО</p></a></div>
+        <div class="footer-image"><a href="index.php?r=site%2Fcontact"><p>КОНТАКТЫ</p></a></div>
+        <div class="footer-image"><a href="index.php?r=site%2Fpublicoffer"><p>ПУБЛИЧНАЯ ОФЕРТА</p></a></div>
+        <div class="footer-image"><a href=""><p>АВТОРСКИЕ ПРАВА</p></a></div>
     </footer>
-<span><p style="text-align:center;vertical-align:middle;font-family:Century Gothic;">©GEKKOSTONE <?php echo date("Y"); ?></p></span>
+<span><p style="text-align:center;vertical-align:middle;font-family:Century Gothic;font-size:10px;">©GEKKOSTONE <?php echo date("Y"); ?></p></span>
 <?php $this->endBody() ?>
 </body>
 </html>

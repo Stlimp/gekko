@@ -287,8 +287,6 @@ body {
 
 .footer {
     height: 80px;
-    background-color: #3F3F3F;
-    border-top: 1px solid #ddd;
     text-align:justify;
     padding-left:50px;
     padding-right:50px;
@@ -296,10 +294,7 @@ body {
     min-width:1000px;
 }
 .first-footer{
-      background-image: url('./../images/footer.jpg');
-      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./../images/footer.jpg');
-
-  background-size: cover;
+      background: rgba(243, 242, 255, 0.87);
 }
 
 
@@ -311,7 +306,7 @@ body {
 .footer-image{
   display:inline-block;
   height:80px;
-  width:80px;
+  #width:80px;
   vertical-align: top;
 }
 
@@ -321,9 +316,15 @@ body {
 }
 /*footer images*/
     .footer-image p{
-        font-family:Impact;
+        font-family:Corbel;
         white-space:nowrap;
-        color:#CCCCCC;   
+        color:#737373;
+        line-height: 80px;
+    vertical-align: middle;  
+    font-size: 15px;
+    }
+    p#mygallery{
+        color:#996633;
     }
      .footer-image div{
         width:80px;
@@ -331,57 +332,10 @@ body {
         background-size: 100%;
      }
 
-
-    #sitemap{
-        background-image:url('./../images/footer/sitemap.png');
-        
-    }
-
-    #sitemap:hover{
-        background-image:url('./../images/footer/sitemaphover.png');
-
-    }
-    #gallery{
-        background-image:url('./../images/footer/gallery.png');
-    }
-
-    #gallery:hover{
-        background-image:url('./../images/footer/galleryhover.png');
-    }
-    #partnership{
-        background-image:url('./../images/footer/partnership.png');
-    }
-
-    #partnership:hover{
-        background-image:url('./../images/footer/partnershiphover.png');
-    }
-    #contacts{
-        background-image:url('./../images/footer/contacts.png');
-    }
-
-    #contacts:hover{
-        background-image:url('./../images/footer/contactshover.png');
-    }
-    #publicoffer{
-        background-image:url('./../images/footer/publicoffer.png');
-    }
-
-    #publicoffer:hover{
-        background-image:url('./../images/footer/publicofferhover.png');
-    }
-    #copyright{
-        background-image:url('./../images/footer/copyright.png');
-    }
-
-    #copyright:hover{
-        background-image:url('./../images/footer/copyrighthover.png');
-    }
-
-     .footer-element{
-      background-size: contain !important;
-        background-repeat: no-repeat;
-        background-position: center; 
-     }
+.footer-image p:hover{
+  text-shadow: 0px 0px 0 #000000;
+}
+   
 
 
 .left-side-half-text a{
