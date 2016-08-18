@@ -206,7 +206,7 @@ body {
 }
 
 .left-side-half-header {
-     background: #D7D5C1;
+     background: #F3F2EE;
     float:left;
     font-family:Corbel;
     font-weight:bold;
@@ -221,7 +221,7 @@ body {
 }
 
 .right-side-half-header {
-    background: #D7D5C1;
+    background: #F3F2EE;
     float:left;
     font-family:Corbel;
     font-weight:bold;
@@ -260,7 +260,7 @@ body {
 }
 .page-header {
   width:100%;
-    background: #D7D5C1;
+    background: #F3F2EE;
     float:left;
     font-family:Corbel;
     font-weight:bolder;
@@ -691,7 +691,7 @@ transform: scale(1.02);
     .sliderImg {
         display: block;
         border: 3px solid #FFFFFF;
-        border-radius: 10px 0  10px;
+        #border-radius: 10px 0  10px;
         height: 100px;
         width:150px;
         max-width: 100%;
