@@ -97,6 +97,26 @@ $this->registerJsFile('@web/js/slide-up-down.js');
         opacity:1;
     }
 
+    .center_split{
+            position: relative;
+    }
+    .center_split:after {
+        
+        position:absolute;
+        opacity:0;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        content:'\A';
+        width:100%; height:100%;
+        top:0; left:0;
+        background:rgba(0,0,0,0.3);
+    }
+    .center_split:hover:after    {
+        opacity:1;
+    }
+
+
+
     .test{
         background-image: url(../web/images/content/test_background.png);
         
@@ -164,42 +184,53 @@ $this->registerJsFile('@web/js/slide-up-down.js');
         </div>
         <div class="center_third">
             <div class="center_split">
-               
-               <div class="center_split_text"><p>При помощи конфигуратора «ПОДБОР КАМНЯ» 
-                    Вы сможете самостоятельно подобрать самую 
-                    оптимальную фактуру и расцветку декоративного
-                    камня для интерьера или экстерьера Вашего дома.</p>
+               <a href="#">
+               <div class="center_split_text"><p>
+                   КОЛЛЕКЦИЯ <b>GEKKOSTONE</b>
+               </p>
+               <p>Полная коллекция декоративного облицовочного камня производства компании 
+                        GEKKOSTONE. В коллекции представлен 
+                        облицовочный камень и декоративный 
+                        кирпич разнообразных фактур и расцветок.
+                    </p>
                 </div>
-                <a href="#">
-                    <div class="center_split_vertically">
+                <div class="center_split_vertically">
+                    <img src="images/content/a.png" alt="">
+                </div>
+                    <!-- <div class="center_split_vertically">
                        <p>ПОДБОР КАМНЯ</p>
-                    </div>
+                    </div> -->
                 </a>
             </div>
             
             <div class="center_split">
-                  
-                <div class="center_split_text"><p>В фотогалерее представлены фотографии интерьеров
-                        и экстерьеров ДО и ПОСЛЕ проведения облицовочных 
-                        работ по укладке декоративного камня.</p> 
-                </div>
-                <a href="#">
-                <div class="center_split_vertically">
-                   <p>ДО И ПОСЛЕ</p>
-                </div>
+                <a href="#">  
+                    <div class="center_split_text"><p><b>ПОДБОР ФАКТУРЫ И ЦВЕТА</b></p>
+                        <p>При помощи конфигуратора  «ПОДБОР 
+                            КАМНЯ»  Вы сможете  самостоятельно 
+                            подобрать самую оптимальную фактуру 
+                            и  расцветку декоративного камня для 
+                            интерьера или экстерьера Вашего дома.</p> 
+                    </div>
+                    
+                    <div class="center_split_vertically">
+                        <img src="images/content/b.png" alt="">
+                    </div>
                 </a>  
             </div>
                 <div class="center_split" style="margin-bottom:0px">
-                    
-                   <div class="center_split_text"><p>В видеогалерее представлены демонстрационные,
-                    а также обучающие видео по применению в облицовке
-                    декоративного облицовочного камня.</p>
+                    <a href="#">
+                       <div class="center_split_text"><p><b>ДО и ПОСЛЕ</b></p>
+                        <p>В фотогалерее представлены фотографии 
+                            интерьеров и экстерьеров ДО и ПОСЛЕ 
+                            проведения облицовочных работ по 
+                            укладке декоративного камня. </p>
+                        </div>
+                        <div class="center_split_vertically">
+                            <img src="images/content/c.png" alt="">
+                        </div>
                     </div>
-                    <a href="index.php?r=videogallery%2Findex"><div class="center_split_vertically" style="background-image:url(images/content/videogallery.jpg);background-size:cover;">
-                       <p>ВИДЕОГАЛЕРЕЯ</p>
-                   </div></a>
-                </div>
-            </a>
+                </a>
         </div>
         
         <div class="slider">

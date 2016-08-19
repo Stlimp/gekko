@@ -69,7 +69,7 @@ $this->registerJsFile('@web/js/ajax.js');
 						<div id="calc_right_half">
 										<a style="float:left" id="remove_from_cart" class="btn btn-success btn-send cart-button" href="index.php?r=productcolor/remove-from-cart&id=<?= $cartItem->product_color_id ?>"><b>Удалить</b></a>  <span style="display: inline-block;padding-left: 10px;margin-top: 7px;">расцветку из</span> <b>ГАЛЕРЕИ</b>
 										
-										<p><br><span style="color: #D0272E">Для облицовки вам необходимо:</span><br>
+										<p><br><span style="color: #CC9933">Для облицовки вам необходимо:</span><br>
 										<input type="hidden" id="price_color_<?= $cartItem->product_color_id ?>" name="price_color[<?= $cartItem->product_color_id ?>]" value="0">
 
 										<input type="hidden" id="weight_color_<?= $cartItem->product_color_id ?>" name="weight_color[<?= $cartItem->product_color_id ?>]" value="0">

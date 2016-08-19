@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
    <div class="jumbotron">
    	<div class="left-half">
 <div class="left-side-half-header">
-	ВАКАНСИИ -Работа в компании GEKKOSTONE
+	ВАКАНСИИ - Работа в компании GEKKOSTONE
 </div>
 	<div class="left-side-half-text">
 		<p>В компании <b>GEKKOSTONE</b> всегда заинтересованы в профессиональных кадрах! Если 
@@ -20,18 +20,16 @@ use yii\widgets\ActiveForm;
 триваем каждую заявку! В случае, если Ваше резюме покажется нам интересным, - 
 мы обязательно свяжемся с Вами и назначим собеседование, где Вы сможете задать 
 любые дополнительные вопросы.</p>
+	<p style="color:#996633"><i>Внимание! <br> 
+В настоящий момент вакансий не требуется! Следите за обновлениями на сайте! 
+ </i></p>
 <p><img src="images/content/vacancy.jpg" align="right" width="100%"></p>
 
 
 </div>
-<div class="left-side-half-text" style="text-align:left;font-family:Impact;">
-				<?php 
-					$input = array('ИСКУССТВО ДЕКОРАТИВНОГО <span style="color: #D0272E">К</span>АМНЯ', 'ТВОЕ ПРОСТРАНСТВО, ТВОЙ <span style="color: #D0272E">К</span>АМЕНЬ', 'БУДУЩЕЕ СТРОИТСЯ НА <span style="color: #D0272E">К</span>АМНЕ!', 'СОВЕРШЕННАЯ ФИЛОСОФИЯ <span style="color: #D0272E">К</span>АМНЯ', 'МЫ ДЕЛАЕМ <span style="color: #D0272E">К</span>АМЕНЬ НАТУРАЛЬНЫМ!');
-					$key = array_rand($input,1); 
-					echo "<h1>$input[$key]</h1>"	; 
-				?>
-			</div>
+
 </div>
+
 
 <div class="right-half">
 <div class="right-side-half-header">
@@ -75,7 +73,7 @@ use yii\widgets\ActiveForm;
 ]);;
 
 			echo Html::submitButton("ОТПРАВИТЬ",['class'=>'btn btn-success btn-send']);
-			echo '<p style="color:#D0272E;font-style: italic;">* - поля, обязательные для заполнения;<br> 
+			echo '<p style="color:#996633;font-style: italic;">* - поля, обязательные для заполнения;<br> 
      проверьте указанную информацию перед отправкой!</p>';
 		}
 		
@@ -83,5 +81,9 @@ use yii\widgets\ActiveForm;
 	
 </div>
 </div>
+<div class="moto" style="font-family:Esenin;font-size:50px;text-align:left;height:30px;padding-left:30px;">Будущее строится на <span style="color:#996633;">к</span>амне!</div>	
 </div>
+<hr style="margin:20px;">
+</div>
+
 </div>	

@@ -16,7 +16,7 @@ $(document).ready(function(){
         $(this).children('span').css('line-height','30px' );
     },
     function () {
-        $(this).children('span').css('color', '#4D4D4D');
+        $(this).children('span').css('color', 'transparent');
         $(this).children('span').css('font','14px Geneva, Arial, Helvetica, sans-serif' );
     });
     
@@ -26,7 +26,7 @@ $(document).ready(function(){
         $(this).children('span').css('font','14px Geneva, Arial, Helvetica, sans-serif' );
     },
     function () {
-        $(this).children('span').css('color', '#4D4D4D');
+        $(this).children('span').css('color', 'transparent');
         $(this).children('span').css('font','14px Geneva, Arial, Helvetica, sans-serif' );
     });
     $(document).ready(function(){

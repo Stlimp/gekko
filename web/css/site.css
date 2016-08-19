@@ -718,7 +718,7 @@ transform: scale(1.02);
       font-family:"Century Gothic";
     } 
     #cart{
-      background-color:#D0272E;
+      background-color:#CC9933;
       color:#fff;
       border: 1px solid #FFFFFF;
       border-radius: 5px 0  5px;
@@ -738,11 +738,16 @@ transform: scale(1.02);
   padding-left: 50px;
 }
 .cart-button{
-  color:#787764;
-  font-weight: bold;
-  background-color: #D7D5C1 !important;
-  border: 2px solid #787764;
+  border-color:#CC9933 !important;
+  color:#CC9933;
+
+  background-color: #FFFFFF !important;
+  border: 2px solid #CC9933;
 }
+.cart-button:hover,.cart-button:focus,.cart-button:active,.cart-button:focus{
+   color:#CC9933!important;
+   background-color: #FFFFFF !important;
+  }
 
 .submit_form{
   text-align: left;
@@ -757,7 +762,7 @@ transform: scale(1.02);
 }
 
 #warning{
-    color: #D0272E;
+    color: #CC9933;
     font-style: italic; 
     padding-left: 10px;
 }
@@ -1168,7 +1173,7 @@ left: 0;
   }
     .required>label::after {
       content: " *";
-      color:#D0272E;
+      color:#996633;
     }
 
     #partnershipform-typeofpartnership,#feedbackform-department,#contactsform-department,#vacancyform-employment,#vacancyform-employmenttype,#vacancyform-education,#vacancyform-civilstatus,#vacancyform-personalauto,#vacancyform-smoker{
@@ -1466,7 +1471,7 @@ max-height:100%;
 }
 .selected{
   font-weight: bold;
-  color:#D0272E;
+  color:#CC9933;
 }
 .unselected{
   color:transparent;

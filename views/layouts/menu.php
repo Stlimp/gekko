@@ -67,11 +67,11 @@
                             ?>
                             <?php  foreach ($products_categories as $category):?>
                                 <li>
-                                    <a href="?ProductSearch%5Bproduct_category_name%5D=<?php echo str_replace(' ', '+', $category->product_category_name) ?>&r=product%2Findex"><?php echo mb_strtoupper($category->product_category_name);?></a><span>&#9658;</span>
+                                    <a href="?ProductSearch%5Bproduct_category_name%5D=<?php echo str_replace(' ', '+', $category->product_category_name) ?>&r=product%2Findex"><?php echo mb_strtoupper($category->product_category_name);?></a><span style="color:transparent;">&#9658;</span>
                                     <ul>
                                         <?php  foreach ($products as $product_item):?>
                                             <?php if (!strcmp($product_item->product_category_name, $category->product_category_name)):?>
-                                            <li><span>&#9679;</span><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?php echo $product_item->product_product_name ?>&r=productcolor%2Findex"> <?php echo $product_item->product_product_name ?></a></li>
+                                            <li><span style="color:transparent">&#9679;</span><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?php echo $product_item->product_product_name ?>&r=productcolor%2Findex"> <?php echo $product_item->product_product_name ?></a></li>
                                             <?php endif;?>    
                                         <?php endforeach;?>
 
@@ -94,11 +94,11 @@
                          ?>
                          <?php  foreach ($image_categories as $category):?>
                                 <li>
-                                    <a href="index.php?PhotogallerySearch%5Bphoto_category%5D=<?php echo $category->image_category_name ?>&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex"><?php echo mb_strtoupper($category->image_category_name);?></a><span>&#9658;</span>    
+                                    <a href="index.php?PhotogallerySearch%5Bphoto_category%5D=<?php echo $category->image_category_name ?>&PhotogallerySearch%5Bphoto_subcategory%5D=&r=photogallery%2Findex"><?php echo mb_strtoupper($category->image_category_name);?></a><span style="color:transparent;">&#9658;</span>    
                                     <ul>
                                         <?php  foreach ($imagesubcategories as $subcategory_item):?>
                                             <?php if (!strcmp($subcategory_item->image_category_name, $category->image_category_name)):?>
-                                            <li><span>&#9679;</span><a href="index.php?PhotogallerySearch%5Bphoto_category%5D=<?php echo $category->image_category_name ?>&PhotogallerySearch%5Bphoto_subcategory%5D=<?php echo $subcategory_item->image_subcategory_name;?>&r=photogallery%2Findex"> <?php echo $subcategory_item->image_subcategory_name ?></a></li>
+                                            <li><span style="color:transparent;">&#9679;</span><a href="index.php?PhotogallerySearch%5Bphoto_category%5D=<?php echo $category->image_category_name ?>&PhotogallerySearch%5Bphoto_subcategory%5D=<?php echo $subcategory_item->image_subcategory_name;?>&r=photogallery%2Findex"> <?php echo $subcategory_item->image_subcategory_name ?></a></li>
                                             <?php endif;?>    
                                         <?php endforeach;?>
 

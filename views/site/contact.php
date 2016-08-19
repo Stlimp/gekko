@@ -15,11 +15,11 @@ use yii\widgets\MaskedInput;
 					<td rowspan="2">
 						<img src="images/content/logomonochrome.jpg" align="left">
 					</td>
-					<td>ООО <b>«ГЕККОСТОУН»</b>, УНП 290489059
+					<td>ООО <b>«ГЕККОСТОУН»</b>, УНП <span class="numbers">290489059</span>
 					</td>
 				</tr>
 				<tr>
-					<td><b>юридический адрес:</b> д. Черни, ул. Брестская 56/6;  Брестская область.
+					<td><b>юридический адрес:</b> д. Черни, ул. Брестская <span class="numbers">56/6</span>;  Брестская область.
 					</td>
 				</tr>
 			</table>
@@ -32,17 +32,17 @@ use yii\widgets\MaskedInput;
 				</tr>
 				<tr>
 					<td>
-						тел. +375 29 7208060(МТС)
+						тел. <span class="numbers">+375 29 7208060</span>(МТС)
 					</td>
 				</tr>
 				<tr>
 					<td>
-						тел. +375 29 9324060(Velcom)
+						тел. <span class="numbers">+375 29 9324060</span>(Velcom)
 					</td>
 				</tr>
 				<tr>
 					<td>
-						факс. +375 16 2490075
+						факс. <span class="numbers">+375 16 2490075</span>
 					</td>
 				</tr>
 				<tr>
@@ -95,10 +95,10 @@ use yii\widgets\MaskedInput;
 						<td><u><b>Время работы склада:</b></u>(без перерывов)</td>
 					</tr>
 					<tr>
-						<td>Понедельник - Четверг: <b>8:00 - 17:00</b></td>
+						<td>Понедельник - Четверг: <b><span class="numbers">8:00 - 17:00</span></b></td>
 					</tr>
 					<tr>
-						<td>Пятница: <b>8:00 - 12:00</b></td>
+						<td>Пятница: <b><span class="numbers">8:00 - 12:00</span></b></td>
 					</tr>
 					<tr>
 						<td>Суббота, воскресенье: <b>выходные</b></td></td>
@@ -117,12 +117,12 @@ use yii\widgets\MaskedInput;
      			<table class="contacts_table">
 					<tr>
 						<td><u><b>GPS склада:</b></u></th>
-						<td> N52° 04.896´</th>
+						<td> <span class="numbers">N52° 04.896´</span></th>
 						<td rowspan="2"><img src="images/content/icons/gps.png" alt=""></td>
 					</tr>
 					<tr>
 						<td></td>
-						<td> E23° 48.810´</td>
+						<td> <span class="numbers">E23° 48.810´</span></td>
 						<td></td>
 					</tr>
 				</table>
@@ -171,33 +171,33 @@ use yii\widgets\MaskedInput;
     'mask' => '+375(99)999-99-99',
 ]); 
 			            echo Html::submitButton('ОТПРАВИТЬ', ['class' => 'btn btn-success']);
-			           echo '<p style="color:#D0272E;font-style: italic;">* - поля, обязательные для заполнения;<br> 
+			           echo '<p style="color:#996633;font-style: italic;">* - поля, обязательные для заполнения;<br> 
      проверьте указанную информацию перед отправкой!</p>';
 					}        
 		   		 ?>
 			</p>
 			
 		</div>
-		<div class="right-side-half-header">
+		<!-- <div class="right-side-half-header">
 			КОМПАНИЯ GEKKOSTONE В ИНТЕРНЕТЕ
 		</div>
 		<div class="right-side-half-text" id="social-block-contacts">
 			<p>Социальные сети: 
 				<span class="social-links">
-	                <a href="#"><img src="images/content/icons/ok.png" alt="">ОДНОКЛАССНИКИ</a>
-	                <a href="#"><img src="images/content/icons/vk.png" alt="">ВКОНТАКТЕ</a>
-	                <a href="#"><img src="images/content/icons/facebook.png">FACEBOOK</a>
-	                <a href="#"><img src="images/content/icons/twitter.png" alt="">TWITTER</a>
-                </span>
-            </p>
-            <p>Интернет-адреса:
-            	<span class="social-links">
-	                <a href="#"><img src="images/content/icons/youtube.png" alt="">YouTube</a>
-	                <a href="tel:+123"><img src="images/content/icons/viber.png" alt="">Viber</a>
-	                <a href="#"><img src="images/content/icons/skype.png" alt="">Skype</a>
-	            </span>
-            </p>
-        </div>
+			                <a href="#"><img src="images/content/icons/ok.png" alt="">ОДНОКЛАССНИКИ</a>
+			                <a href="#"><img src="images/content/icons/vk.png" alt="">ВКОНТАКТЕ</a>
+			                <a href="#"><img src="images/content/icons/facebook.png">FACEBOOK</a>
+			                <a href="#"><img src="images/content/icons/twitter.png" alt="">TWITTER</a>
+		                </span>
+		            </p>
+		            <p>Интернет-адреса:
+		            	<span class="social-links">
+			                <a href="#"><img src="images/content/icons/youtube.png" alt="">YouTube</a>
+			                <a href="tel:+123"><img src="images/content/icons/viber.png" alt="">Viber</a>
+			                <a href="#"><img src="images/content/icons/skype.png" alt="">Skype</a>
+			            </span>
+		            </p>
+		        </div> -->
 	</div>
    </div>
 </div>

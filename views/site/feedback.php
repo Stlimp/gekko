@@ -50,7 +50,8 @@ use yii\widgets\ActiveForm;
 ]);;
 
 					echo Html::submitButton("ОТПРАВИТЬ",['class'=>'btn btn-success']);
-					
+					echo '<p style="color:#996633;font-style: italic;">* - поля, обязательные для заполнения;<br> 
+     проверьте указанную информацию перед отправкой!</p>';
 					}
 				?>
     		</p>
