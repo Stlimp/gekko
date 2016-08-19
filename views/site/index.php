@@ -271,7 +271,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
             <span>
                 <form>
                     <div>email</div>
-                    <div class="input" style="border: 1px solid black;
+                    <div class="input" style="border: 1px solid #E1DFD0;
     padding: 3px;">
                         <input type="text" class="button" id="email" name="email" placeholder="" style="border: 0;height:25px;">
                         <input type="submit" class="button" id="submit" value="ПОДПИСКА" style="border: 0;height:25px;">

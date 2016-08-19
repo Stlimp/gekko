@@ -4,7 +4,9 @@ body {
     font-family: Corbel;
 }
 
-
+@font-face {font-family:Esenin;
+    src: url(fonts/esenin.woff);
+   }
 input:focus,
 select:focus,
 textarea:focus,
