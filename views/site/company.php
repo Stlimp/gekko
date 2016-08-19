@@ -33,12 +33,12 @@ $this->title = 'Gekkostone';
             </div>	
         </div>
     
-    <div class="right-half">
-        <div class="right-side-half-text" style="float:left">
-            <img src="images/content/aboutcompany.jpg" style="float:top;width:100%;">
-        </div>
+        <div class="right-half">
+            <div class="right-side-half-text" style="float:left">
+                <img src="images/content/aboutcompany.jpg" style="float:top;width:100%;">
+            </div>
 
-    </div>
+        </div>
 
     </div>
     <div class="moto" style="font-family:Esenin;font-size:50px;text-align:right;height:30px;padding-right:30px;">Будущее строится на <span style="color:#996633;">к</span>амне!</div>
