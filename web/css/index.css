@@ -309,8 +309,7 @@ margin:10px;}
 .half{
   display:inline-block;
   width:50%;
-  height:200px;
-  background-color: red;
+  height:160px;
   float:left;
   position: relative;
 }
