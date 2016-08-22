@@ -1484,3 +1484,21 @@ max-height:100%;
 .lSAction>a{
   z-index:5 !important;
 }
+
+.randomfooter{
+  display:inline-block;
+  width:100%;
+  height:auto;
+  float:left;
+  position: relative;
+}
+
+.randomfooter form{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.news-index{
+  min-height:500px;
+}

@@ -43,7 +43,7 @@ class BeforeandafteralbumController extends Controller
             'query' => BeforeandafterPhoto::find(),
         ]);
 
-        $this->layout='twoFootersLayout';
+        $this->layout='main';
         return $this->render('index', [
             'dataProvider' => $dataProvider,
             'dataProviderPhotos' => $dataProviderPhotos,

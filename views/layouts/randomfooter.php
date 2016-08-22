@@ -9,19 +9,28 @@
             <hr style="margin-top: 5px;">
         </div>
 
-        <div class="half">
+        <!-- <div class="half">
             <span>
                 <form>
                     <div>email</div>
                     <div class="input" style="border: 1px solid #E1DFD0;
-    padding: 3px;">
+            padding: 3px;">
                         <input type="text" class="button" id="email" name="email" placeholder="" style="border: 0;height:25px;">
                         <input type="submit" class="button" id="submit" value="ПОДПИСКА" style="border: 0;height:25px;">
                       </div>
                 </form>
             </span>
-        </div>
-        <div class="half">
+        </div> -->
+        <div class="randomfooter">
+             <span>
+                <form>
+                    <div>email</div>
+                    <div style="border: 1px solid #E1DFD0;width:235px;padding: 3px;">
+                        <input type="text" class="button" id="email" name="email" placeholder="" style="border: 0;height:25px;">
+                        <input type="submit" class="button" id="submit" value="ПОДПИСКА" style="border: 0;height:25px;">
+                      </div>
+                </form>
+            </span>
             <?php 
             $rnd1 = rand(0,3);
             do {
@@ -64,7 +73,7 @@
                     break;
             }
         ?>
-            <a href="<?= $link1 ?>"><img src="<?= $img1 ?>" style="float:right;width: 40%;height: 100%;"; alt=""></a>  
-            <a href="<?= $link2 ?>"><img src="<?= $img2 ?>" style="float:right;padding-right:15px;width: 40%;height: 100%;"; alt=""> </a>     
+            <a href="<?= $link1 ?>"><img src="<?= $img1 ?>" style="float:right;width: 20%;height: auto;"; alt=""></a>  
+            <a href="<?= $link2 ?>"><img src="<?= $img2 ?>" style="float:right;margin-right:10px;width: 20%;height:auto"; alt=""> </a>     
             <span style="float:right;padding-right:15px;">скачать <a href="index.php?r=site%2Fprice" style="color:#996633"><u>price</u></a></span>
         </div>

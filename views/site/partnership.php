@@ -4,11 +4,11 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="site-index">
-   <div class="jumbotron">
+  <div class="jumbotron">
    	<div class="left-half">
-<div class="left-side-half-header">
-	ПАРТНЕРСТВО
-</div>
+    <div class="left-side-half-header">
+    	ПАРТНЕРСТВО
+    </div>
 	<div class="left-side-half-text">
 		<p><b>GEKKOSTONE</b> предлагает Вам стать партнером компании. Приглашаем индиви-
 дуальных предпринимателей, юридических и частных лиц заключить с нами Договор 
@@ -157,10 +157,15 @@ use yii\widgets\ActiveForm;
 			echo Html::submitButton("ОТПРАВИТЬ",['class'=>'btn btn-success']);
       echo '<p style="color:#996633;font-style: italic;">* - поля, обязательные для заполнения;<br> 
      проверьте указанную информацию перед отправкой!</p>';
+     
+     ActiveForm::end();
 		}
 	?>
   
 </div>
 </div>
+  <div class="block" style="display:inline-block;width:100%;height:100%;padding:0px 50px 0px 50px;">
+            <?php include './../views/layouts/randomfooter.php' ?>
+    </div>
 </div>
 </div>	

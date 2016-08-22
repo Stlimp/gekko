@@ -171,8 +171,9 @@ use yii\widgets\MaskedInput;
     'mask' => '+375(99)999-99-99',
 ]); 
 			            echo Html::submitButton('ОТПРАВИТЬ', ['class' => 'btn btn-success']);
-			           echo '<p style="color:#996633;font-style: italic;">* - поля, обязательные для заполнения;<br> 
+			           	echo '<p style="color:#996633;font-style: italic;">* - поля, обязательные для заполнения;<br> 
      проверьте указанную информацию перед отправкой!</p>';
+     					ActiveForm::end();
 					}        
 		   		 ?>
 			</p>
@@ -199,6 +200,9 @@ use yii\widgets\MaskedInput;
 		            </p>
 		        </div> -->
 	</div>
+	<div class="block" style="display:inline-block;width:100%;height:100%;padding:0px 50px 0px 50px;">
+						<?php include './../views/layouts/randomfooter.php' ?>
+		</div>
    </div>
 </div>
 

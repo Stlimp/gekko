@@ -19,13 +19,13 @@ use yii\widgets\ActiveForm;
 направить Ваше обращение в любой отдел компании.</p>
 			<p><img src="images/content/vacancy.jpg" align="right" width="100%"></p>
     	</div>
-    	<div class="left-side-half-text" style="text-align:left;font-family:Impact;">
-			<?php 
-				$input = array('ИСКУССТВО ДЕКОРАТИВНОГО <span style="color: #D0272E">К</span>АМНЯ', 'ТВОЕ ПРОСТРАНСТВО, ТВОЙ <span style="color: #D0272E">К</span>АМЕНЬ', 'БУДУЩЕЕ СТРОИТСЯ НА <span style="color: #D0272E">К</span>АМНЕ!', 'СОВЕРШЕННАЯ ФИЛОСОФИЯ <span style="color: #D0272E">К</span>АМНЯ', 'МЫ ДЕЛАЕМ <span style="color: #D0272E">К</span>АМЕНЬ НАТУРАЛЬНЫМ!');
-				$key = array_rand($input,1); 
-				echo "<h1>$input[$key]</h1>"; 
-			?>
-		</div>
+    	<!-- <div class="left-side-half-text" style="text-align:left;font-family:Impact;">
+    				<?php 
+    					$input = array('ИСКУССТВО ДЕКОРАТИВНОГО <span style="color: #D0272E">К</span>АМНЯ', 'ТВОЕ ПРОСТРАНСТВО, ТВОЙ <span style="color: #D0272E">К</span>АМЕНЬ', 'БУДУЩЕЕ СТРОИТСЯ НА <span style="color: #D0272E">К</span>АМНЕ!', 'СОВЕРШЕННАЯ ФИЛОСОФИЯ <span style="color: #D0272E">К</span>АМНЯ', 'МЫ ДЕЛАЕМ <span style="color: #D0272E">К</span>АМЕНЬ НАТУРАЛЬНЫМ!');
+    					$key = array_rand($input,1); 
+    					echo "<h1>$input[$key]</h1>"; 
+    				?>
+    			</div> -->
     </div>
     <div class="right-half">
     	<div class="right-side-half-header">
@@ -52,6 +52,7 @@ use yii\widgets\ActiveForm;
 					echo Html::submitButton("ОТПРАВИТЬ",['class'=>'btn btn-success']);
 					echo '<p style="color:#996633;font-style: italic;">* - поля, обязательные для заполнения;<br> 
      проверьте указанную информацию перед отправкой!</p>';
+     				ActiveForm::end();
 					}
 				?>
     		</p>
@@ -59,6 +60,9 @@ use yii\widgets\ActiveForm;
     	
 
     </div>
+    <div class="block" style="display:inline-block;width:100%;height:100%;padding:0px 50px 0px 50px;">
+						<?php include './../views/layouts/randomfooter.php' ?>
+		</div>
 	</div>
 </div>
 
