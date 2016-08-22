@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
+use yii\jui\Accordion;
 mb_internal_encoding("UTF-8");
 $this->registerJsFile('@web/js/faq-select.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 /* @var $this yii\web\View */

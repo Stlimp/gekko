@@ -82,16 +82,16 @@ class SiteController extends Controller
         $products = $model::find()->all();
         $product = array_rand($products,1);
 
-        $model=new ProductCategories();
-        $products_categories=$model::find()->select('product_category_name')->all();
+        /*$model=new ProductCategories();
+        $products_categories=$model::find()->select('product_category_name')->all();*/
 
         $model=new Photogallery();
         $photos=$model::find()->all();
 
        /* $pressModel = new Press();
         $pressLinks = $pressModel::find()->all();*/
-        $this->view->params['menuselected'] = '';
-
+        Yii::$app->view->params['menuselected'] = 'asd';
+  
         $this->layout='indexLayout';
         return $this->render('index',[
             'product'=>$products[$product],

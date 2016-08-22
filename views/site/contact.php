@@ -81,7 +81,6 @@ use yii\widgets\MaskedInput;
                                 'openOpacity' => true,
                                 'arrows' =>true,
                                 'title' => ['type' => 'inside'],
-                                'title' => $subcategory,
                                 'autoResize'=>true,
                             ]
                          ]);

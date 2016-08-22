@@ -1,5 +1,5 @@
 <?php 
-	$this->registerCssFile('/web/css/slickmap.css');
+	$this->registerCssFile('./css/slickmap.css');
  ?>
 
 

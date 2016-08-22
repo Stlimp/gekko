@@ -2,13 +2,13 @@
     use app\models\ProductCategories;
     use app\models\Product;
     use app\models\ImageCategories;
-    use app\models\ImageSubcategories;
+    use app\models\ImageSubcategories; 
  ?>
 
 <div id="w0-nav" class="navbar-fixed-top navbar">
             <a href="<?=Yii::$app->homeUrl?>">
                 <div class="logo">
-                    <img src="images/logo.png" alt="">
+                    <img src="./images/logo.png" alt="">
                 </div>
             </a>
 
@@ -45,7 +45,7 @@
             
             <ul id="nav" class="nav2">
                 
-                <li class="menu-item <?php if ($this->params['menuselected'] == "index"){ echo "selectedmenu";}else{echo $menuselected;} ?>"><a href="#">О КОМПАНИИ</a> 
+                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "index")){ echo "selectedmenu";} ?>"><a href="#">О КОМПАНИИ</a> 
                         <ul> 
                             <li><a href="index.php?r=site%2Fcompany">GEKKOSTONE</a></li> 
                             <li><a href="index.php?r=site%2Fadvantages">ПРЕИМУЩЕСТВА</a></li>
@@ -56,7 +56,7 @@
                             <li><a href="index.php?r=site%2Fcontact">КОНТАКТЫ</a></li>    
                         </ul> 
                 </li>
-                <li class="menu-item <?php if ($this->params['menuselected'] == "products"){ echo "selectedmenu";} ?>" ><a href="#">ПРОДУКЦИЯ</a> 
+                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "products")){ echo "selectedmenu";} ?>" ><a href="#">ПРОДУКЦИЯ</a> 
                     <ul> 
                         <li><a href="index.php?r=product%2Findex">ВСЯ ПРОДУКЦИЯ</a></li> 
                          <?php 
@@ -84,7 +84,7 @@
                         <li><a href="#">СОПУТСТВУЮЩИЕ ТОВАРЫ</a></li>
                     </ul> 
                 </li>
-                <li class="menu-item <?php if ($this->params['menuselected'] == "photogallery") { echo "selectedmenu";} ?>"><a href="#">ФОТОГАЛЕРЕЯ</a> 
+                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "photogallery")) { echo "selectedmenu";} ?>"><a href="#">ФОТОГАЛЕРЕЯ</a> 
                     <ul> 
                         <?php 
                             $model=new ImageCategories();
@@ -109,7 +109,7 @@
                         <li><a href="index.php?r=beforeandafteralbum%2Findex">ДО И ПОСЛЕ</a></li> 
                     </ul> 
                 </li>
-                <li class="menu-item <?php if ($this->params['menuselected'] == "info") { echo "selectedmenu";} ?>"><a href="#">ИНФОРМАЦИЯ</a> 
+                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "info")) { echo "selectedmenu";} ?>"><a href="#">ИНФОРМАЦИЯ</a> 
                     <ul> 
                         <li><a href="index.php?r=site%2Frocklaying">УКЛАДКА КАМНЯ</a></li> 
                         <li><a href="index.php?r=faq%2Findex">ВОПРОС - ОТВЕТ</a></li> 
@@ -121,8 +121,8 @@
                         <li><a href="index.php?r=product%2F3ds">ТЕКСТУРЫ КАМНЯ<span style ="color:#4D4D4D;background-color:white;border-radius: 3px 0px 3px 0px;float:left">3DS</span></a></li> 
                     </ul> 
                 </li> 
-                <li class="menu-item <?php if ($this->params['menuselected'] == "stores") { echo "selectedmenu";} ?>"><a href="index.php?r=stores%2Findex">ГДЕ КУПИТЬ</a></li> 
-                <li class="menu-item <?php if ($this->params['menuselected'] == "services") { echo "selectedmenu";} ?>"><a href="#">УСЛУГИ</a> 
+                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "stores")) { echo "selectedmenu";} ?>"><a href="index.php?r=stores%2Findex">ГДЕ КУПИТЬ</a></li> 
+                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "services")) { echo "selectedmenu";} ?>"><a href="#">УСЛУГИ</a> 
                     <ul> 
                             <li><a href="index.php?r=site%2Fdesign">ДИЗАЙН-ПРОЕКТ</a></li> 
                             <li><a href="index.php?r=site%2Fselection">ПОДБОР КАМНЯ</a></li>

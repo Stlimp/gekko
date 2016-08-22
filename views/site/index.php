@@ -132,11 +132,11 @@ $this->registerJsFile('@web/js/slide-up-down.js');
 
 
     .test{
-        background-image: url(../web/images/content/test_background.png);
+        background-image: url(./images/content/test_background.png);
         
     }
     .cart{
-        background-image: url(../web/images/content/cart_background.png);
+        background-image: url(./images/content/cart_background.png);
     }
 
 
