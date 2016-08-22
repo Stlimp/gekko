@@ -33,6 +33,7 @@ class ProductController extends Controller
      */
     public function actionIndex()
     {
+        $this->view->params['menuselected'] = 'products';
         $searchModel = new ProductSearch();
         //$dataProvider = $searchModel->search(['ProductsSearch'=>['product_category_name'=>'Кирпич тонкий']]);
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
@@ -59,6 +60,7 @@ class ProductController extends Controller
          */
         public function action3ds()
         {
+            $this->view->params['menuselected'] = 'info';
             $searchModel = new ProductSearch();
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 

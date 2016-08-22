@@ -49,6 +49,7 @@ class NewsController extends Controller
      */
     public function actionIndex()
     {
+        $this->view->params['menuselected'] = 'index';
         $searchModel = new NewsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider->setSort([
@@ -86,7 +87,8 @@ class NewsController extends Controller
      * @return mixed
      */
     public function actionView($id)
-    {        
+    {
+        $this->view->params['menuselected'] = 'index';        
         return $this->render('view', [
             'model' => $this->findModel($id),
         ]);

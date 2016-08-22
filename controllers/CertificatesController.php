@@ -34,6 +34,7 @@ class CertificatesController extends Controller
      */
     public function actionIndex()
     {
+        $this->view->params['menuselected'] = 'info';
         $dataProvider = new ActiveDataProvider([
             'query' => Certificates::find(),
         ]);

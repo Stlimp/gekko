@@ -90,6 +90,7 @@ class SiteController extends Controller
 
        /* $pressModel = new Press();
         $pressLinks = $pressModel::find()->all();*/
+        $this->view->params['menuselected'] = '';
 
         $this->layout='indexLayout';
         return $this->render('index',[
@@ -124,6 +125,7 @@ class SiteController extends Controller
 
     public function actionContact()
     {
+        $this->view->params['menuselected'] = 'index';
         $model = new ContactsForm();
         if ($model->load(Yii::$app->request->post())&&$model->validate() ) {
             Yii::$app->session->setFlash('contactFormSubmitted');
@@ -148,16 +150,18 @@ class SiteController extends Controller
 
     public function actionCompany()
     {
+        $this->view->params['menuselected'] = 'index';
         return $this->render('company');
     }
 
     public function actionAdvantages()
     {
+        $this->view->params['menuselected'] = 'index';
         return $this->render('advantages');
     }
     public function actionCart()
     {
-
+        $this->view->params['menuselected'] = '';
         $cartItems = \Yii::$app->cart->getPositions();
         $this->layout='twoFootersLayout';
         return $this->render('cart',['cartItems'=>$cartItems]);
@@ -165,6 +169,7 @@ class SiteController extends Controller
 
     public function actionFeedback()
     {
+        $this->view->params['menuselected'] = 'index';
         $this->layout='main';
          $model=new FeedbackForm;
 
@@ -190,18 +195,22 @@ class SiteController extends Controller
 
     public function actionWarranty()
     {
+        $this->view->params['menuselected'] = 'info';
         return $this->render('warranty');
     }
     public function actionWarning()
     {
+        $this->view->params['menuselected'] = 'info';
         return $this->render('warning');
     }
     public function actionPublicoffer()
     {
+        $this->view->params['menuselected'] = 'info';
         return $this->render('publicoffer');
     }
     public function actionVacancy()
     {
+        $this->view->params['menuselected'] = 'index';
         $model=new VacancyForm;
 
         if($model->load(Yii::$app->request->post()) &&$model->validate())
@@ -242,6 +251,7 @@ class SiteController extends Controller
 
     public function actionPartnership()
     {
+        $this->view->params['menuselected'] = 'index';
         $model=new PartnershipForm;
 
         if($model->load(Yii::$app->request->post()) &&$model->validate())
@@ -271,10 +281,12 @@ class SiteController extends Controller
 
     public function actionPrice()
     {
+        $this->view->params['menuselected'] = 'info';
         return $this->render('price');
     }
     public function actionRocklaying()
     {
+        $this->view->params['menuselected'] = 'info';
         $dataProvider = new ActiveDataProvider([
             'query' => Videogallery::find(),
             'pagination'=>[
@@ -288,23 +300,28 @@ class SiteController extends Controller
 
     public function actionDesign()
     {
+        $this->view->params['menuselected'] = 'services';
         return $this->render('design');
     }
     public function actionSelection()
     {
+        $this->view->params['menuselected'] = 'services';
         return $this->render('selection');
     }
     public function actionDelivery()
     {
+        $this->view->params['menuselected'] = 'services';
         return $this->render('delivery');
     }
     public function actionFacing()
     {
+        $this->view->params['menuselected'] = 'services';
         return $this->render('facing');
     }
 
     public function actionSitemap()
     {
+        $this->view->params['menuselected'] = '';
         return $this->render('sitemap');
     }
 

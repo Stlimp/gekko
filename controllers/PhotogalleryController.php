@@ -35,6 +35,7 @@ class PhotogalleryController extends Controller
      */
     public function actionIndex()
     {
+        $this->view->params['menuselected'] = 'photogallery';
         $searchModel = new PhotogallerySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $photogallery = $dataProvider->getModels();
@@ -45,7 +46,7 @@ class PhotogalleryController extends Controller
         
         $params=Yii::$app->request->queryParams;
         /*$params=Yii::$app->request->getQueryParam('photo_category');*/
-
+        $this->view->params['menuselected'] = 'photogallery';
 
         return $this->render('index', [
             'searchModel' => $searchModel,

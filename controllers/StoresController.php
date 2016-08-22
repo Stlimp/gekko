@@ -33,6 +33,7 @@ class StoresController extends Controller
      */
     public function actionIndex()
     {
+        $this->view->params['menuselected'] = 'stores';
         $dataProvider = new ActiveDataProvider([
             'query' => Stores::find(),
         ]);

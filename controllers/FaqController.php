@@ -34,6 +34,7 @@ class FaqController extends Controller
      */
     public function actionIndex()
     {
+        $this->view->params['menuselected'] = 'info';
         $id=Faq::find()->select('id')->distinct()->all();
         $chapter = Faq::find()->select('chapter')->distinct()->all();
         $faq = Faq::find()->all();

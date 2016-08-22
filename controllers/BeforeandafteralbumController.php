@@ -34,6 +34,7 @@ class BeforeandafteralbumController extends Controller
      */
     public function actionIndex()
     {
+        $this->view->params['menuselected'] = 'photogallery';
         $dataProvider = new ActiveDataProvider([
             'query' => BeforeandafterAlbum::find(),
         ]);
@@ -56,6 +57,7 @@ class BeforeandafteralbumController extends Controller
      */
     public function actionView($id)
     {
+        $this->view->params['menuselected'] = 'photogallery';
         if (!\Yii::$app->user->can('view')) {
             throw new ForbiddenHttpException('Access denied');
         }

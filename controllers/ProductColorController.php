@@ -33,6 +33,7 @@ class ProductcolorController extends Controller
 
     public function action3ds()
         {
+            $this->view->params['menuselected'] = 'info';
             $searchModel = new ProductColorSearch();
             $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
@@ -58,6 +59,7 @@ class ProductcolorController extends Controller
      */
     public function actionIndex()
     {
+        $this->view->params['menuselected'] = 'products';
         $searchModel = new ProductColorSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $colors=$dataProvider->getModels();
