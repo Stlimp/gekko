@@ -112,7 +112,21 @@ $this->registerJsFile('@web/js/slide-up-down.js');
         background:rgba(0,0,0,0.3);
     }
     .center_split:hover:after    {
-        opacity:1;
+        opacity:0.5;
+    }
+
+    .quarter:after{
+        position:absolute;
+        opacity:0;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        content:'\A';
+        width:100%; height:100%;
+        top:0; left:0;
+        background:rgba(0,0,0,0.3);
+    }
+    .quarter:hover:after    {
+        opacity:0.5;
     }
 
 
@@ -183,28 +197,25 @@ $this->registerJsFile('@web/js/slide-up-down.js');
             </a>
         </div>
         <div class="center_third">
-            <div class="center_split">
-               <a href="#">
-               <div class="center_split_text"><p>
-                   КОЛЛЕКЦИЯ <b>GEKKOSTONE</b>
-               </p>
-               <p>Полная коллекция декоративного облицовочного камня производства компании 
-                        GEKKOSTONE. В коллекции представлен 
-                        облицовочный камень и декоративный 
-                        кирпич разнообразных фактур и расцветок.
-                    </p>
-                </div>
-                <div class="center_split_vertically">
-                    <img src="images/content/a.png" alt="">
-                </div>
+            <a href="index.php?r=product%2Findex" class="center_split">
+               
+                   <div class="center_split_text"><p>
+                       КОЛЛЕКЦИЯ <b>GEKKOSTONE</b>
+                   </p>
+                   <p>Полная коллекция декоративного облицовочного камня производства компании 
+                            GEKKOSTONE. В коллекции представлен 
+                            облицовочный камень и декоративный 
+                            кирпич разнообразных фактур и расцветок.
+                        </p>
+                    </div>
+                    <div class="center_split_vertically">
+                        <img src="images/content/a.png" alt="">
+                    </div>
                     <!-- <div class="center_split_vertically">
                        <p>ПОДБОР КАМНЯ</p>
                     </div> -->
-                </a>
-            </div>
-            
-            <div class="center_split">
-                <a href="#">  
+            </a>
+            <a href="index.php?r=site%2Fselection" class="center_split">
                     <div class="center_split_text"><p><b>ПОДБОР ФАКТУРЫ И ЦВЕТА</b></p>
                         <p>При помощи конфигуратора  «ПОДБОР 
                             КАМНЯ»  Вы сможете  самостоятельно 
@@ -216,21 +227,19 @@ $this->registerJsFile('@web/js/slide-up-down.js');
                     <div class="center_split_vertically">
                         <img src="images/content/b.png" alt="">
                     </div>
-                </a>  
-            </div>
-                <div class="center_split" style="margin-bottom:0px">
-                    <a href="#">
-                       <div class="center_split_text"><p><b>ДО и ПОСЛЕ</b></p>
+            </a>
+            <a href="index.php?r=beforeandafteralbum%2Findex" class="center_split">
+                    <div class="center_split_text"><p><b>ДО и ПОСЛЕ</b></p>
                         <p>В фотогалерее представлены фотографии 
                             интерьеров и экстерьеров ДО и ПОСЛЕ 
                             проведения облицовочных работ по 
                             укладке декоративного камня. </p>
-                        </div>
-                        <div class="center_split_vertically">
-                            <img src="images/content/c.png" alt="">
-                        </div>
                     </div>
-                </a>
+                    <div class="center_split_vertically">
+                        <img src="images/content/c.png" alt="">
+                    </div>
+            </a>
+                    
         </div>
         
         <div class="slider">

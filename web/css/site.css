@@ -369,6 +369,10 @@ body {
     *display:inline; /* ie7 fix */
     float: none; /* this is the part that makes it work */
     margin:10px;
+    width:23%;
+    background-color: #FFFFFF;
+    border: 2px solid #CCCCCC;
+    height: 200px;
 }
  
 .product a{
@@ -377,7 +381,7 @@ body {
 .product a img {
 
     #border: 2px solid #eed3d7;
-    border-radius: 10px 0  10px;
+    #border-radius: 10px 0  10px;
     transition: all .1s ease-in-out;
 }
 
@@ -472,7 +476,7 @@ body {
 }
 .ablock>span{
   display: inline-block; 
-   width:16.6%;
+   width:16.5%;
    text-align: center;
 }
 .iconblock1{
@@ -1475,4 +1479,8 @@ max-height:100%;
 }
 .unselected{
   color:transparent;
+}
+
+.lSAction>a{
+  z-index:5 !important;
 }
