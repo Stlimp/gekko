@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
@@ -26,7 +26,7 @@ IndexAsset::register($this);
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Keywords" content="декоративный камень, декоративный кирпич, античный кирпич, состаренный кирпич, декоративная плитка, искусственный камень, искусственный декоративный камень">
-    <meta name="Description" content="Компания Gekkostone - производитель декоративного камня высочайшего качества. Оптовые поставки искусственного декоративного камня во все страны мира. Скалистая гора, античный кирпич, состаренный кирпич, дамские пальчики - идеальные фактуры для внутренней и внешней отделки зданий">
+    <meta name="Description" content="Компания GEKKOSTONE - производитель декоративного камня премиум-качества. Скалистая гора, античный кирпич, состаренный кирпич, пальчики - идеальные фактуры для внутренней и внешней отделки зданий">
     <link rel="shortcut icon" href="<?php echo Yii::$app->request->baseUrl; ?>/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/social-likes_classic.css">
 
@@ -60,7 +60,7 @@ IndexAsset::register($this);
             ]
         ]);
         ?>
-            <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 100px;";> <a href="#downer"><div class="button-down"></div></a></div>
+            <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 100px;";><a href="#downer"><div class="button-down"></div></a></div>
             <div id="downer"></div>
             <?= $content ?>
         </div> 

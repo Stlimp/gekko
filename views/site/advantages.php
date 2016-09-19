@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
@@ -22,7 +22,7 @@ $this->title = 'Gekkostone';
 				</div>
 				<div class="right-half">
 		            <div class="right-side-half-text" style="float:left">
-		                <p style="font-size:15px;">ПОЛНЫЙ ПРОИЗВОДСТВЕННЫЙ КОНТРОЛЬ</p>
+		                <p style="font-size:18px;">ПОЛНЫЙ ПРОИЗВОДСТВЕННЫЙ КОНТРОЛЬ</p>
 		                <p style="text-align:justify">
 		                	Наше предприятие является предприятием полного производственного 
 		цикла. Начиная от моделирования прототипов декоративного камня, 
@@ -40,7 +40,7 @@ $this->title = 'Gekkostone';
 			<div class="block" style="display:inline-block;width:100%;height:auto;">
 				<div class="left-half">
 					<div class="left-side-half-text" style="float:left">
-					<p style="font-size:15px;">ИДЕАЛЬНАЯ ДЕТАЛИЗАЦИЯ ФАКТУРЫ</p>
+					<p style="font-size:18px;">ИДЕАЛЬНАЯ ДЕТАЛИЗАЦИЯ ФАКТУРЫ</p>
 					<p style="text-align:justify">
 						Все без исключения прототипы декоративного камня GEKKOSTONE изготавливаются на основе натурального природного камня самых разнообразных пород и фактур. Значительное 
 						внимание на этапе моделирования придается тщательному копированию микрорельефа 
@@ -70,7 +70,7 @@ $this->title = 'Gekkostone';
 				</div>
 				<div class="right-half">
 					<div class="right-side-half-text" style="float:left">
-						<p style="font-size:15px;">ОСОБАЯ МЕТОДИКА ОКРАШИВАНИЯ В МАССЕ </p>
+						<p style="font-size:18px;">ОСОБАЯ МЕТОДИКА ОКРАШИВАНИЯ В МАССЕ </p>
 						<p style="text-align:justify">
 							Нашим предприятием разработана специальная технология окрашивания камня в массе, позволяющая в условиях производства моделировать 
 							естественные природные процессы пигментации натуральной породы. 
@@ -91,7 +91,7 @@ $this->title = 'Gekkostone';
 			<div class="block" style="display:inline-block;width:100%;height:auto;">
 				<div class="left-half">
 					<div class="left-side-half-text" style="float:left">
-						<p style="font-size:15px;">ОКРАСЫ «ПОД НАТУРАЛЬНЫЙ КАМЕНЬ»</p>
+						<p style="font-size:18px;">ОКРАСЫ «ПОД НАТУРАЛЬНЫЙ КАМЕНЬ»</p>
 						<p style="text-align:justify">
 							В линейке расцветок декоративного камня GEKKOSTONE  Вы не найдете перенасыщенных 
 							или сильноконтрастных цветовых тонов, которые не встретишь также в природе у нату-
@@ -131,7 +131,7 @@ $this->title = 'Gekkostone';
 				</div>
 				<div class="right-half">
 					<div class="right-side-half-text" style="float:left">
-						<p style="font-size:15px;">ПРИБОРНЫЙ КОНТРОЛЬ ЦВЕТА </p>
+						<p style="font-size:18px;">ПРИБОРНЫЙ КОНТРОЛЬ ЦВЕТА </p>
 						<p style="text-align:justify">
 							Для контроля окрасов декоративного камня используется прецизионный 
 							спектрофотометр <b>X-Rite SP<span class="numbers">62</span></b> Вычисление требуемого цвета производится в расчетном программном комплексе с большой степенью точности. 
@@ -151,7 +151,7 @@ $this->title = 'Gekkostone';
 			<div class="block" style="display:inline-block;width:100%;height:auto;">
 				<div class="left-half">
 					<div class="left-side-half-text" style="float:left">
-						<p style="font-size:15px;">ТОЛЬКО НА ОСНОВЕ БЕЛОГО ЦЕМЕНТА!</p>
+						<p style="font-size:18px;">ТОЛЬКО НА ОСНОВЕ БЕЛОГО ЦЕМЕНТА!</p>
 						<p style="text-align:justify">
 							Декоративный камень GEKKOSTONE изготавливается с применением только натуральных 
 							сырьевых компонентов и красителей, что позволяет заявить о его 100% натуральности и 

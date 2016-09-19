@@ -31,48 +31,7 @@
                       </div>
                 </form>
             </span>
-            <?php 
-            $rnd1 = rand(0,3);
-            do {
-                $rnd2 = rand(0,3);
-            } while ($rnd1 == $rnd2);
-            switch ($rnd1) {
-                case 0:
-                    $link1 ="index.php?r=site%2Fcart";
-                    $img1 ="images/content/gallery.png";
-                    break;
-                case 1:
-                    $link1 ="index.php?r=beforeandafteralbum%2Findex";
-                    $img1 ="images/content/beforeandafter.png";
-                    break;
-                case 2:
-                    $link1 ="index.php?r=site%2Fselection";
-                    $img1 ="images/content/selection.png";
-                    break;
-                case 3:
-                    $link1 ="index.php?r=product%2Findex";
-                    $img1 ="images/content/collection.png";
-                    break;
-            }
-            switch ($rnd2) {
-                case 0:
-                    $link2 ="index.php?r=site%2Fcart";
-                    $img2 ="images/content/gallery.png";
-                    break;
-                case 1:
-                    $link2 ="index.php?r=beforeandafteralbum%2Findex";
-                    $img2 ="images/content/beforeandafter.png";
-                    break;
-                case 2:
-                    $link2 ="index.php?r=site%2Fselection";
-                    $img2 ="images/content/selection.png";
-                    break;
-                case 3:
-                    $link2 ="index.php?r=product%2Findex";
-                    $img2 ="images/content/collection.png";
-                    break;
-            }
-        ?>
+            
             <a href="<?= $link1 ?>"><img src="<?= $img1 ?>" style="float:right;width: 20%;height: auto;"; alt=""></a>  
             <a href="<?= $link2 ?>"><img src="<?= $img2 ?>" style="float:right;margin-right:10px;width: 20%;height:auto"; alt=""> </a>     
             <span style="float:right;padding-right:15px;">скачать <a href="index.php?r=site%2Fprice" style="color:#996633"><u>price</u></a></span>
