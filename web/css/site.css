@@ -1,4 +1,4 @@
-html,
+﻿html,
 body {
     height: 100%;
     font-family: Corbel;
@@ -552,7 +552,7 @@ body {
 }
 .warning{
   font-family:"Century Gothic";
-  color:#D0272E;
+  color:#CC9933;
 }
 
 .regular_product{
@@ -1494,9 +1494,10 @@ max-height:100%;
 }
 
 .randomfooter form{
-  position: absolute;
+  /* position: absolute;
   bottom: 0;
-  left: 0;
+  left: 0; */
+  float: right;
 }
 
 .news-index{

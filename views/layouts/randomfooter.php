@@ -1,9 +1,9 @@
 <div class="iconblock2" style="display:inline-block;width:15%;float:left;text-align:left;">
-            <span><a href="#"><img src="images/icons/ok.png" alt="" onmouseover="this.src='images/icons/okhover.png';" onmouseout="this.src='images/icons/ok.png';"></a></span>
-            <span><a href="#"><img src="images/icons/vk.png" alt="" onmouseover="this.src='images/icons/vkhover.png';" onmouseout="this.src='images/icons/vk.png';"></a></span>
-            <span><a href="#"><img src="images/icons/facebook.png" alt="" onmouseover="this.src='images/icons/facebookhover.png';" onmouseout="this.src='images/icons/facebook.png';"></a></span>
-            <span><a href="#"><img src="images/icons/twitter.png" alt="" onmouseover="this.src='images/icons/twitterhover.png';" onmouseout="this.src='images/icons/twitter.png';"></a></span>
-            <span><a href="#"><img src="images/icons/youtube.png" alt="" onmouseover="this.src='images/icons/youtubehover.png';" onmouseout="this.src='images/icons/youtube.png';"></a></span>   
+            <span><a href="https://vk.com/away.php?utf=1&to=https%3A%2F%2Fok.ru%2Fgroup%2F54147799711857" target="_blank"><img src="images/icons/ok.png" alt="" onmouseover="this.src='images/icons/okhover.png';" onmouseout="this.src='images/icons/ok.png';"></a></span>
+                                <span><a href="http://vk.com/public77540551" target="_blank"><img src="images/icons/vk.png" alt="" onmouseover="this.src='images/icons/vkhover.png';" onmouseout="this.src='images/icons/vk.png';"></a></span>
+                                <span><a href="https://www.facebook.com/gekkostone" target="_blank"><img src="images/icons/facebook.png" alt="" onmouseover="this.src='images/icons/facebookhover.png';" onmouseout="this.src='images/icons/facebook.png';"></a></span>
+                                <span><a href="https://www.instagram.com/gekkostone/" target="_blank"><img src="images/icons/instagram.png" alt="" onmouseover="this.src='images/icons/instagramhover.png';" onmouseout="this.src='images/icons/twitter.png';"></a></span>
+                                <span><a href="https://www.youtube.com/channel/UC1DZsDgI5K9jGuUAzYDjUnQ" target="_blank"><img src="images/icons/youtube.png" alt="" onmouseover="this.src='images/icons/youtubehover.png';" onmouseout="this.src='images/icons/youtube.png';"></a></span>
         </div>
         <div style="width:85%;float:right"> 
             <hr style="margin-top: 5px;">
@@ -32,7 +32,6 @@
                 </form>
             </span>
             
-            <a href="<?= $link1 ?>"><img src="<?= $img1 ?>" style="float:right;width: 20%;height: auto;"; alt=""></a>  
-            <a href="<?= $link2 ?>"><img src="<?= $img2 ?>" style="float:right;margin-right:10px;width: 20%;height:auto"; alt=""> </a>     
-            <span style="float:right;padding-right:15px;">скачать <a href="index.php?r=site%2Fprice" style="color:#996633"><u>price</u></a></span>
+            
+            <span style="float:left;padding-right:15px;">скачать <a href="index.php?r=site%2Fprice" style="color:#996633"><u>price</u></a></span>
         </div>

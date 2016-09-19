@@ -44,7 +44,7 @@
   Bootstrap Carousel Fade Transition (for Bootstrap 3.3.x)
   CSS from:       http://codepen.io/transportedman/pen/NPWRGq
   and:            http://stackoverflow.com/questions/18548731/bootstrap-3-carousel-fading-to-new-slide-instead-of-sliding-to-new-slide
-  Inspired from:  http://codepen.io/Rowno/pen/Afykb 
+  Inspired from:  http://codepen.io/Rowno/pen/Afykb
 */
 .carousel-fade .carousel-inner .item {
   opacity: 0;
@@ -126,7 +126,7 @@ body,
 }
 .item{
   min-height: 100% !important;
-  
+
 }
 
 .wrap>.container{
@@ -137,9 +137,9 @@ body,
 
 
 
-.carousel-indicators .active {height:10px;width:10px;border-radius: 2px 0px 2px 0px;background-color: #D02729;margin:10px;}
-.carousel-indicators li {height:10px;width:10px;border-radius: 2px 0px 2px 0px;
-margin:10px;}
+.carousel-indicators .active {height:12px;width:12px;border-radius: 2px 0px 2px 0px;background-color: #CC9933;margin:10px;}
+.carousel-indicators li {height:12px;width:12px;border-radius: 2px 0px 2px 0px;
+margin:10px; border: 2px solid #fff;}
 
 .carousel-indicators{
   left:10%;
@@ -257,7 +257,7 @@ margin:10px;}
     position:absolute;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
 }
 .left_product_name {
     font-family:Impact;
@@ -290,7 +290,7 @@ margin:10px;}
 .bottom_div1 a{
   display: table-cell;
   color:#3D3931;
-  text-decoration: none; 
+  text-decoration: none;
   width:25%;
   padding-right: 10px;
 
@@ -323,7 +323,7 @@ margin:10px;}
   text-align: left;
 }
 .quarter a{
-  
+
 }
 .quarter img{
   width: 100%;
@@ -349,7 +349,7 @@ margin:10px;}
     background-image: url(../images/up.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
     display:inline-block;
 }
 .button-up:hover{
@@ -358,7 +358,7 @@ margin:10px;}
     background-image: url(../images/up-hover.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
     display:inline-block;
 }
   .button-down{
@@ -368,7 +368,7 @@ margin:10px;}
     background-size: contain;
     display:inline-block;
     background-repeat: no-repeat;
-    background-position: center; 
+    background-position: center;
 }
 .button-down:hover{
     width:50px;
