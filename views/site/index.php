@@ -132,7 +132,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
 
 
     .test{
-        background-image: url(./images/content/test_background.png);
+        background-image: url(./images/background/test.jpg);
         
     }
     .cart{
@@ -170,8 +170,8 @@ $this->registerJsFile('@web/js/slide-up-down.js');
             <a href="google.com">
                 <div class="left_third" style="padding:0;">
                     <p style="font-weight:900 !important;position: absolute;top:75%;transform: translateY(-50%);"><?= mb_strtoupper($product->product_product_name) ?></p>
-                    <p style="font-size:25px;font-weight:100 !important;position: absolute;top:10%;transform: translateY(-50%);">Декоративный камень</p>
-                    <img src="http://www.eldoradostone.com/wp-content/uploads/2015/10/brick-thumb.jpg">                        
+                    <p style="font-size:18px;font-weight:100 !important;position: absolute;top:10%;transform: translateY(-50%);"><b>ДЕКОРАТИВНЫЙ КАМЕНЬ</b></p>
+                       <img src="images/modules/rockfaktura.jpg">                        
                 </div>
             </a>
            <!--     <span class="<?= $font_class?>" >
@@ -183,15 +183,15 @@ $this->registerJsFile('@web/js/slide-up-down.js');
         <div class="right_third">
             <a href="#">
                 <div class="right_split test" style="top:0">
-                    <span style="font-weight:900 !important;position: absolute;top:30%;transform: translateY(-50%);font-family:Corbel;" class="test_text">НАТУРАЛЬНЫЙ ИЛИ ИСКУСТВЕННЫЙ?</span>
-                    <p style="position: absolute;top:75%;transform: translateY(-50%); font-family:Corbel"><b>ТЕСТ.</b> Попробуй отыскать натуральные камни среди искусственных камней GEKKOSTONE!</p>
+                    <span style="font-weight:900 !important;position: absolute;top:34%;transform: translateY(-50%);font-family:Corbel;" class="test_text">НАТУРАЛЬНЫЙ ИЛИ ИСКУССТВЕННЫЙ?</span>
+                    <p style="position: absolute;top:80%;transform: translateY(-50%); font-family:Corbel"><b>ТЕСТ.</b> Попробуй отыскать натуральные камни среди искусственных камней GEKKOSTONE!</p>
                 </div>
             </a>
             <a href="index.php?r=site%2Fcart">
                 <div class="right_split cart" style="bottom:0">
                     <p style="position: absolute;top:30%;transform: translateY(-50%);font-family:Corbel">Собери собственную галерею из наиболее понравившихся фактур 
     и расцветок!</p>
-                    <span class="test_text" style="position: absolute;top:50%;transform: translateY(-50%); font-size:35px; font-family:Corbel;">МОЯ ГАЛЕРЕЯ</span>
+                    <span class="test_text" style="position: absolute;top:50%;transform: translateY(-50%); font-size:35px; font-family:Corbel;"><b>МОЯ ГАЛЕРЕЯ</b></span>
                     <p style="position: absolute;top:75%;transform: translateY(-50%); font-family:Corbel">Расчет необходимого количества камня, его веса и стоимости!</p>
                 </div>
             </a>
@@ -209,7 +209,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
                         </p>
                     </div>
                     <div class="center_split_vertically">
-                        <img src="images/content/a.png" alt="">
+                        <img src="images/background/faktury.jpg" alt="">
                     </div>
                     <!-- <div class="center_split_vertically">
                        <p>ПОДБОР КАМНЯ</p>
@@ -225,7 +225,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
                     </div>
                     
                     <div class="center_split_vertically">
-                        <img src="images/content/b.png" alt="">
+                        <img src="images/background/choice.jpg" alt="">
                     </div>
             </a>
             <a href="index.php?r=beforeandafteralbum%2Findex" class="center_split">
@@ -236,7 +236,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
                             укладке декоративного камня. </p>
                     </div>
                     <div class="center_split_vertically">
-                        <img src="images/content/c.png" alt="">
+                        <img src="images/background/before_after.jpg" alt="">
                     </div>
             </a>
                     
@@ -255,42 +255,38 @@ $this->registerJsFile('@web/js/slide-up-down.js');
         <div class="bottom_div1">
             <a href="index.php?r=site%2Fadvantages">
                 <div class="quarter">
-                        <div class="header">ОПТИМАЛЬНЫЙ ВЫБОР</div>
-                        <div class="text">Преимущества декоративно-облицовочного камня GEKKOSTONE</div>
-                        <img src="images/content/test_background.png" alt="">
+                        <div class="header">ОПТИМАЛЬНЫЙ ВЫБОР КАМНЯ</div>
+                        <div class="text">Преимущества и недостатки декоративного облицовочного камня, представленного на рынке .</div>
+                        <img src="images/background/gekko.jpg" alt="">
                 </div>
             </a>
             <a href="index.php?r=faq%2Findex">
                 <div class="quarter">
-                        <div class="header">FAQ: ВОПРОС-ОТВЕТ</div>
+                        <div class="header">ВОПРОС / ОТВЕТ</div>
                         <div class="text">Ответы на наиболее часто задаваемые
-                                        вопросы по подбору, монтажу и после-
-                                        дующей эксплуатации декоративного
-                                        облицовочного камня.
+                                        вопросы по подбору, монтажу и последующей эксплуатации декоративного облицовочного камня.
                         </div>
-                        <img src="images/content/test_background.png" alt="">  
+                        <img src="images/background/faq.jpg" alt="">  
                 </div>
             </a>
             <a href="index.php?r=videogallery%2Findex">
                 <div class="quarter">
-                    <div class="header">ВИДЕОГАЛЕРЕЯ</div>
-                    <div class="text">Видеоролики по монтажу и расшивке 
-                                    швов декоративного облицовочного 
-                                    камня GEKKOSTONE.
+                    <div class="header">ТЕХНИЧЕСКИЕ ДАННЫЕ</div>
+                    <div class="text">Технические и эксплуатационные характеристики декоративного камня GEKKOSTONE.
                     </div>
-                    <img src="images/content/test_background.png" alt="">
+                    <img src="images/background/technical.jpg" alt="">
             </div>
             </a>
             <a href="index.php?r=site%2Frocklaying">
             <div class="quarter">
                 
-                    <div class="header">ИНСТРУКЦИЯ ПО УКЛАДКЕ КАМНЯ И РАСШИВКЕ ШВОВ</div>
+                    <div class="header">ИНСТРУКЦИИ ПО УКЛАДКЕ КАМНЯ И РАСШИВКЕ ШВОВ</div>
                     <div class="text">Инструкции по монтажу декоративного 
                                     камня, расшивке швов, а также полезные 
                                     советы по успешной последующей 
-                                    эксплуатации.
+                                    эксплуатации. Видеоинструкции. 
                     </div>
-                    <img src="images/content/test_background.png" alt="">
+                    <img src="images/background/facing.jpg" alt="">
                 
             </div>
             </a>

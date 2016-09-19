@@ -69,7 +69,7 @@ class ProductcolorController extends Controller
         $modelProduct=new ProductSearch();
         $product_data=$modelProduct::findOne(['product_product_name'=>Yii::$app->request->queryParams['ProductColorSearch']['product_subcategory_name']]);
 
-
+        $id=5;
 
 
 
@@ -194,13 +194,12 @@ class ProductcolorController extends Controller
             $colors=$dataProvider->getModels();
 
                /*Product photos*/
-            $searchModelPhotos = new PhotogallerySearch();
-            $paramsPhotos[PhotogallerySearch]['photo_product']=Yii::$app->request->queryParams[ProductColorSearch]['product_subcategory_name'];
+/*            $searchModelPhotos = new PhotogallerySearch();
+
+            $paramsPhotos['PhotogallerySearch']['photo_product']=Yii::$app->request->queryParams['ProductColorSearch']['product_subcategory_name'];
             $dataProviderPhotos = $searchModelPhotos->search($paramsPhotos);
-
-
+*/
             return $this->redirect(Yii::$app->request->referrer);
-
 
 
            /* $this->layout='twoFootersLayout';
