@@ -40,7 +40,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                     <a id="link_to_3ds" href="<?= reset($colors)->product_3ds_link ?>" target="_blank" ><b><u>СКАЧАТЬ</u></b></a> «ТЕКСТУРУ» для 3DS
                 </div>
                 <div class="right_halfheader">
-                    <a id="add_to_cart" href="index.php?r=productcolor/add-to-cart&id=1"><b><u>ДОБАВИТЬ</u></b></a> расцветку в <b>«МОЮ ГАЛЕРЕЮ»</b>
+                    <a id="add_to_cart" href="index.php?r=productcolor/add-to-cart&id=<?= array_values($colors)[0]->product_color_id; ?>"><b><u>ДОБАВИТЬ</u></b></a> расцветку в <b>«МОЮ ГАЛЕРЕЮ»</b>
                 </div>
                 <div class="selected_product_color"><img id="selected_product_image" src="<?= reset($colors)->product_color_image ?>" alt=""></div>
                 <div class="left_halfheader">

@@ -1,4 +1,4 @@
-﻿html,
+﻿  html,
 body {
     height: 100%;
     font-family: Corbel;
@@ -373,6 +373,7 @@ body {
     background-color: #FFFFFF;
     border: 2px solid #CCCCCC;
     height: 200px;
+    overflow: hidden;
 }
  
 .product a{
@@ -511,6 +512,15 @@ body {
 }
 .iconblock1 img,.iconblock2 img{
   height:100%;
+}
+
+.iconblock2 img{
+  height:22px;
+  width: 22px;
+}
+.iconblock2 img:hover{
+  height:22px;
+  width: 22px;
 }
 
 

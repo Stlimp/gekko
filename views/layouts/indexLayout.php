@@ -16,6 +16,8 @@ mb_internal_encoding("UTF-8");
 $this->registerJsFile('@web/js/social-likes.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJsFile('@web/js/menu.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJsFile('@web/js/likes.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+$this->registerJsFile('@web/js/jquery.hoverIntent.minified.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
+
 IndexAsset::register($this);
 ?>
 <?php $this->beginPage() ?>

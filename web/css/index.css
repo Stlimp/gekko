@@ -107,6 +107,13 @@ body,
 
 }
 
+.carousel-inner > .item {
+    -webkit-transition: 0.9s ease-in-out left;
+    -moz-transition: 0.9s ease-in-out left;
+    -o-transition: 0.9s ease-in-out left;
+    transition: 0.9s ease-in-out left;
+}
+
 .carousel img {
 
 
@@ -376,4 +383,25 @@ margin:10px; border: 2px solid #fff;}
     background-image: url(../images/down-hover.png);
     background-size: contain;
     display:inline-block;
+}
+
+
+.carousel-fade .active.left {
+        left:0;
+        opacity:0;
+        -webkit-transition: opacity 1s; /*time < to $.carousel.interval setup */
+        -moz-transition: opacity 1s; 
+        -ms-transition: opacity1s; 
+        -o-transition: opacity 1s; 
+        transition: opacity  1s;
+        z-index:2;
+
+}
+
+.carousel-fade .next {
+
+    left:0;
+    opacity:1;
+    z-index:1;
+
 }

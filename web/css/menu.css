@@ -70,8 +70,17 @@ span.bullet{
     #border-right: 1px solid #FFFFFF;
     width:16.6%;
     z-index : 2;
+    
  
 } 
+
+
+#nav li:hover{ 
+    border: 1px solid rgba(221,221,221,1);
+    border-bottom: 3px solid rgba(204, 153, 51, 1);
+    border-radius: 10px 0px 0px 0px;
+ 
+}
  
 #nav li a{ 
     padding: 0px 0px 0px 8px; 
@@ -106,12 +115,7 @@ span.bullet{
     border-bottom: 3px solid #CC9933 !important;
 }
  
-#nav li:hover{ 
-    border: 1px solid #DDDDDD;
-    border-bottom: 3px solid #CC9933;
-    border-radius: 10px 0px 0px 0px;
- 
-}
+
 #nav>li>a{ 
     display: block; 
     font-size: 1em;
@@ -149,7 +153,7 @@ span.bullet{
 /*#nav ul li:last-child:hover {border-radius: 0px 0px 10px 0px;}*/
  
 #nav ul li:hover{border-radius: 0px 0px 0px 0px; text-shadow: 0px 0px 0 #000000;}
-#nav ul li:last-child:hover {border-radius: 0px 0px 10px 0px;}
+/* #nav ul li:last-child:hover {border-radius: 0px 0px 10px 0px;} */
 
 #nav ul li:last-child { border-bottom: none;} 
 #nav ul li:last-child a{ border-bottom: none;}
@@ -161,7 +165,7 @@ span.bullet{
     position: absolute; 
     top: 39px;
     left: -1px; 
-    border: 1px solid #DDDDDD;
+    #border: 1px solid #DDDDDD;
 } 
 
 
@@ -215,8 +219,8 @@ text-shadow: 0px 0px 0 #000000;
 #nav ul li:last-child{border-radius: 0px 0px 10px 0px;}
 #nav ul ul li:first-child {border-radius: 10px 0px 0px 0px;}
 
-#nav ul ul li:first-child:hover {border-radius: 10px 0px 0px 0px;}
-#nav ul ul li:last-child:hover {border-radius: 0px 0px 10px 0px;} 
+/* #nav ul ul li:first-child:hover {border-radius: 10px 0px 0px 0px;}
+#nav ul ul li:last-child:hover {border-radius: 0px 0px 10px 0px;}  */
 /* Fourth-level menus */ 
 #nav ul ul ul{ 
     top: 0px; 
