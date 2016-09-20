@@ -44,8 +44,6 @@ class ProductcolorController extends Controller
             //$tempmodel=new ProductCategories();
            // $categories=$tempmodel::find()->select('product_category_name')->orderBy('product_category_id')->all();
             
-            $this->layout='twoFootersLayout';
-            
             return $this->render('3ds', [
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,
@@ -78,7 +76,6 @@ class ProductcolorController extends Controller
         $paramsPhotos['PhotogallerySearch']['photo_product']=Yii::$app->request->queryParams['ProductColorSearch']['product_subcategory_name'];
         $dataProviderPhotos = $searchModelPhotos->search($paramsPhotos);
 
-        $this->layout='twoFootersLayout';
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
@@ -202,7 +199,7 @@ class ProductcolorController extends Controller
             return $this->redirect(Yii::$app->request->referrer);
 
 
-           /* $this->layout='twoFootersLayout';
+           /* 
             return $this->render('index', [
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,

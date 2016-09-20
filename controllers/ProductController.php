@@ -69,9 +69,7 @@ class ProductController extends Controller
 
             $tempmodel=new ProductCategories();
             $categories=$tempmodel::find()->select('product_category_name')->orderBy('product_category_id')->all();
-            
-            $this->layout='twoFootersLayout';
-            
+        
             return $this->render('3ds', [
                 'searchModel' => $searchModel,
                 'dataProvider' => $dataProvider,

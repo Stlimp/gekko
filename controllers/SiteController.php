@@ -163,7 +163,6 @@ class SiteController extends Controller
     {
         $this->view->params['menuselected'] = '';
         $cartItems = \Yii::$app->cart->getPositions();
-        $this->layout='twoFootersLayout';
         return $this->render('cart',['cartItems'=>$cartItems]);
     }
 
