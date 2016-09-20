@@ -108,10 +108,10 @@ body,
 }
 
 .carousel-inner > .item {
-    -webkit-transition: 0.9s ease-in-out left;
-    -moz-transition: 0.9s ease-in-out left;
-    -o-transition: 0.9s ease-in-out left;
-    transition: 0.9s ease-in-out left;
+    -webkit-transition: 1.4s ease-in-out left;
+    -moz-transition: 1.4s ease-in-out left;
+    -o-transition: 1.4s ease-in-out left;
+    transition: 1.4s ease-in-out left;
 }
 
 .carousel img {
@@ -390,9 +390,9 @@ margin:10px; border: 2px solid #fff;}
         left:0;
         opacity:0;
         -webkit-transition: opacity 1s; /*time < to $.carousel.interval setup */
-        -moz-transition: opacity 1s; 
-        -ms-transition: opacity1s; 
-        -o-transition: opacity 1s; 
+        -moz-transition: opacity 1s;
+        -ms-transition: opacity1s;
+        -o-transition: opacity 1s;
         transition: opacity  1s;
         z-index:2;
 
