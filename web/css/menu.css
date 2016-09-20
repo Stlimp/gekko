@@ -1,6 +1,6 @@
 #w0-nav{
 background-image: none ;
-min-width: 1000px;  
+min-width: 1000px;
 border-bottom: 1px solid #DDDDDD;
 }
 
@@ -10,13 +10,13 @@ border-bottom: 1px solid #DDDDDD;
         padding-right:0px;
 
     }
-/* navigation style */ 
-.nav1{ 
+/* navigation style */
+.nav1{
     min-width: 800px;
-    height: 30px; 
+    height: 30px;
     line-height: 30px;
-    margin-left: 0px; 
-    padding: 0px 10px 0px 0px; 
+    margin-left: 0px;
+    padding: 0px 10px 0px 0px;
 
     float:right;
     font-size: 1em;
@@ -24,8 +24,8 @@ border-bottom: 1px solid #DDDDDD;
     font-family: Century Gothic;
     margin-bottom: 0;
    /*  display: inline-block !important; */
-     white-space: nowrap; 
-} 
+     white-space: nowrap;
+}
 
 .nav1 .ablock a{
     color: #333333;
@@ -44,96 +44,96 @@ span.bullet{
 }
 
 
-.nav2{ 
-    height: 60px; 
+.nav2{
+    height: 60px;
 
-    #background: #3AB3A9; 
-    min-width:800px; 
-    margin-left: 0px; 
-    padding: 25px 0px 25px 0px; 
+    #background: #3AB3A9;
+    min-width:800px;
+    margin-left: 0px;
+    padding: 25px 0px 25px 0px;
 
     float:right;
     font-family: Corbel;
-}     
- 
+}
 
 
 
-/*main menu*/ 
-#nav li{ 
-    list-style: none; 
-    display: inline; 
-    float: left; 
-    height: 40px; 
+
+/*main menu*/
+#nav li{
+    list-style: none;
+    display: inline;
+    float: left;
+    height: 45px;
     position: relative;
-    /* border: 1px solid rgba(0, 0, 0, 0); *//*прозрачная граница, чтобы избежать мерцания*/ 
+    /* border: 1px solid rgba(0, 0, 0, 0); *//*прозрачная граница, чтобы избежать мерцания*/
     #border-right: 1px solid #FFFFFF;
     width:16.6%;
     z-index : 2;
-    
- 
-} 
 
 
-#nav li:hover{ 
+}
+
+
+#nav li:hover{
     border: 1px solid rgba(221,221,221,1);
     border-bottom: 3px solid rgba(204, 153, 51, 1);
     border-radius: 10px 0px 0px 0px;
- 
+
 }
- 
-#nav li a{ 
-    padding: 0px 0px 0px 8px; 
-    margin: 0px; 
-    line-height: 40px; 
-    text-decoration: none; 
+
+#nav li a{
+    padding: 0px 0px 0px 8px;
+    margin: 0px;
+    line-height: 40px;
+    text-decoration: none;
    /*  height: 40px;  */
-    color: #333333; 
-    text-align:center;   
+    color: #584F46;
+    text-align:center;
     display: table-cell;
-  vertical-align: middle;  
+  vertical-align: middle;
   outline: 0;
-} 
- 
-#nav ul{ 
+}
+
+#nav ul{
     /* background: #4D4D4D;   */
-    padding: 0px; 
-    #border-bottom: 1px solid #DDDDDD; 
-   # border-right: 1px solid #DDDDDD; 
-    #border-left:1px solid #DDDDDD; 
-    #border-radius: 0px 0px 3px 3px; 
-    /* box-shadow: 3px 2px 5px #000000; 
-    -webkit-box-shadow: 3px 2px 5px #000000; 
-        -moz-box-shadow:3px 2px 5px #000000; 
+    padding: 0px;
+    #border-bottom: 1px solid #DDDDDD;
+   # border-right: 1px solid #DDDDDD;
+    #border-left:1px solid #DDDDDD;
+    #border-radius: 0px 0px 3px 3px;
+    /* box-shadow: 3px 2px 5px #000000;
+    -webkit-box-shadow: 3px 2px 5px #000000;
+        -moz-box-shadow:3px 2px 5px #000000;
     width:150px;
     border-radius: 0px 0px 10px 0px;? */
 
-     
+
 }
 
 .selectedmenu{
     border-bottom: 3px solid #CC9933 !important;
 }
- 
 
-#nav>li>a{ 
-    display: block; 
-    font-size: 1em;
+
+#nav>li>a{
+    display: block;
+    font-size: 1.06em;
     outline: 0;
-} 
+}
 
 
-#nav ul li { 
+#nav ul li {
     background: rgba(255, 255, 255, 0.87);
-    border-right:none; 
-    #border-bottom:1px solid #DDDDDD; 
-    width:15%; 
-    min-height:39px; 
+    border-right:none;
+    #border-bottom:1px solid #DDDDDD;
+    width:15%;
+    min-height:39px;
     padding:5px;
 }
 
- 
-#nav ul li a { 
+
+#nav ul li a {
     border-right: none;
     text-align:left;
     line-height: 12px;
@@ -142,41 +142,41 @@ span.bullet{
     vertical-align: middle;
     /* text-shadow: 1px 1px 1px #FFF; */
     #border-bottom:1px solid #FFFFFF;
-    #color:#6791AD; 
-    #text-shadow: 1px 1px 1px #FFF; 
+    #color:#6791AD;
+    #text-shadow: 1px 1px 1px #FFF;
     #border-bottom:1px solid #FFFFFF;
-    width: 100%; 
-    font-size: 1em;
+    width: 100%;
+    font-size: 0.97em;
     outline: 0;
-} 
+}
 /*#nav ul li:hover{background:#000000;border-radius: 0px 0px 0px 0px;}*/
 /*#nav ul li:last-child:hover {border-radius: 0px 0px 10px 0px;}*/
- 
+
 #nav ul li:hover{border-radius: 0px 0px 0px 0px; text-shadow: 0px 0px 0 #000000;}
 /* #nav ul li:last-child:hover {border-radius: 0px 0px 10px 0px;} */
 
-#nav ul li:last-child { border-bottom: none;} 
+#nav ul li:last-child { border-bottom: none;}
 #nav ul li:last-child a{ border-bottom: none;}
- 
-/* Sub menus */ 
-#nav ul{ 
-    display: none; 
-    visibility:hidden; 
-    position: absolute; 
-    top: 39px;
-    left: -1px; 
+
+/* Sub menus */
+#nav ul{
+    display: none;
+    visibility:hidden;
+    position: absolute;
+    top: 44px;
+    left: -1px;
     #border: 1px solid #DDDDDD;
-} 
-
-
-
-#nav li ul li:hover{ 
-    border: 0;
-    width:100%;
- 
 }
 
-#nav li a:hover{ 
+
+
+#nav li ul li:hover{
+    border: 0;
+    width:100%;
+
+}
+
+#nav li a:hover{
 width:100%;
 padding-left: 8px;
 text-shadow: 0px 0px 0 #000000;
@@ -187,7 +187,7 @@ text-shadow: 0px 0px 0 #000000;
 }
 
 #nav>ul>ul>li>a{
-    
+
     line-height: 12px;
     vertical-align: middle;
     padding-left:0px;
@@ -203,17 +203,17 @@ text-shadow: 0px 0px 0 #000000;
 
 }
 
- 
-/* Third-level menus */ 
+
+/* Third-level menus */
 #nav ul ul{
     /* margin-left:1px;  */
     padding-left:10px;
-    top: 0px; 
-    left:150px; 
-    display: none; 
-    visibility:hidden; 
+    top: 0px;
+    left:150px;
+    display: none;
+    visibility:hidden;
     #border: 1px solid #DDDDDD;
-    border-radius: 10px 0px 10px 0px; 
+    border-radius: 10px 0px 10px 0px;
 }
 
 #nav ul li:last-child{border-radius: 0px 0px 10px 0px;}
@@ -221,26 +221,26 @@ text-shadow: 0px 0px 0 #000000;
 
 /* #nav ul ul li:first-child:hover {border-radius: 10px 0px 0px 0px;}
 #nav ul ul li:last-child:hover {border-radius: 0px 0px 10px 0px;}  */
-/* Fourth-level menus */ 
-#nav ul ul ul{ 
-    top: 0px; 
-    left:150px; 
-    display: none; 
-    visibility:hidden; 
+/* Fourth-level menus */
+#nav ul ul ul{
+    top: 0px;
+    left:150px;
+    display: none;
+    visibility:hidden;
     /* border: 1px solid #DDDDDD; */
- 
-} 
- 
-#nav ul li{ 
-    display: table; 
-    visibility:visible; 
+
+}
+
+#nav ul li{
+    display: table;
+    visibility:visible;
     float:left;
     width:100%;
     text-align: left;
-} 
-#nav li:hover > ul{ 
-    display: block; 
-    visibility:visible; 
+}
+#nav li:hover > ul{
+    display: block;
+    visibility:visible;
 }
 
 #nav ul li span{
@@ -261,10 +261,10 @@ text-shadow: 0px 0px 0 #000000;
 }
 
 #delimiter :hover{
-    
+
     border: 0 !important;
     padding:0px !important;
-    
+
 
 
 }
@@ -275,25 +275,25 @@ text-shadow: 0px 0px 0 #000000;
  .wrap{
     min-width: 1000px !important;
 }
- 
-<!--[if IE 7]> 
+
+<!--[if IE 7]>
 #nav{
     margin-left:0px;
 
-} 
-#nav ul{ 
-    #left:-40px; 
-} 
-#nav ul ul{ 
+}
+#nav ul{
+    #left:-40px;
+}
+#nav ul ul{
     position: absolute;
     left: 100%;
     width:100%;
 }
 
-#nav ul ul ul{ 
-    left:130px; 
-} 
-<![endif]--> 
+#nav ul ul ul{
+    left:130px;
+}
+<![endif]-->
 
 
 

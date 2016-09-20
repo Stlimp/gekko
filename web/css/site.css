@@ -45,7 +45,7 @@ a{
 .container .jumbotron, .container-fluid .jumbotron {
     padding-right: 0px;
     padding-left: 0px;
-}
+  }
 
 .jumbotron {
     /* text-align: center; */
@@ -150,8 +150,8 @@ display: block;
 
 /*Menu opacity*/
 .navbar{
-  background: rgba(255, 255, 255, 0.87);
-  height:101px;
+  background: rgba(255, 255, 255, 0.9);
+  height:100px;
 
 }
 /*dropdown styling*/
@@ -182,7 +182,7 @@ font-weight: bold;
 -------------------------------------------------- */
 body {
   padding-bottom: 40px;
-  color: #5a5a5a;
+  color: #666666;
 }
 
 
@@ -240,7 +240,7 @@ body {
 .left-side-half-text {
     margin-top:15px;
     float:left;
-    font-family:Corbel;
+    font-family: Corbel;
     text-align:left;
     #padding-right: 30px;
     width:100%;
@@ -265,13 +265,12 @@ body {
     background: #F3F2EE;
     float:left;
     font-family:Corbel;
-    font-weight:bolder;
-    font-size:16px;
+    font-size: 17px;
     text-align:left;
     padding-left: 50px;
     padding-bottom: 0;
-    line-height: 25px;
-    margin-top:0px;
+    line-height: 33px;
+    margin-top:18px;
 }
 .page-text {
   width:100%;
@@ -282,7 +281,7 @@ body {
     padding-left: 50px;
     padding-right: 50px;
     font-family: Corbel;
-    font-size:12px;
+    font-size:14px;
     /*line-height:120%;межстрочный интервал*/
 }
 
@@ -296,7 +295,7 @@ body {
     min-width:1000px;
 }
 .first-footer{
-      background: rgba(243, 242, 255, 0.87);
+      background: rgba(243, 242, 238, 1.0);
 }
 
 
@@ -326,7 +325,7 @@ body {
     font-size: 15px;
     }
     p#mygallery{
-        color:#996633;
+        color:#737373;
     }
      .footer-image div{
         width:80px;
@@ -353,7 +352,7 @@ body {
   font-size:12px;
 }
 .jumbotron p{
-  font-size:12px;
+  font-size:14px;
 }
 /*
 .navbar-brand img{
