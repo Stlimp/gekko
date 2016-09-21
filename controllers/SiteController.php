@@ -17,6 +17,7 @@ use app\models\Product;
 use app\models\Emails;
 use app\models\Orders;
 use app\models\OrderItems;
+use app\models\Subscribers;
 /*use app\models\Press;*/
 use app\models\Photogallery;
 use yii\data\ActiveDataProvider;
@@ -322,6 +323,28 @@ class SiteController extends Controller
     {
         $this->view->params['menuselected'] = '';
         return $this->render('sitemap');
+    }
+
+    public function actionSubscribe() 
+    {
+        $date=date('Y-m-d');
+        $subsciber = new Subscribers();
+            if ($_POST["email"]==NULL){
+                return $this->redirect(Yii::$app->request->referrer);
+            }
+        
+        $subsciber->email=$_POST["email"];
+        $subsciber->date =$date;
+        $exists = Subscribers::find()->where([ 'email' => $subsciber->email])->exists();
+        if ($exists==NULL){
+            $subsciber->save();
+        }
+        else{
+             return $this->redirect(Yii::$app->request->referrer);
+        }
+
+        return $this->render('tech');    
+        
     }
 
     public function actionOrder() {
