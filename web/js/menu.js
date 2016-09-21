@@ -1,13 +1,13 @@
-$(document).ready(function(){ 
-    /*$("#nav li").hover( 
-    function(){ 
+$(document).ready(function(){
+    /*$("#nav li").hover(
+    function(){
         $(this).children('ul').hide();
-        $("#nav li #delimiter").hide(); 
-        $(this).children('ul').fadeIn(800); 
-    }, 
-    function () { 
-        $('ul', this).fadeOut(200); 
-          
+        $("#nav li #delimiter").hide();
+        $(this).children('ul').fadeIn(800);
+    },
+    function () {
+        $('ul', this).fadeOut(200);
+
     });
 */
 
@@ -19,9 +19,9 @@ $(document).ready(function(){
 
 $("#nav li").on({
     "mouseenter" : function(e){
-        _delay = 500; 
-        $(this).children('ul').hide();  
-        $(this).children('ul').delay(_delay).fadeIn(800);
+        _delay = 200;
+        $(this).children('ul').hide();
+        $(this).children('ul').delay(_delay).fadeIn(500);
     },
     "mouseleave" : function(e){
        $(this).children('ul').stop(true);
@@ -40,7 +40,7 @@ $("#nav li").on({
         $(this).children('span').css('color', 'transparent');
         $(this).children('span').css('font','14px Geneva, Arial, Helvetica, sans-serif' );
     });
-    
+
     $("#nav ul ul li a").hover(
     function () {
         $(this).children('span').css('color', '#CC9933');
@@ -60,5 +60,5 @@ $("#nav li").on({
         });
 
     });
- 
-}); 
+
+});
