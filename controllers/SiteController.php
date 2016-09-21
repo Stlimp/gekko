@@ -336,7 +336,7 @@ class SiteController extends Controller
         $subsciber->email=$_POST["email"];
         $subsciber->date =$date;
         $exists = Subscribers::find()->where([ 'email' => $subsciber->email])->exists();
-        if ($exists==NULL){
+        if ((filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))&&($exists==NULL)){
             $subsciber->save();
         }
         else{
