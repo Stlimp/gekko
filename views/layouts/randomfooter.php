@@ -34,9 +34,9 @@ use yii\widgets\ActiveForm;
              <span>
                 <form action="index.php?r=site%2Fsubscribe" method="post">
                     <div>email</div>
-                    <div style="border: 1px solid #E1DFD0;width:235px;padding: 3px;">
-                            <input type="text" class="email" id="email" name="email" placeholder="e-mail" style="border: 0;height:25px;">
-                            <input type="submit" class="button" id="submit" value="ПОДПИСКА" style="border: 0;height:25px;float:right;">
+                    <div style="border: 1px solid #E1DFD0;width:250px;padding: 3px;">
+                            <input type="text" class="email" id="email" name="email" placeholder="e-mail" style="border: 0;height:25px;width:150px">
+                            <input type="submit" class="button" id="submit" value="ПОДПИСКА" style="border: 0;height:25px;float:right;width:85px;">
                         </form> 
                     </div> 
                 </form>
