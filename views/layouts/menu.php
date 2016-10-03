@@ -45,7 +45,7 @@
             
             <ul id="nav" class="nav2">
                 
-                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "index")){ echo "selectedmenu";} ?>"><a href="#">О КОМПАНИИ</a> 
+                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "index")){ echo "selectedmenu";} ?>"><a href="" onclick="return false;">О КОМПАНИИ</a> 
                         <ul> 
                             <li><a href="index.php?r=site%2Fcompany">GEKKOSTONE</a></li> 
                             <li><a href="index.php?r=site%2Fadvantages">ПРЕИМУЩЕСТВА</a></li>
@@ -56,7 +56,7 @@
                             <li><a href="index.php?r=site%2Fcontact">КОНТАКТЫ</a></li>    
                         </ul> 
                 </li>
-                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "products")){ echo "selectedmenu";} ?>" ><a href="#">ПРОДУКЦИЯ</a> 
+                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "products")){ echo "selectedmenu";} ?>" ><a href="" onclick="return false;">ПРОДУКЦИЯ</a> 
                     <ul> 
                         <li><a href="index.php?r=product%2Findex">ВСЯ ПРОДУКЦИЯ</a></li> 
                          <?php 
@@ -84,7 +84,7 @@
                         <li><a href="#">СОПУТСТВУЮЩИЕ ТОВАРЫ</a></li>
                     </ul> 
                 </li>
-                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "photogallery")) { echo "selectedmenu";} ?>"><a href="#">ФОТОГАЛЕРЕЯ</a> 
+                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "photogallery")) { echo "selectedmenu";} ?>"><a href="" onclick="return false;">ФОТОГАЛЕРЕЯ</a> 
                     <ul> 
                         <?php 
                             $model=new ImageCategories();
@@ -109,7 +109,7 @@
                         <li><a href="index.php?r=beforeandafteralbum%2Findex">ДО И ПОСЛЕ</a></li> 
                     </ul> 
                 </li>
-                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "info")) { echo "selectedmenu";} ?>"><a href="#">ИНФОРМАЦИЯ</a> 
+                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "info")) { echo "selectedmenu";} ?>"><a href=""  onclick="return false;">ИНФОРМАЦИЯ</a> 
                     <ul> 
                         <li><a href="index.php?r=site%2Frocklaying">УКЛАДКА КАМНЯ</a></li> 
                         <li><a href="index.php?r=faq%2Findex">ВОПРОС - ОТВЕТ</a></li> 
@@ -122,7 +122,7 @@
                     </ul> 
                 </li> 
                 <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "stores")) { echo "selectedmenu";} ?>"><a href="index.php?r=stores%2Findex">ГДЕ КУПИТЬ</a></li> 
-                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "services")) { echo "selectedmenu";} ?>"><a href="#">УСЛУГИ</a> 
+                <li class="menu-item <?php if (isset($this->params['menuselected'])&&($this->params['menuselected'] == "services")) { echo "selectedmenu";} ?>"><a href=""  onclick="return false;">УСЛУГИ</a> 
                     <ul> 
                             <li><a href="index.php?r=site%2Fdesign">ДИЗАЙН-ПРОЕКТ</a></li> 
                             <li><a href="index.php?r=site%2Fselection">ПОДБОР КАМНЯ</a></li>
