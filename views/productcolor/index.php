@@ -15,8 +15,20 @@ $this->registerJsFile('@web/js/lightslider.min.js', ['depends' => [\yii\web\Jque
 $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 ?>
 
+<style>
+    th{
+        width:calc(100%/6);
+        height:25px;
+         border: 1px solid #FFFFFF;
+    }
+    .selected_seam{
+        border: 2px solid #CC9933;
+    }
+
+</style>
 <div class="product-color-index">
     <div class="jumbotron">
+        <div style="display:inline-block">
         <div class="left-half">
             <div class="left-side-half-header"><?=  mb_strtoupper($product_data->product_product_name) ?> <div class="price" >ЦЕНА: <span id="price_value"><?= number_format($product_data->product_price) ?></span> руб/м<span class="warning">*</span> </div></div>    
             <div class="left-side-half-text">
@@ -37,18 +49,21 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                 </div>
             
                 <div class="left_halfheader">
-                    <a id="link_to_3ds" href="<?= reset($colors)->product_3ds_link ?>" target="_blank" ><b><u>СКАЧАТЬ</u></b></a> «ТЕКСТУРУ» для 3DS
-                </div>
-                <div class="right_halfheader">
-                    <a id="add_to_cart" href="index.php?r=productcolor/add-to-cart&id=<?= array_values($colors)[0]->product_color_id; ?>"><b><u>ДОБАВИТЬ</u></b></a> расцветку в <b>«МОЮ ГАЛЕРЕЮ»</b>
-                </div>
-                <div class="selected_product_color"><img id="selected_product_image" src="<?= reset($colors)->product_color_image ?>" alt=""></div>
-                <div class="left_halfheader">
                     <span id="color_name">расцветка <span>«<?= reset($colors)->product_color_name ?>»</span></span>
+                    <!-- <a id="link_to_3ds" href="<?= reset($colors)->product_3ds_link ?>" target="_blank" ><b><u>СКАЧАТЬ</u></b></a> «ТЕКСТУРУ» для 3DS -->
                 </div>
                 <div class="right_halfheader">
                     <span id="article">Арт.<?= reset($colors)->product_article ?></span>
+                    <!-- <a id="add_to_cart" href="index.php?r=productcolor/add-to-cart&id=<?= array_values($colors)[0]->product_color_id; ?>"><b><u>ДОБАВИТЬ</u></b></a> расцветку в <b>«МОЮ ГАЛЕРЕЮ»</b> -->
                 </div>
+                <div id="selected_product_color"><img id="selected_product_image" src="<?= reset($colors)->product_color_image ?>" alt=""></div>
+                <div class="left_halfheader">
+                    <!-- <span id="color_name">расцветка <span>«<?= reset($colors)->product_color_name ?>»</span></span> -->
+                </div>
+                <div class="right_halfheader">
+                    <!-- <span id="article">Арт.<?= reset($colors)->product_article ?></span> -->
+                </div>
+                
             </div>
         </div>
         <div class="right-half">
@@ -156,31 +171,92 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
             <div class="product_colors">
                 <?php foreach ($colors as $productColor){ ?>
                     <div class="miniature" id=" miniature<?= $productColor->product_color_id?>">
-                        <span><img src="<?= $productColor->product_color_image ?>" alt=""><?= $productColor->product_color_name ?></span>
+                        <span><?= $productColor->product_color_name ?><img src="<?= $productColor->product_color_image ?>" alt=""></span>
                     </div>
                 <?php } ?>
             </div>
         </div>
         </div>
+        </div>
+        <div class="left-half">
+            <div class="left-side-half-text">
+                <div class="left_halfheader">
+                    <span>ВЫБОР РАСЦВЕТКИ ДЛЯ ЗАТИРКИ ШВА</span>
+                </div>
+                <div class="right_halfheader">
+                    <span>серия ceresit 4-45</span>
+                </div>
+                <table class="seams" style="margin-left:-2px;;width:calc(100% + 4px);;empty-cells: show;border-collapse: separate;" >
+                  <tr>
+                    <th class="tg" style="background-color:#D2D5D4;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#D6D4D0;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#D3D6CC;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#DDD3C1;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#DFD2C9;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#DFD4B3;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                  </tr>
+                  <tr>
+                    <th class="tg" style="background-color:#8E9190;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#91908C;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#8F9189;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#988F7E;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#998E85;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#999071;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                  </tr>
+                  <tr>
+                    <th class="tg" style="background-color:#525554;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#555451;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#53554D;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#5B5343;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#5C524A;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#645045;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                  </tr>
+                  <tr>
+                    <th class="tg" style="background-color:#323434;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#353431;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#33352E;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#3A3324;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#3B322B;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                    <th class="tg" style="background-color:#423026;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
+                  </tr>
+                </table>
+            </div>
+        </div>
+        <div class="right-half">
+            <div class="left-side-half-text">
+                <a id="add_to_cart" class="btn btn-success btn-send" style="float:left;border:0; background-color: #CC9933;color:white;margin-right:5px;" href="index.php?r=productcolor/add-to-cart&id=<?= array_values($colors)[0]->product_color_id; ?>"><b><u>ДОБАВИТЬ</u></b></a><span style="line-height:25px;"> расцветку в <b>«МОЮ ГАЛЕРЕЮ»</b></span> 
+                <br>
+                <br>
+                <div class="left_halfheader"><a id="link_to_3ds" href="<?= reset($colors)->product_3ds_link ?>" target="_blank" ><b><u>СКАЧАТЬ</u></b></a> «ТЕКСТУРЫ» для 3DS</div>
+                <div class="right_halfheader"><a href="index.php?r=site%2Fwarning"><u>ПРЕДУПРЕЖДЕНИЕ ПО ЦВЕТОПЕРЕДАЧЕ</u></a></div>
 
-        <div class="slider" >
-            <ul id="lightSlider">
-                <?php foreach ($dataProviderPhotos->getModels() as $productPhoto){ ?>
+            </div>
+        </div>
 
-                    <li class="sliderLi">   
-                        <a href="http://google.com"><img class="sliderImg" src="<?=$productPhoto->photo_image?>" /></a>
-                    </li>
-                    <li class="sliderLi">   
-                        <a href="http://google.com"><img class="sliderImg" src="<?=$productPhoto->photo_image?>" /></a>
-                    </li>                    
-                <?php } ?>
-                
-
-                
-            </ul>
+     <!--    <div class="slider" >
+         <ul id="lightSlider">
+             <?php foreach ($dataProviderPhotos->getModels() as $productPhoto){ ?>
+     
+                 <li class="sliderLi">   
+                     <a href="http://google.com"><img class="sliderImg" src="<?=$productPhoto->photo_image?>" /></a>
+                 </li>
+                 <li class="sliderLi">   
+                     <a href="http://google.com"><img class="sliderImg" src="<?=$productPhoto->photo_image?>" /></a>
+                 </li>                    
+             <?php } ?>
+             
+     
+             
+         </ul>
+     </div> -->
+<!--         <?php foreach ($seams as $seam){ ?>
+    <div><?=$seam->product_seam_product_color?></div>
+<?php } ?> -->
+        <div class="page-text">
+            <?php include './../views/layouts/bottom.php' ?> 
         </div>
       </div>
-
+        
         
         
 
@@ -192,22 +268,22 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
             <?= Html::a('Create Product Color', ['create'], ['class' => 'btn btn-success']) ?>
         </p>
  -->
-        <?= GridView::widget([
-            'dataProvider' => $dataProvider,
-            'filterModel' => $searchModel,
-            'columns' => [
-                ['class' => 'yii\grid\SerialColumn'],
+<!--         <?= GridView::widget([
+    'dataProvider' => $dataProvider,
+    'filterModel' => $searchModel,
+    'columns' => [
+        ['class' => 'yii\grid\SerialColumn'],
 
-                'product_color_id',
-                'product_color_name',
-                'product_article',
-                'product_3ds_link',
-                'product_subcategory_name',
-                'product_color_image',
+        'product_color_id',
+        'product_color_name',
+        'product_article',
+        'product_3ds_link',
+        'product_subcategory_name',
+        'product_color_image',
 
-                ['class' => 'yii\grid\ActionColumn'],
-            ],
-        ]); ?>
+        ['class' => 'yii\grid\ActionColumn'],
+    ],
+]); ?> -->
 
     </div>
 </div>
@@ -228,10 +304,17 @@ $('.miniature').click(function(){
          document.getElementById("article").innerHTML= "Арт."+data.product_article;
          document.getElementById("color_name").innerHTML= "расцветка <span>«"+data.product_color_name+"»</span>";
          document.getElementById("add_to_cart").href="index.php?r=productcolor/add-to-cart&id=".concat(data.product_color_id);
+         
         return false;
 
     });
 })
+
+$("th").click(function(){
+   $("th").removeClass("selected_seam");
+    $(this).addClass("selected_seam");
+    //document.getElementById("selected_product_color").attr('src',LINKLINKLINK);
+    });
 
 
     

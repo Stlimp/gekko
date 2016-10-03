@@ -9,6 +9,7 @@ use app\models\ProductSearch;
 use app\models\ProductColor;
 use app\models\ProductColorSearch;
 use app\models\PhotogallerySearch;
+use app\models\ProductSeamSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -67,8 +68,9 @@ class ProductcolorController extends Controller
         $modelProduct=new ProductSearch();
         $product_data=$modelProduct::findOne(['product_product_name'=>Yii::$app->request->queryParams['ProductColorSearch']['product_subcategory_name']]);
 
-        $id=5;
-
+        $modelSeam=new ProductSeamSearch();
+        $dataProviderSeams=$modelSeam->search($colors);
+        $seamData=$dataProviderSeams->getModels();
 
 
         /*Product photos*/
@@ -83,6 +85,7 @@ class ProductcolorController extends Controller
             'colors'=>$colors,
             'itemsCount'=>$itemsCount,
             'product_data'=>$product_data,
+            'seams'=>$seamData,
         ]);
     }
 
