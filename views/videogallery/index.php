@@ -16,8 +16,8 @@ $this->params['breadcrumbs'][] = $this->title;
 
          <div class="gallery" >   
             <?php foreach ($videos as $videoItem){ ?>
-                <div class="product" style="width:20%;float:none;vertical-align:top;text-align: justify;">
-                    <a target="_blank" href="<?= $videoItem->video_link ?>"><img src="<?= $videoItem->video_thumbnail?>"  width="220" height="150"></a>
+                <div class="videoblock" style="width:20%;float:none;vertical-align:top;text-align: justify;">
+                    <a target="_blank" href="<?= $videoItem->video_link ?>"><img src="<?= $videoItem->video_thumbnail?>"></a>
                     <p style="margin:0;"><b><?= $videoItem->video_name?></b></p>
                     <p style="margin:0;"><?= $videoItem->video_description?></p>
                 </div>

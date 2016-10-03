@@ -963,7 +963,7 @@ background-image: url('./../images/menu.jpg');
 }
 
 .link_grey_color:hover{
-  font-size: 14px;
+  //font-size: 14px;
   color:#A9A9A9;
 }
 
@@ -1578,4 +1578,22 @@ max-height:100%;
   bottom: 0;
   left: 0;
   padding:10px;
+}
+
+.videoblock{
+  display: inline-block;
+  margin: 10px;
+  width:22%;
+  float:none;
+  vertical-align:top;
+  border:0;
+  overflow:initial;
+}
+.videoblock>a{
+  text-decoration:none;
+  color:inherit;
+}
+.videoblock img{
+  height:150px;
+  width:100%;
 }
