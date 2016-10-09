@@ -293,6 +293,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
 
 <?php 
 $script=<<<JS
+var seam="asdf"
 $('.miniature').click(function(){
 
     var color_id= this.id.replace(/[^\d]+/, '');
@@ -304,22 +305,27 @@ $('.miniature').click(function(){
          document.getElementById("article").innerHTML= "Арт."+data.product_article;
          document.getElementById("color_name").innerHTML= "расцветка <span>«"+data.product_color_name+"»</span>";
          document.getElementById("add_to_cart").href="index.php?r=productcolor/add-to-cart&id=".concat(data.product_color_id);
-         
+        seam="123";
+        console.log(seam);
         return false;
+
 
     });
 })
 
-$("th").click(function(){
-   $("th").removeClass("selected_seam");
-    $(this).addClass("selected_seam");
-    //document.getElementById("selected_product_color").attr('src',LINKLINKLINK);
-    });
 
 
-    
+$(document).ready(function () {
+    $("th").click(function(){
+        $("th").removeClass("selected_seam");
+        $(this).addClass("selected_seam");
+        alert(seam);
+        
+    })
+}); 
 
 JS;
 $this->registerJs($script);
  ?>
+
 
