@@ -10,9 +10,7 @@ use Yii;
  * @property integer $product_seam_id
  * @property string $product_seam_name
  * @property string $product_seam_product_color
- * @property string $product_seam_number
- * @property string $product_seam_miniature
- * @property string $product_seam_image
+ * @property string $product_seam_postfix
  */
 class ProductSeam extends \yii\db\ActiveRecord
 {
@@ -30,10 +28,9 @@ class ProductSeam extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['product_seam_id', 'product_seam_name', 'product_seam_product_color', 'product_seam_number', 'product_seam_miniature', 'product_seam_image'], 'required'],
+            [['product_seam_id', 'product_seam_name', 'product_seam_product_color', 'product_seam_postfix'], 'required'],
             [['product_seam_id'], 'integer'],
-            [['product_seam_name', 'product_seam_product_color', 'product_seam_number', 'product_seam_miniature', 'product_seam_image'], 'string', 'max' => 255],
-            [['product_seam_product_color'], 'exist', 'skipOnError' => true, 'targetClass' => ProductColor::className(), 'targetAttribute' => ['product_seam_product_color' => 'product_color_name']],
+            [['product_seam_name', 'product_seam_product_color', 'product_seam_postfix'], 'string', 'max' => 255],
         ];
     }
 
@@ -46,9 +43,7 @@ class ProductSeam extends \yii\db\ActiveRecord
             'product_seam_id' => 'Product Seam ID',
             'product_seam_name' => 'Product Seam Name',
             'product_seam_product_color' => 'Product Seam Product Color',
-            'product_seam_number' => 'Product Seam Number',
-            'product_seam_miniature' => 'Product Seam Miniature',
-            'product_seam_image' => 'Product Seam Image',
+            'product_seam_postfix' => 'Product Seam Postfix',
         ];
     }
 }

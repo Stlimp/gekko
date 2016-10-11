@@ -19,7 +19,7 @@ class ProductSeamSearch extends ProductSeam
     {
         return [
             [['product_seam_id'], 'integer'],
-            [['product_seam_name', 'product_seam_product_color', 'product_seam_number', 'product_seam_miniature', 'product_seam_image'], 'safe'],
+            [['product_seam_name', 'product_seam_product_color', 'product_seam_postfix'], 'safe'],
         ];
     }
 
@@ -47,6 +47,7 @@ class ProductSeamSearch extends ProductSeam
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination'=>false,
         ]);
 
         $this->load($params);
@@ -64,9 +65,7 @@ class ProductSeamSearch extends ProductSeam
 
         $query->andFilterWhere(['like', 'product_seam_name', $this->product_seam_name])
             ->andFilterWhere(['like', 'product_seam_product_color', $this->product_seam_product_color])
-            ->andFilterWhere(['like', 'product_seam_number', $this->product_seam_number])
-            ->andFilterWhere(['like', 'product_seam_miniature', $this->product_seam_miniature])
-            ->andFilterWhere(['like', 'product_seam_image', $this->product_seam_image]);
+            ->andFilterWhere(['like', 'product_seam_postfix', $this->product_seam_postfix]);
 
         return $dataProvider;
     }

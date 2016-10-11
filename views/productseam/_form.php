@@ -18,11 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'product_seam_product_color')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'product_seam_number')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'product_seam_miniature')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'product_seam_image')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'product_seam_postfix')->textInput(['maxlength' => true]) ?>
 
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>

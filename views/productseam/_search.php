@@ -21,11 +21,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'product_seam_product_color') ?>
 
-    <?= $form->field($model, 'product_seam_number') ?>
-
-    <?= $form->field($model, 'product_seam_miniature') ?>
-
-    <?php // echo $form->field($model, 'product_seam_image') ?>
+    <?= $form->field($model, 'product_seam_postfix') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

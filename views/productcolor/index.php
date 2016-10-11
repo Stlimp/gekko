@@ -187,38 +187,19 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                     <span>серия ceresit 4-45</span>
                 </div>
                 <table class="seams" style="margin-left:-2px;;width:calc(100% + 4px);;empty-cells: show;border-collapse: separate;" >
-                  <tr>
-                    <th class="tg" style="background-color:#D2D5D4;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#D6D4D0;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#D3D6CC;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#DDD3C1;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#DFD2C9;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#DFD4B3;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                  </tr>
-                  <tr>
-                    <th class="tg" style="background-color:#8E9190;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#91908C;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#8F9189;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#988F7E;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#998E85;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#999071;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                  </tr>
-                  <tr>
-                    <th class="tg" style="background-color:#525554;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#555451;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#53554D;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#5B5343;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#5C524A;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#645045;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                  </tr>
-                  <tr>
-                    <th class="tg" style="background-color:#323434;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#353431;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#33352E;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#3A3324;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#3B322B;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                    <th class="tg" style="background-color:#423026;"><a href="" onclick="return false;" style="display:block;text-decoration:none;">&nbsp;</a></th>
-                  </tr>
+                <tr>
+                <?php $i=0; 
+                foreach ($seams as $seam){ 
+                        
+                    echo "<th class=\"tg\" data-postfix=\"$seam->product_seam_postfix\" style=\"background-color:$seam->product_seam_product_color;\"><a href=\"\" onclick=\"return false;\" style=\"display:block;text-decoration:none;\">&nbsp;</a></th>";
+                    $i++;
+                    if ($i%6==0) {
+                        echo "</tr>";
+                        echo "<tr>";
+                    }                   
+                 } ?>
+                 </tr>
+                
                 </table>
             </div>
         </div>
@@ -249,9 +230,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
              
          </ul>
      </div> -->
-<!--         <?php foreach ($seams as $seam){ ?>
-    <div><?=$seam->product_seam_product_color?></div>
-<?php } ?> -->
+
         <div class="page-text">
             <?php include './../views/layouts/bottom.php' ?> 
         </div>
@@ -308,8 +287,6 @@ $('.miniature').click(function(){
         seam="123";
         console.log(seam);
         return false;
-
-
     });
 })
 
@@ -319,8 +296,8 @@ $(document).ready(function () {
     $("th").click(function(){
         $("th").removeClass("selected_seam");
         $(this).addClass("selected_seam");
-        alert(seam);
-        
+        $("#selected_product_image").attr('src',"images/content/products/seams/".concat("m_ant_alb_",$(this).data('postfix'),".jpg"));
+               
     })
 }); 
 

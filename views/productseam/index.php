@@ -27,9 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'product_seam_id',
             'product_seam_name',
             'product_seam_product_color',
-            'product_seam_number',
-            'product_seam_miniature',
-            // 'product_seam_image',
+            'product_seam_postfix',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],
