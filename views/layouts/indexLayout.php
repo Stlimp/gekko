@@ -49,7 +49,7 @@ IndexAsset::register($this);
         <?php
         use yii\bootstrap\Carousel;
         echo Carousel::widget([
-            'options' => ['class' => 'carousel slide carousel-fade ','data-ride'=>'carousel','data-interval'=>'5000', 'pause'=>'false'],
+            'options' => ['class' => 'carousel slide carousel-fade ','data-ride'=>'carousel','data-interval'=>'5000', ' data-pause'=>'false'],
             'items' => [
                 // the item contains only the image
                 ['content' => '<img src="images/background/background1.jpg"/>'],

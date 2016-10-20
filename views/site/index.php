@@ -169,18 +169,19 @@ $this->registerJsFile('@web/js/slide-up-down.js');
 
         </a>
         <div class="right_third">
-            <a href="#">
-                <div class="right_split test" style="top:0">
-                   <!-- <span style="font-weight:900 !important;position: absolute;top:34%;transform: translateY(-50%);font-family:Corbel;" class="test_text">НАТУРАЛЬНЫЙ ИЛИ ИСКУССТВЕННЫЙ?</span>
-                    <p style="position: absolute;top:80%;transform: translateY(-50%); font-family:Corbel"><b>ТЕСТ.</b> Попробуй отыскать натуральные камни среди искусственных камней GEKKOSTONE!</p>-->
-                </div>
-            </a>
             <a href="index.php?r=site%2Fcart">
-                <div class="right_split cart" style="bottom:0">
+                <div class="right_split cart" style="top:0">
                     <p style="position: absolute;top:30%;transform: translateY(-50%);font-family:Corbel">Собери собственную галерею из наиболее понравившихся фактур
     и расцветок!</p>
                     <span class="test_text" style="position: absolute;top:50%;transform: translateY(-50%); font-size:35px; font-family:Corbel;"><b>МОЯ ГАЛЕРЕЯ</b></span>
                     <p style="position: absolute;top:75%;transform: translateY(-50%); font-family:Corbel">Расчет необходимого количества камня, его веса и стоимости!</p>
+                </div>
+            </a>
+            <a href="#">
+                
+                <div class="right_split test" style="bottom:0">
+                   <!-- <span style="font-weight:900 !important;position: absolute;top:34%;transform: translateY(-50%);font-family:Corbel;" class="test_text">НАТУРАЛЬНЫЙ ИЛИ ИСКУССТВЕННЫЙ?</span>
+                    <p style="position: absolute;top:80%;transform: translateY(-50%); font-family:Corbel"><b>ТЕСТ.</b> Попробуй отыскать натуральные камни среди искусственных камней GEKKOSTONE!</p>-->
                 </div>
             </a>
         </div>
