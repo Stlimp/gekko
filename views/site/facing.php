@@ -13,7 +13,7 @@ $this->title = 'Gekkosone';
     <div class="jumbotron">
     <div class="page-header">ОБЛИЦОВКА</div>
     <div class="page-text">
-
+    	<p>Страница находится в разработке. Следите за новостями на веб-сайте компании.</p>
     </div>
 </div>
 </div>

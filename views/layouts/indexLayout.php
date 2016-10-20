@@ -37,19 +37,19 @@ IndexAsset::register($this);
     <?php $this->head() ?>
 </head>
 
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <body>
 
 <?php $this->beginBody() ?>
 <div id="upper"></div>
     <div class="wrap">
-    <?php include './../views/layouts/menu.php' ?>       
-    <div class="container">  
-        <?php 
-        use yii\bootstrap\Carousel;   
+    <?php include './../views/layouts/menu.php' ?>
+    <div class="container">
+        <?php
+        use yii\bootstrap\Carousel;
         echo Carousel::widget([
-            'options' => ['class' => 'carousel slide carousel-fade ','data-ride'=>'carousel','data-interval'=>'5000'],
+            'options' => ['class' => 'carousel slide carousel-fade ','data-ride'=>'carousel','data-interval'=>'5000', 'pause'=>'false'],
             'items' => [
                 // the item contains only the image
                 ['content' => '<img src="images/background/background1.jpg"/>'],
@@ -65,7 +65,7 @@ IndexAsset::register($this);
             <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 100px;";><a href="#downer"><div class="button-down"></div></a></div>
             <div id="downer"></div>
             <?= $content ?>
-        </div> 
+        </div>
     </div>
     <footer class="footer first-footer">
         <div class="footer-image"><a href="index.php?r=site%2Fsitemap"><p>КАРТА САЙТА</p></a></div>

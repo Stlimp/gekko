@@ -10,7 +10,16 @@ use yii\grid\GridView;
 $this->title = 'Products';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="product-index">
+<div class="site-index">
+    <div class="jumbotron">
+    <div class="page-header">3DS текстуры камня</div>
+    <div class="page-text">
+        <p>Страница находится в разработке. Следите за новостями на веб-сайте компании.</p>
+    </div>
+</div>
+</div>
+
+<!-- <div class="product-index">
     <div class="jumbotron">
         <div class="page-header">ДЕКОРАТИВНЫЙ КАМЕНЬ <b>GEKKOSTONE</b></div>
 
@@ -53,3 +62,4 @@ $this->params['breadcrumbs'][] = $this->title;
         ]); ?>
     </div>
 </div>
+ -->

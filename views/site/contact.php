@@ -7,7 +7,7 @@ use yii\widgets\MaskedInput;
    <div class="jumbotron">
 	<div class="left-half">
 		<div class="left-side-half-header">
-		КОНТАКТЫ 
+		<span style="color:#858370"><b>КОНТАКТЫ</b>
 		</div>
 		<div class="left-side-half-text">
 			<table class="contacts_table">
@@ -54,7 +54,7 @@ use yii\widgets\MaskedInput;
 			<br>
 		</div>
 		<div class="left-side-half-header">
-		СХЕМА ПРОЕЗДА НА СКЛАД-МАГАЗИН ДЕКОРАТИВНОГО КАМНЯ 
+		<span style="color:#858370"><b>СХЕМА ПРОЕЗДА НА СКЛАД-МАГАЗИН ДЕКОРАТИВНОГО КАМНЯ</b>
 		</div>
 		<div class="left-side-half-text">
 			 <?php
@@ -128,61 +128,61 @@ use yii\widgets\MaskedInput;
             </div>
 		</div>
 		<div class="left-side-half-header">
-		ФОРМЫ ОБРАТНОЙ СВЯЗИ 
+		<span style="color:#858370"><b>ФОРМЫ ОБРАТНОЙ СВЯЗИ</b>
 		</div>
 		<div class="left-side-half-text">
-			<p>Для оформления заявки на декоративный камень воспользуйтесь формой по ссылке 
+			<p>Для оформления заявки на декоративный камень воспользуйтесь формой по ссылке
 			в меню «УСЛУГИ» или в дополнительном меню страницы, <a class="link_brown_color" href="index.php?r=site%2Fgallery"><u>Моя галерея</u></a>.</p>
 			<p>Для оформления заявки на сотрудничество с компанией воспользуйтесь соответ-
 			ствующей формой по ссылке в меню «О КОМПАНИИ», <a class="link_brown_color" href="index.php?r=site%2Fpartnership"><u>Партнерство</u></a>.</p>
 			<p>Для заполнения заявки на вакансии по трудоустройству воспользуйтесь формой
 			по ссылке в меню «О КОМПАНИИ»,<a class="link_brown_color" href="index.php?r=site%2Fvacancy"><u>Вакансии</u></a>.</p>
 			<p>Если Вы желаете оставить отзыв или внести предложение по качеству продукции и
-			предоставляемых услуг компании, - воспользуйтесь специальной формой по ссылке 
+			предоставляемых услуг компании, - воспользуйтесь специальной формой по ссылке
 			в меню «О КОМПАНИИ», <a class="link_brown_color" href="index.php?r=site%2Ffeedback"><u>Отзывы и предложения</u></a>.</p>
 			<p>По иным вопросам Вы можете воспользоваться формой для связи на текущей странице.</p>
 		</div>
 	</div>
 	<div class="right-half">
 		<div class="right-side-half-header">
-			ФОРМА ДЛЯ СВЯЗИ
+			<span style="color:#858370"><b>ФОРМА ДЛЯ СВЯЗИ</b>
 		</div>
 		<div class="right-side-half-text">
 			<p>
 
-				<?php 
+				<?php
 					if(Yii::$app->session->hasFlash('success')){
 					   	echo "<div style =\"color:#D0272E\"><i>";
 					   	echo Yii::$app->session->getFlash('success');
 					   	echo "</i></div>";
 					}
 					else {
-						$form =ActiveForm::begin(['id'=>'inline-form']); 
-						echo $form->field($model, 'organization')->label('Наименование фирмы, ИП(для юр.лица) или ФИО для физ.лица'); 
-						echo $form->field($model, 'city')->label('Местонахождение(страна, город)'); 
+						$form =ActiveForm::begin(['id'=>'inline-form']);
+						echo $form->field($model, 'organization')->label('Наименование фирмы, ИП(для юр.лица) или ФИО для физ.лица');
+						echo $form->field($model, 'city')->label('Местонахождение(страна, город)');
 
 		        		echo $form->field($model, 'text')->textarea(['rows' => 10])->label('Ваше обращение');
 		        		echo $form->field($model, 'department')->dropDownList(['Отдел 1' => 'Отдел 1', 'Отдел 2' => 'Отдел 2', 'Отдел 3' => 'Отдел 3'], ['prompt'=>''])->label('Выберите отдел');
-		        		echo $form->field($model, 'name')->label('ФИО контактного лица'); 
-		        		echo $form->field($model, 'position')->label('Должность'); 
+		        		echo $form->field($model, 'name')->label('ФИО контактного лица');
+		        		echo $form->field($model, 'position')->label('Должность');
 		        		echo $form->field($model, 'email')->label('Контактный e-mail');
 		        		echo $form->field($model, 'phone')->label('Контактный телефон')->widget(\yii\widgets\MaskedInput::className(), [
     'mask' => '+375(99)999-99-99',
-]); 
+]);
 			            echo Html::submitButton('ОТПРАВИТЬ', ['class' => 'btn btn-success']);
-			           	echo '<p style="color:#996633;font-style: italic;">* - поля, обязательные для заполнения;<br> 
+			           	echo '<p style="color:#996633;font-style: italic;">* - поля, обязательные для заполнения;<br>
      проверьте указанную информацию перед отправкой!</p>';
      					ActiveForm::end();
-					}        
+					}
 		   		 ?>
 			</p>
-			
+
 		</div>
 		<!-- <div class="right-side-half-header">
 			КОМПАНИЯ GEKKOSTONE В ИНТЕРНЕТЕ
 		</div>
 		<div class="right-side-half-text" id="social-block-contacts">
-			<p>Социальные сети: 
+			<p>Социальные сети:
 				<span class="social-links">
 			                <a href="#"><img src="images/content/icons/ok.png" alt="">ОДНОКЛАССНИКИ</a>
 			                <a href="#"><img src="images/content/icons/vk.png" alt="">ВКОНТАКТЕ</a>

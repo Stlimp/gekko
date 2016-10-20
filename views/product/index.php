@@ -12,11 +12,11 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="product-index">
   <div class="jumbotron" style="background-color:#F3F2EE">
-    <div class="page-header">ДЕКОРИТАВНЫЙ КАМЕНЬ <b>GEKKOSTONE</b></div>
+    <div class="page-header">ДЕКОРАТИВНЫЙ КАМЕНЬ <b>GEKKOSTONE</b></div>
 
-    
+
      <div class="gallery">
-<div class="moto" style="display:inline-block;float:right;font-family:Esenin;font-size:50px;text-align:right;width:100%;padding-right:30px;"><span style="color:#996633;">Вдохновение,</span> подаренное природой!</div>   
+<div class="moto" style="display:inline-block;float:right;font-family:Esenin;font-size:50px;text-align:right;width:100%;padding-right:30px; color: #787764;"><span style="color:#996633;">Вдохновение,</span> подаренное природой!</div>
         <?php foreach ($categories as $category): ?>
            <?php foreach ($products as $productItem): ?>
                 <?php if (!strcmp($category->product_category_name,$productItem->product_category_name)): ?>
@@ -36,17 +36,17 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
    <!--  <h1><?= Html::encode($this->title) ?></h1>
    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-   
+
    <p>
        <?= Html::a('Create Product', ['create'], ['class' => 'btn btn-success']) ?>
    </p>
-   
+
    <?= GridView::widget([
        'dataProvider' => $dataProvider,
        'filterModel' => $searchModel,
        'columns' => [
            ['class' => 'yii\grid\SerialColumn'],
-   
+
            'product_product_id',
            'product_product_name',
            'product_category_name',

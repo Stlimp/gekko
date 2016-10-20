@@ -11,17 +11,16 @@ use yii\widgets\ActiveForm;
     <div class="jumbotron">
 	   	<div class="left-half">
 			<div class="left-side-half-header">
-				ВАКАНСИИ - Работа в компании GEKKOSTONE
+				<p>РАБОТА В КОМПАНИИ <b>GEKKOSTONE</b></p>
 			</div>
 			<div class="left-side-half-text">
-				<p>В компании <b>GEKKOSTONE</b> всегда заинтересованы в профессиональных кадрах! Если 
-				Вы хотите иметь интересную и творческую работу, если Вы уверены в своих силах и 
-				способностях, - направляйте резюме по прилагаемой на странице форме! Мы рассма-
-				триваем каждую заявку! В случае, если Ваше резюме покажется нам интересным, - 
-				мы обязательно свяжемся с Вами и назначим собеседование, где Вы сможете задать 
+				<p>В компании <b>GEKKOSTONE</b> заинтересованы в профессиональных кадрах! Если
+				Вы хотите иметь интересную и творческую работу, если Вы уверены в своих силах и
+				способностях, - направляйте резюме по прилагаемой на странице форме! Мы рассматриваем каждую заявку! В случае, если Ваше резюме покажется нам интересным, -
+				мы обязательно свяжемся с Вами и назначим собеседование, где Вы сможете задать
 				любые дополнительные вопросы.</p>
-				<p style="color:#996633"><i>Внимание! <br> 
-				В настоящий момент вакансий не требуется! Следите за обновлениями на сайте! 
+				<p style="color:#996633"><i><b>Внимание!</b> <br>
+				В настоящий момент вакансий не требуется. Следите за обновлениями на сайте! Вы можете оставить заявку, - она будет рассмотрена сразу после появления свободных вакансий.
 				 </i></p>
 				<p>
 					<img src="images/content/vacancy.jpg" align="right" width="100%">
@@ -31,7 +30,7 @@ use yii\widgets\ActiveForm;
 		</div>
 		<div class="right-half">
 			<div class="right-side-half-header">
-				РЕЗЮМЕ
+				<p>РЕЗЮМЕ</p>
 			</div>
 			<div class="right-side-half-text">
 				<?php
@@ -43,7 +42,7 @@ use yii\widgets\ActiveForm;
 					else {
 						$form =ActiveForm::begin(['id'=>'inline-form']);
 
-						echo $form->field($model, 'employment')->dropDownList(['a' => 'Род занятости 1', 'b' => 'Род занятости 2', 'c' => 'Род занятости 3'], ['prompt'=>''])->label('Род занятости в GEKKOSTONE');
+						echo $form->field($model, 'employment')->dropDownList(['a' => 'Производство камня', 'b' => '', 'c' => 'Род занятости 3'], ['prompt'=>''])->label('Род занятости в GEKKOSTONE');
 						echo $form->field($model, 'employmenttype')->dropDownList(['a' => 'Полная занятость', 'b' => 'Частичная занятость'], ['prompt'=>''])->label('Занятость');
 						echo $form->field($model,'name')->label('ФИО');
 						echo $form->field($model,'age')->label('Возраст');
@@ -65,13 +64,13 @@ use yii\widgets\ActiveForm;
 						echo $form->field($model, 'smoker')->dropDownList(['a' => 'Да', 'b' => 'Нет'], ['prompt'=>''])->label('Вы курите?');
 						echo $form->field($model,'characteristic')->label('Ваши качества');
 						echo $form->field($model,'selfimage')->textarea(['rows' => 5])->label('Напишите о себе( свободная форма)');
-						
+
 						echo $form->field($model,'phonenumber')->label('Контактный телефон( с кодом оператора)')->widget(\yii\widgets\MaskedInput::className(), [
 			    'mask' => '+375(99)999-99-99',
 			]);;
 
 						echo Html::submitButton("ОТПРАВИТЬ",['class'=>'btn btn-success btn-send']);
-						echo '<p style="color:#996633;font-style: italic;">* - поля, обязательные для заполнения;<br> 
+						echo '<p style="color:#996633;font-style: italic;">* - поля, обязательные для заполнения;<br>
 			     проверьте указанную информацию перед отправкой!</p>';
 					}
 					 ActiveForm::end()

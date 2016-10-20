@@ -144,8 +144,8 @@ body,
 
 
 
-.carousel-indicators .active {height:12px;width:12px;border-radius: 2px 0px 2px 0px;background-color: #CC9933;margin:10px;}
-.carousel-indicators li {height:12px;width:12px;border-radius: 2px 0px 2px 0px;
+.carousel-indicators .active {height:14px;width:14px;border-radius:8px;background-color: #CC9933;margin:10px;}
+.carousel-indicators li {height:14px;width:14px;border-radius: 8px;
 margin:10px; border: 2px solid #fff;}
 
 .carousel-indicators{
@@ -299,7 +299,7 @@ margin:10px; border: 2px solid #fff;}
 
     vertical-align: middle;
     text-align:left;
-    font-size: 32px;
+    font-size: 29px;
     color:white;
 }
 .button-up{

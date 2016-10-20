@@ -13,6 +13,7 @@ $this->title = 'Gekkosone';
     <div class="jumbotron">
     <div class="page-header">ДОСТАВКА КАМНЯ</div>
     <div class="page-text">
+    	<p>Возможно осуществление доставки камня по Республике Беларусь по предварительному согласованию.</p>
 
     </div>
 </div>

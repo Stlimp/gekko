@@ -284,8 +284,7 @@ $('.miniature').click(function(){
          document.getElementById("article").innerHTML= "Арт."+data.product_article;
          document.getElementById("color_name").innerHTML= "расцветка <span>«"+data.product_color_name+"»</span>";
          document.getElementById("add_to_cart").href="index.php?r=productcolor/add-to-cart&id=".concat(data.product_color_id);
-        seam="123";
-        console.log(seam);
+        $("th").removeClass("selected_seam");
         return false;
     });
 })
