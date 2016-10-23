@@ -75,8 +75,5 @@ $this->params['breadcrumbs'][] = $this->title;
                         ?>
 
     </div>
-    <div class="block" style="display:inline-block;width:100%;height:100%;padding:0px 50px 0px 50px;">
-            <?php include './../views/layouts/randomfooter.php' ?>
-    </div>
 
 </div>

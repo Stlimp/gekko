@@ -113,7 +113,6 @@ $this->title = 'Rocklaying';
         </div>
     <?php } ?>
 </div>
-<?php include './../views/layouts/randomfooter.php' ?>
 </div>
 
    </div>

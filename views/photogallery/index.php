@@ -63,28 +63,5 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
         <?php }?>
 
-
-    <p>
-        <?= Html::a('Create Photogallery', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'photo_name',
-            'photo_category',
-            'photo_subcategory',
-            'photo_image',
-            'photo_product',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-    <div class="block" style="display:inline-block;width:100%;height:100%;padding:0px 50px 0px 50px;">
-            <?php include './../views/layouts/randomfooter.php' ?>
-    </div>
     </div>
 </div>

@@ -65,6 +65,9 @@ IndexAsset::register($this);
         </div>
     </div>
     <footer class="footer first-footer">
+        <?php include './../views/layouts/randomfooter.php' ?>
+    </footer>
+    <footer class="footer second-footer">
         <div class="footer-image"><a href="index.php?r=site%2Fsitemap"><p>КАРТА САЙТА</p></a></div>
         <div class="footer-image"><a href="index.php?r=site%2Fcart"><p id="mygallery">МОЯ ГАЛЕРЕЯ</p></a></div>
         <div class="footer-image"><a href="index.php?r=site%2Fpartnership"><p>ПАРТНЕРСТВО</p></a></div>

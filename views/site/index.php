@@ -246,7 +246,6 @@ $this->registerJsFile('@web/js/slide-up-down.js');
 
 
         <?php include './../views/layouts/bottom.php' ?>
-        <?php include './../views/layouts/randomfooter.php' ?>
       </div>
     </div>
 </div>

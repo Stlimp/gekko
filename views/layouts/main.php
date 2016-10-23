@@ -18,8 +18,6 @@ $this->registerJsFile('@web/js/menu.js', ['depends' => [\yii\web\JqueryAsset::cl
 $this->registerJsFile('@web/js/likes.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJsFile('@web/js/bootstrap.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 AppAsset::register($this);
-
-$nohr="false";
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -47,14 +45,20 @@ $nohr="false";
         <div class="container">  
             <?= $content ?>
         </div> 
+
     </div>
-         <footer class="footer first-footer">
-        <div class="footer-image"><a href="index.php?r=site%2Fsitemap"><p>КАРТА САЙТА</p></a></div>
-        <div class="footer-image"><a href="index.php?r=site%2Fcart"><p id="mygallery">МОЯ ГАЛЕРЕЯ</p></a></div>
-        <div class="footer-image"><a href="index.php?r=site%2Fpartnership"><p>ПАРТНЕРСТВО</p></a></div>
-        <div class="footer-image"><a href="index.php?r=site%2Fcontact"><p>КОНТАКТЫ</p></a></div>
-        <div class="footer-image"><a href="index.php?r=site%2Fpublicoffer"><p>ПУБЛИЧНАЯ ОФЕРТА</p></a></div>
-        <div class="footer-image"><a href="index.php?r=site%2Fcopyright"><p>АВТОРСКИЕ ПРАВА</p></a></div>
+    <footer class="footer first-footer">
+        <?php include './../views/layouts/randomfooter.php' ?>
+    </footer>
+
+    <footer class="footer second-footer">
+            <div class="footer-image"><a href="index.php?r=site%2Fsitemap"><p>КАРТА САЙТА</p></a></div>
+            <div class="footer-image"><a href="index.php?r=site%2Fcart"><p id="mygallery">МОЯ ГАЛЕРЕЯ</p></a></div>
+            <div class="footer-image"><a href="index.php?r=site%2Fpartnership"><p>ПАРТНЕРСТВО</p></a></div>
+            <div class="footer-image"><a href="index.php?r=site%2Fcontact"><p>КОНТАКТЫ</p></a></div>
+            <div class="footer-image"><a href="index.php?r=site%2Fpublicoffer"><p>ПУБЛИЧНАЯ ОФЕРТА</p></a></div>
+            <div class="footer-image"><a href="index.php?r=site%2Fcopyright"><p>АВТОРСКИЕ ПРАВА</p></a></div>
+        
     </footer>
 <span><p style="text-align:center;vertical-align:middle;font-family:Century Gothic;font-size:10px;">©GEKKOSTONE <?php echo date("Y"); ?></p></span>
 <?php $this->endBody() ?>
@@ -65,6 +69,7 @@ $nohr="false";
 
 
 <?php $this->endBody() ?>
+
 </body>
 </html>
 </html>

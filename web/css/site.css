@@ -290,7 +290,7 @@ body {
 
 
 .footer {
-    height: 80px;
+  #height: 80px;
     text-align:justify;
     padding-left:50px;
     padding-right:50px;
@@ -298,7 +298,10 @@ body {
     min-width:1000px;
 }
 .first-footer{
-      background: rgba(243, 242, 238, 1.0);
+    }
+
+.second-footer{
+    background: rgba(243, 242, 238, 1.0);
 }
 
 

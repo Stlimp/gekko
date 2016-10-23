@@ -105,29 +105,5 @@ $this->title = 'Certificates';
 
             </div>
         </div>
-
-
-
-
-
-
-        <p>
-            <?= Html::a('Create Certificates', ['create'], ['class' => 'btn btn-success']) ?>
-        </p>
-
-        <?= GridView::widget([
-            'dataProvider' => $dataProvider,
-            'columns' => [
-                ['class' => 'yii\grid\SerialColumn'],
-
-                'id',
-                'type',
-                'path',
-                'description',
-                'thumbnail',
-
-                ['class' => 'yii\grid\ActionColumn'],
-            ],
-        ]); ?>
     </div>
 </div>

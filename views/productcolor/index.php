@@ -235,35 +235,6 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
             <?php include './../views/layouts/bottom.php' ?> 
         </div>
       </div>
-        
-        
-        
-
-
-<!-- 
-        <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-        <p>
-            <?= Html::a('Create Product Color', ['create'], ['class' => 'btn btn-success']) ?>
-        </p>
- -->
-<!--         <?= GridView::widget([
-    'dataProvider' => $dataProvider,
-    'filterModel' => $searchModel,
-    'columns' => [
-        ['class' => 'yii\grid\SerialColumn'],
-
-        'product_color_id',
-        'product_color_name',
-        'product_article',
-        'product_3ds_link',
-        'product_subcategory_name',
-        'product_color_image',
-
-        ['class' => 'yii\grid\ActionColumn'],
-    ],
-]); ?> -->
-
     </div>
 </div>
 

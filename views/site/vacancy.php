@@ -79,9 +79,6 @@ use yii\widgets\ActiveForm;
 		</div>
 
 <!-- <div class="moto" style="font-family:Esenin;font-size:50px;text-align:left;height:30px;padding-left:30px;">Будущее строится на <span style="color:#996633;">к</span>амне!</div>	 -->
-		<div class="block" style="display:inline-block;width:100%;height:100%;padding:0px 50px 0px 50px;">
-						<?php include './../views/layouts/randomfooter.php' ?>
-		</div>
 </div>
 
 <!-- <hr style="margin:20px;"> -->

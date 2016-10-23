@@ -11,23 +11,6 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="press-index">
     <div class="jumbotron">
-        <h1><?= Html::encode($this->title) ?></h1>
-
-        <p>
-            <?= Html::a('Create Press', ['create'], ['class' => 'btn btn-success']) ?>
-        </p>
-
-        <?= GridView::widget([
-            'dataProvider' => $dataProvider,
-            'columns' => [
-                ['class' => 'yii\grid\SerialColumn'],
-
-                'id',
-                'link_name',
-                'link',
-
-                ['class' => 'yii\grid\ActionColumn'],
-            ],
-        ]); ?>
+    
     </div>
 </div>

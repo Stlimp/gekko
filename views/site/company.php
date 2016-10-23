@@ -68,8 +68,6 @@ $this->title = 'GEKKOSTONE';
                     </div>
                 </div>
             </div>
-            <?php include './../views/layouts/randomfooter.php' ?>
-
         </div>
 	</div>
 </div>

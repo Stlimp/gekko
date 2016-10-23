@@ -52,9 +52,5 @@ $this->title = 'gekkostone';
                 </div>
             </div>
         </div>
-<div class="page-text">   
-
-        <?php include './../views/layouts/randomfooter.php' ?>  
-</div>
 </div>
 </div>

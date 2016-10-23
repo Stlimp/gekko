@@ -24,24 +24,6 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php } ?>
         </div>
 
-        <p>
-            <?= Html::a('Create Products', ['create'], ['class' => 'btn btn-success']) ?>
-        </p>
-
-         <?= GridView::widget([
-            'dataProvider' => $dataProvider,
-            'columns' => [
-                ['class' => 'yii\grid\SerialColumn'],
-
-                'id',
-                'video_name',
-                'video_description',
-                'video_link',
-                'video_thumbnail',
-
-                ['class' => 'yii\grid\ActionColumn'],
-            ],
-        ]); ?>
     </div>
 </div>
 

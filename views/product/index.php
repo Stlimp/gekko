@@ -40,26 +40,8 @@ $nohr="true";
     </div>
    <!--  <h1><?= Html::encode($this->title) ?></h1>
    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-   <p>
-       <?= Html::a('Create Product', ['create'], ['class' => 'btn btn-success']) ?>
-   </p>
-
-   <?= GridView::widget([
-       'dataProvider' => $dataProvider,
-       'filterModel' => $searchModel,
-       'columns' => [
-           ['class' => 'yii\grid\SerialColumn'],
-
-           'product_product_id',
-           'product_product_name',
-           'product_category_name',
-           ['class' => 'yii\grid\ActionColumn'],
-       ],
-   ]); ?> -->
+-->
 
   </div>
-  <div class="block" style="display:inline-block;width:100%;height:100%;padding:0px 50px 0px 50px;">
-            <?php include './../views/layouts/randomfooter.php' ?>
-    </div>
+
 </div>

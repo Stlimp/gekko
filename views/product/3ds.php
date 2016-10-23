@@ -41,25 +41,6 @@ $this->params['breadcrumbs'][] = $this->title;
         <h1><?= Html::encode($this->title) ?></h1>
         <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-        <p>
-            <?= Html::a('Create Product', ['create'], ['class' => 'btn btn-success']) ?>
-        </p>
-
-        <?= GridView::widget([
-            'dataProvider' => $dataProvider,
-            'filterModel' => $searchModel,
-            'columns' => [
-                ['class' => 'yii\grid\SerialColumn'],
-
-                'product_product_id',
-                'product_product_name',
-                'product_category_name',
-                /*'product_category_short_description',
-                'product_category_short_characteristics',*/
-
-                ['class' => 'yii\grid\ActionColumn'],
-            ],
-        ]); ?>
     </div>
 </div>
  -->

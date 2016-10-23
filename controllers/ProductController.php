@@ -46,6 +46,7 @@ class ProductController extends Controller
         
         $this->layout='main';
 
+         $this->view->params['nohr'] = 'true';
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
