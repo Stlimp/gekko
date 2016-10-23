@@ -11,6 +11,7 @@ $this->title = 'Products';
 $this->params['breadcrumbs'][] = $this->title;
 
 $nohr="true";
+
 ?>
 <div class="product-index">
   <div class="jumbotron" style="background-color:#F3F2EE">

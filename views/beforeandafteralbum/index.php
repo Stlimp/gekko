@@ -80,22 +80,3 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
 </div>
-<!-- 
-    <p>
-        <?= Html::a('Create Beforeandafter Album', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'album_name',
-            'city',
-            'description:ntext',
-            'product_color_id',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?> -->

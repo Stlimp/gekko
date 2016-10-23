@@ -56,7 +56,7 @@ $this->title = 'Gekkostone';
 				</div>
 				<div class="right-half">
 					<div class="right-side-half-text" style="float:left">
-						<img src="images/content/gekko.jpg" style="float:left;width:80%; padding-top: 5px;">
+						<img src="/images/content/gekko.jpg" style="float:left;width:80%; padding-top: 5px;">
 					</div>
 				</div>
 			</div>
@@ -65,7 +65,7 @@ $this->title = 'Gekkostone';
 			<div class="block" style="display:inline-block;width:100%;height:auto;">
 				<div class="left-half">
 					<div class="left-side-half-text" style="float:left">
-						<img src="images/content/painting.png" style="float:right;width:55%;padding-top: 10px;">
+						<img src="/images/content/painting.png" style="float:right;width:55%;padding-top: 10px;">
 					</div>
 				</div>
 				<div class="right-half">
@@ -118,7 +118,7 @@ $this->title = 'Gekkostone';
 				</div>
 				<div class="right-half">
 					<div class="right-side-half-text" style="float:left">
-						<img src="images/content/coloring.png" style="float:left;width:80%; padding-top: 40px;">
+						<img src="/images/content/coloring.png" style="float:left;width:80%; padding-top: 40px;">
 					</div>
 				</div>
 			</div>
@@ -126,7 +126,7 @@ $this->title = 'Gekkostone';
 			<div class="block" style="display:inline-block;width:100%;height:auto;">
 				<div class="left-half">
 					<div class="left-side-half-text" style="float:left">
-						<img src="images/content/colorcontrol.jpg" style="float:right;width:55%; padding-top: 5px;">
+						<img src="/images/content/colorcontrol.jpg" style="float:right;width:55%; padding-top: 5px;">
 					</div>
 				</div>
 				<div class="right-half">
@@ -173,7 +173,7 @@ $this->title = 'Gekkostone';
 				</div>
 				<div class="right-half">
 					<div class="right-side-half-text" style="float:left">
-						<img src="images/content/cement.png" style="float:left;width:80%; padding-top: 40px;">
+						<img src="/images/content/cement.png" style="float:left;width:80%; padding-top: 40px;">
 					</div>
 				</div>
 			</div>

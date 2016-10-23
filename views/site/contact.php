@@ -13,7 +13,7 @@ use yii\widgets\MaskedInput;
 			<table class="contacts_table">
 				<tr>
 					<td rowspan="2">
-						<img src="images/content/logomonochrome.jpg" align="left">
+						<img src="/images/content/logomonochrome.jpg" align="left" height="50" width="150">
 					</td>
 					<td>ООО <b>«ГЕККОСТОУН»</b>, УНП <span class="numbers">290489059</span>
 					</td>
@@ -86,7 +86,7 @@ use yii\widgets\MaskedInput;
                          ]);
                     ?>
 			<div class="photogallery-item" style="float:left">
-                <a href="images/content/map.png" rel="fancybox"><img src="images/content/map_thumb.jpg" alt="Схема проезда>" width="200" height="150"></a>
+                <a href="/images/content/map.png" rel="fancybox"><img src="/images/content/map_thumb.jpg" alt="Схема проезда>" width="200" height="150"></a>
             </div>
             <div class="store-item" float="left" >
 				<table class="contacts_table">
@@ -117,7 +117,7 @@ use yii\widgets\MaskedInput;
 					<tr>
 						<td><u><b>GPS склада:</b></u></th>
 						<td> <span class="numbers">N52° 04.896´</span></th>
-						<td rowspan="2"><img src="images/content/icons/gps.png" alt=""></td>
+						<td rowspan="2"><img src="/images/content/icons/gps.png" alt=""></td>
 					</tr>
 					<tr>
 						<td></td>

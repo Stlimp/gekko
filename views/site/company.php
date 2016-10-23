@@ -35,7 +35,7 @@ $this->title = 'GEKKOSTONE';
 
                 <div class="right-half">
                     <div class="right-side-half-text" style="float:left">
-                        <img src="images/content/aboutcompany.jpg" style="float:top;width:80%; padding-top: 5px;">
+                        <img src="/images/content/aboutcompany.jpg" style="float:top;width:80%; padding-top: 5px;">
                     </div>
 
                 </div>
@@ -47,7 +47,7 @@ $this->title = 'GEKKOSTONE';
             <div class="block" style="display:inline-block;width:100%;height:auto;">
                 <div class="left-half">
                         <div class="left-side-half-text" style="float:left">
-                           <img src="images/content/gekko.jpg" style="float:right;width:80%; padding-top: 45px;">
+                           <img src="/images/content/gekko.jpg" style="float:right;width:80%; padding-top: 45px;">
                         </div>
                 </div>
                 <div class="right-half">

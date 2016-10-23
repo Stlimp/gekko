@@ -6,9 +6,6 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\IndexAsset;
 
-
-
-
 mb_internal_encoding("UTF-8");
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -73,7 +70,7 @@ IndexAsset::register($this);
         <div class="footer-image"><a href="index.php?r=site%2Fpartnership"><p>ПАРТНЕРСТВО</p></a></div>
         <div class="footer-image"><a href="index.php?r=site%2Fcontact"><p>КОНТАКТЫ</p></a></div>
         <div class="footer-image"><a href="index.php?r=site%2Fpublicoffer"><p>ПУБЛИЧНАЯ ОФЕРТА</p></a></div>
-        <div class="footer-image"><a href=""><p>АВТОРСКИЕ ПРАВА</p></a></div>
+        <div class="footer-image"><a href="index.php?r=site%2Fcopyright"><p>АВТОРСКИЕ ПРАВА</p></a></div>
     </footer>
 <span><p style="text-align:center;vertical-align:middle;font-family:Century Gothic;font-size:10px;">©GEKKOSTONE <?php echo date("Y"); ?></p></span>
 <?php $this->endBody() ?>

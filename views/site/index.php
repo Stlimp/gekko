@@ -155,11 +155,14 @@ $this->registerJsFile('@web/js/slide-up-down.js');
 
 
                ?>
-                <a href="google.com">
+                <a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?php echo str_replace(' ', '%20',  $product->product_product_name) ?>&r=productcolor%2Findex">
                 <div class="left_third" style="padding:0;">
-                   <!-- <p style="font-weight:900 !important;position: absolute;top:75%;transform: translateY(-50%);"><?= mb_strtoupper($product->product_product_name) ?></p>-->
-                   <!-- <p style="font-size:18px;font-weight:100 !important;position: absolute;top:10%;transform: translateY(-50%);"><b>ДЕКОРАТИВНЫЙ КАМЕНЬ</b></p>-->
-                       <img src="images/modules/rockfaktura.jpg">
+                   <!--  <p style="font-weight:900 !important;position: absolute;top:75%;transform: translateY(-50%);"><?php if ($product->product_product_name=="СОСТАРЕННЫЙ КИРПИЧ") {
+                       echo (mb_strtoupper("Состарен. кирпич"));
+                   }else{
+                       echo (mb_strtoupper($product->product_product_name));} ?></p>
+                   <p style="font-size:18px;font-weight:100 !important;position: absolute;top:10%;transform: translateY(-50%);"><b>ДЕКОРАТИВНЫЙ КАМЕНЬ</b></p> -->
+                       <img src="<?= $product->product_product_image?>">
                 </div>
             </a>
            <!--     <span class="<?= $font_class?>" >
@@ -171,13 +174,13 @@ $this->registerJsFile('@web/js/slide-up-down.js');
         <div class="right_third">
             <a href="index.php?r=site%2Fcart">
                 <div class="right_split cart" style="top:0">
-                    <p style="position: absolute;top:30%;transform: translateY(-50%);font-family:Corbel">Собери собственную галерею из наиболее понравившихся фактур
-    и расцветок!</p>
-                    <span class="test_text" style="position: absolute;top:50%;transform: translateY(-50%); font-size:35px; font-family:Corbel;"><b>МОЯ ГАЛЕРЕЯ</b></span>
-                    <p style="position: absolute;top:75%;transform: translateY(-50%); font-family:Corbel">Расчет необходимого количества камня, его веса и стоимости!</p>
+                   <!--  <p style="position: absolute;top:30%;transform: translateY(-50%);font-family:Corbel">Собери собственную галерею из наиболее понравившихся фактур
+                       и расцветок!</p>
+                   <span class="test_text" style="position: absolute;top:50%;transform: translateY(-50%); font-size:35px; font-family:Corbel;"><b>МОЯ ГАЛЕРЕЯ</b></span>
+                   <p style="position: absolute;top:75%;transform: translateY(-50%); font-family:Corbel">Расчет необходимого количества камня, его веса и стоимости!</p> -->
                 </div>
             </a>
-            <a href="#">
+            <a href="index.php?r=site%2Ftest">
                 
                 <div class="right_split test" style="bottom:0">
                    <!-- <span style="font-weight:900 !important;position: absolute;top:34%;transform: translateY(-50%);font-family:Corbel;" class="test_text">НАТУРАЛЬНЫЙ ИЛИ ИСКУССТВЕННЫЙ?</span>
@@ -198,7 +201,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
                         </p>
                     </div>
                     <div class="center_split_vertically">
-                        <img src="images/background/faktury.jpg" alt="">
+                        <img src="/images/background/faktury.jpg" alt="">
                     </div>
                     <!-- <div class="center_split_vertically">
                        <p>ПОДБОР КАМНЯ</p>
@@ -214,7 +217,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
                     </div>
 
                     <div class="center_split_vertically">
-                        <img src="images/background/choice.jpg" alt="">
+                        <img src="/images/background/choice.jpg" alt="">
                     </div>
             </a>
             <a href="index.php?r=beforeandafteralbum%2Findex" class="center_split">
@@ -225,21 +228,21 @@ $this->registerJsFile('@web/js/slide-up-down.js');
                             укладке декоративного камня. </p>
                     </div>
                     <div class="center_split_vertically">
-                        <img src="images/background/before_after.jpg" alt="">
+                        <img src="/images/background/before_after.jpg" alt="">
                     </div>
             </a>
 
         </div>
 
-        <div class="slider">
-            <ul id="lightSlider">
-                <?php foreach ($photos as $image)  { ?>
-                <li class="sliderLi">
-                    <a href="http://gekkostone/web/?ProductColorSearch%5Bproduct_subcategory_name%5D=<?=$image->photo_product?>&r=productcolor%2Findex"><img class="sliderImg" src="<?= $image->photo_image ?>" /></a>
-                </li>
-                <?php } ?>
-            </ul>
-        </div>
+       <!--  <div class="slider">
+           <ul id="lightSlider">
+               <?php foreach ($photos as $image)  { ?>
+               <li class="sliderLi">
+                   <a href="http://gekkostone/web/?ProductColorSearch%5Bproduct_subcategory_name%5D=<?=$image->photo_product?>&r=productcolor%2Findex"><img class="sliderImg" src="<?= $image->photo_image ?>" /></a>
+               </li>
+               <?php } ?>
+           </ul>
+       </div> -->
 
 
         <?php include './../views/layouts/bottom.php' ?>

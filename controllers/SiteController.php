@@ -297,7 +297,16 @@ class SiteController extends Controller
         $videos = $dataProvider->getModels();
         return $this->render('rocklaying',['videos' => $videos]);
     }
-
+    public function actionTest()
+    {
+        $this->view->params['menuselected'] = 'services';
+        return $this->render('test');
+    }
+    public function actionCopyright()
+    {
+        $this->view->params['menuselected'] = 'services';
+        return $this->render('copyright');
+    }
     public function actionDesign()
     {
         $this->view->params['menuselected'] = 'services';

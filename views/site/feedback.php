@@ -17,7 +17,7 @@ use yii\widgets\ActiveForm;
 предложение по улучшению качества обслуживания, реализуемой продукции или
 предоставляемых услуг, Вы можете заполнить прилагаемую на странице форму и
 направить Ваше обращение в любой отдел компании.</p>
-			<p><img src="images/content/vacancy.jpg" align="right" width="100%"></p>
+			<p><img src="/images/content/vacancy.jpg" align="right" width="100%"></p>
     	</div>
     	<!-- <div class="left-side-half-text" style="text-align:left;font-family:Impact;">
     				<?php

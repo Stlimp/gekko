@@ -23,7 +23,7 @@ use yii\widgets\ActiveForm;
 				В настоящий момент вакансий не требуется. Следите за обновлениями на сайте! Вы можете оставить заявку, - она будет рассмотрена сразу после появления свободных вакансий.
 				 </i></p>
 				<p>
-					<img src="images/content/vacancy.jpg" align="right" width="100%">
+					<img src="/images/content/vacancy.jpg" align="right" width="100%">
 				</p>
 			</div>
 

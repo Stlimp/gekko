@@ -1,7 +1,7 @@
 
 <div class="site-index">
    	<div class="jumbotron">
-	    <div class="page-header"><span style="color:#666666"><b>ПРЕДУПРЕЖДЕНИЕ О ЦВЕТОПЕРЕДАЧЕ</b><img src="images/content/alarm.png" style="padding-left:10px;"></div>
+	    <div class="page-header"><span style="color:#666666"><b>ПРЕДУПРЕЖДЕНИЕ О ЦВЕТОПЕРЕДАЧЕ</b><img src="/images/content/alarm.png" style="padding-left:10px;"></div>
 		<div class="page-text">
 			<div style="width:75%;float:left;">
 				<p>Прежде всего следует учесть тот факт, что понятие цвета — характеристика не математическая, а субъективная,
@@ -30,7 +30,7 @@
 					<li>Печатные технологии также не способны достоверно точно передать цвет. Во-первых, в любом случае для фотографии используется фототехника, после чего фото дорабатывается в программе с контролем цветопередачи на мониторе. Далее изображение по определенным алгоритмам переводится из аддитивной модели в субтрактивную модель, понятную печатной машине, что вносит определенные искажения по цветопередаче. В дополнение, технологии цифровой печати также имеют свои ограничения по цветовому охвату. </li>
 				</ol>
 			</div>
-			<div style="width:25%;float:right;padding-left:10px;"><img src="images/content/warning1.png" style="width:100%;padding-bottom:15px;"><img src="images/content/warning2.png" style="width:100%">фото камня с различным цветовым балансом</div>
+			<div style="width:25%;float:right;padding-left:10px;"><img src="/images/content/warning1.png" style="width:100%;padding-bottom:15px;"><img src="/images/content/warning2.png" style="width:100%">фото камня с различным цветовым балансом</div>
 			</p>
 			<div style="width:100%;float:left;">
 			<p style="color:#996633"><b>Мы рекомендуем Вам делать свой выбор по образцам, представленным на рекламных стендах при освещении, максимально приближенном к условиям эксплуатации! </b> </p>

@@ -3,7 +3,7 @@
                 <div class="quarter">
                         <div class="header">ОПТИМАЛЬНЫЙ ВЫБОР КАМНЯ</div>
                         <div class="text">Преимущества и недостатки декоративного облицовочного камня, представленного на рынке .</div>
-                        <img src="images/background/gekko.jpg" alt="">
+                        <img src="/images/background/gekko.jpg" alt="">
                 </div>
             </a>
             <a href="index.php?r=faq%2Findex">
@@ -12,7 +12,7 @@
                         <div class="text">Ответы на наиболее часто задаваемые
                                         вопросы по подбору, монтажу и последующей эксплуатации декоративного облицовочного камня.
                         </div>
-                        <img src="images/background/faq.jpg" alt="">
+                        <img src="/images/background/faq.jpg" alt="">
                 </div>
             </a>
             <a href="index.php?r=certificates%2Findex">
@@ -20,7 +20,7 @@
                     <div class="header">ТЕХНИЧЕСКИЕ ДАННЫЕ</div>
                     <div class="text">Технические и эксплуатационные характеристики декоративного камня GEKKOSTONE.
                     </div>
-                    <img src="images/background/technical.jpg" alt="">
+                    <img src="/images/background/technical.jpg" alt="">
             </div>
             </a>
             <a href="index.php?r=site%2Frocklaying">
@@ -32,7 +32,7 @@
                                     советы по успешной последующей
                                     эксплуатации. Видеоинструкции.
                     </div>
-                    <img src="images/background/facing.jpg" alt="">
+                    <img src="/images/background/facing.jpg" alt="">
 
             </div>
             </a>

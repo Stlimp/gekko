@@ -44,7 +44,7 @@ class BeforeandafteralbumController extends Controller
         ]);
 
         $this->layout='main';
-        return $this->render('index', [
+        return $this->render('developement', [
             'dataProvider' => $dataProvider,
             'dataProviderPhotos' => $dataProviderPhotos,
         ]);

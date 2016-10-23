@@ -206,7 +206,7 @@ margin:10px; border: 2px solid #fff;}
 
 .center_split_vertically{
   float:right;
-    width:30%;
+    width:40%;
     height: 100%;
     background-color: #D8D8CA;
     #border-radius: 20px 0px ;
@@ -228,7 +228,7 @@ margin:10px; border: 2px solid #fff;}
 
 }
 .center_split_text{
-    width:70%;
+    width:60%;
     float:left;
     height: 100%;
     display: table;

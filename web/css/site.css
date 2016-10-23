@@ -550,7 +550,12 @@ color:#666666;
   display:inline-block;
 }
 
-
+.panel-heading{
+  background-color: #E1DFD0 !important;
+}
+.panel-heading a:focus{
+  text-decoration: none;
+}
 /*Bootstrap buttons fixes*/
 .btn:focus,.btn:active {
    outline: none !important;
@@ -1331,7 +1336,7 @@ left: 0;
    }
 
 .contacts_table td {
-  padding-left: 10px;
+  padding-right: 10px;
   font-size: 15px;
 }
 
@@ -1491,6 +1496,11 @@ max-height:100%;
 .news-selector> ul{
   padding-left: 50px;
 }
+
+.news-selector li{
+  padding-bottom: 10px;
+}
+
 .selected{
   font-weight: bold;
   color:#CC9933;
