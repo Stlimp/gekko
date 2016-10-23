@@ -35,7 +35,7 @@ $this->title = 'Rocklaying';
             <p>
                 <table style="width:100%;border:20px">
                     <tr >
-                        <td><img src="images\content\rocklaying\1.png" align="left"></img></td>
+                        <td><img src="\images\content\rocklaying\1.png" align="left"></img></td>
                         <td>Персонал, производящий облицовочные работы, должен обладать необходимыми знаниями по типу применяемых материалов, а также
                         требуемыми навыками по монтажу. Перед началом облицовочных работ убедитесь, что персонал изучил рекомендуемую информацию
                         по типу применяемых материалов, а также по технологии монтажа и требуйте соблюдения настоящих рекомендаций!
@@ -43,7 +43,7 @@ $this->title = 'Rocklaying';
                     </tr>
 
                     <tr>
-                        <td><img src="images\content\rocklaying\2.png" align="left"></img></td>
+                        <td><img src="\images\content\rocklaying\2.png" align="left"></img></td>
                         <td>Качественный проект требует применения надлежащих материалов и правильных методов монтажа. Конечно, применение качественных
                         материалов и надлежащая методика укладки камня предполагает дополнительные расходы. Однако, это необходимые расходы, если Вы
                         желаете получить красивую и качественную облицовку, которая прослужит Вам многие десятилетия.
@@ -57,7 +57,7 @@ $this->title = 'Rocklaying';
          <p>
         <table style="width:100%">
             <tr>
-                        <td><img src="images\content\rocklaying\3.png" align="left"></td>
+                        <td><img src="\images\content\rocklaying\3.png" align="left"></td>
                         <td>Настоятельно рекомендуем соблюдать правила техники безопасности на рабочем месте при работе с инструмен-
                         том, а также химическими растворами и добавками. Также рекомендуем применять индивидуальные средства
                         защиты органов зрения, слуха и дыхания, работы производить в защитной обуви, костюме и перчатках.
@@ -71,7 +71,7 @@ $this->title = 'Rocklaying';
         <div class="right-half">
             <div class="right-side-half-text">
                 <div id="document" style="text-align: left;">
-                    <p><a class="link_grey_color" href="data/instr_short.pdf"><img class="doc-miniature" src="images\content\certificates\transparent.png" alt="..." style="float:left"/>
+                    <p><a class="link_grey_color" href="data/instr_short.pdf" target="_blank"><img class="doc-miniature" src="\images\content\certificates\transparent.png" alt="..." style="float:left"/>
                         <u><b>КРАТКАЯ ИНСТРУКЦИЯ.</b></u></a><br>
                         Изложены общие рекомендации
                         по монтажу различных фактур и
@@ -86,7 +86,7 @@ $this->title = 'Rocklaying';
         <div class="left-half">
             <div class="left-side-half-text">
                 <div id="document" style="text-align: left;">
-                    <p><a class="link_grey_color" href="data/instr_depth.pdf"><img class="doc-miniature" src="images\content\certificates\transparent.png" alt="..." style="float:left"/>
+                    <p><a class="link_grey_color" href="data/instr_depth.pdf" target="_blank"><img class="doc-miniature" src="\images\content\certificates\transparent.png" alt="..." style="float:left"/>
                         <u><b>ПОДРОБНАЯ ИНСТРУКЦИЯ.</b></u></a><br>
                         Изложены подробные рекомендации
                         по монтажу различных фактур на

@@ -45,7 +45,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                     <img src="images/content/products/icons/water.png" alt="">
                     <img src="images/content/products/icons/eco.png" alt="">-->
                     <?= $product_data->product_characteristics?>
-                    <img src="images\content\products\icons\TPBY.png" alt="" style="float:right">
+                    <img src="\images\content\products\icons\TPBY.png" alt="" style="float:right">
                 </div>
             
                 <div class="left_halfheader">

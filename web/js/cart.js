@@ -109,8 +109,8 @@ function order() {
 	    	document.getElementById('angular_result_'.concat(color_id)).innerHTML=angular_result;//. стоимость уголвых
 	    	document.getElementById('regular_result_'.concat(color_id)).innerHTML=regular_result;//. стоимость рядовых
 
-	    	var price=Math.ceil((angular_result+regular_result)*color_data.product_price/100)*100;//6. общая цена до деноминации
-	    	//var price=Math.ceil((angular_result+regular_result)*color_data.product_price_seamless*100)/100;//6. общая цена после деноминации
+	    	//var price=Math.ceil((angular_result+regular_result)*color_data.product_price/100)*100;//6. общая цена до деноминации
+	    	var price=Math.ceil((angular_result+regular_result)*color_data.product_price_seamless*100)/100;//6. общая цена после деноминации
 
 	    }
 	    else{
@@ -134,8 +134,8 @@ function order() {
 	    	document.getElementById('regular_result_'.concat(color_id)).innerHTML=regular_result;//. стоимость рядовых
 
 
-	    	var price=Math.ceil((angular_result+regular_result)*color_data.product_price_seamless/100)*100;//6. общая цена до деноминации
-	    	//var price=Math.ceil((angular_result+regular_result)*color_data.product_price_seamless*100)/100;//6. общая цена после деноминации
+	    	//var price=Math.ceil((angular_result+regular_result)*color_data.product_price_seamless/100)*100;//6. общая цена до деноминации
+	    	var price=Math.ceil((angular_result+regular_result)*color_data.product_price_seamless*100)/100;//6. общая цена после деноминации
 
 
 	   	}

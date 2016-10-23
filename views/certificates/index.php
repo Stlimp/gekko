@@ -28,43 +28,43 @@ $this->title = 'Certificates';
                 <p>
                     <table style="width:100%;border-spacing: 10px;border-collapse: separate;">
                         <tr>
-                            <td><img class=""src="images\content\certificates\png\1.png" align="left"></img></td>
+                            <td><img class=""src="/images/content/certificates/png/1.png" align="left"></img></td>
                             <td>Изготовлен на основе бездобавочного белого цемента 600-й марки. </td>
                         </tr>
                         <tr>
-                            <td><img src="images\content\certificates\png\2.png" align="left"></img></td>
+                            <td><img src="/images/content/certificates/png/2.png" align="left"></img></td>
                             <td>Требуемая прочность на сжатие не ниже 25,7 МПа <br>(фактическая около 45 МПа).</td>
                         </tr><br>
                         <tr>
-                            <td><img src="images\content\certificates\png\3.png" align="left"></img></td>
+                            <td><img src="/images/content/certificates/png/3.png" align="left"></img></td>
                             <td>Требуемая прочность на изгиб не менее 1,8 МПа<br>(фактическая более 7,7 МПа).</td>
                         </tr>
                         <tr>
-                            <td><img src="images\content\certificates\png\4.png" align="left"></img></td>
+                            <td><img src="/images/content/certificates/png/4.png" align="left"></img></td>
                             <td>Требуемая морозостойкость не менее F150<br>(фактическая расчетная около F400).</td>
                         </tr>
                         <tr>
-                            <td><img src="images\content\certificates\png\5.png" align="left"></img></td>
+                            <td><img src="/images/content/certificates/png/5.png" align="left"></img></td>
                             <td>Требуемая водонепроницаемость не менее W2 (фактическая W8).<br>Требуемое водопоглощение не более 8% (фактическое менее 8%).</td>
                         </tr>
                         <tr>
-                            <td><img src="images\content\certificates\png\6.png" align="left"></img></td>
+                            <td><img src="/images/content/certificates/png/6.png" align="left"></img></td>
                             <td>Не горит и не выделяет дым при нагревании.<br>Не изменяет своих свойств при температуре до 200°C.  </td>
                         </tr>
                         <tr>
-                            <td><img src="images\content\certificates\png\7.png" align="left"></img></td>
+                            <td><img src="/images/content/certificates/png/7.png" align="left"></img></td>
                             <td>Идеально подходит как для наружной<br>так и для внутренней облицовки.</td>
                         </tr>
                         <tr>
-                            <td><img src="images\content\certificates\png\9.png" align="left"></img></td>
+                            <td><img src="/images/content/certificates/png/9.png" align="left"></img></td>
                             <td>Превосходная светостойкость в силу природы <br>применяемых неорганических пигментов компании Lanxess.</td>
                         </tr>
                         <tr>
-                            <td><img src="images\content\certificates\png\8.png" align="left"></img></td>
+                            <td><img src="/images/content/certificates/png/8.png" align="left"></img></td>
                             <td>Изготовлен из натуральных компонентов <br>и является экологически чистым. <br></td>
                         </tr>
                          <tr>
-                            <td><img src="images\content\certificates\png\10.png" align="left"></img></td>
+                            <td><img src="/images/content/certificates/png/10.png" align="left"></img></td>
                             <td>Естественный уровень радионуклидов не более 26,5 Бк/кг. <br>Уровень ЕРН = 26,5 Бк/кг при допустимом уровне до 370 Бк/кг.</td>
                         </tr>
                     </table>

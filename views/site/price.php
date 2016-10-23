@@ -19,7 +19,7 @@ $this->title = 'Price';
             <div id="document">
                 <a class="link_grey_color" href="http://example.com/files/myfile.pdf" target="_blank">
 
-                    <img class="doc-miniature" src="images\content\certificates\transparent.png" alt="..." />    
+                    <img class="doc-miniature" src="\images\content\certificates\transparent.png" alt="..." />    
 
                 <p>КАТАЛОГ 2015</p>
                 </a>
@@ -27,7 +27,7 @@ $this->title = 'Price';
             <div id="document">
                 <a class="link_grey_color" href="http://example.com/files/myfile.pdf" target="_blank">
 
-                    <img class="doc-miniature" src="images\content\certificates\transparent.png" alt="..." />    
+                    <img class="doc-miniature" src="\images\content\certificates\transparent.png" alt="..." />    
 
                 <p>ЛИФЛЕТ 2015</p>
                 </a>
@@ -40,7 +40,7 @@ $this->title = 'Price';
             
             <div id="document">
                 <a class="link_grey_color" href="data/price.xls" target="_blank">
-                <img class="doc-miniature" src="images\content\certificates\price.jpg" alt="..." />    
+                <img class="doc-miniature" src="\images\content\certificates\price.jpg" alt="..." />    
                 <p>Розничный прайс <br> от 01.02.2016г.</p>
                 </a>
             </div>          
