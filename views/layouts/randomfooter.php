@@ -14,10 +14,11 @@ use yii\widgets\ActiveForm;
                                 <span><a href="https://www.instagram.com/gekkostone/" target="_blank"><img src="images/icons/instagram.png" alt="" onmouseover="this.src='images/icons/instagramhover.png';" onmouseout="this.src='images/icons/twitter.png';"></a></span>
                                 <span><a href="https://www.youtube.com/channel/UC1DZsDgI5K9jGuUAzYDjUnQ" target="_blank"><img src="images/icons/youtube.png" alt="" onmouseover="this.src='images/icons/youtubehover.png';" onmouseout="this.src='images/icons/youtube.png';"></a></span>
         </div>
-        <div style="width:85%;float:right">
-            <hr style="margin-top: 5px;">
-        </div>
-
+        <?php if ($nohr!="true"){
+         echo "<div style=\"width:85%;float:right\">
+            <hr style=\"margin-top: 5px;\">
+        </div>";
+         }?>
         <!-- <div class="half">
             <span>
                 <form>
@@ -33,7 +34,6 @@ use yii\widgets\ActiveForm;
         <div class="randomfooter">
              <span>
                 <form action="index.php?r=site%2Fsubscribe" method="post">
-                    <div>email</div>
                     <div style="border: 1px solid #E1DFD0;width:250px;padding: 3px;">
                             <input type="text" class="email" id="email" name="email" placeholder="e-mail" style="border: 0;height:25px;width:150px">
                             <input type="submit" class="button" id="submit" value="ПОДПИСКА" style="border: 0;height:25px;float:right;width:85px;">

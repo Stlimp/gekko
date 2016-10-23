@@ -379,7 +379,8 @@ body {
 }
 
 .product a{
-
+text-decoration: none;
+color:#666666;
 }
 .product a img {
 
@@ -388,10 +389,14 @@ body {
     transition: all .1s ease-in-out;
 }
 
-
+.product a:hover{
+  color:#996633;
+}
+  
 .product a:hover img{
     #border: 2px solid #a94442;
     transform: scale(1.02);
+
 }
 
 
