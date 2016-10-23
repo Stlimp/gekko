@@ -13,7 +13,7 @@ $this->registerJsFile('@web/js/ajax.js');
 <div class="site-index">
    <div class="jumbotron">
 	 <div class="my_gallery" style="width:20%;float:left;">
-	 	<div class="page-header" style="float:left;">МОЯ ГАЛЕРЕЯ <span id="cart"><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></div>
+	 	<div class="page-header" style="float:left;">МОЯ ГАЛЕРЕЯ <span id="cart" <?php if (\Yii::$app->cart->getCount()==0){echo "style=\"background-color:transparent;color: #000000; border: 1px solid #000000;\"";} ?>><?php echo $itemsCount = \Yii::$app->cart->getCount(); ?></span></div>
 	 </div>
 	 <!--   <?php $form = ActiveForm::begin([
 	  	//'action' => './index.php?r=site%2Fsamplepdf'
@@ -88,6 +88,12 @@ $this->registerJsFile('@web/js/ajax.js');
 				</div>
 			<?php } ?>
 		</div>
+		<div class="war" style ="padding:0px 50px 0px 50px;">
+			<p>«Сайт предназначен для рекламы продукции производителя, носит информативный характер и не является интернет-магазином. Оплата через публичные сети с использованием платежных систем невозможна! Вы можете оплатить продукцию ООО «ГЕККОСТОУН» только через розничную торговую точку на складе-магазине в г. Брест, Красный Двор – 108 (р-н Картингового стадиона) или по безналичному расчету через банк на текущий р/счет ООО «ГЕККОСТОУН» в соответствии с Договором публичной оферты. Обязательно уточняйте наличие продукции на складе!»</p>
+		</div>
+
 	</form>
+
+	
 	</div>
 </div>
