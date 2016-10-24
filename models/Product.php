@@ -51,9 +51,11 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             [['product_product_id'], 'integer'],
-            [['product_product_name', 'product_product_image', 'product_category_name', 'product_characteristics', 'product_regular_size', 'product_regular_thickness', 'product_regular_weight', 'product_regular_quantity', 'product_regular_repeatability', 'product_regular_calculation_size', 'product_price', 'product_regular_seamless_calculation_size', 'product_price_seamless'], 'required'],
+            [['product_product_name', 'product_product_image', 'product_index_image', 'product_category_name', 'product_characteristics', 'product_regular_size', 'product_regular_thickness', 'product_regular_weight', 'product_regular_quantity', 'product_regular_repeatability', 'product_regular_calculation_size', 'product_price', 'product_regular_seamless_calculation_size', 'product_price_seamless'], 'required'],
             [['product_regular_weight', 'product_angular_weight', 'product_regular_calculation_size', 'product_angular_calculation_size', 'product_angular_calculation_size_square', 'product_price', 'product_regular_seamless_calculation_size', 'product_angular_seamless_calculation_size', 'product_angular_seamless_calculation_size_square', 'product_price_seamless'], 'number'],
-            [['product_product_name', 'product_product_image', 'product_category_name', 'product_characteristics', 'product_regular_size', 'product_regular_thickness', 'product_regular_quantity', 'product_regular_repeatability', 'product_angular_size', 'product_angular_thickness', 'product_angular_quantity', 'product_angular_repeatability'], 'string', 'max' => 255]
+            [['product_product_name', 'product_product_image', 'product_index_image', 'product_category_name', 'product_regular_size', 'product_regular_thickness', 'product_regular_quantity', 'product_regular_repeatability', 'product_angular_size', 'product_angular_thickness', 'product_angular_quantity', 'product_angular_repeatability'], 'string', 'max' => 255],
+            [['product_characteristics'], 'string', 'max' => 1000],//?
+            [['product_category_name'], 'exist', 'skipOnError' => true, 'targetClass' => GkkProductCategories::className(), 'targetAttribute' => ['product_category_name' => 'product_category_name']],//?
         ];
     }
 
@@ -66,6 +68,7 @@ class Product extends \yii\db\ActiveRecord
             'product_product_id' => 'Product Product ID',
             'product_product_name' => 'Product Product Name',
             'product_product_image' => 'Product Product Image',
+             'product_index_image' => 'Product Index Image', 
             'product_category_name' => 'Product Category Name',
             'product_characteristics' => 'Product Characteristics',
             'product_regular_size' => 'Product Regular Size',

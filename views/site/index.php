@@ -162,7 +162,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
                    }else{
                        echo (mb_strtoupper($product->product_product_name));} ?></p>
                    <p style="font-size:18px;font-weight:100 !important;position: absolute;top:10%;transform: translateY(-50%);"><b>ДЕКОРАТИВНЫЙ КАМЕНЬ</b></p> -->
-                       <img src="<?= $product->product_product_image?>">
+                       <img src="<?= $product->product_index_image?>">
                 </div>
             </a>
            <!--     <span class="<?= $font_class?>" >
