@@ -8,6 +8,7 @@ $this->title = 'Gekkostone';
 $this->registerJsFile('@web/js/cart.js');
 $this->registerJsFile('http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
 $this->registerJsFile('@web/js/ajax.js');
+$this->registerJsFile('@web/js/number-polyfill.js');
 ?>
 
 <div class="site-index">
