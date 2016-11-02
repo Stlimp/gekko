@@ -20,10 +20,10 @@
 			<li><a href="#">Авторские права</a></li>
 		</ul>
 		<ul id="primaryNav" class="col4">
-			<li id="home"><a href="/web/">Home</a></li>
+			<li id="home"><a href="http://www.gekkostone.by/">Home</a></li>
 			<li><a href="index.php?r=site%2Fcompany">О компании</a>
 				<ul>
-					<li><a href="index.php?r=site%2Fcompany">Gekkostone</a></li>
+					<li><a href="index.php?r=site%2Fcompany">GEKKOSTONE</a></li>
                     <li><a href="index.php?r=site%2Fadvantages">Преимущества</a></li>
                     <li><a href="index.php?r=news%2Findex">Новости</a></li>
                     <li><a href="index.php?r=site%2Fvacancy">Вакансии</a></li>
@@ -35,18 +35,15 @@
 			<li><a href="#">Продукция</a>
 				<ul>
 					<li><a href="index.php?r=product%2Findex">Вся продукция</a></li>
-					<li><a href="?ProductSearch%5Bproduct_category_name%5D=Кирпич+тонкий&r=product%2Findex">Кирпич тонкий</a>
-						<ul>
+					<ul>>
 							<li><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=Античный&r=productcolor%2Findex">Античный</a></li>
 							<li><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=Состаренный&r=productcolor%2Findex">Состаренный</a></li>
-							<li><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=Классический&r=productcolor%2Findex">Классический</a></li>
+
                         </ul>
 					</li>
 					<li><a href="?ProductSearch%5Bproduct_category_name%5D=Камень+облицовочный&r=product%2Findex">Камень облицовочный</a>
 						<ul>
 							<li><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=Скалистая гора&r=productcolor%2Findex">Скалистая гора</a></li>
-							<li><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=Скала тонкая&r=productcolor%2Findex">Скала тонкая</a></li>
-							<li><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=Скала состарен.&r=productcolor%2Findex">Скала состарен.</a></li>
 							<li><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=Травертин&r=productcolor%2Findex">Травертин</a></li>
 							<li><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=Пальчики&r=productcolor%2Findex">Пальчики</a></li>
 						</ul>

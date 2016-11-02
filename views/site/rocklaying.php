@@ -71,7 +71,7 @@ $this->title = 'Rocklaying';
         <div class="right-half">
             <div class="right-side-half-text">
                 <div id="document" style="text-align: left;">
-                    <p><a class="link_grey_color" href="data/instr_short.pdf" target="_blank"><img class="doc-miniature" src="\images\content\certificates\transparent.png" alt="..." style="float:left"/>
+                    <p><a class="link_grey_color" href="data/instr_short.pdf" target="_blank"><img class="doc-miniature" src="\data\instr_short_icon.jpg" alt="..." style="float:left"/>
                         <u><b>КРАТКАЯ ИНСТРУКЦИЯ.</b></u></a><br>
                         Изложены общие рекомендации
                         по монтажу различных фактур и

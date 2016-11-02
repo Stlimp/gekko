@@ -36,7 +36,7 @@ $nohr="true";
             <a href="http://gekkostone/web/index.php"><img src="images/content/related_products.jpg" alt="" width="220" height="150"></a>
             <h3 style="margin:0">Сопутствтвующие товары</h3>
         </div> -->
-      <div class="moto" style="display:inline-block;float:right;font-family:Esenin;font-size:50px;text-align:right;width:100%;padding-right:30px; color: #787764;"><span style="color:#996633;">Вдохновение,</span> подаренное природой!</div>
+      <div class="moto" style="display:inline-block;float:right;font-family:Esenin;font-size:50px;text-align:right;width:100%;padding-right:15px; color: #787764;"><span style="color:#996633;">Вдохновение,</span> подаренное природой!</div>
     </div>
    <!--  <h1><?= Html::encode($this->title) ?></h1>
    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

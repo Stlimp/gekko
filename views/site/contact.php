@@ -7,19 +7,19 @@ use yii\widgets\MaskedInput;
    <div class="jumbotron">
 	<div class="left-half">
 		<div class="left-side-half-header">
-		<span style="color:#858370"><b>КОНТАКТЫ</b>
+		<span style="color:#666666"><b>КОНТАКТЫ</b>
 		</div>
 		<div class="left-side-half-text">
 			<table class="contacts_table">
 				<tr>
-					<td rowspan="2">
+					<!--<td rowspan="2">
 						<img src="/images/content/logomonochrome.jpg" align="left" height="50" width="150">
-					</td>
+					</td>-->
 					<td>ООО <b>«ГЕККОСТОУН»</b>, УНП <span class="numbers">290489059</span>
 					</td>
 				</tr>
 				<tr>
-					<td><b>юридический адрес:</b> д. Черни, ул. Брестская <span class="numbers">56/6</span>;  Брестская область.
+					<td><b>юридический адрес:</b> д. Черни, ул. Брестская <span class="numbers">56/6</span>;  <br>Брестская область, Брестский р-н.
 					</td>
 				</tr>
 			</table>
@@ -32,19 +32,25 @@ use yii\widgets\MaskedInput;
 				</tr>
 				<tr>
 					<td>
-						тел. <span class="numbers">+375 29 7208060</span>(МТС)
+						уточняйте наличие продукции на складе по телефонам:
 					</td>
 				</tr>
 				<tr>
 					<td>
-						тел. <span class="numbers">+375 29 9324060</span>(Velcom)
-					</td>
+						тел. <span class="numbers">+375 29 <b>7208060</b></span> (МТС)
+					</td><br>
 				</tr>
 				<tr>
+
+					<td>
+						тел. <span class="numbers">+375 29 <b>9324060</b></span> (Velcom)
+					</td>
+				</tr>
+				<!--<tr>
 					<td>
 						факс. <span class="numbers">+375 16 2490075</span>
 					</td>
-				</tr>
+				</tr>-->
 				<tr>
 					<td>
 						gekkostone@gmail.com
@@ -54,7 +60,7 @@ use yii\widgets\MaskedInput;
 			<br>
 		</div>
 		<div class="left-side-half-header">
-		<span style="color:#858370"><b>СХЕМА ПРОЕЗДА НА СКЛАД-МАГАЗИН ДЕКОРАТИВНОГО КАМНЯ</b>
+		<span style="color:#666666"><b>СХЕМА ПРОЕЗДА НА СКЛАД-МАГАЗИН ДЕКОРАТИВНОГО КАМНЯ</b>
 		</div>
 		<div class="left-side-half-text">
 			 <?php
@@ -86,7 +92,7 @@ use yii\widgets\MaskedInput;
                          ]);
                     ?>
 			<div class="photogallery-item" style="float:left">
-                <a href="/images/content/map.png" rel="fancybox"><img src="/images/content/map_thumb.jpg" alt="Схема проезда>" width="200" height="150"></a>
+                <a href="/images/content/map.png" rel="fancybox"><img src="/images/content/map_thumb.jpg" alt="Схема проезда>" width="225" height="150"></a>
             </div>
             <div class="store-item" float="left" >
 				<table class="contacts_table">
@@ -106,7 +112,7 @@ use yii\widgets\MaskedInput;
 				<table class="contacts_table">
 					<tr>
 						<td><u><b>Адрес склада:</b></u></th>
-						<td> г. Брест, Красный Двор-108,</th>
+						<td> г. Брест, Красный Двор-<span class="numbers">108</span>,</th>
 					</tr>
 					<tr>
 						<td></td>
@@ -128,7 +134,7 @@ use yii\widgets\MaskedInput;
             </div>
 		</div>
 		<div class="left-side-half-header">
-		<span style="color:#858370"><b>ФОРМЫ ОБРАТНОЙ СВЯЗИ</b>
+		<span style="color:#666666"><b>ФОРМЫ ОБРАТНОЙ СВЯЗИ</b>
 		</div>
 		<div class="left-side-half-text">
 			<p>Для оформления заявки на декоративный камень воспользуйтесь формой по ссылке
@@ -145,7 +151,7 @@ use yii\widgets\MaskedInput;
 	</div>
 	<div class="right-half">
 		<div class="right-side-half-header">
-			<span style="color:#858370"><b>ФОРМА ДЛЯ СВЯЗИ</b>
+			<span style="color:#666666"><b>ФОРМА ДЛЯ СВЯЗИ</b>
 		</div>
 		<div class="right-side-half-text">
 			<p>
@@ -162,7 +168,7 @@ use yii\widgets\MaskedInput;
 						echo $form->field($model, 'city')->label('Местонахождение(страна, город)');
 
 		        		echo $form->field($model, 'text')->textarea(['rows' => 10])->label('Ваше обращение');
-		        		echo $form->field($model, 'department')->dropDownList(['Отдел 1' => 'Отдел 1', 'Отдел 2' => 'Отдел 2', 'Отдел 3' => 'Отдел 3'], ['prompt'=>''])->label('Выберите отдел');
+		        		echo $form->field($model, 'department')->dropDownList(['Производственный отдел' => 'Производственный отдел', 'Отдел сбыта' => 'Отдел сбыта', 'Директору' => 'Директору'], ['prompt'=>''])->label('Выберите отдел');
 		        		echo $form->field($model, 'name')->label('ФИО контактного лица');
 		        		echo $form->field($model, 'position')->label('Должность');
 		        		echo $form->field($model, 'email')->label('Контактный e-mail');

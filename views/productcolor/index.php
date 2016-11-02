@@ -30,9 +30,9 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
     <div class="jumbotron">
         <div style="display:inline-block">
         <div class="left-half">
-            <div class="left-side-half-header"><?=  mb_strtoupper($product_data->product_product_name) ?> <div class="price" >ЦЕНА: <span id="price_value"><?= number_format($product_data->product_price) ?></span> руб/м<span class="warning">*</span> </div></div>    
+            <div class="left-side-half-header"><?=  mb_strtoupper($product_data->product_product_name) ?> <div class="price" >ЦЕНА: <span id="price_value"><?= number_format($product_data->product_price) ?></span> руб/м2 (м.пог.)<span class="warning">*</span> </div></div>
             <div class="left-side-half-text">
-                <p>фактура представляет имитацию кладки классического глиняного клинкера</p>
+                <p><?= $product_data->product_description?></p>
                 <div class="icons">
                     <!-- <img src="images/content/products/icons/cement.png" alt="">
                     <img src="images/content/products/icons/inout.png" alt="">
@@ -47,39 +47,39 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                     <?= $product_data->product_characteristics?>
                     <img src="\images\content\products\icons\TPBY.png" alt="" style="float:right">
                 </div>
-            
+
                 <div class="left_halfheader">
                     <span id="color_name">расцветка <span>«<?= reset($colors)->product_color_name ?>»</span></span>
                     <!-- <a id="link_to_3ds" href="<?= reset($colors)->product_3ds_link ?>" target="_blank" ><b><u>СКАЧАТЬ</u></b></a> «ТЕКСТУРУ» для 3DS -->
                 </div>
                 <div class="right_halfheader">
-                    <span id="article">Арт.<?= reset($colors)->product_article ?></span>
-                    <!-- <a id="add_to_cart" href="index.php?r=productcolor/add-to-cart&id=<?= array_values($colors)[0]->product_color_id; ?>"><b><u>ДОБАВИТЬ</u></b></a> расцветку в <b>«МОЮ ГАЛЕРЕЮ»</b> -->
+                    <span id="article"><font color="#666666"> Арт.</font><?= reset($colors)->product_article ?></span>
+                    <!-- <a id="add_to_cart" href="index.php?r=productcolor/add-to-cart&id=<?= array_values($colors)[0]->product_color_id; ?>"><b><u>ДОБАВИТЬ</u></b></a> расцветку в <a href="/index.php?r=site%2Fcart" <b>«МОЮ ГАЛЕРЕЮ»</b></a> -->
                 </div>
                 <div id="selected_product_color"><img id="selected_product_image" src="<?= reset($colors)->product_color_image ?>" alt=""></div>
                 <div class="left_halfheader">
                     <!-- <span id="color_name">расцветка <span>«<?= reset($colors)->product_color_name ?>»</span></span> -->
                 </div>
                 <div class="right_halfheader">
-                    <!-- <span id="article">Арт.<?= reset($colors)->product_article ?></span> -->
+                    <!-- <span id="article">Арт.<?= reset($colors)->product_article ?></span>-->
                 </div>
-                
+
             </div>
         </div>
         <div class="right-half">
-            
+
             <div class="right-side-half-header">
-                <div class="regular_product">РЯДОВАЯ ПЛИТКА <img src="images\content\products\icons\regular.png" alt=""></div> 
+                <div class="regular_product"><img src="images\content\products\icons\regular.png" alt=""> - рядовая плитка</div>
             <?php if ($product_data->hasAngular()=="true") { ?>
-                <div class="angular_product">УГЛОВАЯ ПЛИТКА <img src="images\content\products\icons\angular.png" alt=""> </div>
-            <?php } ?> 
+                <div class="angular_product"><img src="images\content\products\icons\angular.png" alt=""> - угловая плитка </div>
+            <?php } ?>
             </div>
             <div class="right-side-half-text">
             <div class="regular_product_desription">
                 <table>
                     <tr>
                         <td>
-                        Размеры камней 
+                        размер плитки
                         </td>
                         <td style="padding-left:10px;">
                         -  <?= $product_data->product_regular_size ?>
@@ -87,7 +87,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                     </tr>
                     <tr>
                         <td>
-                        Толщина камней   
+                        толщина
                         </td>
                         <td style="padding-left:10px;">
                         -  <?= $product_data->product_regular_thickness ?>
@@ -95,15 +95,15 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                     </tr>
                     <tr>
                         <td>
-                        Вес 1 м2 
+                        вес <span class="numbers">1</span></b> усл.м2
                         </td>
                         <td style="padding-left:10px;">
-                        -  <?= $product_data->product_regular_weight ?> кг.
+                        -  <span class="numbers"> <?= $product_data->product_regular_weight ?> кг;</span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                        Кол-во в упаковке 
+                        кол. в упаковке
                         </td>
                         <td style="padding-left:10px;">
                         -  <?= $product_data->product_regular_quantity ?>
@@ -111,7 +111,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                     </tr>
                     <tr>
                         <td>
-                        Повторяемость
+                        повторяемость
                         </td>
                         <td style="padding-left:10px;">
                         -  <?= $product_data->product_regular_repeatability ?>
@@ -126,7 +126,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                 <table>
                     <tr>
                         <td>
-                        Размеры камней 
+                        размер плитки
                         </td>
                         <td style="padding-left:10px;">
                         -  <?= $product_data->product_angular_size ?>
@@ -134,7 +134,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                     </tr>
                     <tr>
                         <td>
-                        Толщина камней
+                        толщина
                         </td>
                         <td style="padding-left:10px;">
                         -  <?= $product_data->product_angular_thickness ?>
@@ -142,15 +142,15 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                     </tr>
                     <tr>
                         <td>
-                        Вес 1 м2 
+                        вес <span class="numbers">1</span></b> усл.м.пог.
                         </td>
                         <td style="padding-left:10px;">
-                        -  <?= $product_data->product_angular_weight ?> кг.
+                        -  <span class="numbers"><?= $product_data->product_angular_weight ?> кг;</span>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                        Кол-во в упаковке 
+                        кол. в упаковке
                         </td>
                         <td style="padding-left:10px;">
                         -  <?= $product_data->product_angular_quantity ?>
@@ -158,7 +158,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                     </tr>
                     <tr>
                         <td>
-                        Повторяемость 
+                        повторяемость
                         </td>
                         <td style="padding-left:10px;">
                         -  <?= $product_data->product_angular_repeatability ?>
@@ -181,31 +181,31 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
         <div class="left-half">
             <div class="left-side-half-text">
                 <div class="left_halfheader">
-                    <span>ВЫБОР РАСЦВЕТКИ ДЛЯ ЗАТИРКИ ШВА</span>
+                    <span>ВАРИАНТ РАСЦВЕТКИ ШВА  (цвета подобраны условно)</span>
                 </div>
                 <div class="right_halfheader">
-                    <span>серия ceresit 4-45</span>
+                    <!--<span>серия ceresit 4-45</span>-->
                 </div>
                 <table class="seams" style="margin-left:-2px;;width:calc(100% + 4px);;empty-cells: show;border-collapse: separate;" >
                 <tr>
-                <?php $i=0; 
-                foreach ($seams as $seam){ 
-                        
+                <?php $i=0;
+                foreach ($seams as $seam){
+
                     echo "<th class=\"tg\" data-postfix=\"$seam->product_seam_postfix\" style=\"background-color:$seam->product_seam_product_color;\"><a href=\"\" onclick=\"return false;\" style=\"display:block;text-decoration:none;\">&nbsp;</a></th>";
                     $i++;
                     if ($i%6==0) {
                         echo "</tr>";
                         echo "<tr>";
-                    }                   
+                    }
                  } ?>
                  </tr>
-                
+
                 </table>
             </div>
         </div>
         <div class="right-half">
             <div class="left-side-half-text">
-                <a id="add_to_cart" class="btn btn-success btn-send" style="float:left;border:0; background-color: #CC9933;color:white;margin-right:5px;" href="index.php?r=productcolor/add-to-cart&id=<?= array_values($colors)[0]->product_color_id; ?>"><b><u>ДОБАВИТЬ</u></b></a><span style="line-height:25px;"> расцветку в <b>«МОЮ ГАЛЕРЕЮ»</b></span> 
+                <a id="add_to_cart" class="btn btn-success btn-send" style="float:left;border:0; background-color: #CC9933;color:white;margin-right:5px;" href="index.php?r=productcolor/add-to-cart&id=<?= array_values($colors)[0]->product_color_id; ?>"><b>ДОБАВИТЬ</b></a><span style="line-height:25px;"> расцветку в <a class="link_brown_color" href="/index.php?r=site%2Fcart" <b>«МОЮ ГАЛЕРЕЮ»</b></a></span>
                 <br>
                 <br>
                 <div class="left_halfheader"><a id="link_to_3ds" href="<?= reset($colors)->product_3ds_link ?>" target="_blank" ><b><u>СКАЧАТЬ</u></b></a> «ТЕКСТУРЫ» для 3DS</div>
@@ -217,22 +217,22 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
      <!--    <div class="slider" >
          <ul id="lightSlider">
              <?php foreach ($dataProviderPhotos->getModels() as $productPhoto){ ?>
-     
-                 <li class="sliderLi">   
+
+                 <li class="sliderLi">
                      <a href="http://google.com"><img class="sliderImg" src="<?=$productPhoto->photo_image?>" /></a>
                  </li>
-                 <li class="sliderLi">   
+                 <li class="sliderLi">
                      <a href="http://google.com"><img class="sliderImg" src="<?=$productPhoto->photo_image?>" /></a>
-                 </li>                    
+                 </li>
              <?php } ?>
-             
-     
-             
+
+
+
          </ul>
      </div> -->
 
         <div class="page-text">
-            <?php include './../views/layouts/bottom.php' ?> 
+            <?php include './../views/layouts/bottom.php' ?>
         </div>
       </div>
     </div>
@@ -241,7 +241,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
 
 
 
-<?php 
+<?php
 $script=<<<JS
 var seam="asdf"
 $('.miniature').click(function(){
@@ -267,9 +267,9 @@ $(document).ready(function () {
         $("th").removeClass("selected_seam");
         $(this).addClass("selected_seam");
         $("#selected_product_image").attr('src',"images/content/products/seams/".concat("m_ant_alb_",$(this).data('postfix'),".jpg"));
-               
+
     })
-}); 
+});
 
 JS;
 $this->registerJs($script);

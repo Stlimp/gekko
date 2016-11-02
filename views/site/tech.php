@@ -8,7 +8,7 @@ $this->title = 'Gekkostone';
 <div class="site-index">
    <div class="jumbotron">
    	    <div class="page-text">
-			Спасибо за подписку! В скором времени вы получите нашу информационную рассылку. Stay tuned!
+			Спасибо за подписку! В скором времени вы получите нашу информационную рассылку.
    	    </div>
    	</div>
-</div>    
+</div>

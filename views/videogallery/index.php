@@ -12,9 +12,9 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="videogallery-index">
     <div class="jumbotron">
-        <div class="page-header">ДЕКОРИТАВНЫЙ КАМЕНЬ <b>GEKKOSTONE</b></div>
+        <div class="page-header">ДЕКОРАТИВНЫЙ КАМЕНЬ <b>GEKKOSTONE</b></div>
 
-         <div class="gallery" >   
+         <div class="gallery" >
             <?php foreach ($videos as $videoItem){ ?>
                 <div class="videoblock" style="width:20%;float:none;vertical-align:top;text-align: justify;">
                     <a target="_blank" href="<?= $videoItem->video_link ?>"><img src="<?= $videoItem->video_thumbnail?>"></a>

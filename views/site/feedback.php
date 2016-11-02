@@ -43,7 +43,7 @@ use yii\widgets\ActiveForm;
 					$form =ActiveForm::begin(['id'=>'inline-form']);
 					echo $form->field($model,'name')->textInput()->label('ФИО');
 					echo $form->field($model,'text')->textarea(['rows' => 20])->label('Ваше обращение');
-					echo $form->field($model, 'department')->dropDownList(['Отдел 1' => 'Отдел 1', 'Отдел 2' => 'Отдел 2', 'Отдел 3' => 'Отдел 3'], ['prompt'=>''])->label('Выберите отдел');
+					echo $form->field($model, 'department')->dropDownList(['Производственный отдел' => 'Производственный отдел', 'Отдел сбыта' => 'Отдел сбыта', 'Директору' => 'Директору'], ['prompt'=>''])->label('Выберите отдел');
 					echo $form->field($model,'email')->label('Контактный e-mail');
 					echo $form->field($model,'phone')->label('Контактный телефон')->widget(\yii\widgets\MaskedInput::className(), [
     'mask' => '+375(99)999-99-99',

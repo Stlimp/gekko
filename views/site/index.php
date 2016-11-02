@@ -139,7 +139,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
 
 
             <div class="col-md-12 hover-slide text-center" id="scroll" style="height:0px;text-align:right;bottom: -60px;";> <a href="#upper" ><div class="button-up"></div> </a>   </div>
-        <div class="page-header" style="margin-top:70px;">ДЕКОРАТИВНЫЙ КАМЕНЬ <b>GEKKOSTONE</b></div>
+        <div class="page-header" style="margin-top:80px;">ДЕКОРАТИВНЫЙ КАМЕНЬ <b>GEKKOSTONE</b></div>
         <div class="page-text" style="margin-top:0px;">
 
         <!--<a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?= $product->product_product_name?>&r=productcolor%2Findex">
@@ -181,7 +181,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
                 </div>
             </a>
             <a href="index.php?r=site%2Ftest">
-                
+
                 <div class="right_split test" style="bottom:0">
                    <!-- <span style="font-weight:900 !important;position: absolute;top:34%;transform: translateY(-50%);font-family:Corbel;" class="test_text">НАТУРАЛЬНЫЙ ИЛИ ИСКУССТВЕННЫЙ?</span>
                     <p style="position: absolute;top:80%;transform: translateY(-50%); font-family:Corbel"><b>ТЕСТ.</b> Попробуй отыскать натуральные камни среди искусственных камней GEKKOSTONE!</p>-->
@@ -194,7 +194,7 @@ $this->registerJsFile('@web/js/slide-up-down.js');
                    <div class="center_split_text"><p>
                        КОЛЛЕКЦИЯ <b>GEKKOSTONE</b>
                    </p>
-                   <p>Полная коллекция декоративного облицовочного камня производства компании
+                   <p>Полная коллекция декоративного облицовочного камня компании
                             GEKKOSTONE. В коллекции представлен
                             облицовочный камень и декоративный
                             кирпич разнообразных фактур и расцветок.

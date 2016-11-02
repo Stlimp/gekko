@@ -24,8 +24,8 @@ IndexAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="Keywords" content="декоративный камень, декоративный кирпич, античный кирпич, состаренный кирпич, декоративная плитка, искусственный камень, искусственный декоративный камень">
-    <meta name="Description" content="Компания GEKKOSTONE - производитель декоративного камня премиум-качества. Скалистая гора, античный кирпич, состаренный кирпич, пальчики - идеальные фактуры для внутренней и внешней отделки зданий">
+    <meta name="Keywords" content="декоративный камень, облицовочный камень, декоративный кирпич, античный кирпич, состаренный кирпич, декоративная плитка, искусственный камень, искусственный декоративный камень">
+    <meta name="Description" content="Компания GEKKOSTONE - производитель декоративного камня премиум-качества. Скалистая гора, античный кирпич, состаренный кирпич, пальчики - фактуры для внутренней и наружной отделки зданий">
     <link rel="shortcut icon" href="<?php echo Yii::$app->request->baseUrl; ?>/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="css/social-likes_classic.css">
 

@@ -39,7 +39,7 @@ class ProductColor extends \yii\db\ActiveRecord implements \yz\shoppingcart\Cart
     {
         return [
             [['product_color_name', 'product_article', 'product_3ds_link', 'product_subcategory_name', 'product_color_image'], 'required'],
-            [['product_color_name', 'product_article', 'product_3ds_link', 'product_subcategory_name', 'product_color_image'], 'string', 'max' => 255]б
+            [['product_color_name', 'product_article', 'product_3ds_link', 'product_subcategory_name', 'product_color_image'], 'string', 'max' => 255],
             [['product_color_prefix'], 'string', 'max' => 50]
         ];
     }
