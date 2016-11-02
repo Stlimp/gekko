@@ -9,7 +9,7 @@ use app\models\Product;
 use app\models\ProductCategories;
 use app\models\ImageCategories;
 use app\models\ImageSubcategories;
-$this->title = 'Gekkostone';
+$this->title = 'Декоративный камень GEKKOSTONE';
 mb_internal_encoding("UTF-8");
 /* @var $this \yii\web\View */
 /* @var $content string */

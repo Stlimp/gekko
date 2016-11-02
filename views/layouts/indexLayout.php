@@ -5,7 +5,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\IndexAsset;
-
+$this->title = 'Декоративный камень GEKKOSTONE';
 mb_internal_encoding("UTF-8");
 /* @var $this \yii\web\View */
 /* @var $content string */
