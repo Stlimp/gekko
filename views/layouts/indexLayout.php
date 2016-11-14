@@ -10,11 +10,12 @@ mb_internal_encoding("UTF-8");
 /* @var $this \yii\web\View */
 /* @var $content string */
 /*LAYOUT USED ONLY FOR INDEX.PHP!!!*/
+
+
 $this->registerJsFile('@web/js/social-likes.min.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJsFile('@web/js/menu.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJsFile('@web/js/likes.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
 $this->registerJsFile('@web/js/jquery.hoverIntent.minified.js', ['depends' => [\yii\web\JqueryAsset::className()]]);
-
 IndexAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
@@ -43,24 +44,7 @@ IndexAsset::register($this);
     <div class="wrap">
     <?php include './../views/layouts/menu.php' ?>
     <div class="container">
-        <?php
-        use yii\bootstrap\Carousel;
-        echo Carousel::widget([
-            'options' => ['class' => 'carousel slide carousel-fade ','data-ride'=>'carousel','data-interval'=>'5000', ' data-pause'=>'false'],
-            'items' => [
-                // the item contains only the image
-                ['content' => '<img src="images/background/background1.jpg"/>'],
-                // equivalent to the above
-                ['content' => '<img src="images/background/background2.jpg"/>'],
-                // the item contains both the image and the caption
-                ['content' => '<img src="images/background/background3.jpg"/>'],
-                ['content' => '<img src="images/background/background4.jpg"/>'],
-                ['content' => '<img src="images/background/background5.jpg"/>'],
-            ]
-        ]);
-        ?>
-            <div class="col-md-12 hover-slide text-center" id="scroll" style="text-align:right;bottom: 100px;";><a href="#downer"><div class="button-down"></div></a></div>
-            <div id="downer"></div>
+       
             <?= $content ?>
         </div>
     </div>

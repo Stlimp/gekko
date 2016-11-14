@@ -111,4 +111,13 @@ return array (
       '@yii/gii' => $vendorDir . '/yiisoft/yii2-gii',
     ),
   ),
+  'evgeniyrru/yii2-slick' => 
+  array (
+    'name' => 'evgeniyrru/yii2-slick',
+    'version' => '1.0.0.0',
+    'alias' => 
+    array (
+      '@evgeniyrru/yii2slick' => $vendorDir . '/evgeniyrru/yii2-slick',
+    ),
+  ),
 );

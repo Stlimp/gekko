@@ -1324,7 +1324,8 @@
         "keywords": [
             "codeception",
             "yii2"
-        ]
+        ],
+        "abandoned": "codeception/codeception"
     },
     {
         "name": "yiisoft/yii2-bootstrap",
@@ -1480,6 +1481,98 @@
             "code generator",
             "gii",
             "yii2"
+        ]
+    },
+    {
+        "name": "bower-asset/slick-carousel",
+        "version": "1.6.0",
+        "version_normalized": "1.6.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/kenwheeler/slick.git",
+            "reference": "0aee9fe00e440cc9d72c2dc11768ad9277880603"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/kenwheeler/slick/zipball/0aee9fe00e440cc9d72c2dc11768ad9277880603",
+            "reference": "0aee9fe00e440cc9d72c2dc11768ad9277880603",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/jquery": ">=1.7"
+        },
+        "type": "bower-asset-library",
+        "extra": {
+            "bower-asset-main": [
+                "slick/slick.js",
+                "slick/slick.css",
+                "slick/slick.less",
+                "slick/slick.scss"
+            ],
+            "bower-asset-ignore": [
+                "**/.*",
+                "node_modules",
+                "bower_components",
+                "test",
+                "tests",
+                "package.json",
+                "index.html"
+            ]
+        },
+        "installation-source": "dist",
+        "license": [
+            "MIT"
+        ],
+        "description": "the last carousel you'll ever need",
+        "keywords": [
+            "carousel",
+            "jquery",
+            "responsive"
+        ]
+    },
+    {
+        "name": "evgeniyrru/yii2-slick",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/EvgeniyRRU/yii2-slick.git",
+            "reference": "cc49cc2c7fdcb968fad7cb011ca7a484c6b500ee"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/EvgeniyRRU/yii2-slick/zipball/cc49cc2c7fdcb968fad7cb011ca7a484c6b500ee",
+            "reference": "cc49cc2c7fdcb968fad7cb011ca7a484c6b500ee",
+            "shasum": ""
+        },
+        "require": {
+            "bower-asset/slick-carousel": "*",
+            "yiisoft/yii2": "*"
+        },
+        "time": "2015-02-16 21:56:58",
+        "type": "yii2-extension",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "evgeniyrru\\yii2slick\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Evgeniy Chernyshev",
+                "email": "EvgeniyRRU@gmail.com"
+            }
+        ],
+        "description": "Yii2 extension for Slick Carousel",
+        "keywords": [
+            "carousel",
+            "extension",
+            "widget",
+            "yii"
         ]
     }
 ]
