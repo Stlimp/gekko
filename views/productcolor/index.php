@@ -203,7 +203,16 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
                 </table>
             </div>
         </div>
+        <div class="right-half">
+            <div class="left-side-half-text">
+                <a id="add_to_cart" class="btn btn-success btn-send" style="float:left;border:0; background-color: #CC9933;color:white;margin-right:5px;" href="index.php?r=productcolor/add-to-cart&id=<?= array_values($colors)[0]->product_color_id; ?>"><b>ДОБАВИТЬ</b></a><span style="line-height:25px;"> расцветку в <a class="link_brown_color" href="/index.php?r=site%2Fcart" <b>«МОЮ ГАЛЕРЕЮ»</b></a></span>
+                <br>
+                <br>
+                <div class="left_halfheader"><a id="link_to_3ds" href="<?= reset($colors)->product_3ds_link ?>" target="_blank" ><b><u>СКАЧАТЬ</u></b></a> «ТЕКСТУРЫ» для 3DS</div>
+                <div class="right_halfheader"><a href="index.php?r=site%2Fwarning"><u>ПРЕДУПРЕЖДЕНИЕ ПО ЦВЕТОПЕРЕДАЧЕ</u></a></div>
 
+            </div>
+        </div>
 
      <!--    <div class="slider" >
          <ul id="lightSlider">
