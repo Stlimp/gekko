@@ -10,7 +10,7 @@ use yii\widgets\ActiveForm;
 
     <div class="left-half">
     	<div class="left-side-half-header">
-    		<span><b>ОТЗЫВЫ И ПРЕДЛОЖЕНИЯ</b></span>
+    		<span style="font-weight: normal">ОТЗЫВЫ И ПРЕДЛОЖЕНИЯ</span>
     	</div>
     	<div class="left-side-half-text">
     		<p>Если Вы желаете оставить отзыв о продукции компании <b>GEKKOSTONE</b> или у Вас есть
@@ -29,7 +29,7 @@ use yii\widgets\ActiveForm;
     </div>
     <div class="right-half">
     	<div class="right-side-half-header">
-    		ФОРМА ДЛЯ ОТЗЫВОВ И ПРЕДЛОЖЕНИЙ
+    		<span style="font-weight: normal">ФОРМА ДЛЯ ОТЗЫВОВ И ПРЕДЛОЖЕНИЙ</span>
     	</div>
     	<div class="left-side-half-text">
     		<p>

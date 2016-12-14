@@ -10,7 +10,7 @@ $this->title = 'GEKKOSTONE';
 
 <div class="site-index">
    <div class="jumbotron">
-        <div class="page-header"><span style="color:#666666"><b>О КОМПАНИИ</b></div>
+        <div class="page-header"><span style="color:#666666">О КОМПАНИИ</div>
         <div class="page-text">
             <div class="block" style="display:inline-block;width:100%;height:auto;">
                 <div class="left-half">

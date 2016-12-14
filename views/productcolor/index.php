@@ -175,7 +175,7 @@ $this->registerJsFile('@web/js/lightSlider.js', ['depends' => [\yii\web\JqueryAs
             <div class="product_colors">
                 <?php foreach ($colors as $productColor){ ?>
                     <div class="miniature" id=" miniature<?= $productColor->product_color_id?>">
-                        <span><?= $productColor->product_color_name ?><img src="<?= $productColor->product_color_image ?>" alt=""></span>
+                        <span><?= $productColor->product_color_name_short ?><img src="<?= $productColor->product_color_image ?>" alt=""></span>
                     </div>
                 <?php } ?>
             </div>

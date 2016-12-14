@@ -11,6 +11,7 @@ use yz\shoppingcart\ShoppingCart;
  *
  * @property integer $product_color_id
  * @property string $product_color_name
+ * @property string $product_color_name_short 
  * @property string $product_article
  * @property string $product_3ds_link
  * @property string $product_angular
@@ -38,8 +39,8 @@ class ProductColor extends \yii\db\ActiveRecord implements \yz\shoppingcart\Cart
     public function rules()
     {
         return [
-            [['product_color_name', 'product_article', 'product_3ds_link', 'product_subcategory_name', 'product_color_image'], 'required'],
-            [['product_color_name', 'product_article', 'product_3ds_link', 'product_subcategory_name', 'product_color_image'], 'string', 'max' => 255],
+            [['product_color_name','product_color_name_short','product_article', 'product_3ds_link', 'product_subcategory_name', 'product_color_image'], 'required'],
+            [['product_color_name','product_color_name_short', 'product_article', 'product_3ds_link', 'product_subcategory_name', 'product_color_image'], 'string', 'max' => 255],
             [['product_color_prefix'], 'string', 'max' => 50]
         ];
     }
@@ -52,6 +53,7 @@ class ProductColor extends \yii\db\ActiveRecord implements \yz\shoppingcart\Cart
         return [
             'product_color_id' => 'Product Color ID',
             'product_color_name' => 'Product Color Name',
+            'product_color_name_short' =>'Product Color Name Short',
             'product_article' => 'Product Article',
             'product_3ds_link' => 'Product 3ds Link',
             'product_subcategory_name' => 'Product Subcategory Name',

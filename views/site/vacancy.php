@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
     <div class="jumbotron">
 	   	<div class="left-half">
 			<div class="left-side-half-header">
-				<p>РАБОТА В КОМПАНИИ <b>GEKKOSTONE</b></p>
+				<span style="font-weight: normal">РАБОТА В КОМПАНИИ <b>GEKKOSTONE</b></span>
 			</div>
 			<div class="left-side-half-text">
 				<p>В компании <b>GEKKOSTONE</b> заинтересованы в профессиональных кадрах! Если
@@ -30,7 +30,7 @@ use yii\widgets\ActiveForm;
 		</div>
 		<div class="right-half">
 			<div class="right-side-half-header">
-				<p>РЕЗЮМЕ</p>
+				<span style="font-weight: normal">РЕЗЮМЕ</span>
 			</div>
 			<div class="right-side-half-text">
 				<?php

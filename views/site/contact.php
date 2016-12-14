@@ -7,7 +7,7 @@ use yii\widgets\MaskedInput;
    <div class="jumbotron">
 	<div class="left-half">
 		<div class="left-side-half-header">
-		<span style="color:#666666"><b>КОНТАКТЫ</b>
+		<span style="color:#666666">КОНТАКТЫ</span>
 		</div>
 		<div class="left-side-half-text">
 			<table class="contacts_table">
@@ -134,7 +134,7 @@ use yii\widgets\MaskedInput;
             </div>
 		</div>
 		<div class="left-side-half-header">
-		<span style="color:#666666"><b>ФОРМЫ ОБРАТНОЙ СВЯЗИ</b>
+		<span style="color:#666666">ФОРМЫ ОБРАТНОЙ СВЯЗИ</span>
 		</div>
 		<div class="left-side-half-text">
 			<p>Для оформления заявки на декоративный камень воспользуйтесь формой по ссылке
@@ -151,7 +151,7 @@ use yii\widgets\MaskedInput;
 	</div>
 	<div class="right-half">
 		<div class="right-side-half-header">
-			<span style="color:#666666"><b>ФОРМА ДЛЯ СВЯЗИ</b>
+			<span style="color:#666666">ФОРМА ДЛЯ СВЯЗИ</span>
 		</div>
 		<div class="right-side-half-text">
 			<p>

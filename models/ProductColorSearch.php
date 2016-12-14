@@ -19,7 +19,7 @@ class ProductColorSearch extends ProductColor
     {
         return [
             [['product_color_id'], 'integer'],
-            [['product_color_name', 'product_article', 'product_3ds_link', 'product_subcategory_name', 'product_color_image'], 'safe'],
+            [['product_color_name','product_color_name_short', 'product_article', 'product_3ds_link', 'product_subcategory_name', 'product_color_image'], 'safe'],
         ];
     }
 
