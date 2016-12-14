@@ -90,7 +90,7 @@ function order() {
     	
 		if (!document.getElementById('seamless_'.concat(color_id)).checked) {
 	    	var angular_packages=Math.ceil(angular_value/color_data.product_angular_calculation_size);//1. количество упаковок
-	    	var angular_square=angular_value*color_data.product_angular_calculation_size_square/color_data.product_angular_calculation_size;//2. площадь углов
+	    	var angular_square=angular_value/color_data.product_angular_calculation_size_square*color_data.product_angular_calculation_size;//2. площадь углов
 
 	    	if (document.getElementById('reduce_square_'.concat(color_id)).checked) {
 	    		var regular_square=(regular_value-angular_square);// . площадь рядовых при учете угловых		
@@ -117,7 +117,7 @@ function order() {
 	    else{
 	    	/*Бесшовный монтаж*/
 	    	var angular_packages=Math.ceil(angular_value/color_data.product_angular_seamless_calculation_size);//1. количество упаковок
-	    	var angular_square=angular_value*color_data.product_angular_seamless_calculation_size_square/color_data.product_angular_seamless_calculation_size;//2. площадь углов
+	    	var angular_square=angular_value/color_data.product_angular_seamless_calculation_size_square*color_data.product_angular_seamless_calculation_size;//2. площадь углов
 
 	    	if (document.getElementById('reduce_square_'.concat(color_id)).checked) {
 	    		var regular_square=(regular_value-angular_square);// . площадь рядовых при учете угловых
