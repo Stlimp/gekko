@@ -2,8 +2,11 @@ $(document).ready(function(){
     $(".question").click( 
     function () {      
             if ($(this).hasClass('unselected')) {
-                $(this).css('font-weight', 'bold');
                 $(this).removeClass( "unselected" );
+                $("a").removeClass("selected");
+                $("a").css('font-weight', 'normal');
+                $("li div").removeClass("in");
+                $(this).css('font-weight', 'bold');
                 $(this).addClass( "selected" );
             }
             else
