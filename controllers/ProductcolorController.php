@@ -16,6 +16,7 @@ use yii\filters\VerbFilter;
 use yii\helpers\Json;
 use yz\shoppingcart\ShoppingCart;
 
+
 /**
  * ProductcolorController implements the CRUD actions for ProductColor model.
  */
@@ -66,7 +67,7 @@ class ProductcolorController extends Controller
         $itemsCount = \Yii::$app->cart->getCount();
 
         $modelProduct=new ProductSearch();
-        $product_data=$modelProduct::findOne(['product_product_name'=>Yii::$app->request->queryParams['ProductColorSearch']['product_subcategory_name']]);
+        $product_data=$modelProduct::findOne(['product_product_name'=>urldecode(Yii::$app->request->queryParams['ProductColorSearch']['product_subcategory_name'])]);
 
         $modelSeam=new ProductSeamSearch();
         $dataProviderSeams=$modelSeam->search($colors);
@@ -86,8 +87,10 @@ class ProductcolorController extends Controller
             'itemsCount'=>$itemsCount,
             'product_data'=>$product_data,
             'seams'=>$seamData,
+            'queyP'=>Yii::$app->request->queryParams['ProductColorSearch']['product_subcategory_name'],
         ]);
     }
+
 
 
     public function actionViewProduct()

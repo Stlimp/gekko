@@ -83,23 +83,24 @@ function order() {
     	
     	if (document.getElementById('add_five_percent_'.concat(color_id)).checked) {//. добавить 5%, если выставленна галка
     		regular_value =regular_value*1.05;
+    		angular_value=angular_value*1.02;
     	};
+
     	
     	
 		if (!document.getElementById('seamless_'.concat(color_id)).checked) {
 	    	var angular_packages=Math.ceil(angular_value/color_data.product_angular_calculation_size);//1. количество упаковок
-	    	var angular_square=angular_value*color_data.product_angular_calculation_size_square;//2. площадь углов
+	    	var angular_square=angular_value*color_data.product_angular_calculation_size_square/color_data.product_angular_calculation_size;//2. площадь углов
 
 	    	if (document.getElementById('reduce_square_'.concat(color_id)).checked) {
-	    		var regular_square=(regular_value-angular_square);// . площадь рядовых при учете угловых
-	    		if (regular_square<0){
-	    			regular_square=0;
-	    		}
+	    		var regular_square=(regular_value-angular_square);// . площадь рядовых при учете угловых		
 			}
 			else{
 				var regular_square=regular_value;//. площадь рядовых без учета угловых
 			}
 			
+
+			console.log(regular_square);
 			
 	    	var regular_packages=Math.ceil(regular_square/color_data.product_regular_calculation_size);//3. количество упаково рядовой
 
@@ -116,7 +117,7 @@ function order() {
 	    else{
 	    	/*Бесшовный монтаж*/
 	    	var angular_packages=Math.ceil(angular_value/color_data.product_angular_seamless_calculation_size);//1. количество упаковок
-	    	var angular_square=angular_value*color_data.product_angular_seamless_calculation_size_square;//2. площадь углов
+	    	var angular_square=angular_value*color_data.product_angular_seamless_calculation_size_square/color_data.product_angular_seamless_calculation_size;//2. площадь углов
 
 	    	if (document.getElementById('reduce_square_'.concat(color_id)).checked) {
 	    		var regular_square=(regular_value-angular_square);// . площадь рядовых при учете угловых
@@ -124,11 +125,12 @@ function order() {
 			else{
 				var regular_square=regular_value;//. площадь рядовых без учета угловых
 			}
+			console.log(regular_square);
 			
 	    	var regular_packages=Math.ceil(regular_square/color_data.product_regular_seamless_calculation_size);//3. количество упаково рядовой
 
-	    	var angular_result=Math.ceil(angular_packages*color_data.product_angular_seamless_calculation_size*1000)/1000;//4. подсчет погонных метров угловой
-	    	var regular_result=Math.ceil(regular_packages*color_data.product_regular_seamless_calculation_size*1000)/1000;//5. подсчет погонных метров рядовой
+	    	var angular_result=Math.ceil(angular_packages*color_data.product_angular_calculation_size*1000)/1000;//4. подсчет погонных метров угловой
+	    	var regular_result=Math.ceil(regular_packages*color_data.product_regular_calculation_size*1000)/1000;//5. подсчет погонных метров рядовой
 
 	    	document.getElementById('angular_result_'.concat(color_id)).innerHTML=angular_result;//. стоимость уголвых
 	    	document.getElementById('regular_result_'.concat(color_id)).innerHTML=regular_result;//. стоимость рядовых

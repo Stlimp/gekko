@@ -72,7 +72,7 @@
                                     <ul>
                                         <?php  foreach ($products as $product_item):?>
                                             <?php if (!strcmp($product_item->product_category_name, $category->product_category_name)):?>
-                                            <li><span style="color:transparent">&#9679;</span><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?php echo $product_item->product_product_name ?>&r=productcolor%2Findex"> <?php echo $product_item->product_product_name ?></a></li>
+                                            <li><span style="color:transparent">&#9679;</span><a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?php echo urlencode($product_item->product_product_name) ?>&r=productcolor%2Findex"> <?php echo $product_item->product_product_name ?></a></li>
                                             <?php endif;?>
                                         <?php endforeach;?>
 

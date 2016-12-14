@@ -25,7 +25,7 @@ $nohr="true";
                 <?php if (!strcmp($category->product_category_name,$productItem->product_category_name)): ?>
 
                     <div class="product">
-                        <a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?php echo $productItem->product_product_name ?>&r=productcolor%2Findex"><img src="<?= $productItem->product_product_image?>" alt="" width="100%" height="145">
+                        <a href="?ProductColorSearch%5Bproduct_subcategory_name%5D=<?php echo urlencode($productItem->product_product_name) ?>&r=productcolor%2Findex"><img src="<?= $productItem->product_product_image?>" alt="" width="100%" height="145">
                         <h4 style="margin:15px;;text-align:center;text-transform: uppercase;"><?= $productItem->product_product_name?></h3>
                           </a>
                     </div>
