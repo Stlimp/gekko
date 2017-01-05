@@ -1,4 +1,6 @@
-<div class="bottom_div1">
+<div class="bottom_div1" style="border-collapse: separate; border-spacing: 5px;">
+    <div style="display:table-row;">
+        <div style="display:table-cell;width:25%;vertical-align:top; background-color: #F3F2EE;height:100%;">
             <a href="index.php?r=site%2Fadvantages">
                 <div class="quarter">
                         <div class="header">ОПТИМАЛЬНЫЙ ВЫБОР КАМНЯ</div>
@@ -6,6 +8,8 @@
                         <img src="/images/background/gekko.jpg" alt="">
                 </div>
             </a>
+        </div>
+        <div style="display:table-cell;width:25%;vertical-align:top;background-color: #F3F2EE;height:100%;">
             <a href="index.php?r=faq%2Findex">
                 <div class="quarter">
                         <div class="header">ВОПРОС / ОТВЕТ</div>
@@ -15,6 +19,8 @@
                         <img src="/images/background/faq.jpg" alt="">
                 </div>
             </a>
+        </div>
+        <div style="display:table-cell;width:25%;vertical-align:top;background-color: #F3F2EE;height:100%;">
             <a href="index.php?r=certificates%2Findex">
                 <div class="quarter">
                     <div class="header">ТЕХНИЧЕСКИЕ ДАННЫЕ</div>
@@ -23,6 +29,8 @@
                     <img src="/images/background/technical.jpg" alt="">
             </div>
             </a>
+        </div>
+        <div style="display:table-cell;width:25%;vertical-align:top;background-color: #F3F2EE;height:100%;">
             <a href="index.php?r=site%2Frocklaying">
             <div class="quarter">
 
@@ -37,3 +45,5 @@
             </div>
             </a>
         </div>
+    </div>
+</div>
